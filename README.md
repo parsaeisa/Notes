@@ -20,3 +20,8 @@
 * cassandra 
 * mongo
 * postgre
+
+#### Concepts :
+* distributed systems 
+* cloud computing 
+* data engineering 
