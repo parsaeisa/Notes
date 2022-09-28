@@ -11,6 +11,7 @@
 * grafana 
 * ceph 
 * spark 
+* argoCD
 
 #### Golang : 
 * opening and creating file 
