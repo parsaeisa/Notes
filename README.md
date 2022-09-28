@@ -12,6 +12,7 @@
 * ceph 
 * spark 
 * argoCD
+* OpenStreetMap
 
 #### Golang : 
 * opening and creating file 
