@@ -29,6 +29,10 @@
 * data engineering 
 * microservices 
 
+#### topics :
+* chats
+* mail servers
+
 #### what is it ? 
 * A RESP-compatible geofence sharding and replication proxy server for Tile38
 * AAA services for Snapp group
