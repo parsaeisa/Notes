@@ -9,6 +9,8 @@
 
 #### Golang : 
 * opening and creating file 
+* concurrency 
+* what was that fast json unmarshalling golang package ? 
 
 
 #### Database : 
@@ -26,10 +28,11 @@
 * chats
 * mail servers
 
-## Tools 
 #### what is it ? 
 * A RESP-compatible geofence sharding and replication proxy server for Tile38
 * AAA services for Snapp group
+
+## Tools 
 
 #### DevOps Tools :
 * grafana 
