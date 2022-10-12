@@ -45,6 +45,7 @@
 * argoCD
 * jenkins
 * nginx
+* k8s
 
 #### cloud tools : 
 * ceph 
