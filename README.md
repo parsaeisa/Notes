@@ -1,5 +1,12 @@
 # Notes
 
+### Types of things to learn : 
+
+* Developing 
+* DevOps
+* System-Design
+* Concepts
+
 ### Good/Interesting to learn : 
 
 #### Languages :
