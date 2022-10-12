@@ -15,7 +15,6 @@
 * kotlin 
 
 #### Golang : 
-* opening and creating file 
 * concurrency 
 * what was that fast json unmarshalling golang package ? 
 
