@@ -16,11 +16,13 @@ parameters :
 * verbose : print sth or not 
 * we have epochs , shuffle and batch_size which you know what are they . 
 
+
 **to_categorical** : the distance between each two output classes should be equal . for example if the required anwer is 2 , and model gives 3 or 7 , it should be penalized equally in both cases . 
 
 to achieve this , we need convert classes to matrices . for example 
 
 2 must become [0,0,1,0,0,0,0,0,0,0]
+
 3 must become [0,0,0,1,0,0,0,0,0,0]
 etc .
 
