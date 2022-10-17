@@ -20,7 +20,7 @@ To pass a request to a non-HTTP proxied server, the appropriate **_pass directiv
 **proxy_set_header** is used to modify header fields of the request which 
 is being passed and is used to change nginx default header fields setting .
 
-#### Buffers
+### Buffers
 nginx buffers servers' responses and sends them to client when the response is 
 completely recieved from server , and it buffers it until the client downloads it . 
 
