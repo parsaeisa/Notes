@@ -53,3 +53,12 @@ for name in "${!names[@]}"; do
     fi
 done
 ```
+
+We can also define methods with bash . for example : 
+
+{bring an example}
+
+and call it like this : 
+```bash
+    deploy_project $project
+```
