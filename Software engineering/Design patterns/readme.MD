@@ -31,9 +31,11 @@ Agent.
 	Step3()
 ```
 * state and strategy pattern are so much alike and they have a little 
-difference . ( that is definitely true if it's not obvious from your definition of 
+difference . ( that is definitely true , if this point is not obvious from your definition of 
 strategy pattern , the correct your definition there .)
 
+in state pattern , the state changes continuously , but in strategy pattern we don't
+have any state changes . 
 ## Structural
 one example is **singleton pattern** . in singleton pattern 
 the constructor is private and cannot be called any time . 
