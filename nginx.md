@@ -12,10 +12,10 @@ By default, NGINX redefines two header fields in proxied requests, “Host” an
 
 To pass a request to a non-HTTP proxied server, the appropriate **_pass directive should be used:
 
-**fastcgi_pass passes** a request to a FastCGI server
-**uwsgi_pass passes** a request to a uwsgi server
-**scgi_pass passes** a request to an SCGI server
-**memcached_pass passes** a request to a memcached server
+* fastcgi_pass passes a request to a FastCGI server
+* uwsgi_pass passes a request to a uwsgi server
+* scgi_pass passes a request to an SCGI server
+* memcached_pass passes a request to a memcached server
 
 **proxy_set_header** is used to modify header fields of the request which 
 is being passed and is used to change nginx default header fields setting .
