@@ -33,7 +33,7 @@ parameters :
 consider you have a parameter called len , if you execute "echo len" ,
 you will get the "len" . 
 
-To act len like its a variable you should type "echo ${len}"
+To act len like its a variable and to get its value , you should type "echo ${len}"
 
 An example : 
 ```bash
