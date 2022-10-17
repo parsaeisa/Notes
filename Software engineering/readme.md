@@ -11,4 +11,5 @@ components :
 * database
 * CDN
 * Load balancers
+* brokers
 * ... To complete
