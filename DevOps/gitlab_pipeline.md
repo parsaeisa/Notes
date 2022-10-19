@@ -1,8 +1,9 @@
 # Gitlab pipeline
 
+A pipeline is consisted of multiple jobs . 
+
 ### Structure of a gitlab pipline
 
-### Gitlab built-in variables
 * include
 * stages
 * variables
@@ -42,3 +43,14 @@ stages:
   - package
   - release
 ```
+
+### Structure of a gitlab job
+* image
+* stage
+* script
+* artifact
+* before_script
+* after_script
+* dependencies 
+
+### Gitlab built-in variables
