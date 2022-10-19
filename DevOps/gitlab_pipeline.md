@@ -53,4 +53,8 @@ stages:
 * after_script
 * dependencies 
 
-### Gitlab built-in variables
+### Gitlab predfined variables
+
+https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
+
+you can use these variables without any need to define them  . 
