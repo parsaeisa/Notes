@@ -24,3 +24,7 @@ plt.figure(figsize=(16, 16))
 plt.imshow(res, cmap='gray')
 ```
 
+* unique
+* cumsum
+* interp
+* 
