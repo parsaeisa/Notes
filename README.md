@@ -17,6 +17,7 @@
 #### Golang : 
 * concurrency 
 * what was that fast json unmarshalling golang package ? 
+* gosec
 
 
 #### Database : 
