@@ -2,6 +2,26 @@
 
 when a model is defined , it must inherit torch.nn.Module
 
+### Tensor
+we can make torch tensors from :
+* python arrays --> `tensor` method
+* numpy arrays --> `from_numpy` method
+* from another tensor --> for example `ones_like` and `rand_like` methods
+* from shapes . these methods get shape as inputs and fill them with ones or zeros on rand numbers : `rand` , `ones` and `zeros` . 
+
+#### Operation on tensors 
+
+on two tensors : 
+* `cat`
+* `matmul`
+* `mul`
+
+single tensor : 
+* `add_`
+* `sum`
+
+
+[Reference](https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html)
 
 ### Optimizer 
 
