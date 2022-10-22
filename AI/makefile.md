@@ -37,7 +37,3 @@ coverage: vendor
 	gotestsum -- -gcflags 'all=-N -l' -mod vendor -v -coverprofile=.testCoverage.txt ./...
 	GOFLAGS=-mod=vendor go tool cover -func=.testCoverage.txt
 ```
-
-### Golang
-This is a list of golang packages that adopted in golang projects' make files . 
-* 
