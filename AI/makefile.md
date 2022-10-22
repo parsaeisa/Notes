@@ -10,7 +10,9 @@ vendor: set-goproxy
 	go mod vendor -v
 ```
 
-if you type 'make vendor' , the 'go mod vendor -v' will be executed . 
+if you type 'make vendor' , the 'go mod vendor -v' will be executed . This is so 
+handy when you are using pipelines , for example you can add 'make lint' as
+part of a script , then It will execute all of lint command in you make file . 
 
 This is very useful when you want to write pipelines and number of lines of 
 your pipeline will decrease .
@@ -35,3 +37,7 @@ coverage: vendor
 	gotestsum -- -gcflags 'all=-N -l' -mod vendor -v -coverprofile=.testCoverage.txt ./...
 	GOFLAGS=-mod=vendor go tool cover -func=.testCoverage.txt
 ```
+
+### Golang
+This is a list of golang packages that adopted in golang projects' make files . 
+* 
