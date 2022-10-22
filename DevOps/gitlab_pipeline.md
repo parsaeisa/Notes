@@ -52,6 +52,8 @@ stages:
 * before_script
 * after_script
 * dependencies 
+* allow failure 
+* rules
 
 ### Gitlab predfined variables
 
