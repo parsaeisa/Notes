@@ -51,6 +51,7 @@ SGD is one of the most usefull optimizers which computes gradient descent and de
 
 then **optim.step** is used to initiate gradient descents .
 
+* what are `zero_grad` and `no_grad` methods ? 
 
 ### Loss functions
 There are other loss functions than `(prediction - labels).sum()` .
