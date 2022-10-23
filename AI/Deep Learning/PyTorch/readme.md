@@ -1,6 +1,6 @@
 # PyTorch
 
-### Tensor
+## Tensor
 we can make torch tensors from :
 * python arrays --> `tensor` method
 * numpy arrays --> `from_numpy` method
@@ -21,7 +21,7 @@ single tensor :
 
 [Reference](https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html)
 
-### Optimizer 
+## Optimizer 
 
 when optimizing in DNNs , we have a forward-pass and a backward-pass . 
 
@@ -53,10 +53,10 @@ then **optim.step** is used to initiate gradient descents .
 
 * what are `zero_grad` and `no_grad` methods ? 
 
-### Loss functions
+## Loss functions
 There are other loss functions than `(prediction - labels).sum()` .
 
-### Model
+## Model
 we need to use , save and load a model . 
 
 A model must inherit torch.nn.Module
