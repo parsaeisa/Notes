@@ -9,6 +9,9 @@ This is the life cycle of a real project :
     - explorer
     - bunch of epochs to iterate 
 
+
+we need a memory too (a class which represents the memory and enables us to use it )
+
 Q-function is a dictionary . 
 
 there is a fit and a learn . what's the difference ?? 
