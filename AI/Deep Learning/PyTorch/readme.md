@@ -1,5 +1,7 @@
 # PyTorch
 
+PyTorch is an extension of NumPy which can interact with GPU . 
+
 ## Tensor
 we can make torch tensors from :
 * python arrays --> `tensor` method
