@@ -34,6 +34,7 @@ backward-pass :
 ```python
 loss = (prediction - labels).sum()
 loss.backward() # backward pass
+self.optimizer.step() # Does this have to be here always ? 
 ```
 
 after these two steps , model parameters are updated . 
@@ -49,6 +50,10 @@ SGD is one of the most usefull optimizers which computes gradient descent and de
 **torch.optim** has famous optimizers like Adam , SGD , adagrad etc . 
 
 then **optim.step** is used to initiate gradient descents .
+
+
+### Loss functions
+There are other loss functions than `(prediction - labels).sum()` .
 
 ### Model
 we need to use , save and load a model . 
@@ -69,4 +74,12 @@ torch.save(model.state_dict(), filepath)
 #### Load
 ```python
 base_model = torch.load(filepath)
+```
+
+To load model weights, you need to create an instance of the same model first, and then load the parameters using the code below : 
+
+```python
+model = nn.Sequential( *layers )
+model.load_state_dict(torch.load('model_weights.pth'))
+model.eval()
 ```
