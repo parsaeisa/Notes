@@ -1,6 +1,11 @@
 # PyTorch
 
 PyTorch is an extension of NumPy which can interact with GPU . 
+topics : 
+* tensor
+* optimizer
+* loss function
+* model
 
 ## Tensor
 we can make torch tensors from :
