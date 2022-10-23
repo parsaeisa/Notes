@@ -1,7 +1,5 @@
 # PyTorch
 
-when a model is defined , it must inherit torch.nn.Module
-
 ### Tensor
 we can make torch tensors from :
 * python arrays --> `tensor` method
@@ -51,3 +49,24 @@ SGD is one of the most usefull optimizers which computes gradient descent and de
 **torch.optim** has famous optimizers like Adam , SGD , adagrad etc . 
 
 then **optim.step** is used to initiate gradient descents .
+
+### Model
+we need to use , save and load a model . 
+
+A model must inherit torch.nn.Module
+
+#### Define model
+There are lots of models in PyTorch , for example a sequential model : 
+```python
+model = nn.Sequential( *layers )
+```
+
+#### Save 
+```python
+torch.save(model.state_dict(), filepath)
+```
+
+#### Load
+```python
+base_model = torch.load(filepath)
+```
