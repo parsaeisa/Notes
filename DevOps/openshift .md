@@ -1,4 +1,4 @@
-# OpenShit
+# OpenShift
 
 `-f` is always for opening a file . 
 
