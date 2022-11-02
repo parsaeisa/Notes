@@ -27,3 +27,6 @@ to achieve this , we need convert classes to matrices . for example
 etc .
 
 in order to get this representation , we use to_categoricall method . 
+
+## Useful links 
+import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
