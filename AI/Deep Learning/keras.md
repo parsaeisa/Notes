@@ -28,5 +28,15 @@ etc .
 
 in order to get this representation , we use to_categoricall method . 
 
+**plot_model** plots model very nicely and saves it into a file . 
+```python
+plot_model(
+    model_temp_1,
+    to_file="structure_1.png",
+    show_shapes=True,
+    show_layer_names=True,
+)
+```
+
 ## Useful links 
 import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
