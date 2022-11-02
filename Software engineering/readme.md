@@ -13,3 +13,7 @@ components :
 * Load balancers
 * brokers
 * ... To complete
+
+### Database 
+
+Don't store a single value in more than one place ( multiple records or tables ) in database --> it denies **redundancy** .
