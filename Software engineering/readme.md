@@ -25,7 +25,7 @@ consider you have a table which has the records of ali's each objects count , a 
 |-------|-----------------|-----------------|-----------------|
 |  ali  |     45          |     4500        |     450         |
 
-If a new object is added , you need a new migration and your database would crash . 
+If a new object is added , you need a new migration and your database would be crushed . 
 Thus you need to change the structure of your tables , you can convert it to the structure below : 
 
 | char  |      object       | count   |
