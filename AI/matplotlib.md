@@ -1,14 +1,5 @@
 # Matplotlib
 
-## Histogram
-
-drawing the histogram of a picture with 256 brightness layers :
-
-```python
-plt.hist(image.flatten(),256,[0,256], color = 'r')
-plt.show()
-```
-
 showing bunch of images in a good format : 
 * A method from torch called `make_grid` is used here .
 
@@ -20,4 +11,13 @@ for images, _ in train_loader:
     plt.axis('off')
     plt.imshow(make_grid(images, nrow=16).permute((1, 2, 0)))
     break
+```
+
+## Histogram
+
+drawing the histogram of a picture with 256 brightness layers :
+
+```python
+plt.hist(image.flatten(),256,[0,256], color = 'r')
+plt.show()
 ```
