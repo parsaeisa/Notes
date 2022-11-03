@@ -38,5 +38,12 @@ plot_model(
 )
 ```
 
+## Callbacks 
+Call backs are methods that are executed after each epoch . here you can see some callbacks . 
+
+**optimizers.schedules** is used for learning rate decay . 
+
+**TensorBoards** gives a good visualizing on model . 
+
 ## Useful links 
 import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
