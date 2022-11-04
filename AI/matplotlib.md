@@ -13,6 +13,16 @@ for images, _ in train_loader:
     break
 ```
 
+Showing two images side by side with title and size configuration : 
+```python
+plt.figure(figsize = (20,30))
+plt.subplot(121),plt.imshow(im,cmap = 'gray')
+plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(edges,cmap = 'gray')
+plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
+plt.show()
+```
+
 ## Histogram
 
 drawing the histogram of a picture with 256 brightness layers :
