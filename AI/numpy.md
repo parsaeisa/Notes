@@ -24,3 +24,5 @@ plt.figure(figsize=(16, 16))
 plt.imshow(res, cmap='gray')
 ```
 
+`np.prod` : takes an array or a tuple (slice) and calculates multiplication of all of its memberes . 
+
