@@ -43,7 +43,36 @@ Call backs are methods that are executed after each epoch . here you can see som
 
 **optimizers.schedules** is used for learning rate decay . 
 
-**TensorBoards** gives a good visualizing on model . 
+**TensorBoards** gives a good visualizing on model . to use tensorboard use this :
+```python
+import datetime
+log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+```
+
+then add this callaback to your callbacks in fit method .like this : 
+```python
+# Fit model
+  history = model.fit(
+    x_train, 
+    y_train, 
+    batch_size = 64, 
+    epochs = 20,
+    validation_data=(x_test, y_test),
+    callbacks=[tensorboard_callback]
+  )
+```
+
+Then for seeing the charts : 
+
+in google colab : 
+```python
+%load_ext tensorboard
+%tensorboard --logdir logs/fit
+```
+
+in terminal : Same lines just without % at the begininng . 
+[reference](https://www.tensorflow.org/tensorboard/get_started)
 
 ## Foot of kuzeh gari
 
