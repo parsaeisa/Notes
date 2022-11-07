@@ -53,6 +53,8 @@ While multiclass classification , when you use softmax and an output layer with 
 
 This is because you didn't apply to_categorical method on your labels  . 
 
+* Sometimes val_loss is NaN because of mismatching types . 
+
 ## Useful links 
 import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
 
