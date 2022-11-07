@@ -45,5 +45,14 @@ Call backs are methods that are executed after each epoch . here you can see som
 
 **TensorBoards** gives a good visualizing on model . 
 
+## Foot of kuzeh gari
+
+While multiclass classification , when you use softmax and an output layer with for example 10 units , you may face this error : 
+
+> ValueError: Shapes (64, 1) and (64, 10) are incompatible site:stackoverflow.com
+
+This is because you didn't apply to_categorical method on your labels  . 
+
 ## Useful links 
 import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
+
