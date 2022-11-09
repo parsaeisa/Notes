@@ -6,4 +6,4 @@
 
 `go-sec` 
 
-`sem-grep'
+`sem-grep`
