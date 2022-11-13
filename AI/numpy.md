@@ -15,6 +15,12 @@ each element in a to the number .
 
 b is a numpy array .
 
+## Methods 
+
+`unique` extracts unique elements of an array - parameters : array
+
+`full` creates an array with same value - parameters : array shape , value . 
+
 #### stacking two images side by side
 
 ```python
