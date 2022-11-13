@@ -38,6 +38,9 @@ plot_model(
 )
 ```
 
+## Layers
+`Dropout` 
+
 ## Callbacks 
 Call backs are methods that are executed after each epoch . here you can see some callbacks . 
 
@@ -84,6 +87,19 @@ This is because you didn't apply to_categorical method on your labels  .
 
 * Sometimes val_loss is NaN because of mismatching types . 
 
+#### First thing to apply on data 
+
+these 2 lines normalize your input data . 
+
+```python
+x_train_1 = x_train_1.astype(float) / 255.0
+x_test_1 = x_test_1.astype(float) / 255.0
+
+y_train_1 = to_categorical(y_train_1, num_classes=10)
+y_test_1 = to_categorical(y_test_1, num_classes=10)
+```
+
 ## Useful links 
 import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
 
+keras , cifar : https://www.kaggle.com/code/ektasharma/simple-cifar10-cnn-keras-code-with-88-accuracy/notebook#Reading-the-CIFAR-10-dataset-from-Keras-datasets-&-setting-train-and-test-data
