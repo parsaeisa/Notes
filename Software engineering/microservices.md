@@ -16,6 +16,7 @@ One of the best ways to break down the application into multiple services is **b
 * Http requests
 * Message broker : like Rabbit MQ and Nats .
 * Service Mesh which is something in k8s .
+* gRPC
 
 ## Downsides of Micro Service
 
