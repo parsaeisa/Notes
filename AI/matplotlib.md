@@ -23,6 +23,29 @@ plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
 plt.show()
 ```
 
+## Subplots 
+An example with set_title and axis off . 
+```python
+f, axarr = plt.subplots(2, 2)
+axarr[0,0].imshow(img, cmap = cm.Greys_r)
+axarr[0,0].set_title("Rank = 512")
+axarr[0,0].axis('off')
+
+axarr[0,1].imshow(img, cmap = cm.Greys_r)
+axarr[0,1].set_title("Rank = %s" % 128)
+axarr[0,1].axis('off')
+
+axarr[1,0].imshow(img, cmap = cm.Greys_r)
+axarr[1,0].set_title("Rank = %s" % 32)
+axarr[1,0].axis('off')
+
+axarr[1,1].imshow(img, cmap = cm.Greys_r)
+axarr[1,1].set_title("Rank = %s" % 16)
+axarr[1,1].axis('off')
+
+plt.show()
+```
+
 ## Histogram
 
 drawing the histogram of a picture with 256 brightness layers :
