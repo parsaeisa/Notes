@@ -42,20 +42,6 @@ docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=Pass123!" -p 1433:1433 --name sqls
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Pass123!' -i q1.sql 
 ```
 
-* You can name your container with --name parameter while running the image . This can help you to interact more easily with containers .
-
-### Interacting with containers
-#### Copy file in container
-``` bash 
-sudo docker cp db.sql <container id>:/
-```
-#### Go to container terminal
-```bash 
-sudo docker exec -it <container id> bash
-```
-
-* You can get container Id from docker ps command .
-
 ### Open telemetry
 ```bash 
  docker run --name jaeger \
@@ -73,3 +59,17 @@ sudo docker exec -it <container id> bash
 ```
 
 jeager runs on http://127.0.0.1:16686/ .
+
+* You can name your container with --name parameter while running the image . This can help you to interact more easily with containers .
+
+## Interacting with containers
+### Copy file in container
+``` bash 
+sudo docker cp db.sql <container id>:/
+```
+### Go to container terminal
+```bash 
+sudo docker exec -it <container id> bash
+```
+
+* You can get container Id from docker ps command .
