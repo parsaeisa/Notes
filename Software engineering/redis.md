@@ -1,4 +1,4 @@
-1# Redis
+# Redis
 
 The **Re**mote **Di**ctionary **S**erver .
 
