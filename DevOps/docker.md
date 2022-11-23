@@ -1,5 +1,7 @@
 # Docker
 
+Docker is an easier way to run projects and their dependencies . 
+
 ## Basic commands
 
 to see the list of pulled Images : 
