@@ -1,5 +1,7 @@
 # Microservices architecture
 
+The more number of services talk to each other , the higher goes the latency . 
+
 Microservices architecture is against Monolith architecture . 
 
 ## Problems of Monolith architecture 
