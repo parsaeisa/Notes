@@ -1,5 +1,29 @@
 # Docker
 
+## Basic commands
+
+to see the list of pulled Images : 
+```bash
+docker images
+```
+
+to get running containers :
+```bash
+docker ps
+```
+
+to pull a new Image :
+```bash
+docker pull <image name>:<image version>
+```
+
+to runa container from an image :
+```bash
+docker run <image name>:<image version>
+```
+
+
+
 ## Useful commands
 
 This is the place where I put docker commands which are usefull at least for me .
