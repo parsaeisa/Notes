@@ -24,30 +24,30 @@ The goredis package is being used here : https://github.com/go-redis/redis
 
 ```go
 opts := &goredis.FailoverOptions{
-			OnConnect:             ... ,
-			Username:              ... ,
-			Password:              ... ,
-			DB:                    ... ,
-			MaxRetries:            ... ,
-			MinRetryBackoff:       ... ,
-			MaxRetryBackoff:       ... ,
-			DialTimeout:           ... ,
-			ReadTimeout:           ... ,
-			WriteTimeout:          ... ,
-			PoolSize:              ... ,
-			MinIdleConns:         ... ,
-			MaxConnAge:            ... ,
-			PoolTimeout:           ... ,
-			IdleTimeout:           ... ,
-			IdleCheckFrequency:    ... ,
-			// the bottom options are for redis sentinel 
-			MasterName:            ... ,
-			SentinelAddrs:         ... ,
-            SentinelPassword:      ... ,
-            SlaveOnly:             ... ,
-            UseDisconnectedSlaves: ... ,
-		}
-		a.RedisClient = goredis.NewFailoverClient(opts)
+    OnConnect:             ... ,
+    Username:              ... ,
+    Password:              ... ,
+    DB:                    ... ,
+    MaxRetries:            ... ,
+    MinRetryBackoff:       ... ,
+    MaxRetryBackoff:       ... ,
+    DialTimeout:           ... ,
+    ReadTimeout:           ... ,
+    WriteTimeout:          ... ,
+    PoolSize:              ... ,
+    MinIdleConns:         ... ,
+    MaxConnAge:            ... ,
+    PoolTimeout:           ... ,
+    IdleTimeout:           ... ,
+    IdleCheckFrequency:    ... ,
+    // the bottom options are for redis sentinel 
+    MasterName:            ... ,
+    SentinelAddrs:         ... ,
+    SentinelPassword:      ... ,
+    SlaveOnly:             ... ,
+    UseDisconnectedSlaves: ... ,
+}
+a.RedisClient = goredis.NewFailoverClient(opts)
 ```
 as you can see you define two objects , the first one is options and the other one is client and 
 that option object is passed to client .
