@@ -31,12 +31,12 @@ docker run <image name>:<image version>
 This is the place where I put docker commands which are usefull at least for me .
 I hope this repo would help you !!
 
-## Mysql
+### Mysql
 ```bash 
 sudo docker run -d -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -p 3307:3306 mariadb:10.2.14
 ```
 
-## Mssql
+### Mssql
 ```bash 
 docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=Pass123!" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:latest
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Pass123!' -i q1.sql 
@@ -44,19 +44,19 @@ docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=Pass123!" -p 1433:1433 --name sqls
 
 * You can name your container with --name parameter while running the image . This can help you to interact more easily with containers .
 
-## Interacting with containers
-### Copy file in container
+### Interacting with containers
+#### Copy file in container
 ``` bash 
 sudo docker cp db.sql <container id>:/
 ```
-### Go to container terminal
+#### Go to container terminal
 ```bash 
 sudo docker exec -it <container id> bash
 ```
 
 * You can get container Id from docker ps command .
 
-## Open telemetry
+### Open telemetry
 ```bash 
  docker run --name jaeger \
   -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
