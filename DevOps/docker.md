@@ -9,7 +9,7 @@ to see the list of pulled Images :
 docker images
 ```
 
-to get running containers :
+to get running containers (and seeing their IDs):
 ```bash
 docker ps
 ```
@@ -24,6 +24,15 @@ to runa container from an image :
 docker run <image name>:<image version>
 ```
 
+to stop a container : 
+```bash
+docker stop <container id>
+```
+
+## Flags
+`-d` distpaches and returns the terminal 
+
+`--name` with this you can assign a name to your container and make it easier to work with . 
 
 
 ## Useful commands
