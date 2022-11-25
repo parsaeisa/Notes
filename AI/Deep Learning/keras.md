@@ -99,6 +99,24 @@ y_train_1 = to_categorical(y_train_1, num_classes=10)
 y_test_1 = to_categorical(y_test_1, num_classes=10)
 ```
 
+### New methods to learn
+
+`variable_scope`
+
+`Session`
+
+`Graph`
+
+`placeholder`
+
+`random_normal_initializer`
+
+`constant_initializer`
+
+`get_collection`
+
+`tf.train.AdamOptimizer(self.lr).minimize(self.loss)`
+
 ## Useful links 
 import models : https://www.tensorflow.org/api_docs/python/tf/keras/models
 
