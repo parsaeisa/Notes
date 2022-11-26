@@ -31,5 +31,8 @@ Now a new object and its count would be a new record in your database .
 * redis sentinel
 * sharding in MySQL or mariadb
 
+## Sharding
+I think sharding is an operation on Datas .
+
 ### Indexing in mariadb 
 https://www.techonthenet.com/mariadb/indexes.php
