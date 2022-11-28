@@ -99,6 +99,7 @@ panic(err)
 * Redis locker
 * Resp 
 * Redsync
+* Redis datatypes
 
 Continue watching : 
 https://www.youtube.com/watch?v=OqCK95AS-YE
