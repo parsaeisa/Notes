@@ -7,3 +7,15 @@
 `go-sec` 
 
 `sem-grep`
+
+## To Search about
+
+This is an error message from a container scanner script :
+
+> zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).
+
+**Words that can be important** :
+* heap-based buffer
+* over-read buffer overflow
+* inflate
+* zlib
