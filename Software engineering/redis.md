@@ -15,6 +15,8 @@ A Redis command in one handler is estimated 1 pt, the base of estimation .
 
 `AddHook`
 
+Search this word : "Redis datatypes"
+
 ## Add redis to project
 
 In project , we should define a new redis client which connects to a redis server .
