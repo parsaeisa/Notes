@@ -10,6 +10,12 @@
 
 `segfault` is an acronym for segmentation fault , and this happens when app crashes while its trying to read from or write to a not permitted memory . 
 
+#### A program's segments
+* test : for code and instructions 
+* data : variables and arrays 
+* stack : used for temporary variables , functions and subroutines . 
+* heap : for variables which are defined during runtime . 
+
 ## To Search about
 
 This is an error message from a container scanner script :
