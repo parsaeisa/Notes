@@ -8,6 +8,8 @@
 
 `sem-grep`
 
+`segfault` is an acronym for segmentation fault , and this happens when app crashes while its trying to read from or write to a not permitted memory . 
+
 ## To Search about
 
 This is an error message from a container scanner script :
