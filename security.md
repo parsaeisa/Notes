@@ -16,6 +16,9 @@
 * stack : used for temporary variables , functions and subroutines . 
 * heap : for variables which are defined during runtime . 
 
+
+`trivy` is a tool that can perform scanning . 
+
 ## To Search about
 
 This is an error message from a container scanner script :
