@@ -1,5 +1,11 @@
 # Security
 
+There is two stages while security scannings : 
+* SAST : Statict application security testing , which is just applied on base codes .  
+* DAST : Dynamic application security testing which is applied on application after deployments . It needs a new server to deploy our application on . 
+
+# Some tools
+
 `kics` finds security vulnerabilities, compliance issues, and infrastructure misconfigurations .
 
 `zap-cli` a docker images which is useful in  DAST .
