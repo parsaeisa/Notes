@@ -29,6 +29,13 @@ this is the repo : https://github.com/aquasecurity/trivy
 
 And this is the link where you can scan any image online : https://trivy.dev/
 
+## Solutions 
+This section is a toolbox of solutions to fix a security issue . 
+
+Sometimes images ( docker images ) has vulnerabilities . images of golang , debian , alpine and etc . In this situaions , the solution is to change the image verision ( the latest version is not safe always . ) 
+
+* alpine:3.16 has no vulnerabilities , but other version do . 
+
 ## To Search about
 
 This is an error message from a container scanner script :
