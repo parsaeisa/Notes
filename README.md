@@ -19,17 +19,12 @@
 * what was that fast json unmarshalling golang package ? 
 * gosec
 
-
-#### Database : 
-* cassandra 
-* mongo
-* postgre
-
 #### Concepts :
 * distributed systems 
 * cloud computing 
 * data engineering 
 * microservices 
+* push notification
 
 #### topics :
 * chats
