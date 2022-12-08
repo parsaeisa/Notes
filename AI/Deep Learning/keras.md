@@ -117,6 +117,29 @@ a = im_da_gen.flow_from_directory(
 )
 ```
 
+In order to split it to validation and test sets , it is recommended to use seperated directories with the mentioned structure ( one for train and the other for test set) . but if you only have one directory use this code :
+```python
+datagen = ImageDataGenerator(validation_split=0.2 , rescale= 1./255)
+
+train_iterator = datagen.flow_from_directory(
+    directory=images_dir,
+    target_size=(224, 224),
+    color_mode="rgb",
+    batch_size=32,
+    class_mode="categorical",
+    subset='training'
+)
+
+validation_iterator = datagen.flow_from_directory(
+    directory=images_dir,
+    target_size=(224, 224),
+    color_mode="rgb",
+    batch_size=32,
+    class_mode="categorical",
+    subset='validation'
+)
+```
+
 ## Foot of kuzeh gari
 
 While multiclass classification , when you use softmax and an output layer with for example 10 units , you may face this error : 
