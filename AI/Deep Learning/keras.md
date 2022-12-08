@@ -101,6 +101,22 @@ Convolutions and Backpropagations : https://pavisj.medium.com/convolutions-and-b
 * same
 * valid
 
+## Custom dataset
+
+For making custom dataset , you should create a directory . In that directory , you must create a directory for each of your classes , and then put related data in that directory . and then use this code : 
+```python
+im_da_gen = ImageDataGenerator()
+a = im_da_gen.flow_from_directory(
+    directory=images_dir,
+    target_size=(224, 224),
+    color_mode="rgb",
+    batch_size=32,
+    class_mode="categorical",
+    shuffle=True,
+    seed=42
+)
+```
+
 ## Foot of kuzeh gari
 
 While multiclass classification , when you use softmax and an output layer with for example 10 units , you may face this error : 
