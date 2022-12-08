@@ -77,6 +77,25 @@ in google colab :
 in terminal : Same lines just without % at the begininng . 
 [reference](https://www.tensorflow.org/tensorboard/get_started)
 
+## CNN
+
+CNN is acronym for Convolutional neural networks is a network which contains twi types of layers : 
+* Conv2D 
+```python
+from tensorflow.keras.layers import Conv2D
+Conv2D(filters, kernel_size,
+       strides, padding,
+       activation, input_shape)
+```
+
+* MaxPooling 
+```python
+MaxPooling2D(pool_size, strides, padding)
+```
+
+this link was helpfull : https://towardsdatascience.com/coding-a-convolutional-neural-network-cnn-using-keras-sequential-api-ec5211126875
+
+
 ## Foot of kuzeh gari
 
 While multiclass classification , when you use softmax and an output layer with for example 10 units , you may face this error : 
