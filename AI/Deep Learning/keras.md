@@ -95,6 +95,11 @@ MaxPooling2D(pool_size, strides, padding)
 
 this link was helpfull : https://towardsdatascience.com/coding-a-convolutional-neural-network-cnn-using-keras-sequential-api-ec5211126875
 
+Convolutions and Backpropagations : https://pavisj.medium.com/convolutions-and-backpropagations-46026a8f5d2c
+
+### Types of paddings in keras 
+* same
+* valid
 
 ## Foot of kuzeh gari
 
