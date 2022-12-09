@@ -140,6 +140,24 @@ validation_iterator = datagen.flow_from_directory(
 )
 ```
 
+While fitting these data to the model , we can pass these `train_iterator` and `validation_iterator` as train and validation data to fit method .
+```python
+STEP_SIZE_TRAIN=train_generator.n//train_generator.batch_size
+STEP_SIZE_VALID=valid_generator.n//valid_generator.batch_size
+model.fit_generator(generator=train_generator,
+                    steps_per_epoch=STEP_SIZE_TRAIN,
+                    validation_data=valid_generator,
+                    validation_steps=STEP_SIZE_VALID,
+                    epochs=10
+)
+
+# evaluation
+model.evaluate_generator(generator=valid_generator,
+steps=STEP_SIZE_VALID)
+```
+
+based on https://vijayabhaskar96.medium.com/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720 . 
+
 ## Foot of kuzeh gari
 
 While multiclass classification , when you use softmax and an output layer with for example 10 units , you may face this error : 
