@@ -17,18 +17,14 @@
 #### Golang : 
 * concurrency 
 * what was that fast json unmarshalling golang package ? 
-
-
-#### Database : 
-* cassandra 
-* mongo
-* postgre
+* gosec
 
 #### Concepts :
 * distributed systems 
 * cloud computing 
 * data engineering 
 * microservices 
+* push notification
 
 #### topics :
 * chats
