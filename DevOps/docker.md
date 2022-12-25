@@ -29,6 +29,11 @@ to stop a container :
 docker stop <container id>
 ```
 
+Get to the shell : 
+```bash
+docker exec -it [container-id] bash
+```
+
 ## Flags
 `-d` distpaches and returns the terminal 
 

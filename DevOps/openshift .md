@@ -15,3 +15,12 @@ For logging in to our account we must copy the login command from oc dashboard .
 `oc get pods` shows deployed pods' names . 
 
 `oc rsh [pod name]` makes an ssh remote shell to specified container . 
+
+# Helm
+this needs a seperate file , move these notes to another file . 
+
+## Commands
+
+```bash
+helm dependency update <path>
+```

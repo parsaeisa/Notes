@@ -1,5 +1,11 @@
 # Python
 
+Iterating thourgh an array with index : 
+```python
+for i, c in enumerate(contours):
+  pass
+```
+
 ## OS library
 A library for working with files . 
 

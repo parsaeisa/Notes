@@ -32,7 +32,7 @@ Now a new object and its count would be a new record in your database .
 * sharding in MySQL or mariadb
 
 ## Sharding
-I think sharding is an operation on Datas .
+I think sharding is an operation on Datas . Some criterion is used to partition the data among the different set of slave/master databases . 
 
 ### Indexing in mariadb 
 https://www.techonthenet.com/mariadb/indexes.php
