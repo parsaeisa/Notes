@@ -39,6 +39,31 @@ docker exec -it [container-id] bash
 
 `--name` with this you can assign a name to your container and make it easier to work with . 
 
+## Ineracting with registries 
+Registry is a place which has images . The biggest registry is dockerhub . sometimes companies have their own private registry . 
+
+login to a registry :
+```bash
+doker login -u [username] -p [password] [registry address]
+```
+
+
+### Push image
+On occasion, we must push our images to a registery. These are commands for that objective.
+
+First we must tag the image :
+```bash
+docker tag IMAGE[:TAG] [REGISTRYHOST/address to image]
+```
+
+Then we can push the image : 
+```bash
+docker push [name]:[tag]
+```
+this is the name of image or the registry . 
+
+### Push to gitlab registry
+
 
 ## Useful commands
 
