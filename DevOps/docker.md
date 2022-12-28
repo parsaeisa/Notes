@@ -112,3 +112,4 @@ sudo docker exec -it <container id> bash
 ```
 
 * You can get container Id from docker ps command .
+* Sometimes /bin/bash works instead of bash . 
