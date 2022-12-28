@@ -63,7 +63,7 @@ docker push [name]:[tag]
 this is the name of image or the registry . 
 
 ### Push to gitlab registry
-
+https://docs.gitlab.com/ee/user/packages/container_registry/
 
 ## Useful commands
 
