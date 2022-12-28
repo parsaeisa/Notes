@@ -65,6 +65,19 @@ this is the name of image or the registry .
 ### Push to gitlab registry
 https://docs.gitlab.com/ee/user/packages/container_registry/
 
+## Interacting with containers
+### Copy file in container
+``` bash 
+sudo docker cp db.sql <container id>:/
+```
+### Go to container terminal
+```bash 
+sudo docker exec -it <container id> bash
+```
+
+* You can get container Id from docker ps command .
+* Sometimes /bin/bash works instead of bash . 
+
 ## Useful commands
 
 This is the place where I put docker commands which are usefull at least for me .
@@ -100,16 +113,3 @@ docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=Pass123!" -p 1433:1433 --name sqls
 jeager runs on http://127.0.0.1:16686/ .
 
 * You can name your container with --name parameter while running the image . This can help you to interact more easily with containers .
-
-## Interacting with containers
-### Copy file in container
-``` bash 
-sudo docker cp db.sql <container id>:/
-```
-### Go to container terminal
-```bash 
-sudo docker exec -it <container id> bash
-```
-
-* You can get container Id from docker ps command .
-* Sometimes /bin/bash works instead of bash . 
