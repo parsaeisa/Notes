@@ -24,6 +24,18 @@ include:
       - 'foo2.yml'
 ```
 
+* While including a job , we can add rules for them in the below format : 
+
+```bash
+
+include:
+  - project: 'reference/project'
+    file:
+      - 'foo1.yml'
+    rule:
+      - if: '$CI_COMMIT_BRANCH == "master"' # An example condition 
+```
+
 In variables part you define variables . variables are 
 uppercased . 
 
