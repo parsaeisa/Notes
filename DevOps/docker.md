@@ -39,6 +39,8 @@ docker exec -it [container-id] bash
 
 `--name` with this you can assign a name to your container and make it easier to work with . 
 
+
+
 ## Ineracting with registries 
 Registry is a place which has images . The biggest registry is dockerhub . sometimes companies have their own private registry . 
 
@@ -65,6 +67,8 @@ this is the name of image or the registry .
 ### Push to gitlab registry
 https://docs.gitlab.com/ee/user/packages/container_registry/
 
+
+
 ## Interacting with containers
 ### Copy file in container
 ``` bash 
@@ -77,6 +81,8 @@ sudo docker exec -it <container id> bash
 
 * You can get container Id from docker ps command .
 * Sometimes /bin/bash works instead of bash . 
+
+
 
 ## Useful commands
 
