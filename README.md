@@ -44,9 +44,6 @@
 * nginx
 * k8s
 
-#### cloud tools : 
-* ceph 
-
 #### Data engineering tools :
 * spark 
 
