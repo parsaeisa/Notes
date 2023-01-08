@@ -20,7 +20,7 @@
 * gosec
 
 #### Concepts :
-* distributed systems 
+* distributed systems : designing data intencive applications
 * cloud computing 
 * data engineering 
 * microservices 
