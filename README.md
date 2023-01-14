@@ -20,7 +20,7 @@
 * gosec
 
 #### Concepts :
-* distributed systems 
+* distributed systems : designing data intencive applications
 * cloud computing 
 * data engineering 
 * microservices 
@@ -29,6 +29,8 @@
 #### topics :
 * chats
 * mail servers
+* Websocket
+* CDN
 
 #### what is it ? 
 * A RESP-compatible geofence sharding and replication proxy server for Tile38
@@ -42,9 +44,7 @@
 * jenkins
 * nginx
 * k8s
-
-#### cloud tools : 
-* ceph 
+* cloud flare DNS
 
 #### Data engineering tools :
 * spark 
