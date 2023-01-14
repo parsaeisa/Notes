@@ -31,6 +31,7 @@
 * mail servers
 * Websocket
 * CDN
+* Headless server
 
 #### what is it ? 
 * A RESP-compatible geofence sharding and replication proxy server for Tile38
