@@ -30,6 +30,7 @@
 * chats
 * mail servers
 * Websocket
+* CDN
 
 #### what is it ? 
 * A RESP-compatible geofence sharding and replication proxy server for Tile38
@@ -43,6 +44,7 @@
 * jenkins
 * nginx
 * k8s
+* cloud flare DNS
 
 #### Data engineering tools :
 * spark 
