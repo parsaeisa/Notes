@@ -3,6 +3,7 @@
 ##  What it has : 
 * service account : which is a fake account 
 * api server 
+* Headless services
 
 ## Job 
 
