@@ -58,6 +58,16 @@ and call it like this :
     deploy_project $project
 ```
 
+**alias**
+
+example : 
+```bash
+alias swagger='docker run --rm -it  --user $(id -u):$(id -g) -e GOPATH=$(go env GOPATH):/go -v $HOME:$HOME -w $(pwd) quay.io/goswagger/swagger'
+```
+
+Before the above command, if you type swagger in terminal you will get nothing.
+But after you entered this command, swagger acts like a new command in your terminal.
+
 ## curl
 curl is used to make a http request . 
 
