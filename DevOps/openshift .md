@@ -16,6 +16,48 @@ For logging in to our account we must copy the login command from oc dashboard .
 
 `oc rsh [pod name]` makes an ssh remote shell to specified container . 
 
+## Yaml files
+
+It has a kind, and value for that kind can be:
+* Deployment
+* Template
+* ConfigMap
+* CronJob
+* HorizontalPodAutoscaler
+* Ingress
+* Service
+* ServiceMonitor
+* ServiceAccount
+
+You can create a deployment by using this command : 
+```bash
+oc create -f <path to the deloyment yml file>
+```
+
+### Deployment 
+a simple deployment yaml file is shown here :
+```helm
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-openshift
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-openshift
+  template:
+    metadata:
+      labels:
+        app: hello-openshift
+    spec:
+      containers:
+        - name: hello-openshift
+          image: openshift/hello-openshift:latest
+          ports:
+            - containerPort: 80
+```
+
 # Helm
 this needs a seperate file , move these notes to another file . 
 
