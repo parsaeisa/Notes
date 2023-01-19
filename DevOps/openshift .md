@@ -29,11 +29,6 @@ It has a kind, and value for that kind can be:
 * ServiceMonitor
 * ServiceAccount
 
-You can create a deployment by using this command : 
-```bash
-oc create -f <path to the deloyment yml file>
-```
-
 ### Deployment 
 a simple deployment yaml file is shown here :
 ```helm
@@ -56,6 +51,10 @@ spec:
           image: openshift/hello-openshift:latest
           ports:
             - containerPort: 80
+```
+You can create a deployment by using this command : 
+```bash
+oc create -f <path to the deloyment yml file>
 ```
 
 # Helm
