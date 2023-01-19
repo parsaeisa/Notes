@@ -57,6 +57,11 @@ You can create a deployment by using this command :
 oc create -f <path to the deloyment yml file>
 ```
 
+delte a deployment :
+```bash
+oc delete deployment <deployment name>
+```
+
 # Helm
 this needs a seperate file , move these notes to another file . 
 
