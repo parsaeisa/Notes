@@ -1,8 +1,8 @@
 # MxNet
 
 Here I wanted to right `step`s to write a dqn .This document has two sections : 
-* What we need 
-* Procedure 
+* [What we need ](https://github.com/parsaeisa/Notes/blob/main/AI/Deep%20Learning/mxnet.md#what-we-need)
+* [Procedure](https://github.com/parsaeisa/Notes/blob/main/AI/Deep%20Learning/mxnet.md#procedure)
 
 ## What we need 
 
