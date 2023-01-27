@@ -10,3 +10,17 @@ for i, c in enumerate(contours):
 A library for working with files . 
 
 `os.listdir("path")` returns a list of file names in a directory . 
+
+## Data structures 
+
+Most common data structures that I normally use are : 
+* list
+* dictionary
+* Stack
+* Queue
+
+But there are some other data structures that are usefull like Deque 
+
+### Deque
+
+
