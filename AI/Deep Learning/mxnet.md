@@ -70,3 +70,11 @@ Loss function : `loss.L2Loss()` , this loss has a backward method that should be
 In my first reinforcement learning practice [in this link](https://github.com/parsaeisa/Reinforcemnet_learning_first_prac) We get an initial state and then try all of actions to get to the next state . 
 
 Then we obtain the best action by the value of the state that the action leads the agent to . 
+
+Some procedures 
+
+When the replay buffer is fulled , we call our loss function's backward prop and take an step with our trainer . 
+
+I think the `trainer` is already defined in mxnet library and we don't need to write it from scratch . 
+
+Some procedures 
