@@ -92,6 +92,11 @@ panic(err)
 }
 ```
 
+## Redis-cli
+To run redis-cli type `redis-cli` in terminal. 
+
+One of the advantages of key-value stores is their simple interace. So you can see other commands very easily.
+
 ## Other Redis topics
 
 * Redis sentinel : Is used to make redis highly available ,
