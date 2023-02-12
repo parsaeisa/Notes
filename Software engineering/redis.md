@@ -97,6 +97,41 @@ To run redis-cli type `redis-cli` in terminal.
 
 One of the advantages of key-value stores is their simple interace. So you can see other commands very easily.
 
+## Redis sorted set
+Is a sorted non-repeating groups of strings. To each member in the set a score is assigned. Multiple members can share a same score.
+
+### Creating
+In redis-cli zadd is the command used to create a sortedset. 
+
+When we add a new member we should assign it a score.
+
+```bash
+# zadd <the key that contains sorted set> <score> <member>
+zadd firstss 2 "Parsa"
+```
+
+We can add multiple members in one line :
+```bash
+# zadd <the key that contains sorted set> [<score> <member>][n]
+zadd faveGuitarists 4 "Stephen Malkmus" 2 "Rosetta Tharpe" 3 "Bola Sete" 3 "Doug Martsch" 8 "Elizabeth Cotten" 12 "Nancy Wilson"
+```
+
+### Retrieve data
+`zrange` command is used to show members with rank in a specific range.
+```bash 
+# zrange <key containing sorted set> <starting rank> <ending rank>
+zrange faveGuitarists 0 3
+```
+
+ranks can be negative too. -1 is for the last member ( with worst rank), -2 is for second last member and so on.
+
+With `WITHSCORES` we can show scores : 
+```bash
+zrange faveGuitarists 5 6 WITHSCORES
+```
+
+reference : https://www.digitalocean.com/community/cheatsheets/how-to-manage-sorted-sets-in-redis
+
 ## Other Redis topics
 
 * Redis sentinel : Is used to make redis highly available ,
