@@ -132,6 +132,11 @@ zrange faveGuitarists 5 6 WITHSCORES
 
 reference : https://www.digitalocean.com/community/cheatsheets/how-to-manage-sorted-sets-in-redis
 
+### Concepts 
+The data structure used to create a sorted set is "Skiplist".
+You can see the description about Skiplist in [here](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#skiplist).
+
+
 ## Other Redis topics
 
 * Redis sentinel : Is used to make redis highly available ,
