@@ -17,6 +17,10 @@ A Redis command in one handler is estimated 1 pt, the base of estimation .
 
 Search this word : "Redis datatypes"
 
+But redis has more application rather than cahing system which you can see in the image below : 
+
+![](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/images/redis_applications.jpeg)
+
 ## Add redis to project
 
 In project , we should define a new redis client which connects to a redis server .
