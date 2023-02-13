@@ -19,7 +19,7 @@ Search this word : "Redis datatypes"
 
 But redis has more application rather than cahing system which you can see in the image below : 
 
-<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/images/redis_applications.jpeg" width="100" height="400">
+<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/images/redis_applications.jpeg" width="200" height="400">
 
 ## Add redis to project
 
