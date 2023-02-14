@@ -4,6 +4,7 @@ To Learn :
 - cassandra
 - mongo
 - postgre sql
+- influxdb
 
 ## Database design
 
