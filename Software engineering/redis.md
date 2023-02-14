@@ -101,6 +101,45 @@ To run redis-cli type `redis-cli` in terminal.
 
 One of the advantages of key-value stores is their simple interace. So you can see other commands very easily.
 
+## Redis hook
+
+Hook is something that executes by some triggers like : connection, command and pipeline.
+example ( in go-redis v9) :
+```go
+import "github.com/redis/go-redis/v9"
+
+type redisHook struct{}
+
+var _ redis.Hook = redisHook{}
+
+func (redisHook) DialHook(hook redis.DialHook) redis.DialHook {
+	return func(ctx context.Context, network, addr string) (net.Conn, error) {
+		fmt.Printf("dialing %s %s\n", network, addr)
+		conn, err := hook(ctx, network, addr)
+		fmt.Printf("finished dialing %s %s\n", network, addr)
+		return conn, err
+	}
+}
+
+func (redisHook) ProcessHook(hook redis.ProcessHook) redis.ProcessHook {
+	return func(ctx context.Context, cmd redis.Cmder) error {
+		fmt.Printf("starting processing: <%s>\n", cmd)
+		err := hook(ctx, cmd)
+		fmt.Printf("finished processing: <%s>\n", cmd)
+		return err
+	}
+}
+
+func (redisHook) ProcessPipelineHook(hook redis.ProcessPipelineHook) redis.ProcessPipelineHook {
+	return func(ctx context.Context, cmds []redis.Cmder) error {
+		fmt.Printf("pipeline starting processing: %v\n", cmds)
+		err := hook(ctx, cmds)
+		fmt.Printf("pipeline finished processing: %v\n", cmds)
+		return err
+	}
+}
+```
+
 ## Redis sorted set
 Is a sorted non-repeating groups of strings. To each member in the set a score is assigned. Multiple members can share a same score.
 
