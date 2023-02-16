@@ -4,6 +4,8 @@ To Learn :
 - cassandra
 - mongo
 - postgre sql
+- influxdb
+- elastic search
 
 ## Database design
 
@@ -36,3 +38,33 @@ I think sharding is an operation on Datas . Some criterion is used to partition 
 
 ### Indexing in mariadb 
 https://www.techonthenet.com/mariadb/indexes.php
+
+## Marida db vs postgresql 
+Movie this section to a new .md file . 
+
+https://mariadb.com/kb/en/lock-tables/
+
+https://mariadb.com/kb/en/how-to-lock-a-specific-row-for-write-or-read-purpose/
+
+https://mariadb.com/kb/en/select/#lock-in-share-mode-and-for-update-clauses
+
+https://mariadb.com/kb/en/for-update/
+
+https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-ROWS
+
+https://www.postgresql.org/docs/current/explicit-locking.html
+
+## Data structures 
+Databases need to store large amount of data on disk and retrieve data from them very fast. That's why they use
+specific and new data structures. 
+
+https://www.youtube.com/watch?v=W_v05d_2RTo
+
+> I think most of these databases turn an array to a tree.
+
+### Skiplist
+It kinda uses the idea of binary search. 
+
+It sorts the array and by finding the pivot of array it finds the desirable element. 
+
+![Skiplist](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Database/images/skiplist.png)

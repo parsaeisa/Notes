@@ -1,5 +1,7 @@
 # Bash commands 
 
+This is a link which has a good diagrams on most usefull linux command : https://xmind.app/m/WwtB/
+
 You can write a *.sh file which consists of bash commands and then 
 execute all of them by running that file . 
 
@@ -7,7 +9,8 @@ in bash we have **for** , **if** and **switch case** .
 
 In the case that they are needed search for them , just know that they exist . 
 
-**declare** allows you to update attributes applied to variables . 
+### declare 
+allows you to update attributes applied to variables . 
 parameters : 
 * -A : defines associative array ( associative array is like dictionaries in python )
 * -a : defines indexed array
@@ -18,12 +21,13 @@ parameters :
 parameters : 
 * complete it ...
 
-**find** is a built-in function which finds a file or directory . 
+### find
+is a built-in function which finds a file or directory . 
 parameters : 
 * -name : with this you specify the file or directory name .
 * -type : if its d , you are searching for a directory .
 
-**echo**
+### echo
 
 consider you have a parameter called len , if you execute "echo len" ,
 you will get the "len" . 
@@ -58,7 +62,7 @@ and call it like this :
     deploy_project $project
 ```
 
-**alias**
+### alias
 
 example : 
 ```bash

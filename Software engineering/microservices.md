@@ -1,5 +1,9 @@
 # Microservices architecture
 
+I guess the most important advantage of microservice architecture is reducing the interactions between different teams . 
+
+Technical teams offenly have conflicts and interactions between them can waste so much time.
+
 The more number of services talk to each other , the higher goes the latency . 
 
 Microservices architecture is against Monolith architecture . 
@@ -15,10 +19,10 @@ One of the best ways to break down the application into multiple services is **b
 
 ## Communcation between services
 
-* Http requests
+* Serving on one port ( http , graphql, grpc and etc)
 * Message broker : like Rabbit MQ and Nats .
+* SDKs , the destination service gives a sdk to the origin service .
 * Service Mesh which is something in k8s .
-* gRPC
 
 ## Downsides of Micro Service
 
