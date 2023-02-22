@@ -12,12 +12,7 @@
 #### Languages :
 * rust
 * C++
-* kotlin 
-
-#### Golang : 
-* concurrency 
-* what was that fast json unmarshalling golang package ? 
-* gosec
+* kotlin
 
 #### Concepts :
 * distributed systems : designing data intencive applications
