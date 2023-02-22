@@ -4,6 +4,7 @@
 * service account : which is a fake account 
 * api server 
 * Headless services
+* Node exporter - which has metrics
 
 ## Job 
 
