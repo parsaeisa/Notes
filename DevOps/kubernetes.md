@@ -33,7 +33,9 @@ Pod → Deployments → Projects
 
 Each of these are k8s clusters . we can get the list of them in cli using : 
 
+```bash
 get <resource name>s
+```
 
 ## Statefulsets
 
