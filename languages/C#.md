@@ -6,15 +6,29 @@ The stack that courses was based on was **dotnet** and **C#** .
 
 ## Creating a project 
 
+The command for starting a new dotnet project is dotnet new <template> . The template used in this course is `console`.
+
 ```bash
 dotnet new console
 ```
 
-Then in the project directory :
+After making a project try the command to check every thing is ok or not ( in the project directory ) : 
+```bash
+dotnet build
+```
+
+To run the project: 
+```bash
+dotnet run
+```
+
+Then in the another directory :
 
 ```bash
 dotnet new sln --name MySolution
 ```
+
+> In a directory you should have just one solution file or project. solution file and projects are the files that need to be built.
 
 Then for adding the project to the solution : 
 ``` bash
@@ -23,6 +37,24 @@ dotnet sln MySolution.sln add .
 ## strings 
 
 ## File IO
+
+For working with files, you should use the package below : 
+```C#
+using System.IO ;
+```
+
+First interaction to files is to write a word in a file:
+```C#
+string stdid = Console.ReadLine();
+File.WriteAllText("stdlist.txt", stdid + "\n");
+```
+
+To read content from a file:
+```C#
+string content = File.ReadAllText(filename);
+System.Console.WriteLine(content);
+```
+> Write `cw` and then vscode will print the `System.Console.WriteLine()` 
 
 ## exception handling
 
