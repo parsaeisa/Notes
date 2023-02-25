@@ -9,6 +9,24 @@ Nats streaming enables duplex streaming it has four kinds .
 
 # Jetstream 
 
+Before we use any stream in nats, we should create an streaming with the nats connection using the code below : 
+```go
+js, _ := NatsConn.JetStream()
+
+// Create a stream
+js.AddStream(&nats.StreamConfig{
+    Name:     "FOO",
+    Subjects: []string{"ride.accepted"},
+    MaxBytes: 1024,
+})
+```
+
+We define subjects and other parameters while adding streams. 
+
+And don't forget to defer closing the stream .
+```go
+defer js.DeleteStream("FOO")
+```
 
 ## Async
 Jetstream has a mode that publishes messages asynchronously .
