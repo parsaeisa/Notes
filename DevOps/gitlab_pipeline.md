@@ -96,6 +96,25 @@ except:
 ```
 
 ### Variable and rules
+Not defined yet . just see an example :
+```bash
+variables:
+ DOCKER_DRIVER: overlay2
+ REGISTRY_IMAGE_TAG: "$SNAPPCLOUD_TEH1_REGISTRY/mozart/$CI_PROJECT_NAME-v2"
+ DOCKER_API_VERSION: "1.39"
+ DOCKER_REGISTRY_USERNAME: "gitlab-ci"
+ DOCKER_REGISTRY_PASSWORD: ${SNAPPCLOUD_TEH1_MOZART_TOKEN}
+ DOCKER_REGISTRY_ADDRESS: ${SNAPPCLOUD_TEH1_REGISTRY}
+rules:
+ - if: $CI_COMMIT_TAG
+ - if: '$CI_COMMIT_BRANCH == "master"'
+ - if: '$CI_COMMIT_BRANCH =~ /^dev*/'
+ - if: $CI_COMMIT_BRANCH
+   when: manual
+   allow_failure: true
+   
+```
+I think these conditions are in OR . 
 
 
 ### Gitlab predfined variables
