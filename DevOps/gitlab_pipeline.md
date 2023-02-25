@@ -122,3 +122,30 @@ I think these conditions are in OR .
 https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
 
 you can use these variables without any need to define them  . 
+
+For example if we can get the branch name With these parameters, a thing that we can do is to determine that push to which branches can trigger jobs.
+
+Or by using commit_message, we can put a condition that if commit message contained in certain word ( by instance "do_not_test" ) , no testing jobs should be triggered on it.
+
+## Best practices
+
+These jobs are triggered when a push executes on a branche. 
+
+Not all jobs need to run. Some of them can be triggered manually. For example a job that pushes our docker image to a certain registry for test.
+
+### What to do in pipelines ?
+The main purpose of using pipelines is automating processes that should be performed frequently.
+
+This is a list of operations that is better to do with pipelines : 
+* Testing : running unit-tests
+* Lint : checkes the cleanliness of codes
+* Security : Running security scanning , security scanning tools can be called with bash
+* Pushing image to a registry
+* Deploy
+
+> Complete this list
+
+### Makefile 
+
+Consider for testing purposes we need multiple lines with bash. If we put them in our pipeline file It would be too heavy and long. 
+We can put those scripts in Makefile and assign them a name. Then with just `make <that name>` command, all of them would be executed, you can read more about Makefiles in [here](https://github.com/parsaeisa/Notes/blob/main/makefile.md)
