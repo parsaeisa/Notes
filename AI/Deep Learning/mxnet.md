@@ -6,6 +6,8 @@ Here I wanted to right `step`s to write a dqn .This document has two sections :
 
 ## What we need 
 
+The neural network in DQN is used for estimating the Q-value. In the output layer each node represents an action and the node with maximum value stands for the action that must be choosed.
+
 The Classes we need to define : 
 * Environment
 * Replay buffer

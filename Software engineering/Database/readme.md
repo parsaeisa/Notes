@@ -5,6 +5,8 @@ To Learn :
 - mongo
 - postgre sql
 - influxdb
+- elastic search
+- database design principles
 
 ## Database design
 
