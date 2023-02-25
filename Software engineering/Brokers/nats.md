@@ -31,16 +31,6 @@ And don't forget to defer closing the stream .
 defer js.DeleteStream("FOO")
 ```
 
-## Ack
-Ack is one of the configurable parameters in connection between the client and the broker.
-
-When we publish something we need an acknowledge. 
-But in some cases we don't.
-
-When we publish a message on nats (core) , it returns no ack to us.
-
-JetStream is a layer on nats core which sends ack when we publish on it.
-
 ## Async
 Jetstream has a mode that publishes messages asynchronously .
 
@@ -53,6 +43,14 @@ Also you need to configure the publish_async_max_pending while creating a NatsCo
 The `publish_async_max_pending` represents the max number of requests that client sends to cmq asynchronously before getting the PubAck . 
 
 ## Ack 
+Ack is one of the configurable parameters in connection between the client and the broker.
+
+When we publish something we need an acknowledge. 
+But in some cases we don't.
+
+When we publish a message on nats (core) , it returns no ack to us.
+
+JetStream is a layer on nats core which sends ack when we publish on it.
 
 There some kinds of Acks in nats . 
 
