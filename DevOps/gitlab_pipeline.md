@@ -5,9 +5,11 @@ A pipeline is consisted of multiple jobs .
 ### Structure of a gitlab pipline
 
 * include
-* stages
-* variables
-* [ the place where you define you jobs ]
+* **stages** : we just determine stages names and their order 
+* **variables** :  we define constants there with uppercase letters .
+* **Jobs** : we define commands that make our job . each job is there with its name on it . 
+
+Each stage can have more than one job.
 
 It means you have names include , stages and variables 
 in your file but you don't have any word jobs . 
@@ -59,15 +61,42 @@ stages:
 ```
 
 ### Structure of a gitlab job
-* image
-* stage
+* image :  the address of image that we wanna run our job on . 
+* stage : here we define the stage of our job to define its order 
 * script
-* artifact
+* artifacts
 * before_script
 * after_script
-* dependencies 
+* dependencies : dependencies are other jobs . for example if  “test” job is depending on “compile” job we write “-compile” here . 
 * allow failure 
 * rules
+* except 
+* variables
+
+All script, before_script and after_script are bash commands .
+
+### Artifacts
+It is used when we want to store the result of our job in a file called artifact . 
+Parts : 
+name 
+paths
+expire_in
+reports
+Search in Google for values that they can take . 
+
+### Except
+Apparently We can access branch names , commit messages etc with variables defined in gitlab . ( search in google ) . For example, I think  $CI_COMMIT_MESSAGE  represents the commit message . and also we have 
+$CI_COMMIT_BRANCH
+$CI_COMMIT_TAG 
+Except part is being determined to tell the job when not to execute . for example : 
+```bash
+except:
+ variables:
+   - $CI_COMMIT_MESSAGE =~ /\[do-not-test\]/
+```
+
+### Variable and rules
+
 
 ### Gitlab predfined variables
 
