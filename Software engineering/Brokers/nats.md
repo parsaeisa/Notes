@@ -5,7 +5,10 @@ In traditional way a message was published and recieved by a consumer and if the
 
 Streaming is a more persistant way to exchange messages . A persistant storage stores the message for the consumer to not sending it more than one time .
 
+The nats core doesn't persist the data. But nats-streaming does.
 Nats streaming enables duplex streaming it has four kinds .
+
+But Nats streaming needed a refactor and it got a hard process, hence they released jet-sreaming, which is better than jet-streaming in many ways.
 
 # Jetstream 
 
@@ -27,6 +30,16 @@ And don't forget to defer closing the stream .
 ```go
 defer js.DeleteStream("FOO")
 ```
+
+## Ack
+Ack is one of the configurable parameters in connection between the client and the broker.
+
+When we publish something we need an acknowledge. 
+But in some cases we don't.
+
+When we publish a message on nats (core) , it returns no ack to us.
+
+JetStream is a layer on nats core which sends ack when we publish on it.
 
 ## Async
 Jetstream has a mode that publishes messages asynchronously .
