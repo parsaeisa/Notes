@@ -114,7 +114,6 @@ finally:
 ## Enumeration
 
 
-
 One of the main purposes of using enums is to limit the values that a variable can take .
 
 For example in a music instrument shopping application the type of product could be typed "guitar" or "guiiitar" or " guitar" and etc. This is problematic so we use enums to only have a single value that is compatible to guitar.
@@ -140,6 +139,39 @@ public enum Season
     Winter
 }
 var c = (Season)4;
+```
+
+## Flag enum
+C# has two types of enum, normal enum and flag enum. 
+
+With flag enum you can combine values together using binary operands.
+```C#
+[Flags]
+public enum Days
+{
+    None      = 0b_0000_0000,  // 0
+    Monday    = 0b_0000_0001,  // 1
+    Tuesday   = 0b_0000_0010,  // 2
+    Wednesday = 0b_0000_0100,  // 4
+    Thursday  = 0b_0000_1000,  // 8
+    Friday    = 0b_0001_0000,  // 16
+    Saturday  = 0b_0010_0000,  // 32
+    Sunday    = 0b_0100_0000,  // 64
+    Weekend   = Saturday | Sunday
+}
+
+Days meetingDays = Days.Monday | Days.Wednesday | Days.Friday;
+Days workingFromHomeDays = Days.Thursday | Days.Friday;
+bool isMeetingOnTuesday = (meetingDays & Days.Tuesday) == Days.Tuesday;
+// Is there a meeting on Tuesday: False
+```
+
+A variable can contain multiple values from flag enums. For example the number 37 which is `0b_0010_0101` is 
+saturday, monday and wednesday which can act as an array for example.
+
+Flag enums can be converted to like other enums : 
+```C#
+var a = (Days)37 ;
 ```
 
 ## Teaching roadmap 
