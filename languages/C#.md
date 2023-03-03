@@ -141,7 +141,7 @@ public enum Season
 var c = (Season)4;
 ```
 
-## Flag enum
+### Flag enum
 C# has two types of enum, normal enum and flag enum. 
 
 With flag enum you can combine values together using binary operands.
