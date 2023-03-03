@@ -34,7 +34,25 @@ Then for adding the project to the solution :
 ``` bash
 dotnet sln MySolution.sln add .
 ```
-## strings 
+## Strings 
+
+Neat functions:
+- ToUpper, ToLower
+- Split
+- Substring
+- Replace
+- Index of
+- accessing individual character
+
+The `String` class in `System` has some operator overloadings.
+
+> Null is not empty string.
+
+any attempt to call a method on a null string causes a `NullReferenceException`.
+
+> There is something called `StringBuilder` for fast string creation. (Search about this item, read from documentaion)
+
+
 
 ## File IO
 
@@ -56,7 +74,7 @@ System.Console.WriteLine(content);
 ```
 > Write `cw` and then vscode will print the `System.Console.WriteLine()` 
 
-## exception handling
+## Exception handling
 
 Errors happen all the time, an error can be a fatal error and cause suspension in our app which is not good. 
 
@@ -93,4 +111,44 @@ finally:
 
 ```
 
-## enumeration
+## Enumeration
+
+
+
+One of the main purposes of using enums is to limit the values that a variable can take .
+
+For example in a music instrument shopping application the type of product could be typed "guitar" or "guiiitar" or " guitar" and etc. This is problematic so we use enums to only have a single value that is compatible to guitar.
+
+They are of type int and they start from 0. But we can assign them other types : 
+```C#
+enum ErrorCode : ushort
+{
+    None = 0,
+    Unknown = 1,
+    ConnectionLost = 100,
+    OutlierReading = 200
+}
+```
+
+We can convert a number to enum like this : 
+```C#
+public enum Season
+{
+    Spring,
+    Summer,
+    Autumn,
+    Winter
+}
+var c = (Season)4;
+```
+
+## Teaching roadmap 
+
+Write an application that users can buy musical instruments in.
+
+Put two files, each file represents something like table in database :
+* Users
+* Instruments
+* Orders
+
+For choosing instument , first put strings in uppercase format (e.g GUITAR) then put enum.
