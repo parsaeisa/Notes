@@ -5,10 +5,31 @@ In traditional way a message was published and recieved by a consumer and if the
 
 Streaming is a more persistant way to exchange messages . A persistant storage stores the message for the consumer to not sending it more than one time .
 
+The nats core doesn't persist the data. But nats-streaming does.
 Nats streaming enables duplex streaming it has four kinds .
+
+But Nats streaming needed a refactor and it got a hard process, hence they released jet-sreaming, which is better than jet-streaming in many ways.
 
 # Jetstream 
 
+Before we use any stream in nats, we should create an streaming with the nats connection using the code below : 
+```go
+js, _ := NatsConn.JetStream()
+
+// Create a stream
+js.AddStream(&nats.StreamConfig{
+    Name:     "FOO",
+    Subjects: []string{"ride.accepted"},
+    MaxBytes: 1024,
+})
+```
+
+We define subjects and other parameters while adding streams. 
+
+And don't forget to defer closing the stream .
+```go
+defer js.DeleteStream("FOO")
+```
 
 ## Async
 Jetstream has a mode that publishes messages asynchronously .
@@ -22,6 +43,14 @@ Also you need to configure the publish_async_max_pending while creating a NatsCo
 The `publish_async_max_pending` represents the max number of requests that client sends to cmq asynchronously before getting the PubAck . 
 
 ## Ack 
+Ack is one of the configurable parameters in connection between the client and the broker.
+
+When we publish something we need an acknowledge. 
+But in some cases we don't.
+
+When we publish a message on nats (core) , it returns no ack to us.
+
+JetStream is a layer on nats core which sends ack when we publish on it.
 
 There some kinds of Acks in nats . 
 
