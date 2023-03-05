@@ -113,6 +113,9 @@ There is other things that we can do with errors, we can raise an exception for 
 * try
 * except
 * exception
+* catch
+* finally
+* throw
 
 ### Exception
 C# is an object oriented language, like java. Almost every entity you see is a class, And so the Exception. 
@@ -120,6 +123,9 @@ C# is an object oriented language, like java. Almost every entity you see is a c
 Exception has some behaviors that we can override them using inheritence . 
 
 We can define our custom exception . 
+
+There are some pre-defined exceptions in C#.
+!()[https://github.com/parsaeisa/Notes/blob/main/languages/exceptions_c%23.png]
 
 ### Raise
 What do we do with exceptions ? we raise them and catch them in another place in the code. 
