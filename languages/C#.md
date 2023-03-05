@@ -72,6 +72,16 @@ int index = s3.IndexOf("C");
 System.Console.WriteLine(index);
 ```
 
+Split method :
+```C#
+var a = "pisazadeh@outlook.com";
+string[] subs = a.Split('@', '.');
+foreach (string item in subs)
+{
+    System.Console.WriteLine(item);
+}
+```
+
 ## File IO
 
 For working with files, you should use the package below : 
