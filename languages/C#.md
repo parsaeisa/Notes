@@ -36,6 +36,8 @@ dotnet sln MySolution.sln add .
 ```
 ## Strings 
 
+String is an array of characters. You can apply any operation on strings using this fact. But using implemented methods is always a better idea.
+
 Neat functions:
 - ToUpper, ToLower
 - Split
@@ -52,7 +54,23 @@ any attempt to call a method on a null string causes a `NullReferenceException`.
 
 > There is something called `StringBuilder` for fast string creation. (Search about this item, read from documentaion)
 
+```C#
+var s = "Helloo world!!";
+Console.WriteLine(s.ToUpper());   // Outputs "HELLO WORLD"
+Console.WriteLine(s.ToLower());
 
+string s3 = "Visual C# Express C#";
+System.Console.WriteLine(s3.Substring(7, 2));
+// Output: "C#"
+
+System.Console.WriteLine(s3.Replace("C#", "Basic"));
+// Output: "Visual Basic Express"
+
+// Index values are zero-based
+int index = s3.IndexOf("C");
+// index = 7
+System.Console.WriteLine(index);
+```
 
 ## File IO
 
