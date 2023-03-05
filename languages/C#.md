@@ -125,7 +125,8 @@ Exception has some behaviors that we can override them using inheritence .
 We can define our custom exception . 
 
 There are some pre-defined exceptions in C#.
-!()[https://github.com/parsaeisa/Notes/blob/main/languages/exceptions_c%23.png]
+
+![](https://github.com/parsaeisa/Notes/blob/main/languages/exceptions_c%23.png)
 
 ### Raise
 What do we do with exceptions ? we raise them and catch them in another place in the code. 
