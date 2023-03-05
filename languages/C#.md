@@ -117,6 +117,27 @@ There is other things that we can do with errors, we can raise an exception for 
 * finally
 * throw
 
+### Try, catch, finally
+Consider you called a method, which an exception was raised in because the behaviour that we didn't want to happen , happened.
+
+Now we have an exception and we must catch it. We do it using try, except :
+```C#
+try
+{
+    method()
+}
+catch
+{
+
+}
+finally
+{
+
+}
+
+```
+The `finally` section is the section that is executed anyway.
+
 ### Exception
 C# is an object oriented language, like java. Almost every entity you see is a class, And so the Exception. 
 
@@ -169,21 +190,6 @@ static void checkAge(int age)
 
 Then you catch it's exception using try, catch.If you don't catch it your app gonna take Unhandled exception error 
 which is critical.
-
-The `finally` section is the section that is executed anyway.
-
-### Try, except
-Consider you called a method, which an exception was raised in because the behaviour that we didn't want to happen , happened.
-
-Now we have an exception and we must catch it. We do it using try, except :
-```C#
-try:
-    method()
-except:
-
-finally:
-
-```
 
 ## Enumeration
 
