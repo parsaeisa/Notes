@@ -128,10 +128,49 @@ There are some pre-defined exceptions in C#.
 
 ![](https://github.com/parsaeisa/Notes/blob/main/languages/exceptions_c%23.png)
 
-### Raise
+There is no need to define these exceptions : 
+```C#
+var num = Convert.ToInt32(System.Console.ReadLine());
+int a = 0 ;
+try
+{
+    a = 255/num ;            
+}
+catch (DivideByZeroException e)
+{
+    System.Console.WriteLine("exception caught {0}", e);
+    // throw;
+}
+finally
+{
+    System.Console.WriteLine("result {0}", a);
+}
+```
+
+### Throw
 What do we do with exceptions ? we raise them and catch them in another place in the code. 
 
 When an error is happening or an unwanted cyclomathic path has been taken, instead of halting the application we raise an exception.
+
+You can throw these exceptions by your self. For example if you have a system that someone with the age under 10 cannot access you can use the code below : 
+```C#
+static void checkAge(int age)
+{
+  if (age < 18)
+  {
+    throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+  }
+  else
+  {
+    Console.WriteLine("Access granted - You are old enough!");
+  }
+}
+```
+
+Then you catch it's exception using try, catch.If you don't catch it your app gonna take Unhandled exception error 
+which is critical.
+
+The `finally` section is the section that is executed anyway.
 
 ### Try, except
 Consider you called a method, which an exception was raised in because the behaviour that we didn't want to happen , happened.
