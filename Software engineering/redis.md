@@ -188,6 +188,7 @@ You can see the description about Skiplist in [here](https://github.com/parsaeis
 * Resp 
 * Redsync
 * Redis datatypes
+* SETNX
 
 Continue watching : 
 https://www.youtube.com/watch?v=OqCK95AS-YE
