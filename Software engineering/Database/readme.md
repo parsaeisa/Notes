@@ -69,3 +69,25 @@ It kinda uses the idea of binary search.
 It sorts the array and by finding the pivot of array it finds the desirable element. 
 
 ![Skiplist](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Database/images/skiplist.png)
+
+## Transaction
+
+Transaction is a series of actions that should be done together . All of them should be performed or none of them. 
+
+For example, if it has two operations called "operation A" and "operation B" :
+- if A is performed so should B . 
+- if B is not performed , A should be rolled back.
+
+### Transaction in go
+
+In golang we use `sqlx` package to interact with database. 
+
+You can create a transaction using : 
+```go
+tx, err := d.db.BeginTxx(ctx, nil)
+```
+
+Then you can send queries using this `tx`.
+
+There are some other methods that I think should always be called when defining a transaction. 
+`tx.Rollback()` and `tx.Commit()` .
