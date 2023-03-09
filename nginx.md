@@ -1,5 +1,9 @@
 # Nginx
 
+nginx has three applications : 
+* load balancing 
+* caching 
+
 ### Proxy pass
 proxy_pass directive is used to pass the proxied request . 
 
