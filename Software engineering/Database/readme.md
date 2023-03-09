@@ -6,6 +6,7 @@ To Learn :
 - postgre sql
 - influxdb
 - elastic search
+- Clickhouse
 - database design principles
 
 ## Database design
@@ -85,6 +86,15 @@ It kinda uses the idea of binary search.
 It sorts the array and by finding the pivot of array it finds the desirable element. 
 
 ![Skiplist](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Database/images/skiplist.png)
+
+## Row-oriented and Column-oriented
+
+The Column-oriented DBMS, stores the values in a certain column together. For example disk 1 for id column's values, disk 2 for name column and etc.
+
+Common column-based databases : 
+- Redshift
+- BigQuery
+- Snowflake
 
 ## Transaction
 
