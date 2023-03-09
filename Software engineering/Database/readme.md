@@ -12,7 +12,23 @@ To Learn :
 
 Don't store a single value in more than one place ( multiple records or tables ) in database --> it denies **redundancy** .
 
-#### A Trick
+### Query design 
+Group by and aggregate functions can be so heavy for database.
+
+But sometimes we need these actions in our query. So there must be a way to simulate this actions .
+
+- Chunkenized -> as aggregation function
+- Local map -> as group by
+- select for update -> as database lock
+
+#### Chunkenized
+I think this is using `limit` and `offset` in query.
+
+#### Select for update
+
+Consider in a table that contains shoppings we want to count the  you want to count It locks a record 
+
+### A Trick
 consider you have a table which has the records of ali's each objects count , a table like this :
 
 | char  | object_1_counts | object_2_counts | object_3_counts |

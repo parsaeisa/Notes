@@ -36,6 +36,15 @@ Sometimes images ( docker images ) has vulnerabilities . images of golang , debi
 
 * alpine:3.16 has no vulnerabilities , but other version do . 
 
+### integer overflow 
+One of the places that integer overflow occures is when you cast a variable
+to a variable with bigger type. For example an uint8 to int32.
+
+Integer overflow which can cause bugs and damages.
+
+> This is very common when we use grpc. In grpc the smallest variable type is int32 but a variable can be int8 for example and we have to cast it 
+
+
 ## To Search about
 
 This is an error message from a container scanner script :
