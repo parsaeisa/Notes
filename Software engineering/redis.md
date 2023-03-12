@@ -182,7 +182,10 @@ You can see the description about Skiplist in [here](https://github.com/parsaeis
 
 ## Other Redis topics
 
-* Redis sentinel : Is used to make redis highly available ,
+* Redis sentinel : Is used to make redis highly available
+
+Try to cluster some redises with redis-sentinel .
+
 * Redis hashmap
 * Redis locker
 * Resp 
