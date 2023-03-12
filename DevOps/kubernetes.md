@@ -65,6 +65,16 @@ It stands for Horizontal pod autoscaler .
 
 We can create it using the k8s dashboard . 
 
+HPA has three parameters :
+- min : the minimum count of our pods 
+- max : the maximum counts 
+- cpu-percent : This is one of the metrics that k8s decides to scale pods with.
+
+Autoscaling using HPA with CLI : 
+```bash
+oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
+```
+
 ## Networking 
 
 Networking is one of the sections in okd dashboard ( administrator mode ) . 
