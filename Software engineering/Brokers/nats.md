@@ -1,4 +1,34 @@
-# Nats
+# Nats - core
+
+In nats core no ack is returned.
+
+## Closing a nats conn
+
+When the app is shutting down some garbage collection operations should be done. 
+
+- closing the connection
+- Unsubscribing all of subscriptions 
+
+For a connection the closing process is essentially:
+
+- Drain all subscriptions
+- Stop new messages from being published
+- Flush any remaining published messages
+- Close
+
+But when these operations halt sending the messages that are published and pending ( for example stucked in a buffer ).
+
+### Drain
+
+With using `Drain` method in nats, those messages are still going to be published for the old clients.
+
+The drain method is used instead of `close` method.
+
+The mechanics of drain for a subscription are simpler:
+- Unsubscribe
+- Process all cached or inflight messages
+- Clean up
+
 
 # Streaming
 In traditional way a message was published and recieved by a consumer and if the consumer needed it for the second time, The message would be republished . That causes some overhead on the publisher .
