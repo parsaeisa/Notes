@@ -129,8 +129,19 @@ writer = new StreamWriter("users.txt");
 writer.WriteLine("Hello world 2");
 writer.Close();
 ```
-
 If the file already existed in the pathfile, the stream will overwrite it. 
+
+We also have a StreamReader : 
+```C#
+StreamReader reader ;
+reader = new StreamReader("users.txt");
+
+while (reader.EndOfStream == false)
+{
+    System.Console.WriteLine(reader.ReadLine());
+}
+reader.Close();
+```
 
 using a filestream : 
 ```C#
@@ -300,5 +311,10 @@ Put two files, each file represents something like table in database :
 * Instruments
 * Orders
 
-For choosing instument , first put strings in uppercase format (e.g GUITAR) then put enum.
+For choosing instrument , first put strings in uppercase format (e.g GUITAR) then put enum.
 
+### Category option
+Enum defines the categories of instruments.Choosing the category of insturments at first is handled by string, If the category didn't exist on categories list, it returns an exception.
+
+### Pre-processing data
+Finding firstname and last name by string split .Finding username from email (everything before `@`).
