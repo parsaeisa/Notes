@@ -120,9 +120,17 @@ System.Console.WriteLine(content);
 
 ### Stream
 
-C# creates a stream for getting a connection to operating system. With this connections, C# program interacts with
+C# creates a stream for getting a connection to operating system. Through these connections, C# program interacts with
 files(reading and writing).
 
+```C#
+StreamWriter writer ;
+writer = new StreamWriter("users.txt");
+writer.WriteLine("Hello world 2");
+writer.Close();
+```
+
+If the file already existed in the pathfile, the stream will overwrite it. 
 
 ## Exception handling
 
