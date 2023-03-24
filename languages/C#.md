@@ -132,6 +132,13 @@ writer.Close();
 
 If the file already existed in the pathfile, the stream will overwrite it. 
 
+using a filestream : 
+```C#
+byte[] info = new UTF8Encoding(true).GetBytes("Hellooooooooo");
+fs.Write(info, 0, info.Length);
+fs.Close();
+```
+
 ## Exception handling
 
 Errors happen all the time, an error can be a fatal error and cause suspension in our app which is not good. 
