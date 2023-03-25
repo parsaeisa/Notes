@@ -7,6 +7,7 @@ To Learn :
 - influxdb
 - elastic search
 - Clickhouse
+- Snowflake
 - database design principles
 
 ## Database design
