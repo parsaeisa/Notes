@@ -32,7 +32,11 @@ One of the best ways to break down the application into multiple services is **b
 
 All requests to the app, pass through the api-gateway. They are going to a single element and that point sends requests to their corresponding micro-service. This element is called api-gateway. 
 
-An nginx is installed on api-gateway which will proxy-pass the requests to the right microservice.
+An `nginx` is installed on api-gateway which will proxy-pass the requests to the right microservice.
+
+As I recall, **proxy** was a way to hide clients identity from server, the **reverse proxy** Is a way to hide server's identity from clients. 
+
+Here reverse proxy is usefull because client should not know that a specific response was send from which service, So they pass through a load-balancer (nginx).
 
 ## Downsides of Micro Service
 
