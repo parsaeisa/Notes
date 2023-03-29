@@ -24,6 +24,16 @@ One of the best ways to break down the application into multiple services is **b
 * SDKs , the destination service gives a sdk to the origin service .
 * Service Mesh which is something in k8s .
 
+## Best-practices 
+
+- All services must have a same project template, Which makes it easier for developers to read and start working on new services. 
+
+## Api-gateway 
+
+All requests to the app, pass through the api-gateway. They are going to a single element and that point sends requests to their corresponding micro-service. This element is called api-gateway. 
+
+An nginx is installed on api-gateway which will proxy-pass the requests to the right microservice.
+
 ## Downsides of Micro Service
 
 * Configuring the connection between services . 
