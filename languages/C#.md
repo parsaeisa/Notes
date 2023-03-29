@@ -89,10 +89,26 @@ For working with files, you should use the package below :
 using System.IO ;
 ```
 
+### Basic operations 
+
+Creating file (this method returns you a fileStream):
+```C#
+FileStream fs = File.Create(pathName);
+```
+`File.Exists(path)` and `File.Delete(pathname)` are other methods that you can use.
+
+
+
 First interaction to files is to write a word in a file:
 ```C#
 string stdid = Console.ReadLine();
 File.WriteAllText("stdlist.txt", stdid + "\n");
+```
+
+The method above overwrites the content in a file, but the method below just appends it's input to
+the end of file: 
+```C#
+File.AppendAllText("stdlist.txt", stdid + "\n");
 ```
 
 To read content from a file:
@@ -101,6 +117,38 @@ string content = File.ReadAllText(filename);
 System.Console.WriteLine(content);
 ```
 > Write `cw` and then vscode will print the `System.Console.WriteLine()` 
+
+### Stream
+
+C# creates a stream for getting a connection to operating system. Through these connections, C# program interacts with
+files(reading and writing).
+
+```C#
+StreamWriter writer ;
+writer = new StreamWriter("users.txt");
+writer.WriteLine("Hello world 2");
+writer.Close();
+```
+If the file already existed in the pathfile, the stream will overwrite it. 
+
+We also have a StreamReader : 
+```C#
+StreamReader reader ;
+reader = new StreamReader("users.txt");
+
+while (reader.EndOfStream == false)
+{
+    System.Console.WriteLine(reader.ReadLine());
+}
+reader.Close();
+```
+
+using a filestream : 
+```C#
+byte[] info = new UTF8Encoding(true).GetBytes("Hellooooooooo");
+fs.Write(info, 0, info.Length);
+fs.Close();
+```
 
 ## Exception handling
 
@@ -263,4 +311,10 @@ Put two files, each file represents something like table in database :
 * Instruments
 * Orders
 
-For choosing instument , first put strings in uppercase format (e.g GUITAR) then put enum.
+For choosing instrument , first put strings in uppercase format (e.g GUITAR) then put enum.
+
+### Category option
+Enum defines the categories of instruments.Choosing the category of insturments at first is handled by string, If the category didn't exist on categories list, it returns an exception.
+
+### Pre-processing data
+Finding firstname and last name by string split .Finding username from email (everything before `@`).
