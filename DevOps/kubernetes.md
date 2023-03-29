@@ -1,12 +1,25 @@
 # Kubernetes
 
+Kubernetes or k8s is container orchestration tool.
+
+K8s and almost all other container orchestrator use a linux kernel feature called **CFS**. 
+CFS handles resource allocations and enforce limits for runing containers.
+
+
+
+## Service account 
+
+This is an account that is used for pipelines in automations.
+
+It has a level of access that can be for example editor.
+
 ## Manifests
 
 ##  What it has : 
 * service account : which is a fake account 
 * api server 
 * Headless services
-* Node exporter - which has metrics
+* Node exporter - which has metricss
 
 ## Job 
 
