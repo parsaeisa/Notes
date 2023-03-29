@@ -1,12 +1,12 @@
 # Database
 
 Topics :
--[Database design](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#database-design)
--[Highly availability](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#highly-availability)
--[Sharding](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#sharding)
--[Data structures](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#data-structures)
--[Row-oriented and Column-oriented](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#row-oriented-and-column-oriented)
--[Transaction](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#transaction)
+- [Database design](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#database-design)
+- [Highly availability](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#highly-availability)
+- [Sharding](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#sharding)
+- [Data structures](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#data-structures)
+- [Row-oriented and Column-oriented](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#row-oriented-and-column-oriented)
+- [Transaction](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#transaction)
 
 To Learn :
 - cassandra
