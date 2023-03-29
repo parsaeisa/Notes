@@ -30,6 +30,12 @@ I think this is using `limit` and `offset` in query.
 
 Consider in a table that contains shoppings we want to count the  you want to count It locks a record 
 
+#### Select query to a big table
+
+Sometimes you have an enormous table with tons of records. A simple select query to this table is not possible and may cause the database to crash. 
+
+I think **Limit Offset** is a way to tackle this issue.
+
 ### A Trick
 consider you have a table which has the records of ali's each objects count , a table like this :
 
@@ -54,24 +60,6 @@ Now a new object and its count would be a new record in your database .
 
 ## Sharding
 I think sharding is an operation on Datas . Some criterion is used to partition the data among the different set of slave/master databases . 
-
-### Indexing in mariadb 
-https://www.techonthenet.com/mariadb/indexes.php
-
-## Marida db vs postgresql 
-Movie this section to a new .md file . 
-
-https://mariadb.com/kb/en/lock-tables/
-
-https://mariadb.com/kb/en/how-to-lock-a-specific-row-for-write-or-read-purpose/
-
-https://mariadb.com/kb/en/select/#lock-in-share-mode-and-for-update-clauses
-
-https://mariadb.com/kb/en/for-update/
-
-https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-ROWS
-
-https://www.postgresql.org/docs/current/explicit-locking.html
 
 ## Data structures 
 Databases need to store large amount of data on disk and retrieve data from them very fast. That's why they use
