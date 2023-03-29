@@ -44,6 +44,8 @@ docker exec -it [container-id] bash
 ## Ineracting with registries 
 Registry is a place which has images . The biggest registry is dockerhub . sometimes companies have their own private registry . 
 
+The registry helps us to pull images for our applications more quickly.
+
 login to a registry :
 ```bash
 doker login -u [username] -p [password] [registry address]
