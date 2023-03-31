@@ -17,6 +17,7 @@ To Learn :
 - Clickhouse
 - Snowflake
 - database design principles
+- Big database design and query
 
 ## Database design
 
