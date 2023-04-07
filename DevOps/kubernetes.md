@@ -13,6 +13,15 @@ This is an account that is used for pipelines in automations.
 
 It has a level of access that can be for example editor.
 
+grpc load balancing : 
+* kube resolver 
+* connection pool
+
+grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
+
+To learn : 
+- CRD
+
 ## Manifests
 
 ##  What it has : 
@@ -24,12 +33,6 @@ It has a level of access that can be for example editor.
 ## Job 
 
 You can define a job for k8s that is executed in a cron job timing . 
-
-grpc load balancing : 
-* kube resolver 
-* connection pool
-
-grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
 
 In this document I want to talk about what to do exactly with k8s.
 ## Deploy
