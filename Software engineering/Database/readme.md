@@ -17,6 +17,9 @@ To Learn :
 - Clickhouse
 - Snowflake
 - database design principles
+- Big database design and query
+- traffic migration
+- What's happening in database ? 
 
 ## Database design
 
