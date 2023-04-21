@@ -8,6 +8,24 @@ topics :
 * loss function
 * model
 
+## What da ffuck is this shit methods
+* Detach
+* no_grad
+* ttest_rel
+* to(DEVICE)
+* View
+* squeeze
+* Unsqueeze
+* LongTensor
+* expand
+* masked fill
+* log
+* zero_grad
+* Adam.step
+* contiguous
+* graph
+* BatchNorm1d
+
 ## Tensor
 we can make torch tensors from :
 * python arrays --> `tensor` method
