@@ -324,6 +324,7 @@ Finding firstname and last name by string split .Finding username from email (ev
 
 ##### The only constant is change
 
+### Implementing an interface on a class
 Bring an example of implementing an interface with class. 
 ```C#
 interface ICar
@@ -352,8 +353,64 @@ In next stage, pass an interface to a method, in that method call a method from 
 
 This the abstraction layer.
 
+When writing a classes methods, you can do this:
+```C#
+int summ(int a, int b) => a + b ;
+```
+
+### Taking an interface as an argument
+
+We use interface when we want to adapt a method, but we don't care how that method is done. 
+
+For example, if we write a system like IMDB
+
+```C#
+static void DrawShapesWithStats(IShape shape)
+{
+    shape.Draw();
+    Console.WriteLine(shape.GetArea());
+}
+```
+
+### Useful interfaces
+
+* IComparable
+* IEnumerable 
+* IDisposable 
+
+#### IComparable 
+C# is an object oriented programming language. Anything that you see can be implemented for your defined class.
+
+* `object` is the class that all other classes inherit from.
+
+This interface has method called `CompareTo`:
+
+```C#
+public int CompareTo(object incomingobject)
+{
+    // Storing incoming object in temp variable of 
+    // current class type
+    Employee incomingemployee = incomingobject as Employee;
+
+    return this.ID.CompareTo(incomingemployee.ID);
+}
+```
+
+> Use this example for an interface called **Shape** that is implemented by **rectangle** and **square**. A shape is bigger than another if it's area is bigger.
+
+#### IDisposable
+
+
+#### IEnumerable
+
+for iterating a **custom** collection by implementing the IEnumerable and IEnumerator interfaces. 
+
+For making a custom collection we need two interfaces. `IEnumerable` and `IEnumerator`.
 <!-- --------------------------------------------------------------------------------------------- -->
 ## Collection
+
+* Does it include arrays ?
+* What's the difference between arrays and lists ? 
 
 ### List
 
@@ -365,5 +422,32 @@ Write a method that takes a list of ICar and calls Drive method on all of them.
 ## Generic
 A generic that accepts an interface. 
 
-### Swap method
+### Method
+
 Write a method that swaps the value of two variables of any type.
+```C#
+static void Swap<T>(ref T a, ref T b)
+{
+    T temp = a;
+    a = b;
+    b = temp;
+}
+```
+
+You can write a method taking arguments from classes that implement a certain Interface. 
+
+```C#
+static void DrawShapesWithStats<T>(T shape) where T: IShape, new()
+{
+    T s1 = new T();
+    shape.Draw();
+    Console.WriteLine(shape.GetArea());            
+}
+```
+`Draw` method is in IShape interface.
+
+
+
+### Class
+
+`List` is a generic class.
