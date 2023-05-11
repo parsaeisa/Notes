@@ -302,7 +302,7 @@ Flag enums can be converted to like other enums :
 var a = (Days)37 ;
 ```
 
-## Teaching roadmap 
+## Teaching roadmap - Session 1
 
 Write an application that users can buy musical instruments in.
 
@@ -318,3 +318,52 @@ Enum defines the categories of instruments.Choosing the category of insturments 
 
 ### Pre-processing data
 Finding firstname and last name by string split .Finding username from email (everything before `@`).
+
+<!-- --------------------------------------------------------------------------------------------- -->
+## Interface 
+
+##### The only constant is change
+
+Bring an example of implementing an interface with class. 
+```C#
+interface ICar
+{
+    void  Drive();    
+}
+
+class BMW : ICar 
+{
+    public void Drive(){
+        System.Console.WriteLine("BMW is moving ...");
+    }
+}
+
+class Benz : ICar
+{
+    public void Drive(){
+        System.Console.WriteLine("Benz is moving ...");
+    }
+}
+```
+
+* Implemented methods should be public. Don't make them public at first and let students see the error.
+
+In next stage, pass an interface to a method, in that method call a method from that interface and show that we can pass any class to that method only if that class implement the specific interface.
+
+This the abstraction layer.
+
+<!-- --------------------------------------------------------------------------------------------- -->
+## Collection
+
+### List
+
+### Foreach
+It is for loop just in another syntax.
+
+Write a method that takes a list of ICar and calls Drive method on all of them.
+<!-- --------------------------------------------------------------------------------------------- -->
+## Generic
+A generic that accepts an interface. 
+
+### Swap method
+Write a method that swaps the value of two variables of any type.
