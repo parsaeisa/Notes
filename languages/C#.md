@@ -409,15 +409,33 @@ For making a custom collection we need two interfaces. `IEnumerable` and `IEnume
 <!-- --------------------------------------------------------------------------------------------- -->
 ## Collection
 
-* Does it include arrays ?
-* What's the difference between arrays and lists ? 
+`System.Collections` has three sub packages : 
+
+* `System.Collections.Generic` 
+* `System.Collections.Concurrent` 
+* `System.Collections` 
+
+Common Data structures in C3 : 
+![](https://github.com/parsaeisa/Notes/blob/main/languages/DataStructure.png)
+
 
 ### List
+There are some handy methods on `List` that you can use.
+
+* `Count` : returns the count of elements in array. 
+* `ForEach` : ForEach is method that you can use (You will learn more about it on lambda)
+
+```C#
+numbers.ForEach(
+    number => Console.Write(number + " "));
+```
+
 
 ### Foreach
 It is for loop just in another syntax.
 
 Write a method that takes a list of ICar and calls Drive method on all of them.
+
 <!-- --------------------------------------------------------------------------------------------- -->
 ## Generic
 A generic that accepts an interface. 
@@ -447,7 +465,8 @@ static void DrawShapesWithStats<T>(T shape) where T: IShape, new()
 `Draw` method is in IShape interface.
 
 
-
 ### Class
 
-`List` is a generic class.
+ArrayList belongs to when C# didn't have generics.
+
+`List` is a generic class. It implements `IEnumerable<T>`.
