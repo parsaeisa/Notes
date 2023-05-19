@@ -15,6 +15,8 @@ Topics:
 
 Seeds are available in [seeds]().
 
+[Showing students how to work with `mockaroo` ]
+
 We want to create an application database. 
 
 ## Nested query
