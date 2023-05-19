@@ -56,7 +56,7 @@ For naming a column or a table we use the word `AS`.
 
 ```SQL
 SELECT E.Lname AS Employee_name, S.Lname AS Supervisor_name
-FROM EMPLOYEE  AS E, EMPLOYESS AS S
+FROM EMPLOYEES  AS E, EMPLOYEES AS S
 WHERE E.Super_ssn=S.snn;
 ```
 
