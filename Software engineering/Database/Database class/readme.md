@@ -60,7 +60,10 @@ FROM EMPLOYEES  AS E, EMPLOYEES AS S
 WHERE E.Super_ssn=S.snn;
 ```
 
+### Problem
+
 ## Join
+The output of a `join` command is a bigger table that has records of more than 1 table.
 
 Here is a division on Join command in sql: 
 * Inner
@@ -68,7 +71,50 @@ Here is a division on Join command in sql:
     * Left
     * Right
 
+### Problem
+
 ## Aggregate functions
 
-Aggregate means gathering and clustering.
+Aggregate : form or group into a class or cluster. (v) - from google translate
+
+An aggregate function, takes a table as input and returns a table with less then or equal count of rows.
+
+There are some Aggregate functions in sql (subset of functions that we'll learn about).
+
+The pattern of using aggregate functions:
+```
+SELECT [columns or functions - seperated by comma] FROM [table_name]
+[other queries]
+GROUP BY [column name];
+```
+
+### Usefull aggregate functions
+* COUNT
+* SUM
+* MAX
+* MIN
+* AVG
+
+Like functions in all programming languages, these functions are followed by paranthesis `()` which has the inputs. 
+
+These inputs are column names.
+
+An example:
+```SQL
+
+```
+
+### Having
+
+### Problem
+
+## Summary 
+```
+SELECT <attribute and function list>
+FROM <table list>
+[WHERE <conditions>]
+[GROUPBY <grouping attribute>]
+[HAVING <group condition>]
+[ORDER BY <attribute list>]
+```
 
