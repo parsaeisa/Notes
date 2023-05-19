@@ -30,7 +30,7 @@ In nested query, we write a query the output of a former query.
 
 We connect these two tables with the world `IN`.
 
-## Common templates for nested query
+### Common templates for nested query
 ```
 [First query] 
 WHERE [a tuple or a column name] IN [Second query]
@@ -48,7 +48,7 @@ When **existance** is a factor:
 WHERE EXISTS [Second query]
 ```
 
-## Naming columns 
+### Naming columns 
 
 We can change the names of columns and tables for easier use. 
 
@@ -67,3 +67,8 @@ Here is a division on Join command in sql:
 * Outer
     * Left
     * Right
+
+## Aggregate functions
+
+Aggregate means gathering and clustering.
+
