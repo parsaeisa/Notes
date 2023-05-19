@@ -6,8 +6,11 @@ Topics:
 * Nested Query
 * Join 
 * Qroup by 
+* Aggregate function
 * Trigger
+* Constraint
 * View
 * Function
 * Stored Procedure
+* Schema (?)
 
