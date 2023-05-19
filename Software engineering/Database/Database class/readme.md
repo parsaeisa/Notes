@@ -47,3 +47,23 @@ When **existance** is a factor:
 [First query] 
 WHERE EXISTS [Second query]
 ```
+
+## Naming columns 
+
+We can change the names of columns and tables for easier use. 
+
+For naming a column or a table we use the word `AS`.
+
+```SQL
+SELECT E.Lname AS Employee_name, S.Lname AS Supervisor_name
+FROM EMPLOYEE  AS E, EMPLOYESS AS S
+WHERE E.Super_ssn=S.snn;
+```
+
+## Join
+
+Here is a division on Join command in sql: 
+* Inner
+* Outer
+    * Left
+    * Right
