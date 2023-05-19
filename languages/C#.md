@@ -400,12 +400,6 @@ public int CompareTo(object incomingobject)
 
 #### IDisposable
 
-
-#### IEnumerable
-
-for iterating a **custom** collection by implementing the IEnumerable and IEnumerator interfaces. 
-
-For making a custom collection we need two interfaces. `IEnumerable` and `IEnumerator`.
 <!-- --------------------------------------------------------------------------------------------- -->
 ## Collection
 
@@ -470,3 +464,10 @@ static void DrawShapesWithStats<T>(T shape) where T: IShape, new()
 ArrayList belongs to when C# didn't have generics.
 
 `List` is a generic class. It implements `IEnumerable<T>`.
+
+
+#### IEnumerable
+
+for iterating a **custom** collection by implementing the IEnumerable and IEnumerator interfaces. 
+
+For making a custom collection we need two interfaces. `IEnumerable` and `IEnumerator`.
