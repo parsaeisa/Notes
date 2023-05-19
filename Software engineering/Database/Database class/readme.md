@@ -118,3 +118,17 @@ FROM <table list>
 [ORDER BY <attribute list>]
 ```
 
+## Assertion
+
+## Triggers
+
+## Function
+
+## Stored procedure
+
+## View
+
+## Other commands 
+### ALTER
+
+### DROP
