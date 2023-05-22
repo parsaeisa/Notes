@@ -160,6 +160,8 @@ zadd faveGuitarists 4 "Stephen Malkmus" 2 "Rosetta Tharpe" 3 "Bola Sete" 3 "Doug
 ```
 
 ### Retrieve data
+
+#### zrange
 `zrange` command is used to show members with rank in a specific range.
 ```bash 
 # zrange <key containing sorted set> <starting rank> <ending rank>
@@ -174,6 +176,17 @@ zrange faveGuitarists 5 6 WITHSCORES
 ```
 
 reference : https://www.digitalocean.com/community/cheatsheets/how-to-manage-sorted-sets-in-redis
+
+#### ZCOUNT
+
+The `zcount` command returns elements that their scores are in a specific range. 
+
+Command:
+```
+ZCOUNT [sorted set name] [min] [max]
+```
+
+The **min** and **max** are representatives of the range that we are seaching in.
 
 ### Concepts 
 The data structure used to create a sorted set is "Skiplist".
