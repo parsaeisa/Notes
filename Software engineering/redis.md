@@ -188,6 +188,8 @@ ZCOUNT [sorted set name] [min] [max]
 
 The **min** and **max** are representatives of the range that we are seaching in.
 
+We can use `-inf` for min and `+inf` for max.
+
 ### Concepts 
 The data structure used to create a sorted set is "Skiplist".
 You can see the description about Skiplist in [here](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#skiplist).
