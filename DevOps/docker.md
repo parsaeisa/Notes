@@ -143,3 +143,5 @@ EXPOSE 8080
 There are `ARG` and `LABEL` tag that learn what are they. 
 
 You define `ARG`s and then you can use them in label. That's all I know.
+
+> For a golang project you **just** copy the binary (created in pipelines) in `WORKDIR`. (don't use `WORKDIR`, bring the actual name of `WORKDIR`)
