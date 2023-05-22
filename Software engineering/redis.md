@@ -101,6 +101,12 @@ To run redis-cli type `redis-cli` in terminal.
 
 One of the advantages of key-value stores is their simple interace. So you can see other commands very easily.
 
+## Pipe 
+
+When sent a request to redis server, we are waiting for an acknowledgement too. This TTL can take us time. When we have multiple requests that are somehow like transactions ( requests must be done together ) we can put them in a pipe. Pipe accumulates those request and sends them all together. 
+
+This can lower the wastes of time.
+
 ## Redis hook
 
 Hook is something that executes by some triggers like : connection, command and pipeline.
