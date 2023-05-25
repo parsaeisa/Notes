@@ -120,17 +120,87 @@ FROM <table list>
 [ORDER BY <attribute list>]
 ```
 
+## Syntax
+
+In this syntax instead of `{}` we put `BEGIN` & `END`.
+
+
+### If
+```
+IF ([condition])
+BEGIN
+    [commands] [followed by ";"]
+END
+ELSE
+BEGIN
+    [commands] [followed by ";"]
+END
+```
+
+### Creating a variable:
+```
+DECLARE @[variable name] [type];
+```
+
+We give value to these variables by `SELECT` command.
+
+
 ## Assertion
+Defining template:
+```
+CREATE ASSERTION [assertion name]
+CHECK ([checking commands] ([queries]))
+```
 
 ## Triggers
 
+```
+CREATE TRIGGER [name]
+ON [table name]
+AFTER [commands - like update, insert]
+AS
+BEGIN
+    [variables]
+    [query]
+END
+```
+
 ## Function
+Similar to other commands, Functions have queries in themeselves and are used in queries.
+
+They are used like other functions like `COUNT`, `SUM`, etc.
+
+Defining a function: 
+``` 
+create function [name]([arguments])
+return [output type]
+return
+(
+
+)
+```
 
 ## Stored procedure
+Creating command template : 
+```
+CREATE PROCEDURE [name]
+    [arguments]
+AS
+BEGIN
+    [query]
+END
+```
+ 
+Using: 
+
+Example:
 
 ## View
-
-## Other commands 
+Defining template :
+```
+CREATE VIEW [view name] AS [Queries]
+```
+<!-- ## Other commands 
 ### ALTER
 
-### DROP
+### DROP -->
