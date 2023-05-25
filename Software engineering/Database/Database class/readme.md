@@ -11,13 +11,18 @@ Topics:
 * Stored Procedure
 * Schema (?)
 
-# Teaching roadmap
+## Teaching roadmap
 
 Seeds are available in [seeds]().
 
 [Showing students how to work with `mockaroo` ]
 
 We want to create an application database. 
+
+Design a database system for a university, Which contains 3 tables:
+* Students : id, name, major
+* Courses : id, course_name, credit_hours
+* Grades : id, student_id, course_id
 
 ## Nested query
 
@@ -63,6 +68,11 @@ WHERE E.Super_ssn=S.snn;
 ```
 
 ### Problem
+In our scenario, we can write a Nested query for retrieving the name of students that have failed in a course.
+
+``` SQL
+
+```
 
 ## Join
 The output of a `join` command is a bigger table that has records of more than 1 table.
@@ -74,6 +84,12 @@ Here is a division on Join command in sql:
     * Right
 
 ### Problem
+Write a query that shows students grades associated with their course.
+```SQL
+SELECT * FROM students s
+JOIN grades g on s.id = g.student_id 
+JOIN courses c on g.course_id = c.id
+```
 
 ## Aggregate functions
 
@@ -107,6 +123,7 @@ An example:
 ```
 
 ### Having
+`HAVING` is oftenly used for filtering some founded records.
 
 ### Problem
 
@@ -152,6 +169,13 @@ CREATE ASSERTION [assertion name]
 CHECK ([checking commands] ([queries]))
 ```
 
+Example: 
+
+In our scenario, we can create an assertion that ensures no grade goes above 20.
+```SQL
+
+```
+
 ## Triggers
 
 ```
@@ -163,6 +187,14 @@ BEGIN
     [variables]
     [query]
 END
+```
+
+Example: 
+
+In our scenario, we can create a trigger called `UpdateGPA` that fires whenever a new grade is inserted into the `Grades` table. This trigger automatically updates the student's GPA by calling the `CalculateGPA` function.
+
+```SQL
+
 ```
 
 ## Function
@@ -180,6 +212,13 @@ return
 )
 ```
 
+Example:
+
+In our scenrio, we can write a function called `CalculateGPA` that takes a student ID as a parameter and calculates the student's Grade Point Average (GPA) based on the grades they have received.
+```SQL
+
+```
+
 ## Stored procedure
 Creating command template : 
 ```
@@ -195,7 +234,14 @@ Using:
 
 Example:
 
+For out scenario, we can write a procedure called `GetTopStudentsInCourse` that takes a course name as a parameter and returns the top three students with the highest grades in that course.
+```SQL
+
+```
+
 ## View
+It is a saved query that can be treated like a table.
+View is an abstraction layer that can be used to control access. It can encapsulate complicated join logics in itself.
 Defining template :
 ```
 CREATE VIEW [view name] AS [Queries]
