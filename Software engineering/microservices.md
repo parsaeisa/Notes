@@ -64,5 +64,43 @@ Disadvantages :
 
 We can group repositories of our **project** in to one group in gitlab .
 
-## Mono Repo
+### Mono Repo
 Create one repo for all of services , and seperate them with folders (one folder for each service)
+
+## Patterns : 
+
+### Api-Gateway
+
+### Circuit breakers 
+
+### Command Query Responsibility Segregation
+
+### Retry pattern
+
+It handles service failures automatically.
+
+It retries a service call in certain number of times. 
+
+### Event-driven pattern
+
+### Service registry pattern
+
+### Sidecar pattern
+
+### Bulkhead pattern
+
+### Saga pattern
+
+### Outbox pattern
+
+### Self-containment pattern
+
+### External configuration pattern
+
+### Strangler pattern
+
+## Some existing problems
+
+* data partitioning and data replication
+* service governance and service lifecycle management
+* How will you make sure that your Microservices is not affecting other Microservices in the same host?

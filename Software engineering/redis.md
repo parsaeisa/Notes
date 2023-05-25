@@ -101,6 +101,12 @@ To run redis-cli type `redis-cli` in terminal.
 
 One of the advantages of key-value stores is their simple interace. So you can see other commands very easily.
 
+## Pipe 
+
+When sent a request to redis server, we are waiting for an acknowledgement too. This TTL can take us time. When we have multiple requests that are somehow like transactions ( requests must be done together ) we can put them in a pipe. Pipe accumulates those request and sends them all together. 
+
+This can lower the wastes of time.
+
 ## Redis hook
 
 Hook is something that executes by some triggers like : connection, command and pipeline.
@@ -160,6 +166,8 @@ zadd faveGuitarists 4 "Stephen Malkmus" 2 "Rosetta Tharpe" 3 "Bola Sete" 3 "Doug
 ```
 
 ### Retrieve data
+
+#### zrange
 `zrange` command is used to show members with rank in a specific range.
 ```bash 
 # zrange <key containing sorted set> <starting rank> <ending rank>
@@ -174,6 +182,19 @@ zrange faveGuitarists 5 6 WITHSCORES
 ```
 
 reference : https://www.digitalocean.com/community/cheatsheets/how-to-manage-sorted-sets-in-redis
+
+#### ZCOUNT
+
+The `zcount` command returns elements that their scores are in a specific range. 
+
+Command:
+```
+ZCOUNT [sorted set name] [min] [max]
+```
+
+The **min** and **max** are representatives of the range that we are seaching in.
+
+We can use `-inf` for min and `+inf` for max.
 
 ### Concepts 
 The data structure used to create a sorted set is "Skiplist".

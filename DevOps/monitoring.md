@@ -16,5 +16,19 @@ to learn :
 * logstash
 * elastic
 
+## What to monitor
+
+* Latency (general, per method, handler, instance, etc, external service call, publish)
+* Memory (in heap, stack, etc)
+* Errors (4xx or 5xx)
+* Success and fail cases 
+* HTTP/traffic (req/s)
+* Goroutines
+
+There are some things that are being monitored but you don't know what are them: 
+* Live objects
+* Objects allocated, space allocated : there is also a need for monitoring in-used objects and in-use space, some parts of objects and space may not be in use.
+* GC duration
+
 #### Loggers for golang :
 * zap

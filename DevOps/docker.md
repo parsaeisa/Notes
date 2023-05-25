@@ -122,3 +122,26 @@ docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=Pass123!" -p 1433:1433 --name sqls
 jeager runs on http://127.0.0.1:16686/ .
 
 * You can name your container with --name parameter while running the image . This can help you to interact more easily with containers .
+
+
+## Docker file 
+
+```
+ENV TZ="Asia/Tehran" \
+    PATH="/app:${PATH}"
+```
+
+```
+WORKDIR /app
+```
+
+`EXPOSE`: You put a port after it and then the application is served on that port.
+```
+EXPOSE 8080
+```
+
+There are `ARG` and `LABEL` tag that learn what are they. 
+
+You define `ARG`s and then you can use them in label. That's all I know.
+
+> For a golang project you **just** copy the binary (created in pipelines) in `WORKDIR`. (don't use `WORKDIR`, bring the actual name of `WORKDIR`)
