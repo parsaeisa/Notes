@@ -5,7 +5,6 @@ Here you can see my teaching roadmap for Fundamentals of Database Design course.
 Topics: 
 * Nested Query
 * Trigger
-* Constraint
 * View
 * Function
 * Stored Procedure
@@ -22,7 +21,7 @@ We want to create an application database.
 Design a database system for a university, Which contains 3 tables:
 * Students : id, name, major
 * Courses : id, course_name, credit_hours
-* Grades : id, student_id, course_id
+* Grades : id, student_id, course_id, grade
 
 ## Nested query
 
@@ -161,6 +160,14 @@ DECLARE @[variable name] [type];
 
 We give value to these variables by `SELECT` command.
 
+### While 
+
+```SQL
+WHILE [condition]
+BEGIN
+    [operations]
+END
+```
 
 ## Assertion
 Defining template:
@@ -169,12 +176,19 @@ CREATE ASSERTION [assertion name]
 CHECK ([checking commands] ([queries]))
 ```
 
-Example: 
+But in **MSSQL** we don't have any `ASSERTION`.
+
+In MSSQL, we can add constraints by `ALTER` command.
 
 In our scenario, we can create an assertion that ensures no grade goes above 20.
 ```SQL
-
+alter table Grades
+ADD CONSTRAINT grade_check CHECK (grade <= 20)
 ```
+
+Now, if we add a grade higher than 20 to our database, the DBMS will terminate that request. In this case the DBMS returned this error : 
+> The INSERT statement conflicted with the CHECK constraint "grade_check". The conflict occurred in database "master", table "dbo.Grades", column 'grade'.
+The statement has been terminated.
 
 ## Triggers
 
