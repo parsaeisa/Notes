@@ -116,11 +116,6 @@ Like functions in all programming languages, these functions are followed by par
 
 These inputs are column names.
 
-An example:
-```SQL
-
-```
-
 ### Having
 `HAVING` is oftenly used for filtering some founded records.
 
@@ -140,6 +135,7 @@ FROM <table list>
 
 In this syntax instead of `{}` we put `BEGIN` & `END`.
 
+In MSSQL syntax, commands are seperated by `GO` clause.
 
 ### If
 ```
@@ -258,6 +254,13 @@ return
 ```
 
 ## Stored procedure
+
+Stored procedure is a set of database operations that can be applied all together. A stored procedure can be executed by any of these events:
+- Through a program ( with C#, python, etc)
+- In a trigger 
+- In a scheduled job
+- manual execution (with `EXEC` command)
+
 Creating command template : 
 ```
 CREATE PROCEDURE [name]
@@ -274,6 +277,16 @@ Example:
 
 For out scenario, we can write a procedure called `GetTopStudentsInCourse` that takes a course name as a parameter and returns the top three students with the highest grades in that course.
 ```SQL
+CREATE OR ALTER PROCEDURE GetTopStudentsInCourse
+    @course_name VARCHAR(255)
+AS
+BEGIN
+    SELECT TOP 3 s.full_name, c.course_name ,g.grade  FROM students s 
+    JOIN grades g ON s.id = g.student_id
+    JOIN courses c ON g.course_id = c.id
+    WHERE c.course_name = @course_name
+    ORDER BY g.grade DESC
+END
 
 ```
 
