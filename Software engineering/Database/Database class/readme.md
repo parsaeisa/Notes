@@ -205,10 +205,26 @@ END
 
 Example: 
 
-In our scenario, we can create a trigger called `UpdateGPA` that fires whenever a new grade is inserted into the `Grades` table. This trigger automatically updates the student's GPA by calling the `CalculateGPA` function.
+In our scenario, we can create a trigger shows a message when a new grade is inserted to grades table.
 
 ```SQL
+create or ALTER TRIGGER AnnounceGradeAdd 
+ON Grades
+AFTER INSERT 
+AS
+BEGIN 
+    SELECT "New grade has been added."
+END
+```
 
+In a trigger we can access the values in new incoming row by using a virtual table called `inserted`. Like this:
+```SQL
+DECLARE @student_id int ;
+DECLARE @student_name VARCHAR(255);
+
+SELECT @student_id = inserted.column2 ;
+SELECT @student_name = full_name FROM students
+WHERE id = @student_id
 ```
 
 ## Function
@@ -230,7 +246,15 @@ Example:
 
 In our scenrio, we can write a function called `CalculateGPA` that takes a student ID as a parameter and calculates the student's Grade Point Average (GPA) based on the grades they have received.
 ```SQL
-
+create function calculateGPA(@student_name varchar(255))
+returns table
+return 
+(
+    SELECT s.full_name, AVG(g.grade) as GPA FROM students s 
+    JOIN grades g ON s.id = g.student_id
+    WHERE s.full_name = @student_name
+    GROUP BY s.full_name    
+)
 ```
 
 ## Stored procedure
