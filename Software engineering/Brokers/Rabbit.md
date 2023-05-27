@@ -6,6 +6,9 @@ Rabbit is considered as **delayed queue**.
 
 It can store **jobs**.
 
+## Features
+These features distinguish Rabbit mq from other message brokers.
+
 ### Various messaging pattern
 It supports various messaging patterns : 
 * publish/subscribe
