@@ -18,8 +18,9 @@ To Learn :
 - Snowflake
 - database design principles
 - Big database design and query
-- traffic migration
+- traffic and data migration
 - What's happening in database ? 
+- What is bulk insert 
 
 ## Database design
 
