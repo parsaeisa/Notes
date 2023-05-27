@@ -49,3 +49,11 @@ This provides:
 
 It Offers plugins that extend it's funcionality.
 
+
+## Exchange
+
+Exchange need to be made seperatedly like topics.
+
+## Job schedule 
+
+Jobs can be scheduled in Rabbit.
