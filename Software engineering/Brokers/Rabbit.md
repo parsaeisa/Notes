@@ -59,58 +59,8 @@ Exchange need to be made seperatedly like topics.
 
 Messages are always published to an exchange and then that exchange decides where to forward it.
 
-Creating exchanges with golang:
-```go
-exchangeName := "myExchange"
-exchangeType := "direct"
-
-err = ch.ExchangeDeclare(
-    exchangeName, // Name of the exchange
-    exchangeType, // Type of the exchange (e.g., direct, fanout, topic)
-    false,        // Durable - exchange survives broker restart
-    false,        // Auto-deleted - exchange is deleted when there are no bindings
-    false,        // Internal - only used for exchange-to-exchange bindings
-    false,        // No-wait - don't wait for a response
-    nil,          // Arguments
-)
-if err != nil {
-    log.Fatal(err)
-}
-```
-
 Each publish method takes an exchange as input to publish messages to.
 
-## Consuming
-
-For consuming in golang: 
-```go
-msgs, err := ch.Consume(
-    queueName, // Queue name to consume from
-    "",        // Consumer tag - unique identifier for the consumer
-    true,      // Auto-acknowledge - messages are automatically acknowledged
-    false,     // Exclusive - this consumer gets exclusive access to the queue
-    false,     // No-local - don't deliver messages published by this connection
-    false,     // No-wait - don't wait for a response
-    nil,       // Arguments
-)
-if err != nil {
-    log.Fatal(err)
-}
-
-// Start a goroutine to handle incoming messages
-go func() {
-    for msg := range msgs {
-        // Process the received message
-        log.Printf("Received message: %s", msg.Body)
-    }
-}()
-
-// Block the main goroutine to keep the consumer alive
-select {}
-
-```
-
-As you can see we should create a new goroutine to consume on a queue.
 
 ## Job schedule 
 
