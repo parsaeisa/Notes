@@ -297,7 +297,12 @@ Defining template :
 ```
 CREATE VIEW [view name] AS [Queries]
 ```
-<!-- ## Other commands 
+
 ### ALTER
 
-### DROP -->
+Alter is a command that does three things:
+* Add constraints
+* Add or remove columns
+* Change the definition of a column (??)
+
+### DROP 
