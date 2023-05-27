@@ -1,4 +1,4 @@
-# Rabit
+# Rabbit
 
 I think rabbit has more functionalities than other mentioned brokers.
 
