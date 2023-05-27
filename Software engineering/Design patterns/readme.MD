@@ -61,3 +61,6 @@ public class Main {
 
 https://refactoring.guru/design-patterns/catalog
 
+
+## To learn
+* What is worker-queue pattern ? - rabbit
