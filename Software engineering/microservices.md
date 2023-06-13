@@ -8,6 +8,16 @@ The more number of services talk to each other , the higher goes the latency .
 
 Microservices architecture is against Monolith architecture . 
 
+## Api-gateway
+
+It may not be api-gateway for real but because they are too similar I consider them the same.
+
+In Snapp for example, there are lot of services that work on rides and change it's properties. When the client requests for a ride's information, it can ask from any of those services for the specific information that they change. 
+
+It is so hard for client. It is better that client only calls one service and ask ride informations from that service. 
+
+I call this pattern api-gateway for my self, we put a SHAKH service (call it A) between client and other services, client gets rides' information from A service, that A service calls it's needed information from any service that it should.
+
 ## Problems of Monolith architecture 
 
 * The stack of all features should be the same . 
