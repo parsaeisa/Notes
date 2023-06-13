@@ -13,6 +13,8 @@ components :
 * Load balancers
 * brokers
 * Testing strategies
+* monitoring
+* deployment managing tool
 * [To be completed]
 
 ## Incidents 
