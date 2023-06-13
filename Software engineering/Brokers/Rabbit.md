@@ -2,7 +2,7 @@
 
 I think rabbit has more functionalities than other mentioned brokers.
 
-Rabbit is considered as **delayed queue**.
+Rabbit is considered as **delayed queue**. It can store an event for a configurable time, then publish it after that delay time. 
 
 It can store **jobs**.
 

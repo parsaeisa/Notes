@@ -12,8 +12,8 @@ components :
 * CDN
 * Load balancers
 * brokers
-* ... To complete
-
+* Testing strategies
+* [To be completed]
 
 ## Incidents 
 

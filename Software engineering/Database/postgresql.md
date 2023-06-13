@@ -2,6 +2,8 @@
 
 Postgre sql has a MVCC architecture . 
 
+It has something called **Materallized view** and it has operator in k8s I guess and it's more preferable than MySql.
+
 ## Commands 
 
 `TRUNCATE` Empties one or set of tables .

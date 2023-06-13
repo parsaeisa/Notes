@@ -201,6 +201,15 @@ The data structure used to create a sorted set is "Skiplist".
 You can see the description about Skiplist in [here](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#skiplist).
 
 
+## Set
+
+Redis has an array the ensures each element is unique in that array. That array with unique element (each member comes only one time), is called **Set** in redis.
+
+We can use it to remove duplicate records while storing them.
+
+### An example: 
+A broker can deliver a message more than one time, but storing other redelivered messages can harm the application's logic.
+
 ## Other Redis topics
 
 * Redis sentinel : Is used to make redis highly available
@@ -213,6 +222,8 @@ Try to cluster some redises with redis-sentinel .
 * Redsync
 * Redis datatypes
 * SETNX
+* `ZRemRangeByScore` method in golang
+* `Expire` method in golang on a pipeline
 
 Continue watching : 
 https://www.youtube.com/watch?v=OqCK95AS-YE

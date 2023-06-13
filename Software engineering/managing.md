@@ -1,11 +1,24 @@
 # Managing
 
-When you take a technology in an enterprise app, you should cusotmise that thechnology .
+A manager's concerns : 
+* Team non-financial resources (like energy & time)
+* Testing services
+* Request loads
+
+## Scattered points
+
+* When you take a technology in an enterprise app, you should cusotmise that thechnology .
 
 For example wrap echo framework in another framework that behaves like your company wants . 
 
-Do not assign a service to just one person . Every member in team should contribute on every service that is owned by our team .
+* Do not assign a service to just one person . Every member in team should contribute on every service that is owned by our team .
 
+Sometimes we don't know whether a policy or action is good or not. Sometimes we can stop thinking & investigating and test it for a while. For example in the case of features, we roll it out in buckets. These two are related.
+
+
+## Toolbox
+
+Creating a new micro-service
 
 ## Domain 
 Domain managing is one of the challenging part of software managing.
