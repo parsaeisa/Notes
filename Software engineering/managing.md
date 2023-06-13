@@ -5,6 +5,18 @@ A manager's concerns :
 * Testing services
 * Request loads
 
+## Non-financial resources
+
+Developer's time and energy are the most valuable items in a team. So we should save them.
+
+### Automation
+
+Automating process can save the team time. It requires a little amount of development cost but it's just one time.
+
+Tools for automating : 
+* gitlab pipelines
+* Generating codes (for example repositories that have no point in their writing )
+
 ## Scattered points
 
 * When you take a technology in an enterprise app, you should cusotmise that thechnology .
