@@ -1,5 +1,29 @@
 # Load balancing
 
+## Switching solution
+
+Consider there is a broker in your microservice. More than one microservice is relying on this broker and one of them has higher priority (in busniess logic) than your services (call this service B). 
+
+When that broker (call it X) faces a high request load, more than it's tolerance, it goes down and the B service goes down too.
+
+In this situation you should have a **quick switch solution**. You need to move your microservice to another server with lower load.
+
+### Abstraction layer
+
+A solution, in very abstracion way to say is something that I like to call **Abstraction layer**.
+
+Consider the mentioned example, we use the client of X broker so many places in our code. For publishing, subscribing etc. While we are switching that broker, we need to change it all over our code and is not possible to do it in just one hour.
+
+So we can put an abstraction layer of brokers. A simple client for all brokers (nats-streaming, kafka, rabbit, etc ), is used in our code, all over the place. 
+
+While switching we can just change it's creating in app's startup.
+
+Once it's connected to Rabbit, once to Kafka, etc.
+
+This abstraction can be wrote with interface. We put useful methods (like publish & subscribe) in that interface, then for each broker, the implementation of that interface differs.
+
+> don't forget to update config for switching. When we have 2 options for a certain scenario we should have full configurations for those 2 options in our confi file.
+
 ## Simple algorithms 
 A very beautiful link on this topic (with animation) : https://samwho.dev/load-balancing/
 
