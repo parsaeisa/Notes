@@ -1,5 +1,7 @@
 # Monitoring
 
+Monitoring involves continuously observing the state and behavior of a software system or application in real-time. It typically involves collecting and analyzing various metrics, such as CPU usage, memory utilization, network traffic, response times, and error rates. Monitoring helps ensure that the system is functioning correctly and provides insights into its performance, stability, and availability. It often involves setting up alerts or notifications to detect anomalies or critical conditions.
+
 In an AI model , we pass the constructor a print method which gaves us the logging that we want .
 
 In a Backend project , for example in go we define a logger for our app .
