@@ -228,3 +228,54 @@ Try to cluster some redises with redis-sentinel .
 Continue watching : 
 https://www.youtube.com/watch?v=OqCK95AS-YE
 https://www.youtube.com/watch?v=XCsS_NVAa1g
+
+## Geo-spatial features
+
+Redis doesn't have any dedicated feature for geo-spatial objects.
+
+For storing geo-spatioal objects it uses sorted-set. 
+
+`GEOADD` Geo add command is used for storing points. 
+
+```
+GEOADD cities -122.34 47.61 Seattle
+```
+If operation performed successfully it returns 1. 
+
+As you can see this is so much like `ZADD` command for sorted sets. Hence, other sorted sets commands can be used : 
+```
+127.0.0.1:6379> ZRANGE cities 0 -1 WITHSCORES
+1) "Seattle"
+2) "1558507288382415"
+```
+
+with mentioned command you can query newly added items.
+
+I think it's score (as you remember we had scores in sorted sets) is computed using the built-in geohash function.
+
+For inspecting the GEOHASH for a point you can use the command below : 
+```
+127.0.0.1:6379> GEOHASH cities Seattle
+1) "c23nb54sr70"
+```
+
+With `GEOPOS` command we can get coordiantes of a point : 
+```
+127.0.0.1:6379> GEOPOS cities Seattle
+1) 1) "-122.33999758958816528"
+   2) "47.61000085169597185"
+```
+
+For getting points in certain radius from point "A" you can use this command : 
+```
+GEOSEARCH [a set] FROMMEMBER [ A member ] BYRADIUS [radius] km WITHCOORD WITHDIST WITHHASH
+```
+
+The WITHCOORD, WITHDIST and WITHHASH are flags that show information for each founded point. 
+
+We can also query points with a certain distance to a new points (wit coordinates) :
+```
+GEOSEARCH cities FROMLONLAT [lat] [lng] BYRADIUS [radius] km WITHCOORD WITHDIST WITHHASH
+```
+
+In two mentioned queries, we used circles, but redis has features for more sophisticated searchs.
