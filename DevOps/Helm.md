@@ -12,6 +12,25 @@ Helm chart is used to describe our app when deloying on k8s .
 
 this needs a seperate file , move these notes to another file . 
 
+## Syntax 
+
+If you have a set of objects in your value like this :
+```
+services:
+    service1:
+        url: "foo"
+    service2: 
+        url: "bar"
+```
+
+You can iterate through these using `range`:
+
+```
+{{- range $name, $val := .Values.services}}
+// other helm operations 
+{{- end}}
+```
+
 ## Commands
 
 ### Install
