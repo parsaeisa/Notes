@@ -1,5 +1,7 @@
 # Helm
 
+Helm is a command line tool for interacting with helm charts. Helm charts is one of approaches for deploying a service on k8s & openshift.
+
 To create a new helm chart execute the below command :
 ```bash
 helm create <chart name>
@@ -14,6 +16,9 @@ this needs a seperate file , move these notes to another file .
 
 ## Syntax 
 
+When you are defining objects for k8s or openshift ( is helm inegretable for k8s or not ??) there gonna be lots of duplicated codes. Using helm syntax you can remove these duplications. 
+
+### range
 If you have a set of objects in your value like this :
 ```
 services:
@@ -40,6 +45,39 @@ In an equation in helm, the `default` assign a default_value to variable if the 
 ```
 
 In this code block,`$name` is equal to `.Values.name`, but if `.Values.name` was nil, `$name` will be equal to "John Dde".
+
+### printf
+It's something like fmt.printft in golang. 
+
+```
+{{ printf FORMAT_STRING ARGUMENTS... }}
+```
+
+### include 
+
+```
+{{ include KEY_IN_OTHER_OBJECTS .}}
+```
+
+you can define a template in `_helpers.tpl` file like this for an object's labels : 
+```
+{{- define "appName.labels" -}}
+helm.sh/chart: {{ include "appName.chart" . }}
+{{ include "appName.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+```
+
+Then in the manifest of that object for labels you can do this: 
+```
+metadata: 
+    labels: {{ include "appName.labels" . }}
+```
+
+Then all of your defined labels will come here. 
 
 ## Commands
 
