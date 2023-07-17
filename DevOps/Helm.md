@@ -60,7 +60,7 @@ It's something like fmt.printft in golang.
 ```
 
 you can define a template in `_helpers.tpl` file like this for an object's labels : 
-```
+```helm
 {{- define "appName.labels" -}}
 helm.sh/chart: {{ include "appName.chart" . }}
 {{ include "appName.selectorLabels" . }}
