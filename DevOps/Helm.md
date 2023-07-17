@@ -31,6 +31,16 @@ You can iterate through these using `range`:
 {{- end}}
 ```
 
+### default 
+
+In an equation in helm, the `default` assign a default_value to variable if the corresponding value is nil or is not set. 
+
+```
+{{- $name := default .Values.name "John Doe" }}
+```
+
+In this code block,`$name` is equal to `.Values.name`, but if `.Values.name` was nil, `$name` will be equal to "John Dde".
+
 ## Commands
 
 ### Install
