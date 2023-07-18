@@ -130,21 +130,6 @@ Components like databases, key-value stores , brokers etc.
 
 For example postgre , mariadb , redis, nats, kafka etc. 
 
-## Configmaps
-
-Configmaps are subset of __volumes__.
-
-I don’t know the difference between configmaps and deployment configs . 
-
-A service in k8s reads configuration variables from a config file that is  stored in the k8s itself. 
-
-This is useful when an incident is happening and we want to configure the connections or behavior of system very quickly. Without the need of ( is need correct here?? ) changing the project in source code ( creating branches and merge requests and shit )
-
-### Secrets  
-
-In our configmaps, we may need to store some passwords . e.g. the username and password for connection to a database . 
-These passwords should not be shown in the configmaps . so we store them in secrets to be available merely for administrators.  
-
 ## HPA 
 It stands for Horizontal pod autoscaler . 
 
@@ -186,6 +171,21 @@ After adding the storage, a new deployment is being created. Now go to your pod'
 Also you can **detach** a volume from your deployment, simply by removing it in Administrator > Workloads > Deployments > your application > Configuration tab.
 
 Volumes can be deleted. 
+
+### Configmaps
+
+Configmaps are subset of __volumes__.
+
+I don’t know the difference between configmaps and deployment configs . 
+
+A service in k8s reads configuration variables from a config file that is  stored in the k8s itself. 
+
+This is useful when an incident is happening and we want to configure the connections or behavior of system very quickly. Without the need of ( is need correct here?? ) changing the project in source code ( creating branches and merge requests and shit )
+
+#### Secrets  
+
+In our configmaps, we may need to store some passwords . e.g. the username and password for connection to a database . 
+These passwords should not be shown in the configmaps . so we store them in secrets to be available merely for administrators.  
 
 ## Cluster role binding
 
