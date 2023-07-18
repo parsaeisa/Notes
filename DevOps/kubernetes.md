@@ -74,7 +74,7 @@ We adjust specifications in manifests
 ## Main concepts
 You can see main concepts of k8s in the k8s dashboard : 
 
-<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="800" >
+<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="650" >
 
 ## Levels 
 Pod is the atomicity of kubernetes . 
