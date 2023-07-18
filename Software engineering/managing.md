@@ -1,7 +1,7 @@
 # Managing
 
 A manager's concerns : 
-* Team non-financial resources (like energy & time)
+* Team non-financial resources (technical level, energy & time)
 * Testing services
 * Request loads
 
