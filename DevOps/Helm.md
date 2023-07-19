@@ -95,6 +95,19 @@ After checking the validation of helm chart we can deploy it using the below com
 helm install myapplication ./mychart 
 ```
 
+### Uninstall 
+
+I think when you want to re-deploy a resource, you should uninstall it first. 
+
+If you delete the deployment you still gonna have issues and get this error : 
+
+> Error: INSTALLATION FAILED: cannot re-use a name that is still in use
+
+with the command below you can delete a name from kubernetes:
+```bash
+helm uninstall <app name>
+```
+
 ## Lint
 ```bash
 helm lint ./mychart
