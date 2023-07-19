@@ -72,6 +72,16 @@ Now a new object and its count would be a new record in your database .
 * redis sentinel
 * sharding in MySQL or mariadb
 
+Consider in k8s you deployed 3 replicas of a database:
+* Each replica differs from others.
+* They should have same order while creating and tearing down
+* they should constantly communicate with each other to be synchronized. 
+* We should be able to backup their data.
+
+These operations are performed differntly in MySQL, PostgreSQL & elasticsearch for example. 
+
+There is no solution for doing this and we cannot automate in kubernetes. 
+
 ## Sharding
 I think sharding is an operation on Datas . Some criterion is used to partition the data among the different set of slave/master databases . 
 
