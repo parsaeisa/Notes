@@ -136,6 +136,8 @@ Components like databases, key-value stores , brokers etc.
 
 For example postgre , mariadb , redis, nats, kafka, prometheus, etcd, etc. 
 
+Replication of databases has some points that are mentioned [here](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Database#highly-availability)
+
 StatefulSets require **human operations**. But this facts denies many of k8s main concepts like : 
 * automation
 * less human intervention
@@ -143,7 +145,11 @@ StatefulSets require **human operations**. But this facts denies many of k8s mai
 
 So here we need an alternative. Those alternatives suppose to be **operators**.
 
-## Operator
+Kubernetes has **fully automated manner** while manging stateless apps but the concept of operators is defined using StatefulSets. This is because k8s doesn't have required knowledge for managing them.
+
+* stateless apps doesn't have business logic (??)
+
+### Operator
 
 Operator is a software operator instead of human operator.
 
@@ -155,6 +161,20 @@ Operators should do this in a automated manner :
 Operators has a loop : 
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/operator_loop.png" width="400" height="250">
+
+Operators can be **custom operators** in  k8s. 
+
+It also watches for changes, changes in configurations such as image's URL.
+
+It uses CRDs which stands for **C**ustom **R**esource **D**efinitions.
+
+Resources are what I called objects in previous. We have resources such as configMaps, deplymetns etc. We can define our custom resources using CRDs. This is just basic understanding of CRDs I explained about it more in CRD section.
+
+* Operators for many applications has been developed already by the community and you can access them using : operatorhub.io
+
+There is also an **operator sdk** that helps to create an operators.
+
+### CRD's
 
 ## HPA 
 It stands for Horizontal pod autoscaler . 
