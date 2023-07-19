@@ -134,7 +134,26 @@ Stateful sets are used for stateful components of our system .
 
 Components like databases, key-value stores , brokers etc.
 
-For example postgre , mariadb , redis, nats, kafka etc. 
+For example postgre , mariadb , redis, nats, kafka, prometheus, etcd, etc. 
+
+StatefulSets require **human operations**. But this facts denies many of k8s main concepts like : 
+* automation
+* less human intervention
+* self healing
+
+So here we need an alternative. Those alternatives suppose to be **operators**.
+
+## Operator
+
+Operator is a software operator instead of human operator.
+
+Operators should do this in a automated manner : 
+- deploy the app
+- create clusters of APIs
+- recover
+
+Operators has a loop : 
+<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/operator_loop.png" width="800" height="500">
 
 ## HPA 
 It stands for Horizontal pod autoscaler . 
@@ -200,6 +219,3 @@ In our configmaps, we may need to store some passwords . e.g. the username and p
 These passwords should not be shown in the configmaps . so we store them in secrets to be available merely for administrators.  
 
 ## Cluster role binding
-
-## Operator
-
