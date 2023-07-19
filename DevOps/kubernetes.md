@@ -25,6 +25,10 @@ To learn :
 - CRD
 - What is exactly a cluster ??
 
+## Manifests
+
+Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
+
 Files: 
 - clusterrolebinding.yaml
 - configmap.yaml
@@ -36,10 +40,6 @@ Files:
 - service.yaml
 
 You can create most of these files using `helm create` command. 
-
-## Manifests
-
-Each object is defined for k8s in a yml file that I like to call manifest. 
 
 It has a structure : 
 ```
