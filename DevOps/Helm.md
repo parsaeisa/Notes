@@ -86,13 +86,13 @@ The install command is normally used to deploy the projects.
 
 At first we should validate our chart : 
 ```go
-helm install --dry-run --debug ./mychart
+helm install --dry-run --debug <path to chart>
 ```
 The debug inspects the generated definitions.
 
 After checking the validation of helm chart we can deploy it using the below command : 
 ```go
-helm install myapplication ./mychart 
+helm install myapplication <path to chart>
 ```
 
 ### Uninstall 
@@ -106,6 +106,14 @@ If you delete the deployment you still gonna have issues and get this error :
 with the command below you can delete a name from kubernetes:
 ```bash
 helm uninstall <app name>
+```
+
+### Upgrade
+
+Use this command if you already installed an app and you want to update it.
+
+```bash
+helm upgrade [name] [path to chart directory]
 ```
 
 ## Lint
