@@ -153,7 +153,8 @@ Operators should do this in a automated manner :
 - recover
 
 Operators has a loop : 
-<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/operator_loop.png" width="800" height="500">
+
+<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/operator_loop.png" width="400" height="250">
 
 ## HPA 
 It stands for Horizontal pod autoscaler . 
