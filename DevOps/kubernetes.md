@@ -76,10 +76,12 @@ You can see main concepts of k8s in the k8s dashboard :
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="650" >
 
-## Levels 
+## Level of abstraction 
 Pod is the atomicity of kubernetes . 
 
-Pod → Deployments → Projects
+Pod → Deployments → namespace
+
+* in openshift instead of **namespace** we have **project**.
 
 Each of these are k8s clusters. we can get the list of them in cli using : 
 
@@ -111,6 +113,10 @@ Selector is the main component of service.
 It is used to identify the set of Pods that the Service should target.
 
 Selector works with labels. If a selector has a set of labels A, it **selects** pods with A labels.
+
+### Labels
+
+Labels are assigned to each object in k8s for querying purposes. With labels we can select objects with desired properties. 
 
 ### Other components of service
 
@@ -144,6 +150,12 @@ Autoscaling using HPA with CLI :
 ```bash
 oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
 ```
+
+## Clusters
+
+Each cluster contains nodes
+
+## Controllers
 
 ## Networking 
 
