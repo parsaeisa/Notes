@@ -8,22 +8,29 @@ K8s and almost all other container orchestrator use a linux kernel feature calle
 CFS handles resource allocations and enforce limits for runing containers.
 
 
+## Main concepts
+You can see main concepts of k8s in the k8s dashboard : 
 
-## Service account 
+<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="650" >
 
-This is an account that is used for pipelines in automations.
+### Level of abstraction 
+Pod is the atomicity of kubernetes . 
 
-It has a level of access that can be for example editor.
+Pod → Deployments → namespace
 
-grpc load balancing : 
-* kube resolver 
-* connection pool
+* in openshift instead of **namespace** we have **project**.
 
-grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
+Each of these are k8s clusters. we can get the list of them in cli using : 
 
-To learn : 
-- CRD
-- What is exactly a cluster ??
+```bash
+get <resource name>s
+```
+
+###  Other things : 
+* service account : which is a fake account 
+* api server 
+* Headless services
+* Node exporter - which has metricss
 
 ## Manifests
 
@@ -51,43 +58,7 @@ spec:
     [other key featues of object]
 ```
 
-##  What it has : 
-* service account : which is a fake account 
-* api server 
-* Headless services
-* Node exporter - which has metricss
-
-## Job 
-
-You can define a job for k8s that is executed in a cron job timing . 
-
-### Using k8s job in a project
-
-You can put an endpoint in your project that has a handler. In this handler you do things that you want to be done on in a scheduled way on a regular basis.
-
-Then in that cronjob, you can make a request to that endpoint ( in bash, curl ) in time regulations that you want.
-
-## Deploy
-We talk to k8s within manifests. 
-We adjust specifications in manifests 
-
-## Main concepts
-You can see main concepts of k8s in the k8s dashboard : 
-
-<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="650" >
-
-## Level of abstraction 
-Pod is the atomicity of kubernetes . 
-
-Pod → Deployments → namespace
-
-* in openshift instead of **namespace** we have **project**.
-
-Each of these are k8s clusters. we can get the list of them in cli using : 
-
-```bash
-get <resource name>s
-```
+We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
 
 ## Service 
 
@@ -240,3 +211,30 @@ In our configmaps, we may need to store some passwords . e.g. the username and p
 These passwords should not be shown in the configmaps . so we store them in secrets to be available merely for administrators.  
 
 ## Cluster role binding
+
+## Service account 
+
+This is an account that is used for pipelines in automations.
+
+It has a level of access that can be for example editor.
+
+grpc load balancing : 
+* kube resolver 
+* connection pool
+
+grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
+
+To learn : 
+- CRD
+- What is exactly a cluster ??
+
+
+## Job 
+
+You can define a job for k8s that is executed in a cron job timing . 
+
+### Using k8s job in a project
+
+You can put an endpoint in your project that has a handler. In this handler you do things that you want to be done on in a scheduled way on a regular basis.
+
+Then in that cronjob, you can make a request to that endpoint ( in bash, curl ) in time regulations that you want.
