@@ -25,6 +25,8 @@ For example wrap echo framework in another framework that behaves like your comp
 
 * Do not assign a service to just one person . Every member in team should contribute on every service that is owned by our team .
 
+* Divide tasks between team members carefully. You should adjust the granularity of tasks.
+
 Sometimes we don't know whether a policy or action is good or not. Sometimes we can stop thinking & investigating and test it for a while. For example in the case of features, we roll it out in buckets. These two are related.
 
 
