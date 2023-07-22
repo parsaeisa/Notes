@@ -13,10 +13,20 @@ You can see main concepts of k8s in the k8s dashboard :
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="650" >
 
+You can get the information of an object using `describe` commands. 
+```bash
+oc describe [object type] [object type]
+```
+
+For example:
+```bash
+oc describe project automation-test
+```
+
 ### Level of abstraction 
 Pod is the atomicity of kubernetes . 
 
-Pod → Deployments → namespace
+Pod → Deployments → namespace → TEAM
 
 * in openshift instead of **namespace** we have **project**.
 
@@ -238,3 +248,11 @@ You can define a job for k8s that is executed in a cron job timing .
 You can put an endpoint in your project that has a handler. In this handler you do things that you want to be done on in a scheduled way on a regular basis.
 
 Then in that cronjob, you can make a request to that endpoint ( in bash, curl ) in time regulations that you want.
+
+## Team
+
+Each team consists multiple namespaces. 
+
+A namespace can be a part of a team to get quota more than usual. 
+
+Namespaces can be joined to teams and being removed from it. 
