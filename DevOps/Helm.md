@@ -18,6 +18,12 @@ this needs a seperate file , move these notes to another file .
 
 When you are defining objects for k8s or openshift ( is helm inegretable for k8s or not ??) there gonna be lots of duplicated codes. Using helm syntax you can remove these duplications. 
 
+### seperator 
+
+Helm descriptions are written in yaml files. 
+
+With using `---` (dash dash dash) we can put definitions of **multiple** objects in a **single** file and seperate them. 
+
 ### range
 If you have a set of objects in your value like this :
 ```
