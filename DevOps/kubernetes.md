@@ -36,11 +36,12 @@ Each of these are k8s clusters. we can get the list of them in cli using :
 get <resource name>s
 ```
 
-###  Other things : 
+###  To learn : 
 * service account : which is a fake account 
 * api server 
 * Headless services
 * Node exporter - which has metricss
+* Kustomization
 
 ## Manifests
 
