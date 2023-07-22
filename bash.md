@@ -9,6 +9,19 @@ in bash we have **for** , **if** and **switch case** .
 
 In the case that they are needed search for them , just know that they exist . 
 
+
+`|` is the seperator for commads. You can put multiple commands in a row seperated using this character. 
+
+With using this character, the output of previous command is the input of currnet command.  
+
+```
+command 1 | command 2 | command 3
+```
+
+Here the output of command 1 goes to command 2 and the output of command 2 goes to command 3. 
+
+I think command2 act command1's outputs as a file. For example the `awk` command takes a file as input but using `|` we do not need to pass file path to it. 
+
 ### declare 
 allows you to update attributes applied to variables . 
 parameters : 
@@ -71,6 +84,22 @@ alias swagger='docker run --rm -it  --user $(id -u):$(id -g) -e GOPATH=$(go env 
 
 Before the above command, if you type swagger in terminal you will get nothing.
 But after you entered this command, swagger acts like a new command in your terminal.
+
+### awk
+
+awk includes a pattern and a command. 
+```bash
+
+```
+
+### xargs
+
+`xargs` applies a command to all elements of it's previous. It's always comes after `|` character because it wants to be applied of a command's output.
+
+deleting pods of an application using regex : 
+```bash
+kubectl get pods -n default --no-headers=true | awk '/web-app/{print $1}'| xargs  kubectl delete -n default pod
+```
 
 ## curl
 curl is used to make a http request . 
