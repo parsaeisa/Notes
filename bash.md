@@ -89,8 +89,25 @@ But after you entered this command, swagger acts like a new command in your term
 
 awk includes a pattern and a command. 
 ```bash
-
+awk 'pattern { action }' input-file
 ```
+
+Search for a word in a file : 
+```bash
+awk '/pattern/ {print}' file.txt
+```
+
+Getting the lines of a file:
+```bash
+awk 'END {print NR}' file.txt
+```
+
+We can put multiple commands in a single awk : 
+```bash
+awk '{sum += $1} END {print "Total:", sum}' numbers.txt
+```
+
+here we have a sum, then a pattern, at last another command.
 
 ### xargs
 
