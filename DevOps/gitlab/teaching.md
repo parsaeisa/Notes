@@ -29,6 +29,10 @@ Explain them it is better to do these jobs alongside with developing, before a c
 
 DevOps is a practice, not a role. 
 
+Write a simple golang project that has just one function and a it's test. 
+
+Put it on git and tell them to download it. 
+
 ## Showing a usecase
 
 > There is an stage in development when lots of things happen there. This is a place that you can use many tools. 
@@ -83,6 +87,10 @@ It can be a continue to dependencies section.
 One of the most important usages of pipelines. 
 
 just say it theoritically. don't show anything in code, just tell them that they will learn this in docker chapter. 
+
+Tell them about a way that each deploying is performed. 
+
+An image is generated --> it get pushed to a registry --> A deploy command in a bigger computer
 
 ## Examples
 
