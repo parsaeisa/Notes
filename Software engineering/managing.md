@@ -16,6 +16,17 @@ Automating process can save the team time. It requires a little amount of develo
 Tools for automating : 
 * gitlab pipelines
 * Generating codes (for example repositories that have no point in their writing )
+* Test automation 
+
+#### Test automation
+
+The whole idea is to write another application that tests all possible scenarios on the target application.
+
+In the pipelines before deploying all those scenarios are being tested. After the testing is completed, all the allocated resources for testing the application should be deallocated gracefully. 
+
+The QA layer of a firm should not be totally seperated from developer layer. Some developers think that they only develop the code and the QA must test all scenarios. But QA has a resource (for example time) for itself and it's better to empty that resource for them. 
+
+Hence, it's better to test scenarios in an automated manner as much as possible. 
 
 ## Scattered points
 
@@ -26,6 +37,8 @@ For example wrap echo framework in another framework that behaves like your comp
 * Do not assign a service to just one person . Every member in team should contribute on every service that is owned by our team .
 
 * Divide tasks between team members carefully. You should adjust the granularity of tasks.
+
+* Each features that needs to be implemented has a priority and a manager should schedule their implementations carefully.
 
 Sometimes we don't know whether a policy or action is good or not. Sometimes we can stop thinking & investigating and test it for a while. For example in the case of features, we roll it out in buckets. These two are related.
 
