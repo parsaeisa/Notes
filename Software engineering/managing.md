@@ -42,6 +42,7 @@ For example wrap echo framework in another framework that behaves like your comp
 
 Sometimes we don't know whether a policy or action is good or not. Sometimes we can stop thinking & investigating and test it for a while. For example in the case of features, we roll it out in buckets. These two are related.
 
+* Layers in a company are not seperated from each other. Each layer should consider other layers resources (hard & soft resources). You can see an example of cooperating between devlopers & QA layer in the **test automation** section of this document.
 
 ## Toolbox
 
