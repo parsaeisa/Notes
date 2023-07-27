@@ -22,7 +22,7 @@ Here the output of command 1 goes to command 2 and the output of command 2 goes 
 
 I think command2 act command1's outputs as a file. For example the `awk` command takes a file as input but using `|` we do not need to pass file path to it. 
 
-### declare 
+## declare 
 allows you to update attributes applied to variables . 
 parameters : 
 * -A : defines associative array ( associative array is like dictionaries in python )
@@ -34,13 +34,17 @@ parameters :
 parameters : 
 * complete it ...
 
+## System ctl
+
+I don't know what is it, I just used it once to **restart docker**.
+
 ### find
 is a built-in function which finds a file or directory . 
 parameters : 
 * -name : with this you specify the file or directory name .
 * -type : if its d , you are searching for a directory .
 
-### echo
+## echo
 
 consider you have a parameter called len , if you execute "echo len" ,
 you will get the "len" . 
@@ -75,7 +79,7 @@ and call it like this :
     deploy_project $project
 ```
 
-### alias
+## alias
 
 example : 
 ```bash
@@ -85,7 +89,7 @@ alias swagger='docker run --rm -it  --user $(id -u):$(id -g) -e GOPATH=$(go env 
 Before the above command, if you type swagger in terminal you will get nothing.
 But after you entered this command, swagger acts like a new command in your terminal.
 
-### awk
+## awk
 
 awk includes a pattern and a command. 
 ```bash
@@ -109,7 +113,7 @@ awk '{sum += $1} END {print "Total:", sum}' numbers.txt
 
 here we have a sum, then a pattern, at last another command.
 
-### xargs
+## xargs
 
 `xargs` applies a command to all elements of it's previous. It's always comes after `|` character because it wants to be applied of a command's output.
 
