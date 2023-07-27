@@ -21,6 +21,7 @@ To Learn :
 - traffic and data migration
 - What's happening in database ? 
 - What is bulk insert 
+- Proxy sql
 
 ## Database design
 
