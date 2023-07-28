@@ -34,11 +34,49 @@ parameters :
 parameters : 
 * complete it ...
 
+## netplan 
+
+I used it for setting new DNS servers. 
+
+* What is DNS servers ? 
+
+You enter this in the command line :
+```bash
+sudo vim /etc/netplan/00-installer-config.yaml
+```
+
+In that directory is only one yaml file that may have different name. That's ok.
+
+You see a file like below: 
+```
+network:
+  ethernets:
+    ens33:
+      dhcp4: true
+  version: 2
+```
+
+For adding new dns servers change the file to this form:
+```
+network:
+  ethernets:
+    ens33:
+      dhcp4: true
+      nameservers:
+        addresses: [185.51.200.2,178.22.122.100]
+  version: 2
+```
+
+Then run :
+```bash
+sudo netplan apply
+```
+
 ## System ctl
 
 I don't know what is it, I just used it once to **restart docker**.
 
-### find
+## find
 is a built-in function which finds a file or directory . 
 parameters : 
 * -name : with this you specify the file or directory name .
