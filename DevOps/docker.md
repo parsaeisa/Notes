@@ -86,6 +86,15 @@ sudo docker exec -it <container id> bash
 
 
 
+### Volume 
+
+You can mount a directory or file from the host machine into the container.
+
+Command : 
+```bash
+docker run -v <host_path>:<container_path> ...
+```
+
 ## Useful commands
 
 This is the place where I put docker commands which are usefull at least for me .
@@ -119,6 +128,20 @@ docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=Pass123!" -p 1433:1433 --name sqls
   jaegertracing/all-in-one:1.29
 ```
 
+### Gitlab
+```bash
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume $GITLAB_HOME/config:/etc/gitlab \
+  --volume $GITLAB_HOME/logs:/var/log/gitlab \
+  --volume $GITLAB_HOME/data:/var/opt/gitlab \
+  --shm-size 256m \
+  gitlab/gitlab-ee:latest
+```
+
 jeager runs on http://127.0.0.1:16686/ .
 
 * You can name your container with --name parameter while running the image . This can help you to interact more easily with containers .
@@ -145,3 +168,6 @@ There are `ARG` and `LABEL` tag that learn what are they.
 You define `ARG`s and then you can use them in label. That's all I know.
 
 > For a golang project you **just** copy the binary (created in pipelines) in `WORKDIR`. (don't use `WORKDIR`, bring the actual name of `WORKDIR`)
+
+## Docker network 
+
