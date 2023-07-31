@@ -188,6 +188,10 @@ include:
 
 Give them an example like security.
 
+## Manually
+
+refer to snapp projects.
+
 ## Othersssss
 
 ## apk 
