@@ -92,6 +92,10 @@ Tell them about a way that each deploying is performed.
 
 An image is generated --> it get pushed to a registry --> A deploy command in a bigger computer
 
+```
+
+```
+
 ## Examples
 
 What examples should I bring ?
@@ -101,3 +105,66 @@ Ideas :
     - test
     - lint
     - line length limit - you can show them revive for example
+
+
+# Last session
+
+## Gitlab running
+
+explain to them your experience about running a self-managed gitlab. 
+
+Mention **Omnibus**.
+
+## Manual 
+
+Try to build an image with docker using **-h**. Go a scenario that you don't know. Let them see how you learn new things.
+
+## Define some jobs
+
+images: 
+- golang:1.18.5-alpine3.16
+- docker:19.03.9
+
+## Pre-defined values
+
+Show them the link below :
+
+ https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
+
+Show some of them using `echo` command.
+
+Try to use them for creating image.
+
+## A variable in general
+
+## A variable in each job. 
+
+This is usefull when you want to push your image in different registries.
+
+### Why different registries ? 
+
+- Testing environments. 
+- An application may contain more than one datacenter.
+
+There are some variables that need to change everytime. 
+
+Then tell them about templates.
+
+## Template
+
+
+
+## Setting a secret
+
+Setting a secret.
+
+## Othersssss
+
+## Some other variables on dockerfile
+
+## Use github registry
+
+Steps :
+
+- docker -h 
+- docker login
