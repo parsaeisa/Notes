@@ -137,13 +137,20 @@ Show some of them using `echo` command.
 
 Try to use them for creating image.
 
-## A variable in general
+## Variables
 
-## A variable in each job. 
+Variables are defined in 3 places : 
+- in general
+- in each job
+- in secrets
+
+### A variable in general
+
+### A variable in each job. 
 
 This is usefull when you want to push your image in different registries.
 
-### Why different registries ? 
+#### Why different registries ? 
 
 - Testing environments. 
 - An application may contain more than one datacenter.
@@ -152,13 +159,23 @@ There are some variables that need to change everytime.
 
 Then tell them about templates.
 
-## Template
+#### Template
 
 
 
-## Setting a secret
+### Setting a secret
 
 Setting a secret.
+
+## Rules
+
+```bash
+rules:
+    - if: $CI_COMMIT_MESSAGE !~ /\[do-not-test\]/
+```
+
+Sometimes we do not need to test something. It takes time and resources. 
+
 
 ## Othersssss
 
@@ -170,3 +187,55 @@ Steps :
 
 - docker -h 
 - docker login
+
+``` bash
+deploy:
+    needs: [ build, test ]
+    runs-on: ubuntu-latest
+    env:
+      # IMAGE_VERSION: 0.3.0-beta01
+      SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
+      SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
+      DISCORD_SECRET_BOT: ${{ secrets.DISCORD_SECRET_BOT }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Login docker hub
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ragnacode
+          password: ${{ secrets.DOCKERHUB_PWD }}
+
+      # Copy production dockerfile
+      - name: Copy production dockerfile to ./
+        run: |
+          cp ./deployments/dev/Dockerfile .
+
+      # Deploy to Docker registry
+      - name: Deploy to Docker registry
+        uses: docker/build-push-action@v1
+        with:
+          username: ragnacode
+          password: ${{ secrets.DOCKERHUB_PWD }}
+          context: .
+          repository: ragnacodes/legato_server
+          tags: latest
+```
+
+## Clean up stage
+
+Consider there is a testing app that tests your application. 
+
+It come and runs all your applications dependencies. 
+
+So it takes some resources and they must be de-allocated. 
+
+So there is a job that does this. 
+
+## If you had extra time
+
+Go to docker-compose. 
+
+Try your url shortener.
