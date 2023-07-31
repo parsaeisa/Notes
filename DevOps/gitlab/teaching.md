@@ -16,6 +16,8 @@
 - Pushing images
 - Artifact
 - Include
+- Secrets
+- Tag 
 
 - Pushing image to a registry 
 
