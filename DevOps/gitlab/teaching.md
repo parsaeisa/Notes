@@ -176,6 +176,23 @@ rules:
 
 Sometimes we do not need to test something. It takes time and resources. 
 
+## Include
+
+```
+include:
+- project: 'Group/Test'
+  file:
+    - hello.yml
+```
+
+Show them a scenario that included job's stage doesn't exist. Show them .pre & .post stage.
+
+```
+include:
+  - local: 'hello.yml'
+```
+
+Give them an example like security.
 
 ## Othersssss
 
@@ -192,11 +209,6 @@ Steps :
 deploy:
     needs: [ build, test ]
     runs-on: ubuntu-latest
-    env:
-      # IMAGE_VERSION: 0.3.0-beta01
-      SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
-      SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
-      DISCORD_SECRET_BOT: ${{ secrets.DISCORD_SECRET_BOT }}
 
     steps:
       - uses: actions/checkout@v2
