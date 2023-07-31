@@ -52,12 +52,6 @@ The difference between job & pipeline.
 
 > You should always follow conventions. 
 
-### gitlab built-in variables
-
-https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
-
-Show them this link, just echo one of them. 
-
 ## Docker image
 
 Just tell them that docker image describes a computer, and tell them there is docker image for everything. 
@@ -196,7 +190,35 @@ Give them an example like security.
 
 ## Othersssss
 
+## apk 
+
+```bash
+apk add make curl
+make --version
+```
+
+## artifact
+
+Putting result in a file.
+
+
+```
+artifacts:
+    name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-helm"
+    paths:
+      - ${CI_PROJECT_NAME}.html
+    expire_in: 1 week
+    reports:
+      junit: .report.xml
+```
+
+Reports are usually xml files. 
+
 ## Some other variables on dockerfile
+
+Show them this link for gitlab keywords:
+
+https://docs.gitlab.com/ee/ci/yaml/
 
 ## Use github registry
 
