@@ -14,6 +14,9 @@ Helm chart is used to describe our app when deloying on k8s .
 
 this needs a seperate file , move these notes to another file . 
 
+## To learn
+* dependency
+
 ## Syntax 
 
 When you are defining objects for k8s or openshift ( is helm inegretable for k8s or not ??) there gonna be lots of duplicated codes. Using helm syntax you can remove these duplications. 
