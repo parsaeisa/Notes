@@ -117,6 +117,25 @@ and call it like this :
     deploy_project $project
 ```
 
+## Normal operations 
+
+Restart : 
+```bash
+sudo reboot
+```
+
+## usermod 
+
+You can use this to give access to users. 
+
+For example by default while using docker you need to add `sudo` but with the command below: 
+
+```bash
+sudo usermod -aG docker [user]
+```
+
+You can remove the need for sudo.
+
 ## alias
 
 example : 
