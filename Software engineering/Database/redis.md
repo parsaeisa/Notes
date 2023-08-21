@@ -279,3 +279,24 @@ GEOSEARCH cities FROMLONLAT [lat] [lng] BYRADIUS [radius] km WITHCOORD WITHDIST 
 ```
 
 In two mentioned queries, we used circles, but redis has features for more sophisticated searchs.
+
+## Hash set
+
+Redis Hash set stores a dictionary for a key. 
+
+Set new values:
+```bash
+HSET key field value [field value ...]
+```
+
+You can set more values to more fields with just one line command. 
+
+Get hash set :
+```bash
+HGET key field value
+```
+
+Also you can use `HGETALL` to get values for all fields:
+```bash
+HGETALL key
+```
