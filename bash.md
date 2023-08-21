@@ -146,6 +146,25 @@ alias swagger='docker run --rm -it  --user $(id -u):$(id -g) -e GOPATH=$(go env 
 Before the above command, if you type swagger in terminal you will get nothing.
 But after you entered this command, swagger acts like a new command in your terminal.
 
+## apk
+
+In a pipeline when the underlying machine doesn't have needed tools, `apk` is used to install necessary tools.
+
+Example:
+```bash
+apk add curl jq coreutils
+```
+
+With this command, curl, jg and coreutils is installed to the machine. 
+
+* Sometimes the `make` command (the command that executes commands in a makefile) is not available. In this situation use `apk add make`.
+
+## chmod, usermod
+
+I think these commands are used to give permissions to executable files. 
+
+The files that are used for installing a tool. 
+
 ## awk
 
 awk includes a pattern and a command. 
