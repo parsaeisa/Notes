@@ -131,3 +131,9 @@ Then you can send queries using this `tx`.
 
 There are some other methods that I think should always be called when defining a transaction. 
 `tx.Rollback()` and `tx.Commit()` .
+
+## Connection
+
+Our project's connection to the database server is configurable. 
+
+Here is some parameters that can be configured : 
