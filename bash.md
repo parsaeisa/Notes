@@ -231,3 +231,21 @@ The command below checks that a port is available or not.
 telnet [address] [port number]
 ```
 
+
+
+## tmux
+
+If you have a ssh connection with a VM and your process is being terminated whenever you close the terminal, use `tmux`.
+
+You use tmux in this way: 
+```
+tmux new -s mysession
+```
+
+Then you will be redirected to a command line. Start your process there, then for exiting press **ctrl-b** then **d**.
+
+Whenever you want to reconnect to the tmux session and check the script's progress, you can SSH back into the machine and attach to the existing tmux session:
+```
+ssh username@remote_server_ip
+tmux attach -t mysession
+```
