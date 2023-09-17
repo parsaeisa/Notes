@@ -2,7 +2,7 @@
 
 ## Strutcure 
 
-<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/filebeat.png" >
+<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/images/filebeat.png" >
 
 As you can see it read logs from **files**, aggregates them and sends them to other platforms like redis, kafka, elastic, etc.
 
@@ -109,7 +109,7 @@ services:
 
 If everything was ok, you should see the picture below in your Kibana dashboard : 
 
-<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/kibana-filebeat-raw.png" width="700" height="550">
+<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/images/kibana-filebeat-raw.png" width="700" height="550">
 
 This is in Logs/Stream section in dashboard.
 
