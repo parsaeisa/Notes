@@ -1,5 +1,7 @@
 # Filebeat
-Filebeat strutcure: 
+
+## Strutcure 
+
 <img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/filebeat.png" >
 
 As you can see it read logs from **files**, aggregates them and sends them to other platforms like redis, kafka, elastic, etc.
