@@ -109,7 +109,7 @@ services:
 
 If everything was ok, you should see the picture below in your Kibana dashboard : 
 
-<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/kibana-filebeat-raw.png">
+<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/logging/kibana-filebeat-raw.png" width="500" height="350">
 
 This is in Logs/Stream section in dashboard.
 
