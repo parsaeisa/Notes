@@ -114,3 +114,5 @@ If everything was ok, you should see the picture below in your Kibana dashboard 
 This is in Logs/Stream section in dashboard.
 
 Also [This](https://github.com/alcbotta/go-filebeat-elastic/tree/master) is a usefull github repo for this purpose.
+
+> In the image above, logs are moved into kibana as texts, not jsons. We need logs to be json for being able to query them.
