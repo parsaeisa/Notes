@@ -116,3 +116,22 @@ This is in Logs/Stream section in dashboard.
 Also [This](https://github.com/alcbotta/go-filebeat-elastic/tree/master) is a usefull github repo for this purpose.
 
 > In the image above, logs are moved into kibana as texts, not jsons. We need logs to be json for being able to query them.
+
+## Inputs 
+
+Filebeat has two ways for getting input logs. 
+* modules
+* manually
+
+You can access modules by this command: 
+```bash 
+./filebeat modules list
+```
+
+With the command above you can see most used tools for logging and you can easily enable them using `enable` command. 
+
+```bash
+./filebeat enable nginx
+```
+
+In the manually way, 
