@@ -11,3 +11,11 @@ source : neetcode.io
 # Websocket 
 
 Unlike http1, web socket supports bidrectional communication.
+
+# TLS
+
+TLS stands for **Transport Layer Security**.
+
+**TLS certificate**:
+
+**TLS key**:
