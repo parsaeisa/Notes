@@ -29,3 +29,5 @@ There is a difference between Error and Fatal .
 ## logrus
 
 github.com/sirupsen/logrus
+
+Despite of Zap, Logrus supports syslog.
