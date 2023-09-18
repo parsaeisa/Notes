@@ -34,6 +34,16 @@ Get to the shell :
 docker exec -it [container-id] bash
 ```
 
+Get a container's information : 
+```bash
+docker logs [container-id]
+```
+
+See what port, the container is connected to: 
+```bash
+docker port [container-id]
+```
+
 ## Flags
 `-d` distpaches and returns the terminal 
 
@@ -171,3 +181,19 @@ You define `ARG`s and then you can use them in label. That's all I know.
 
 ## Docker network 
 
+By default, Docker containers run in a separate network namespace, which means that 127.0.0.1 inside the Docker container refers to the container itself, not your host machine.
+
+If we want to send request from container to one of host ports, we have two options: 
+- Set the host's ip address for sending requests. 
+- Set docker's network to host : 
+```bash
+docker run --network host [OPTIONS] [image name]
+```
+
+### Bridge network 
+
+What is brige network at all ?
+
+## Label
+
+I think docker assigns labels to it's running container. I don't know anything more. 
