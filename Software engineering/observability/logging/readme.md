@@ -19,3 +19,7 @@ What to log always ?
 * Appropriate message
 
 > Always wrap errors . 
+
+## Syslog
+
+Syslog is a protocol for transfering logs. It can be over network or locally.
