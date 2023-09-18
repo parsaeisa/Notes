@@ -257,3 +257,15 @@ Each team consists multiple namespaces.
 A namespace can be a part of a team to get quota more than usual. 
 
 Namespaces can be joined to teams and being removed from it. 
+
+## Deamonset
+
+Deamonset is used when we want to add a process to every cluster in kubernetes.
+
+## Role
+
+There are some actions defined on k8s objects. Like reading, editing, etc.
+
+A user or a pod ( e.g. deamonset pod ) can get some of these accesses.
+
+I think due to deamonset mindset, it needs to modify some pods and need some accesses. 
