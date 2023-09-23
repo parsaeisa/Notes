@@ -206,6 +206,40 @@ Also you can **detach** a volume from your deployment, simply by removing it in 
 
 Volumes can be deleted. 
 
+One example of using volumes in deployments is creating shared files. First you define a volume in your deployment:
+
+```bash
+apiVersion: apps/v1
+kind: Deployment
+spec:
+    templates:
+        spec:
+            volumes:
+                - name: shared-file
+                  emptyDir: {}
+```
+
+Then you add this to one of containers in your deployment: 
+
+```bash
+apiVersion: apps/v1
+kind: Deployment
+spec:
+    templates:
+        spec:
+            containers:
+                - name: exampleContainer
+                  image: exampleImage
+                  volumeMounts:
+                    - name: shared-file # The name of volume that your shared files are placed in
+                      mountPath: /path/in/container/
+                      subPath: /path/in/shared volume/
+            volumes:
+                - name: shared-file
+                  emptyDir: {}
+```
+
+
 ### Configmaps
 
 Configmaps are subset of __volumes__.
@@ -232,7 +266,7 @@ data:
         # configurations
 ```
 
-Then a volume is created in your pod host machine. You can add this volume to your deployment in this way : 
+Then a volume is created in your pod host machine. You can add this volume to your deployment in this way (it's just like mounting a volume with some little differences ) : 
 
 ```bash
 apiVersion: apps/v1
@@ -259,8 +293,8 @@ spec:
                   image: exampleImage
                   volumeMounts:
                     - name: config # The name of volume that your configMap is placed in
-                    mountPath: /path/in/container/
-                    subPath: /path/in/config volume/
+                      mountPath: /path/in/container/
+                      subPath: /path/in/config volume/
             volumes:
                 - name: config
                     configMap:
