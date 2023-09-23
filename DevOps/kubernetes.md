@@ -208,6 +208,8 @@ Volumes can be deleted.
 
 One example of using volumes in deployments is creating shared files. First you define a volume in your deployment:
 
+<img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/images/Screen%20Shot%201402-07-01%20at%2019.22.37.png" width="400" height="250">
+
 ```bash
 apiVersion: apps/v1
 kind: Deployment
