@@ -216,6 +216,58 @@ A service in k8s reads configuration variables from a config file that is  store
 
 This is useful when an incident is happening and we want to configure the connections or behavior of system very quickly. Without the need of ( is need correct here?? ) changing the project in source code ( creating branches and merge requests and shit )
 
+#### Adding a config to a project
+
+When you want to run your application with a config file, your default path for config file is probably the root directory. 
+
+In configMaps, the data section, you can define multiple files : 
+
+```bash
+data:
+    config1.yml: |-
+        # configurations
+    config2.yml: |-
+        # configurations
+    config3.yml: |-
+        # configurations
+```
+
+Then a volume is created in your pod host machine. You can add this volume to your deployment in this way : 
+
+```bash
+apiVersion: apps/v1
+kind: Deployment
+spec:
+    templates:
+        spec:
+            volumes:
+                - name: config
+                    configMap:
+                    name: "app-name"
+```
+
+For adding a config file to a container in your deployment do this:
+
+```bash
+apiVersion: apps/v1
+kind: Deployment
+spec:
+    templates:
+        spec:
+            containers:
+                - name: exampleContainer
+                  image: exampleImage
+                  volumeMounts:
+                    - name: config # The name of volume that your configMap is placed in
+                    mountPath: /path/in/container/
+                    subPath: /path/in/config volume/
+            volumes:
+                - name: config
+                    configMap:
+                    name: "app-name"
+```
+
+
 #### Secrets  
 
 In our configmaps, we may need to store some passwords . e.g. the username and password for connection to a database . 
