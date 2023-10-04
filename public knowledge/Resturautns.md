@@ -1,5 +1,10 @@
 # Resturaunts
 
+Consider these things for cafes and resturaunts:
+- Decoration & view
+- The new and unique thing that the cafe has ( e.g. Fig sharbat in Roshanan mansion)
+- Good items and bad items (Lamiz americano is great but it's mocha is not)
+
 ## Coffee
 
 Popular one : 
