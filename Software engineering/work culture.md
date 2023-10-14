@@ -23,11 +23,13 @@ So, if a bug happens on a project, he/she should find it immediately and fix it.
 
 ## Mindset
 
-- Try to undertand & **remember** events. Events like :
+- Try to follow, undertand & **remember** events. Events like :
     - starting a project
     - Leaving a project undone
     - Someone being upset
     - What is happening in the whole ? 
+
+> Always check your email and important group chats.
 
 - Try to give solutions all the time. (the solution can go beyond software engineering and go to other parts 
 like QA, product, analyze, etc.)
