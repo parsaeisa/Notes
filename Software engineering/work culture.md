@@ -2,6 +2,8 @@
 
 As a software engineer what should I think about ? 
 
+Give comments on product flows, think about them and try to find holes in it and make it better. 
+
 ## Coding
 
 - Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. 
