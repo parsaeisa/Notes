@@ -1,5 +1,11 @@
 # Software engineering
 
+By now, I think that software engineering consists of 3 main things:
+
+* Database
+* Operating System
+* Prgoramming patterns and paradigms
+
 ## System Design 
 
 System design is designing set of distributed systems which make up 
