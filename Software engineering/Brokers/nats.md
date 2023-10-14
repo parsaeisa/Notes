@@ -1,5 +1,9 @@
 # Nats - core
 
+Nats has trade-off:
+- It can handle high traffic with low resources,
+- But it has message loss. 
+
 In nats core no ack is returned.
 
 ## Closing a nats conn
