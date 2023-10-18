@@ -97,3 +97,17 @@ There some kinds of Acks in nats .
 `AckExplicit` It returns ack for each request . 
 
 `AckNone` It returns no ack .
+
+
+## Commands
+
+```bash
+export NATS_URL
+```
+
+listing consumers: 
+``` bash
+nats consumer ls 
+```
+
+Removing a consumer is just like removing a file from a directory.
