@@ -21,13 +21,24 @@ So, if a bug happens on a project, he/she should find it immediately and fix it.
 
 > A tip: for finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
 
+A junior should have search and documents reading skills.
+
+A junior must be able to work with different tools (such as redis, rabbit, etc.) , to work with their dashboard or their cli or other things.
+
+* As an example, sometimes there is a need to delete messages on a broker manually.
+
+While **Searching**, when you open a link, read it completely or read it until you see that it's useless. then open new tabs and documents. **Don't open** too many tabs. 
+
+> You always think about searching too late. Start it sooner.
+
 ## Mindset
 
 - Try to follow, undertand & **remember** events. Events like :
     - starting a project
     - Leaving a project undone
     - Someone being upset
-    - What is happening in the whole ? 
+    - What is happening in the whole (technical and business logic) ? 
+    - A logic's improvements and problems
 
 > Always check your email and important group chats.
 
@@ -44,3 +55,5 @@ The atomicity in a software company is **team** not **person**.
 If you have a solution that you strongly think that is correct, it is not necessarily applied if other team members are not agree with it. (Even don't insist too much).
 
 If a facinating task must be delivered in the team, your concern should be meeting the deadline of that task regardless to it's assigned developer. (Personnaly I always wanted to do facinating tasks myself, this concern is wrong)
+
+Even If you have enough tasks and you do not have free time, feel free to reject a new task that arrives.
