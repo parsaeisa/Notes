@@ -5,6 +5,14 @@ A manager's concerns :
 * Testing services
 * Request loads
 
+## Supply-Demand balance
+
+I only know the title :) 
+
+I will fill this section.
+
+I only know that this is a very high level management term.
+
 ## Non-financial resources
 
 Developer's time and energy are the most valuable items in a team. So we should save them.
