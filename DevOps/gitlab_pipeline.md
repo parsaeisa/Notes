@@ -149,3 +149,12 @@ This is a list of operations that is better to do with pipelines :
 
 Consider for testing purposes we need multiple lines with bash. If we put them in our pipeline file It would be too heavy and long. 
 We can put those scripts in Makefile and assign them a name. Then with just `make <that name>` command, all of them would be executed, you can read more about Makefiles in [here](https://github.com/parsaeisa/Notes/blob/main/makefile.md)
+
+
+## Gitlab registry 
+
+you can see image's pushed to your project's registry in : Deploy > Container registry
+
+In the section above, you can see the address of your project repository. 
+
+> You cannot push an image in another repository in normal ways. 
