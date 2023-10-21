@@ -189,9 +189,18 @@ awk '{sum += $1} END {print "Total:", sum}' numbers.txt
 
 here we have a sum, then a pattern, at last another command.
 
+## sed
+
+The first time that I used sed, I wanted to extracts "id" tags in a json with multiple objects.
+
+I did it in this way: 
+```bash
+IDS=$(echo "$JSON_DATA" | sed -n 's/.*"id":\s*\([0-9]*\).*/\1/p')
+```
+
 ## xargs
 
-`xargs` applies a command to all elements of it's previous. It's always comes after `|` character because it wants to be applied of a command's output.
+`xargs` applies a command to all elements of it's previous. It's always comes after pipe (`|` character) because it wants to be applied of a command's output.
 
 deleting pods of an application using regex : 
 ```bash
