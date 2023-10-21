@@ -198,6 +198,18 @@ I did it in this way:
 IDS=$(echo "$JSON_DATA" | sed -n 's/.*"id":\s*\([0-9]*\).*/\1/p')
 ```
 
+commands:
+- `s/`: This is the sed command to substitute or replace text.
+- `/p`: This instructs sed to print the lines that match the pattern.
+
+
+### Relation to awk
+`sed` and `awk` are both powerfool **text processing tools**.
+
+sed stand's for **S**tream **Ed**itor, sed iterates through a text in a **line-by-line** manner, instead, awk iterates **row-by-row**, means that it splits each line to bunch of fields and processes word-by-word. 
+
+awk has more advanced and flexible scripting language compared to sed. So, awk is used for wider range of tasks.
+
 ## xargs
 
 `xargs` applies a command to all elements of it's previous. It's always comes after pipe (`|` character) because it wants to be applied of a command's output.
