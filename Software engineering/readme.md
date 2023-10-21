@@ -6,6 +6,11 @@ By now, I think that software engineering consists of 3 main things:
 * Operating System
 * Prgoramming patterns and paradigms
 
+## New-words 
+
+* Dynamic config
+
+
 ## System Design 
 
 System design is designing set of distributed systems which make up 
