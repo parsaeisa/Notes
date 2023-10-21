@@ -1,7 +1,7 @@
 # Watch
 
 Your first objectives:
-- Offer watches to buy based on budget.
+- Offer watches to buy based on budget & style.
 - Know components of a watch. 
 
 ## New names
