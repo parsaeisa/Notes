@@ -13,15 +13,16 @@ Give comments on product flows, think about them and try to find holes in it and
 
 - Before the solution design session for a new feature try to find out how it should be implemented.
 
-### Junior expectations 
+### Expectations 
 
-A junior developer is expected to know where each functionality is placed in the project code base. 
+#### Junior level
+A junior developer is expected to know where each functionality is placed in the project code base.
 
-So, if a bug happens on a project, he/she should find it immediately and fix it. 
+So, if a bug happens on a project, he/she should find it immediately and fix it.  A juior developer should be dominant on **Business logic**.
 
 > A tip: for finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
 
-A junior should have search and documents reading skills.
+A junior should have **search and documents reading skills**.
 
 A junior must be able to work with different tools (such as redis, rabbit, etc.) , to work with their dashboard or their cli or other things.
 
@@ -31,9 +32,7 @@ While **Searching**, when you open a link, read it completely or read it until y
 
 > You always think about searching too late. Start it sooner.
 
-## Mindset
-
-- Try to follow, undertand & **remember** events. Events like :
+A junior developer must always **consider team trends**. Try to follow, undertand & **remember** events. Events like :
     - starting a project
     - Leaving a project undone
     - Someone being upset
@@ -41,6 +40,8 @@ While **Searching**, when you open a link, read it completely or read it until y
     - A logic's improvements and problems
 
 > Always check your email and important group chats.
+
+## Mindset
 
 - Try to give solutions all the time. (the solution can go beyond software engineering and go to other parts 
 like QA, product, analyze, etc.)
