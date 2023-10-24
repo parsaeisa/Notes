@@ -4,6 +4,15 @@ As a software engineer what should I think about ?
 
 Give comments on product flows, think about them and try to find holes in it and make it better. 
 
+## Domain 
+
+Domain is not less important that your technical knowledge. Domain usually consists of: 
+
+- Your team's projects' connections to world. Their kind (http, sdk, consuming, etc.) and their destination (other services)
+- Project Deign. Including software architecture and schema design.
+- Stacks and their configurations: e.g. Redis, MaridaDB, Nats, Rabbit, etc.
+- Business & technical logic
+
 ## Coding
 
 - Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. There some sources that you can read:
@@ -15,9 +24,9 @@ Give comments on product flows, think about them and try to find holes in it and
 
 - Before the solution design session for a new feature try to find out how it should be implemented.
 
-### Expectations 
+## Expectations 
 
-#### Junior level
+### Junior level
 A junior developer is expected to know where each functionality is placed in the project code base.
 
 So, if a bug happens on a project, he/she should find it immediately and fix it.  A juior developer should be dominant on **Business logic**.
@@ -45,17 +54,11 @@ A junior developer must always **consider team trends**. Try to follow, undertan
 
 > Don't do anything in sessions. Just listen.
 
-#### Mid-level
+### Mid-level
 
 These are duties that I see our mid-levels have:
 - Design, generally thinking about what to do ??
 - Starting new projects
-
-#### Attitude
-
-Always attitude like you are **Badass** and **Cool**. Never show yourself weak. 
-
-If a bug is raised to your projects, say "I need time to work on this bug" and do not show yourself Natch.
 
 ## Mindset
 
@@ -64,6 +67,12 @@ like QA, product, analyze, etc.)
     - You can also correct your manager, for example while breaking a task ( tasks' granularity)
 
 - Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
+
+### About yourself
+
+Always attitude like you are **Badass** and **Cool**. Know that your time and your efforts are valuable. Never show yourself weak. 
+
+If a bug is raised to your projects, say "I need time to work on this bug" and do not show yourself Natch.
 
 ### Teamwork mindset
 
