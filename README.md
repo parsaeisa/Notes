@@ -12,6 +12,8 @@
 #### Languages :
 * rust
 * C++
+* C
+* Erlang
 * kotlin
 
 #### Concepts :
