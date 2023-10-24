@@ -6,8 +6,10 @@ Give comments on product flows, think about them and try to find holes in it and
 
 ## Coding
 
-- Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. 
-    - Read different projects in the firm. You can see their tricks & best practices. 
+- Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. There some sources that you can read:
+    * Read different projects in the firm. You can see their tricks & best practices. 
+    * When you are working with a tool (like sqlx), read it's structure using command click.
+    * Other resource is github starred projects by your friends.
 
 - Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
 
@@ -40,6 +42,20 @@ A junior developer must always **consider team trends**. Try to follow, undertan
     - A logic's improvements and problems
 
 > Always check your email and important group chats.
+
+> Don't do anything in sessions. Just listen.
+
+#### Mid-level
+
+These are duties that I see our mid-levels have:
+- Design, generally thinking about what to do ??
+- Starting new projects
+
+#### Attitude
+
+Always attitude like you are **Badass** and **Cool**. Never show yourself weak. 
+
+If a bug is raised to your projects, say "I need time to work on this bug" and do not show yourself Natch.
 
 ## Mindset
 
