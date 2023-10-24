@@ -300,3 +300,9 @@ Also you can use `HGETALL` to get values for all fields:
 ```bash
 HGETALL key
 ```
+
+## Monitoring 
+
+Redis cannot be monitored by prometheus, because it does not export the right interface.
+
+In this situation, we should use the image `oliver006/redis_exporter`. This container is an [adapter pattern]().
