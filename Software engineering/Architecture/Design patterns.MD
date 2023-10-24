@@ -1,4 +1,4 @@
-# Design patterns
+# Code design patterns
 
 we have three types of design patterns : 
 
