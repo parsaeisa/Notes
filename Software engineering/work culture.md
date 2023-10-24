@@ -20,6 +20,8 @@ Domain is not less important that your technical knowledge. Domain usually consi
     * When you are working with a tool (like sqlx), read it's structure using command click.
     * Other resource is github starred projects by your friends.
 
+> Trying to write a protocol or a database or another famous tool can be thriving. 
+
 - Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
 
 - Before the solution design session for a new feature try to find out how it should be implemented.
