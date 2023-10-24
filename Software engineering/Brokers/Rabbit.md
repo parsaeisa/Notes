@@ -53,6 +53,17 @@ This provides:
 It Offers plugins that extend it's funcionality.
 
 
+## Structure 
+
+Components that are monitored: 
+- Nodes
+- Queued messages
+- incoming messages
+- Outgoing messages
+- Queues
+- Channels
+- Connections
+
 ## Exchange
 
 Exchange need to be made seperatedly like topics.
@@ -65,3 +76,38 @@ Each publish method takes an exchange as input to publish messages to.
 ## Job schedule 
 
 Jobs can be scheduled in Rabbit.
+
+## Retry pattern
+
+The `ReChannel` method is a method that is executed in a new goroutine when Dialing RabbitMQ from project.
+
+```go
+func (r *RabbitMQ) ReChannel() {
+	for {
+		reason, ok := <-r.channel.NotifyClose(make(chan *amqp.Error))
+		if !ok {
+			break
+		}
+
+		r.Logger.Error("rabbitmq channel closed", zap.Error(reason))
+
+		connection := r.connectionWithRetry()
+		if connection == nil {
+			r.Logger.Fatal("rabbitmq re-connection failed")
+		}
+
+		r.Logger.Info("reconnection successed")
+
+		r.connection = connection
+
+		channel := r.channelWithRetry()
+		if channel == nil {
+			r.Logger.Fatal("rabbitmq re-channel creation failed")
+		}
+
+		r.Logger.Info("channel recreated")
+
+		r.channel = channel
+	}
+}
+```
