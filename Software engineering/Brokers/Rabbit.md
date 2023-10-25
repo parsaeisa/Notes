@@ -68,7 +68,9 @@ Components that are monitored:
 
 Exchange need to be made seperatedly like topics.
 
-Messages are always published to an exchange and then that exchange decides where to forward it.
+Messages are always published to an exchange and then that exchange decides which message queue bind it to.
+
+* **Binding** sits between exchanges and message queues.
 
 Each publish method takes an exchange as input to publish messages to.
 
