@@ -18,6 +18,15 @@ It is so hard for client. It is better that client only calls one service and as
 
 I call this pattern api-gateway for my self, we put a SHAKH service (call it A) between client and other services, client gets rides' information from A service, that A service calls it's needed information from any service that it should.
 
+
+All requests to the app, pass through the api-gateway. They are going to a single element and that point sends requests to their corresponding micro-service. This element is called api-gateway. 
+
+An `nginx` is installed on api-gateway which will proxy-pass the requests to the right microservice.
+
+As I recall, **proxy** was a way to hide clients identity from server, the **reverse proxy** Is a way to hide server's identity from clients. 
+
+Here reverse proxy is usefull because client should not know that a specific response was send from which service, So they pass through a load-balancer (nginx).
+
 ## Problems of Monolith architecture 
 
 * The stack of all features should be the same . 
@@ -37,16 +46,6 @@ One of the best ways to break down the application into multiple services is **b
 ## Best-practices 
 
 - All services must have a same project template, Which makes it easier for developers to read and start working on new services. 
-
-## Api-gateway 
-
-All requests to the app, pass through the api-gateway. They are going to a single element and that point sends requests to their corresponding micro-service. This element is called api-gateway. 
-
-An `nginx` is installed on api-gateway which will proxy-pass the requests to the right microservice.
-
-As I recall, **proxy** was a way to hide clients identity from server, the **reverse proxy** Is a way to hide server's identity from clients. 
-
-Here reverse proxy is usefull because client should not know that a specific response was send from which service, So they pass through a load-balancer (nginx).
 
 ## Downsides of Micro Service
 
