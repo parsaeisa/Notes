@@ -4,6 +4,8 @@ Your first objectives:
 - Offer watches to buy based on budget & style.
 - Know components of a watch. 
 
+The **main goal** is wear the **best** watch always.
+
 ## New names
 
 - Wintage clocks
