@@ -39,9 +39,7 @@
 #### DevOps Tools :
 * grafana 
 * argoCD
-* jenkins
 * nginx
-* k8s
 * cloud flare DNS
 
 #### Data engineering tools :
@@ -56,3 +54,4 @@ Queue (Top is the resource with most priority):
 - Designing Distributed Systems (Book)
 - Clean Code (Robert martin)
 - Database course ([first link](https://downloadlynet.ir/2023/29/96050/04/practical-database-design-blog-schema/13/?#/96050-udemy-212326100724.html) and [second link](https://downloadlynet.ir/2023/24/92503/02/database-design-implementation/21/?#/92503-amigosco-212326100524.html))
+- Postgre SQL
