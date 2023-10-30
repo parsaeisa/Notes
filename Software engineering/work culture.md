@@ -26,6 +26,16 @@ Domain is not less important that your technical knowledge. Domain usually consi
 
 - Before the solution design session for a new feature try to find out how it should be implemented.
 
+### Code reading 
+
+You can get so much ideas from other projects available on github or your company's gitlab. 
+
+* Reading **your team's projects**: For finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
+
+* Reading a **Tool**, like echo: For example if you ride `s.GET` in your code, start traversing from `GET` method by Command + Click and go deep. 
+
+> Always start from project's interface and go deeper.
+
 ## Expectations 
 
 ### Junior level
@@ -33,7 +43,7 @@ A junior developer is expected to know where each functionality is placed in the
 
 So, if a bug happens on a project, he/she should find it immediately and fix it.  A juior developer should be dominant on **Business logic**.
 
-> A tip: for finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
+* Refer to [Code reading]()
 
 A junior should have **search and documents reading skills**.
 
