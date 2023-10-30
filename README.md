@@ -33,6 +33,7 @@
 
 #### what is it ? 
 * AAA services
+* Web engage
 
 ## Tools 
 
@@ -56,4 +57,6 @@ Queue (Top is the resource with most priority):
 - Database course ([first link](https://downloadlynet.ir/2023/29/96050/04/practical-database-design-blog-schema/13/?#/96050-udemy-212326100724.html) and [second link](https://downloadlynet.ir/2023/24/92503/02/database-design-implementation/21/?#/92503-amigosco-212326100524.html))
 - The book "تئوری بنیادی موسیقی"
 - The book "مبانی سینما"
+- The Clean code book by Robert Martin
 - Postgre SQL
+- Routing engines
