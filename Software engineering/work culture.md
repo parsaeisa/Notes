@@ -43,7 +43,7 @@ A junior developer is expected to know where each functionality is placed in the
 
 So, if a bug happens on a project, he/she should find it immediately and fix it.  A juior developer should be dominant on **Business logic**.
 
-* Refer to [Code reading]()
+* Refer to [Code reading](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/work%20culture.md#code-reading)
 
 A junior should have **search and documents reading skills**.
 
