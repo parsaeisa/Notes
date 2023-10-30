@@ -13,3 +13,6 @@ There different types of architectures that a project can have.
 
 [two pictures]
 
+## Software architecture problems 
+
+- Seperating buiness logic from app technical logic
