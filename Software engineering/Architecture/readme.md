@@ -13,6 +13,8 @@ There different types of architectures that a project can have.
 
 [two pictures]
 
+## Software architecture problems 
+
 ## Programming paradigms
 
 - Structured
@@ -22,3 +24,5 @@ There different types of architectures that a project can have.
 I heard two other names, I don't know whether they are programming pardigms or not:
 - Data oriented
 - Dynamic
+
+- Seperating buiness logic from app technical logic

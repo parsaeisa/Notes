@@ -25,18 +25,8 @@ It supports multiple messaging protocols:
 
 It stores data to the this, so if the server goes down, it ensures that messages are not lost. providing reliability and fault-tolerant message delivery. 
 
-### Routing and exchange types 
-
-It uses exchanges to route messages to queues. 
-
-It provides various exchange types: 
-* direct
-* topic
-* fanout
-* headers
-
 ### Acknowledgement
-Consumers sends Acknowledgemnts when they recieve a message.
+Consumers sends Acknowledgemnts when they recieve a message. Rabbit uses TCP protocol.
 
 ### Scalability
 
@@ -64,7 +54,7 @@ Components that are monitored:
 - Channels
 - Connections
 
-## Exchange
+### Exchange
 
 Exchange need to be made seperatedly like topics.
 
@@ -74,6 +64,23 @@ Messages are always published to an exchange and then that exchange decides whic
 
 Each publish method takes an exchange as input to publish messages to.
 
+When Rabbit MQ is started, a default exchange is being created. 
+
+### Routing and exchange types 
+
+It uses exchanges to route messages to queues. 
+
+It provides various exchange types: 
+* Direct
+* Topic
+* Fanout
+* Headers
+
+### Binding 
+
+As mentioned earlier, bingind sits between exchanges and queues.
+
+Bindings have a binding key (or called routing key) 
 
 ## Job schedule 
 
@@ -113,3 +120,15 @@ func (r *RabbitMQ) ReChannel() {
 	}
 }
 ```
+
+
+## Networking
+
+Your client (your program) creates a connection to RabbitMQ server. 
+
+Using this connection, your client can create multiple **channels**. These channels can be used concurrently. Two TCP packets are required for creating a channel.
+
+**While publishing** we must set exchange name and payload. The client publishes messages to exchanges. 
+
+## Management console
+
