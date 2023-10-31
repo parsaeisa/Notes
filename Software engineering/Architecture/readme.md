@@ -13,3 +13,12 @@ There different types of architectures that a project can have.
 
 [two pictures]
 
+## Programming paradigms
+
+- Structured
+- Functional
+- Object Oriented
+
+I heard two other names, I don't know whether they are programming pardigms or not:
+- Data oriented
+- Dynamic
