@@ -13,7 +13,10 @@ There different types of architectures that a project can have.
 
 [two pictures]
 
-## Software architecture problems 
+## Software architecture scattered problems 
+
+* seperating business logics from technical logics 
+* Using legacy services without changing them
 
 ## Programming paradigms
 
