@@ -72,6 +72,10 @@ Create one repo for all of services , and seperate them with folders (one folder
 - Asynchronous 
 - Message passing
 
+## Scattered points
+
+- A service with too much dependencies should not be in a high level such as A or B levels.
+
 ### Api-Gateway
 
 It may not be api-gateway for real but because they are too similar I consider them the same.
