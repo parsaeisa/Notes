@@ -25,3 +25,15 @@ For sesstion tracked load balancing, a hash between user's IP address and destin
 For performing session management in distributed systems that can scale up & down, a **consistent hash function** must be used. The benefit of this kind of hash functions can reduce the number of users that their destination server is changed.
 
 > What are consistent hash functions ??
+
+#### Twemproxy
+
+**Twemproxy** is a proxy developed by twitter.
+
+#### Varnish
+
+Varnish is a cache http reverse proxy. I seets between user and application's containers.
+
+When a user send's request to application two times, Only the first one goes to application containers. The response to user's first request is stored in Varnish and is being returned to user for the second request.
+
+In result only user's first request goes to application containers.
