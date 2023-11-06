@@ -22,6 +22,11 @@ Domain is not less important that your technical knowledge. Domain usually consi
 
 > Trying to write a protocol or a database or another famous tool can be thriving. 
 
+Company's projects queue (out of team): 
+- Zarrafe - Api gateway
+- OAuth
+- Hulk (using S3)
+
 - Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
 
 - Before the solution design session for a new feature try to find out how it should be implemented.
