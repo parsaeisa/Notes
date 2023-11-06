@@ -16,6 +16,7 @@ To Learn :
 - elastic search
 - Clickhouse
 - Snowflake
+- Time series data
 - database design principles
 - Big database design and query
 - traffic and data migration
