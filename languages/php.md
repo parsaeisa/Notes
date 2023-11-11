@@ -2,6 +2,8 @@
 
 When you want to add `use` command in top of your php file, you should define your namespace.
 
+> Mentioned methods are in Laravel and not php itself.
+
 Instanitaiting a class:
 ```php
 // Using ::class to get the fully qualified class name
