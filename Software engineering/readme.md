@@ -28,6 +28,25 @@ components :
 * deployment managing tool
 * [To be completed]
 
+
+### CAP Theorem
+
+In the CAP theorem we have:
+- **C** as consistency. This factor guarantees that all nodes in a system are seing same data at a same time.
+- **A** as Availability. This factor says that any request to a system at any time should have a response. The response can be inaccurate.
+- **P** as partition tolerant. When the connection between nodes are interrupted (Network partitions), the system's functionality should not break. 
+
+The CAP theorem says that we can have at most two out of these three items. 
+
+The P ( partition tolerant) is being handled oftenly and the main trade-of is between consistency and availability.
+
+In financial applications the **C** is often more important than **A**.
+
+There are three patterns for consistencty:
+- Weak consistency
+- Eventual consistency
+- Strong consistency
+
 ### Solution design 
 
 One of the main mindsets that is helpful is in removing redundants. 
