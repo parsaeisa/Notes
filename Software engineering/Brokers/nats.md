@@ -87,6 +87,19 @@ Also you need to configure the publish_async_max_pending while creating a NatsCo
 
 The `publish_async_max_pending` represents the max number of requests that client sends to cmq asynchronously before getting the PubAck . 
 
+## Deliver options
+
+While subscribing on jet stream, you can set some options ([using opts pattern](https://github.com/parsaeisa/Go_practice/blob/main/pattern/Opts.md)):
+
+- DeliverAll
+- DeliverLast
+- DeliverLastPerSubject
+- DeliverNew
+
+I think these optiona are useful when consumer is not connected to the broker for a while and then it is connected again. Using this options the server decides which policy to apply to send generated messages in the consumer's absence.
+
+e.g. the option DeliverAll tells the broker to sends all messages exisitng in stream for consumer.
+
 ## Ack 
 Ack is one of the configurable parameters in connection between the client and the broker.
 
