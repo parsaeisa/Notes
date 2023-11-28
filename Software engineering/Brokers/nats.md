@@ -57,6 +57,8 @@ But Nats streaming needed a refactor and it got a hard process, hence they relea
 
 # Jetstream 
 
+A useful link: https://docs.nats.io/nats-concepts/jetstream
+
 Before we use any stream in nats, we should create an streaming with the nats connection using the code below : 
 ```go
 js, _ := NatsConn.JetStream()
