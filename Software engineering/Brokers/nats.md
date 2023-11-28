@@ -99,11 +99,11 @@ JetStream is a layer on nats core which sends ack when we publish on it.
 
 There some kinds of Acks in nats . 
 
-`AckAll` It returns an Ack for each 100 requests for example . One for the request index 100 and the ack for other 99 requests are ignored . It reduces the ack overhead . 
+- `AckAll` It returns an Ack for each 100 requests for example . One for the request index 100 and the ack for other 99 requests are ignored . It reduces the ack overhead . 
 
-`AckExplicit` It returns ack for each request . 
+- `AckExplicit` It returns ack for each request . 
 
-`AckNone` It returns no ack .
+- `AckNone` It returns no ack .
 
 
 ## Commands
