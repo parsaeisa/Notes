@@ -17,6 +17,16 @@ I only know that this is a very high level management term.
 
 Developer's time and energy are the most valuable items in a team. So we should save them.
 
+## Objectives
+
+While picking items for next quarter in the GAP, there are some objectives that can be considered to achieve:
+- Stability
+- Radical testing efficiency and better testing
+- Onboarding, HR and documentation improvements
+- Database optimization
+- Reduce resource consumption
+- Better observability
+
 ### Automation
 
 Automating process can save the team time. It requires a little amount of development cost but it's just one time.
