@@ -81,6 +81,8 @@ While **Searching**, when you open a link, read it completely or read it until y
 
 ### Being sharp
 
+You do not have to always remember the business logic, but you should find it immediately in the code. 
+
 - Try to give solutions all the time. (the solution can go beyond software engineering and go to other parts 
 like QA, product, analyze, etc.)
     - You can also correct your manager, for example while breaking a task ( tasks' granularity)
