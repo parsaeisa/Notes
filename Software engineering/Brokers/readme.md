@@ -1,5 +1,11 @@
 # Brokers
 
+Event processing is different processing paradigm than request driven. 
+
+Based on [Desining distributed systems](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Architecture/Distributed%20Systems.md) book.The main difference is it's isolation. A requests in an application is among other requests and is a part of a user's session. But event processing are single stance tasks.
+
+My own important factor is the fact that event processing can be used to more time consuming tasks.
+
 Topics:
 - [Nats]()
 - [Kafka]()
