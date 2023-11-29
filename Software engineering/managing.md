@@ -1,5 +1,12 @@
 # Managing
 
+In one word, a manager is expected to **achieve some big objectives** using the **resources** that he or she has. 
+
+Resources are:
+- People
+- Time
+- Authorities (e.g. accesses)
+
 A manager's concerns : 
 * Team non-financial resources (technical level, energy & time)
 * Testing services
