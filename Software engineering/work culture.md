@@ -54,7 +54,7 @@ These are duties that I see our mid-levels have:
 - Design, generally thinking about what to do ??
 - Starting new projects
 
-## Mindset
+## Required
 
 Required skills:
 - Findinsg bugs immediately
@@ -97,6 +97,7 @@ A junior developer must always **consider team trends**. Try to follow, undertan
 
 > Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
 
+## Mindset
 ### About yourself
 
 Always attitude like you are **Badass** and **Cool**. Know that your time and your efforts are valuable. Never show yourself weak. 
