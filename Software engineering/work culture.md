@@ -48,8 +48,27 @@ A junior developer is expected to know where each functionality is placed in the
 
 So, if a bug happens on a project, he/she should find it immediately and fix it.  A juior developer should be dominant on **Business logic**.
 
+### Mid-level
+
+These are duties that I see our mid-levels have:
+- Design, generally thinking about what to do ??
+- Starting new projects
+
+## Mindset
+
+Required skills:
+- Findinsg bugs immediately
+- Learn new tools
+- Being sharp
+- Be productive
+
+### Productive
+- Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
+
+### Finding bugds
 * Refer to [Code reading](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/work%20culture.md#code-reading)
 
+### Learn new tools
 A junior should have **search and documents reading skills**.
 
 A junior must be able to work with different tools (such as redis, rabbit, etc.) , to work with their dashboard or their cli or other things.
@@ -60,6 +79,13 @@ While **Searching**, when you open a link, read it completely or read it until y
 
 > You always think about searching too late. Start it sooner.
 
+### Being sharp
+
+- Try to give solutions all the time. (the solution can go beyond software engineering and go to other parts 
+like QA, product, analyze, etc.)
+    - You can also correct your manager, for example while breaking a task ( tasks' granularity)
+
+
 A junior developer must always **consider team trends**. Try to follow, undertand & **remember** events. Events like :
     - starting a project
     - Leaving a project undone
@@ -69,21 +95,7 @@ A junior developer must always **consider team trends**. Try to follow, undertan
 
 > Always check your email and important group chats.
 
-> Don't do anything in sessions. Just listen.
-
-### Mid-level
-
-These are duties that I see our mid-levels have:
-- Design, generally thinking about what to do ??
-- Starting new projects
-
-## Mindset
-
-- Try to give solutions all the time. (the solution can go beyond software engineering and go to other parts 
-like QA, product, analyze, etc.)
-    - You can also correct your manager, for example while breaking a task ( tasks' granularity)
-
-- Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
+> Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
 
 ### About yourself
 
