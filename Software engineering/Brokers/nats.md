@@ -1,3 +1,10 @@
+# Nats
+
+There are three products related to NATS discussed in this document:
+- [nats core](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Brokers/nats.md#nats---core)
+- [nats streaming](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Brokers/nats.md#streaming)
+- [jetstream](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Brokers/nats.md#jetstream)
+
 # Nats - core
 
 Nats has trade-off:
@@ -50,6 +57,8 @@ But Nats streaming needed a refactor and it got a hard process, hence they relea
 
 # Jetstream 
 
+A useful link: https://docs.nats.io/nats-concepts/jetstream
+
 Before we use any stream in nats, we should create an streaming with the nats connection using the code below : 
 ```go
 js, _ := NatsConn.JetStream()
@@ -80,6 +89,19 @@ Also you need to configure the publish_async_max_pending while creating a NatsCo
 
 The `publish_async_max_pending` represents the max number of requests that client sends to cmq asynchronously before getting the PubAck . 
 
+## Deliver options
+
+While subscribing on jet stream, you can set some options ([using opts pattern](https://github.com/parsaeisa/Go_practice/blob/main/pattern/Opts.md)):
+
+- DeliverAll
+- DeliverLast
+- DeliverLastPerSubject
+- DeliverNew
+
+I think these optiona are useful when consumer is not connected to the broker for a while and then it is connected again. Using this options the server decides which policy to apply to send generated messages in the consumer's absence.
+
+e.g. the option DeliverAll tells the broker to sends all messages exisitng in stream for consumer.
+
 ## Ack 
 Ack is one of the configurable parameters in connection between the client and the broker.
 
@@ -92,11 +114,11 @@ JetStream is a layer on nats core which sends ack when we publish on it.
 
 There some kinds of Acks in nats . 
 
-`AckAll` It returns an Ack for each 100 requests for example . One for the request index 100 and the ack for other 99 requests are ignored . It reduces the ack overhead . 
+- `AckAll` It returns an Ack for each 100 requests for example . One for the request index 100 and the ack for other 99 requests are ignored . It reduces the ack overhead . 
 
-`AckExplicit` It returns ack for each request . 
+- `AckExplicit` It returns ack for each request . 
 
-`AckNone` It returns no ack .
+- `AckNone` It returns no ack .
 
 
 ## Commands

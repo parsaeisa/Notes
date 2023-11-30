@@ -1,6 +1,12 @@
 # Software engineering
 
-By now, I think that software engineering consists of 3 main things:
+## Introduction
+
+The nature of a task (a big task like two factor authentication) defines the nature of a service.
+
+One of the main factors of a task is **time restriction**. 
+
+By now, I think that software engineering consists of 3 main topics in computer science:
 
 * Database
 * Operating System

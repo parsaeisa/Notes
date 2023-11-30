@@ -1,5 +1,12 @@
 # Managing
 
+In one word, a manager is expected to **achieve some big objectives** using the **resources** that he or she has. 
+
+Resources are:
+- People
+- Time
+- Authorities (e.g. accesses)
+
 A manager's concerns : 
 * Team non-financial resources (technical level, energy & time)
 * Testing services
@@ -16,6 +23,16 @@ I only know that this is a very high level management term.
 ## Non-financial resources
 
 Developer's time and energy are the most valuable items in a team. So we should save them.
+
+## Objectives
+
+While picking items for next quarter in the GAP, there are some objectives that can be considered to achieve:
+- Stability
+- Radical testing efficiency and better testing
+- Onboarding, HR and documentation improvements
+- Database optimization
+- Reduce resource consumption
+- Better observability
 
 ### Automation
 
