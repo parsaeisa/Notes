@@ -62,8 +62,14 @@ Required skills:
 - Being sharp
 - Be productive
 
-### Productive
+### Being productive
 - Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
+
+#### Doing multiple tasks at the same time
+
+There is no way that you can go deep into two tasks at the same time, and as a engineer you should go deep (Going deep to a task is not a responsibility of a **manager**).
+
+So act like a computer processing-unit and make your time slotted. For example two hours on task A and one hour on task B. Make you slots less granular two like 5 hours on task A and 2 hours on task B.
 
 ### Finding bugds
 * Refer to [Code reading](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/work%20culture.md#code-reading)
