@@ -116,6 +116,8 @@ Always attitude like you are **Badass** and **Cool**. Know that your time and yo
 
 If a bug is raised to your projects, say "I need time to work on this bug" and do not show yourself Natch.
 
+Do your job like it's your **every day routine**. For a senior developer learning new things is also an every day routine. 
+
 ### Teamwork mindset
 
 The atomicity in a software company is **team** not **person**. 
