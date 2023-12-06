@@ -27,7 +27,7 @@ A wise man one said that the ratio of code reading to code writing should be aro
 
 You can get so much ideas from other projects. Most of the times, finding similar problems in projects is the **solution design** and **R&D**.
 
-- Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. There some sources that you can read:
+Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. There some sources that you can read:
     * Read different projects in the firm. You can see their tricks & best practices. For finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
     * When you are working with a tool (like sqlx), read it's structure. For example in echo if you see `s.GET` in your code, start traversing from `GET` method by Command + Click and go deep. 
     * Other resource is github starred projects by your friends.
