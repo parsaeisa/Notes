@@ -59,10 +59,10 @@ These are duties that I see our mid-levels have:
 Required skills:
 - Findinsg bugs immediately
 - Learn new tools
-- Being sharp
+- Be sharp
 - Be productive
 
-### Being productive
+### Be productive
 - Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
 
 #### Doing multiple tasks at the same time
@@ -85,7 +85,7 @@ While **Searching**, when you open a link, read it completely or read it until y
 
 > You always think about searching too late. Start it sooner.
 
-### Being sharp
+### Be sharp
 
 You do not have to always remember the business logic, but you should find it immediately in the code. 
 
