@@ -1,3 +1,6 @@
+# Linux
+
+There are different distribution of linux that you should know such as **Fedora** and **Debian**.
 # Bash commands 
 
 This is a link which has a good diagrams on most usefull linux command : https://xmind.app/m/WwtB/

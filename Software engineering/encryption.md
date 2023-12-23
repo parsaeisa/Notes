@@ -3,6 +3,7 @@
 Encryption is a useful concept that applies in many software applications such as:
 - URL shortener
 - Key-value store
+- Authorization & Authentication
 
 ## Different encrypting algorithms
 

@@ -15,31 +15,30 @@ Domain is not less important that your technical knowledge. Domain usually consi
 
 ## Coding
 
-- Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. There some sources that you can read:
-    * Read different projects in the firm. You can see their tricks & best practices. 
-    * When you are working with a tool (like sqlx), read it's structure using command click.
-    * Other resource is github starred projects by your friends.
+> Trying to write a protocol or a database or another famous tool can be thriving.
 
-> Trying to write a protocol or a database or another famous tool can be thriving. 
-
-Company's projects queue (out of team): 
-- Zarrafe - Api gateway
-- OAuth
-- Hulk (using S3)
-
-- Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
-
-- Before the solution design session for a new feature try to find out how it should be implemented.
+> Before the solution design session for a new feature try to find out how it should be implemented.
 
 ### Code reading 
 
-You can get so much ideas from other projects available on github or your company's gitlab. 
+A wise man one said that the ratio of code reading to code writing should be around 9 to 1.
 
-* Reading **your team's projects**: For finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
-
-* Reading a **Tool**, like echo: For example if you ride `s.GET` in your code, start traversing from `GET` method by Command + Click and go deep. 
+You can get so much ideas from other projects. Most of the times, finding similar problems in projects is the **solution design** and **R&D**.
 
 > Always start from project's interface and go deeper.
+
+Reading the code of a new project is a skill that you should have. --> You should understand it's layers and go from top (the interface layer) to the bottom. There some sources that you can read:
+
+- Read different projects in the firm. You can see their tricks & best practices. For finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
+- When you are working with a tool (like sqlx), read it's structure. For example in echo if you see `s.GET` in your code, start traversing from `GET` method by Command + Click and go deep. 
+- Other resource is github starred projects by your friends.
+
+Company's projects queue (out of team): 
+- OAuth
+- Hulk (using S3)
+- Surge
+
+> Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
 
 ## Expectations 
 
@@ -59,10 +58,10 @@ These are duties that I see our mid-levels have:
 Required skills:
 - Findinsg bugs immediately
 - Learn new tools
-- Being sharp
+- Be sharp
 - Be productive
 
-### Being productive
+### Be productive
 - Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
 
 #### Doing multiple tasks at the same time
@@ -85,7 +84,7 @@ While **Searching**, when you open a link, read it completely or read it until y
 
 > You always think about searching too late. Start it sooner.
 
-### Being sharp
+### Be sharp
 
 You do not have to always remember the business logic, but you should find it immediately in the code. 
 
