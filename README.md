@@ -62,4 +62,4 @@ Queue (Top is the resource with most priority):
 
 ### Handy websites 
 - [roadmap.sh](https://roadmap.sh/)
-- [quickref.me](https://quickref.me/)https://quickref.me/)
+- [quickref.me](https://quickref.me/)
