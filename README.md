@@ -59,3 +59,7 @@ Queue (Top is the resource with most priority):
 - The book "مبانی سینما"
 - Postgre SQL
 - Routing engines
+
+### Handy websites 
+- [roadmap.sh](https://roadmap.sh/)
+- [quickref.me](https://quickref.me/)https://quickref.me/)
