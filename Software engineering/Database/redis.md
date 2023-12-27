@@ -306,3 +306,35 @@ HGETALL key
 Redis cannot be monitored by prometheus, because it does not export the right interface.
 
 In this situation, we should use the image `oliver006/redis_exporter`. This container is an [adapter pattern]().
+
+## Lua
+
+Lua is a tool for scripting redis commands. 
+
+You can interact with redis through `redis.call` or `redis.pcall`. They are nearly identical the only difference is where the methods return their error. the redis.call returns it to the client while the redis.pcall sends it to script context for possible error handling. 
+
+example:
+```
+> EVAL "return redis.call('SET', KEYS[1], ARGV[1])" 1 foo bar
+```
+
+In the example above we contained script's source code to the EVAL command. It has two downsides:
+- It wastes bandwidth
+- It pus some overhead to the redis
+
+To overcome these downsides, redis has a caching mechanism for scripts. After entering the EVAL command the script is being stored. We can load that cached script by this command: 
+```
+redis> SCRIPT LOAD "return 'Immabe a cached script'"
+"c664a3bf70bd1d45c4284ffebb65a6f2299bfc9f"
+redis> EVALSHA c664a3bf70bd1d45c4284ffebb65a6f2299bfc9f 0
+"Immabe a cached script"
+```
+
+### SCRIPT command
+
+the command SCRIPT has some attributes:
+- FLUSH: it tells the redis server to empty the cache. 
+- EXISTS: It takes one or more SHA's as argument and tells whether they exist or not. 
+- LOAD:
+- KILL:
+- DEBUG: It wokes up the **Redis lua scripts Debugger**.
