@@ -107,6 +107,13 @@ docker run -v <host_path>:<container_path> ...
 
 ## Useful commands
 
+### Commit
+
+Consider you have a container and you installed a CLI on it. You can save this container to an image by this command: 
+```bash
+docker commit <containerID> <image name>:<tag>
+```
+
 This is the place where I put docker commands which are usefull at least for me .
 I hope this repo would help you !!
 
