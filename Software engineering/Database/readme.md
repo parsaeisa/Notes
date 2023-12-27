@@ -23,6 +23,7 @@ To Learn :
 - What's happening in database ? 
 - What is bulk insert 
 - Proxy sql
+- partial index concept
 
 ## Database design
 
