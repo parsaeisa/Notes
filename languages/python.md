@@ -28,3 +28,25 @@ After the command above, using this you can get to the virtual env shell:
 ```bash
 pipenv shell
 ```
+
+## Parallel
+
+Terms `async` & `await` exist in python too.
+
+## OOP
+
+Implementing some concepts in python. 
+
+In a class, when you want to write an abstract method use `@abstractmethod` and remember to not write anything in the method. 
+```python
+@abstractmethod
+def abstractMethod(self):
+    pass
+```
+
+For static methods you must use `@staticmethod` and **don't put** the `self` in arguments.
+```python
+@staticmethod
+def staticMethod():
+    # Operations 
+```
