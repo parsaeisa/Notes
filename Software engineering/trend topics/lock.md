@@ -1,8 +1,14 @@
-# Master election 
+# Locking
+
+This document talks about different locking mechanisms. 
+
+## Master election 
+
+Master election is related to lock mechanisms but in a distributed system. 
 
 A component that selects the master between multiple nodes is somehow the most important part of designing a distributed system. 
 
-## Tools & Algorithms
+### Tools & Algorithms
 
 There are some Algorithms like **Paxos** and **RAFT** for master election. But these algorithms are attractive for a undergraduate computer science course and may not be applicable in a high scale production environment. 
 
