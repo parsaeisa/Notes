@@ -70,6 +70,7 @@ Create one repo for all of services , and seperate them with folders (one folder
 - Strangler pattern
 - Synchronous
 - Asynchronous 
+- Serving configs ( this is called practe o)
 - Message passing
 
 ## Scattered points
