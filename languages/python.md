@@ -51,7 +51,35 @@ def staticMethod():
     # Operations 
 ```
 
-## Command line
+## Bash Command
 
 - `isort`: exposes a command line utility for sorting, organizing, and formatting imports within Python and Cython source files.
 
+## Creating a command line interface
+
+You should import `click` package.
+
+You create an instance of `Group` object.
+
+```python
+your_cli = click.Group(
+    name='your_cli',
+    help='description',
+)
+```
+
+Then, for defining a command, you use the code below :
+
+```python
+@your_cli.command('command1')
+# For each of your arguments
+@click.argument(
+    'arg1',
+    envvar='arg1',
+    nargs=1,
+    type=str,
+)
+# Through method arguments you can pass command arguments
+def commands_method(arg1: str):
+    pass
+```
