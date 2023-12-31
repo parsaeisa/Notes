@@ -273,3 +273,19 @@ Whenever you want to reconnect to the tmux session and check the script's progre
 ssh username@remote_server_ip
 tmux attach -t mysession
 ```
+
+## flake8
+
+`flake8` is a command-line utility for enforcing style consistency across Python projects.
+
+* I think this command is being used only for python projects but I'm not sure. 
+
+arguments:
+- exclude
+- extend-exclude
+- max-line-length
+
+You can see an example here:
+```bash
+flake8 --exclude='__init__.py','venv/' --extend-exclude='*_pb2*.py' --max-line-length=121  ./..
+```
