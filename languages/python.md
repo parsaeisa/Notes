@@ -50,3 +50,8 @@ For static methods you must use `@staticmethod` and **don't put** the `self` in 
 def staticMethod():
     # Operations 
 ```
+
+## Command line
+
+- `isort`: exposes a command line utility for sorting, organizing, and formatting imports within Python and Cython source files.
+
