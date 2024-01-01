@@ -137,7 +137,18 @@ If you want to share you charts :
 helm package ./mychart
 ```
 
-## don't know what 
+## Dependency
+
+Dependencies are other helm charts that a helm chart relies on to function properly. 
 ```bash
 helm dependency update <path>
+```
+
+The path in the command above is the path to template. The dependencies must be listed on `Chart.yaml` file in the `dependencies` section. 
+
+```
+dependencies:
+    - name:
+      version:
+      repository:
 ```
