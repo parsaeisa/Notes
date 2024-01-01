@@ -61,3 +61,18 @@ delte a deployment :
 ```bash
 oc delete deployment <deployment name>
 ```
+
+
+## Commands
+
+### wait
+This asks oc to wait for a condition to be true.
+
+```bash
+oc wait pod <pod name> --for=condition=ready --timeout=10m
+```
+
+I think for each k8s resource, conditions may differ. For example for deployment, one of the conditions are `available` ( I don't know whether it applies on pod or not)
+
+### process
+
