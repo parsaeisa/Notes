@@ -152,3 +152,20 @@ dependencies:
       version:
       repository:
 ```
+
+## bitnami 
+
+bitnami is a very powerful tool (??) that helps you run open source softwares on any platform, such kuber, various cloud environments or even local systems. 
+
+bitnami is used to provide charts for dependencies list. 
+
+The link below is the repository for helm charts in bitnami I guess:
+
+https://charts.bitnami.com/bitnami
+
+This can be added by helm using this command:
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+> Check bitnami anytime you were not busy. It seems cool. 
