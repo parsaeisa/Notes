@@ -74,5 +74,25 @@ oc wait pod <pod name> --for=condition=ready --timeout=10m
 
 I think for each k8s resource, conditions may differ. For example for deployment, one of the conditions are `available` ( I don't know whether it applies on pod or not)
 
-### process
+## Template
 
+A template describes a set of objects. Which can be parametrized and processed. 
+
+The manifest that describes a template has two main parts. `objects` and `parameters`. Something like this:
+```
+apiVersion:
+kind: Template
+objects:
+  - ...
+parameters:
+  - ...
+```
+
+Each parameter is like this: 
+```
+name:
+displayName:
+required
+```
+
+Then in the `process` command you should set value for each required value with `-p` flag. 
