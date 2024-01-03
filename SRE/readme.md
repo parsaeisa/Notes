@@ -12,6 +12,13 @@ I think this is about data managing for monitoring.
 
 SRE's are involved with analysis on logs and monitorings. 
 
+## Main duties
+
+- Configure monitorings, tracings and logs
+- Automate operational processes
+- Configure alerts
+- Do on-call support
+
 ## Basic stacks
 
 | objectives | tools |
