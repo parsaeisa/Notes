@@ -15,6 +15,7 @@ SRE's are involved with analysis on logs and monitorings.
 ## Basic stacks
 
 | objectives | tools |
+|----------|------|
 | SLO Monitoring | New Relic, Datadog, Grafana, Dynatrace, AppDynamics |
 | Incident response and management | Slack, Zenduty |
 | Automation and Orchestration  |Terraform, Cloudformation, Pulumi |
