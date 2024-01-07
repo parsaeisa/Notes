@@ -169,3 +169,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
 > Check bitnami anytime you were not busy. It seems cool. 
+
+### Foot of koozeh gari
+
+When you have multiple dependencies, they should be updated to their latest version. If they are not, their **bitnami/common** (which I don't know that it is) can cause conflicts and `common.labels.standard` won't be executed.  
