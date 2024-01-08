@@ -59,6 +59,9 @@ Queue (Top is the resource with most priority):
 - The book "مبانی سینما"
 - Postgre SQL
 - Routing engines
+- Two professors research interest:
+    - https://www.cs.rochester.edu/people/faculty/dwarkadas_sandhya/index.html
+    - https://www.cs.rochester.edu/people/faculty/scott_michael/index.html
 
 ### Handy websites 
 - [roadmap.sh](https://roadmap.sh/)
