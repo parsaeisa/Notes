@@ -112,32 +112,6 @@ Common column-based databases :
 - BigQuery
 - Snowflake
 
-## Transaction
-
-Transaction is a series of actions that should be done together . All of them should be performed or none of them. 
-
-For example, if it has two operations called "operation A" and "operation B" :
-- if A is performed so should B . 
-- if B is not performed , A should be rolled back.
-
-* Apparently putting multiple inserts in `BEGIN` and `END` to make them as transacitons can speed up queries.
-
-### Transaction in go
-
-In golang we use `sqlx` package to interact with database. 
-
-You can create a transaction using : 
-```go
-tx, err := d.db.BeginTxx(ctx, nil)
-```
-
-Then you can send queries using this `tx`.
-
-There are some other methods that I think should always be called when defining a transaction. 
-`tx.Rollback()` and `tx.Commit()` .
-
-
-
 ## Prepare statement
 
 Prepare statement is a query that you compile once and then the database stores it desired form. Then you just change values in that query and is not being compiled for many times. 
