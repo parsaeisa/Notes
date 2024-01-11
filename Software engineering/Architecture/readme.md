@@ -21,6 +21,12 @@ Software architecture has some factors that need to be considered while designin
 
 For applications with background processing nature, availability is not a critical factor. Hence, they can be even single-node because downtime (even 2 or 3 minutes per day) may not be destructive.
 
+Based on the roadmap.sh website these are first factors that matter:
+- Throughput
+- Latency
+- Performance
+- Scalability
+
 ## Software architecture scattered problems 
 
 * seperating business logics from technical logics 
