@@ -7,6 +7,15 @@ The `explain` command (before a query) is a tool which shows information about a
 explain [query]
 ```
 
+## Advanced queries
+
+There are some advanced queries which I don't know where the fuck should they be used. 
+- `PIVOT` & `UNPIVOT`: This command rotates columns to rows. 
+- Recursive
+- CTE
+- Window function
+- Dynamic queries
+
 ## Optimizations and best practicing 
 
 
