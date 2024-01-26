@@ -13,6 +13,19 @@ Domain is not less important that your technical knowledge. Domain usually consi
 - Stacks and their configurations: e.g. Redis, MaridaDB, Nats, Rabbit, etc.
 - Business & technical logic
 
+One of the most important things in solution design sessions is internal events in the company. For example regulations set by each team. For example the DBA and the Cloud team may have some rules, they are your infrastucture so you should consider their rules.
+
+### Where do tasks come from ? 
+
+Based on my knowledge there are two sources of tasks:
+- Business (product): When the business wants to increase the income so it tells product team to design new features.
+- Technical bugs: When there is a logical bug on the production or when the load on a service increases and needs new actions to be scaled.
+
+About the technical source, you should be engaged with a problem from the beginning, try to give ideas on it. Try to suggest tasks to undertake. 
+
+Do not start reading about a task when it is assigned to you. Start sooner.
+
+
 ## Coding
 
 > Trying to write a protocol or a database or another famous tool can be thriving.
