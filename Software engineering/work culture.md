@@ -122,6 +122,8 @@ With keeping the tracks of projects, you can easily find **similar problems** wh
 
 > Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
 
+You should know the side-effects and consequences of any action. You can start from knowing side-effects of your own actions.
+
 ## Mindset
 ### About yourself
 
