@@ -51,7 +51,7 @@ Company's projects queue (out of team):
 - OAuth
 - Hulk (using S3)
 - Surge
-- Funnel
+- Morpheus
 
 > Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
 
@@ -125,6 +125,8 @@ With keeping the tracks of projects, you can easily find **similar problems** wh
 > Always check your email and important group chats.
 
 > Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
+
+You should know the side-effects and consequences of any action. You can start from knowing side-effects of your own actions.
 
 ## Mindset
 ### About yourself
