@@ -47,6 +47,7 @@ Reading the code of a new project is a skill that you should have. --> You shoul
 - Other resource is github starred projects by your friends.
 
 Company's projects queue (out of team): 
+- Golchin (matching algorithms)
 - OAuth
 - Hulk (using S3)
 - Surge
