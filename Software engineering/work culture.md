@@ -114,8 +114,11 @@ A junior developer must always **consider team trends**. Try to follow, undertan
     - What is happening in the whole (technical and business logic) ? 
     - A logic's improvements and problems
 
-And other events like:
-- Someone being upset
+What to follow:
+- People's situation (are they sad or not? are they performing good or not?)
+- Who are consumers ? which teams are using our team's package ? Who is calling our endpoints?
+- What was the side effects of each action ? (you can predict the future side effects)
+- Trend problems and their solutions
 
 With keeping the tracks of projects, you can easily find **similar problems** while working on a solution.
 
