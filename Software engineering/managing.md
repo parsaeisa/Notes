@@ -77,6 +77,10 @@ Sometimes we don't know whether a policy or action is good or not. Sometimes we 
 
 * Layers in a company are not seperated from each other. Each layer should consider other layers resources (hard & soft resources). You can see an example of cooperating between devlopers & QA layer in the **test automation** section of this document.
 
+* Sometimes, when a features is rolled out, it may have lower requests and load rather than other features. Product team can test their new features, their income and impact through this new rolled out feature. 
+
+* Sometimes, a project, can be very busy by its heavy features. This can make it hard for that service to be improved So I think the management team (including engineering managers, directors) go to the way of handovering its features to other and even new services. 
+
 ## Toolbox
 
 Creating a new micro-service
