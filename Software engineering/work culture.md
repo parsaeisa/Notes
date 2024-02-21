@@ -96,6 +96,8 @@ When you understand the technical flow you will find bugs immediately. Code read
 
 When you know this fact, you can find race conditions and mutual exclusions which may affect the business logic. For knowing the technical flow you have to know different teams, their services, their roles and their logics. 
 
+After understanding the technical flow, you can think about side effects more efficiently.
+
 ### Learn new tools
 A junior should have **search and documents reading skills**.
 
