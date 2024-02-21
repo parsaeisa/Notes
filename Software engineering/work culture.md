@@ -75,6 +75,7 @@ Required skills:
 - Learn new tools
 - Be sharp
 - Be productive
+- Have good communication With others
 
 ### Be productive
 - Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
@@ -126,6 +127,14 @@ With keeping the tracks of projects, you can easily find **similar problems** wh
 > Always check your email and important group chats.
 
 > Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
+
+### Good communication
+
+You going to have dependency to many people in a tech company. This dependency can be reviewing a merge request, thinking about a problem, develop an API, etc. The people who you are depending on may not do the task very soon, you have to follow up. 
+
+First thing when someone doesn't do the job is offering a help. 
+
+Always have friendly tone of voice and open body language.
 
 ## Mindset
 ### About yourself
