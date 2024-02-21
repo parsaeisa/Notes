@@ -107,7 +107,7 @@ You do not have to always remember the business logic, but you should find it im
 like QA, product, analyze, etc.)
     - You can also correct your manager, for example while breaking a task ( tasks' granularity)
 
-A junior developer must always **consider team trends**. Try to follow, undertand & **remember** projects' **history**. Events like :
+You must always **consider team trends**. Try to follow, undertand & **remember** projects' **history**. Events like :
     - starting a project
     - Leaving a project undone
     - projects' situations
@@ -119,14 +119,13 @@ What to follow:
 - Who are consumers ? which teams are using our team's package ? Who is calling our endpoints?
 - What was the side effects of each action ? (you can predict the future side effects)
 - Trend problems and their solutions
+- You should know the rules defined by each team. Teams such as DBA, cloud, the teams that you have dependency on.
 
 With keeping the tracks of projects, you can easily find **similar problems** while working on a solution.
 
 > Always check your email and important group chats.
 
 > Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
-
-You should know the side-effects and consequences of any action. You can start from knowing side-effects of your own actions.
 
 ## Mindset
 ### About yourself
