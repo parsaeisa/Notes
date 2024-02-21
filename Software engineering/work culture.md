@@ -70,8 +70,12 @@ These are duties that I see our mid-levels have:
 
 ## Required
 
+Against the mindset that nowadays media are providing, anything is not simple :))
+
+There is no core mindset that if you reach it you would be a senior software engineer. You need to know many points in many context. I try to list those contexts here but of course they are not complete. 
+
 Required skills:
-- Findinsg bugs immediately
+- Understand the technical flow
 - Learn new tools
 - Be sharp
 - Be productive
@@ -86,8 +90,11 @@ There is no way that you can go deep into two tasks at the same time, and as a e
 
 So act like a computer processing-unit and make your time slotted. For example two hours on task A and one hour on task B. Make you slots less granular two like 5 hours on task A and 2 hours on task B.
 
-### Finding bugds
+### Understand technical flow
 * Refer to [Code reading](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/work%20culture.md#code-reading)
+When you understand the technical flow you will find bugs immediately. Code reading is important but there is not a code block which has the logic always. Most of the times the logic is distributed over multiple servers and code bases.
+
+When you know this fact, you can find race conditions and mutual exclusions which may affect the business logic. For knowing the technical flow you have to know different teams, their services, their roles and their logics. 
 
 ### Learn new tools
 A junior should have **search and documents reading skills**.
