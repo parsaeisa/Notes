@@ -68,6 +68,19 @@ These are duties that I see our mid-levels have:
 - Design, generally thinking about what to do ??
 - Starting new projects
 
+### Leading level
+
+I think in a leading level, the developer (?!) should checks the services' health **overally**. A leader in the first place should:
+- Monitor services, check their health
+- Only think about their improvement
+- And think about the feasibility of those improvements based on the resources
+    * resources are mainly time and team members. These two factors specify the priority
+
+Then the leader must break the problem to smaller ones (it can be accomplished by a meeting with team members) and dispatch them between team members. He must see:
+- Members unboardings
+- Their recent tasks
+- Their Desire
+
 ## Required
 
 Against the mindset that nowadays media are providing, anything is not simple :))
