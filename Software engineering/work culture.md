@@ -141,7 +141,10 @@ What to follow:
 - People's situation (are they sad or not? are they performing good or not?)
 - Who are consumers ? which teams are using our team's package ? Who is calling our endpoints?
 - What was the side effects of each action ? (you can predict the future side effects)
-- Trend problems and their solutions
+- Trend problems and their solutions, problems normally are:
+    - incidents
+    - features
+    - refactorings
 - You should know the rules defined by each team. Teams such as DBA, cloud, the teams that you have dependency on.
 
 With keeping the tracks of projects, you can easily find **similar problems** while working on a solution.
