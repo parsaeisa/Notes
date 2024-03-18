@@ -44,6 +44,7 @@ Reading the code of a new project is a skill that you should have. --> You shoul
 
 - Read different projects in the firm. You can see their tricks & best practices. For finding different functionalities in code base, only remember the project's connection to outside world ( http handlers, cmq handler, etc.) and start traversing from there. 
 - When you are working with a tool (like sqlx), read it's structure. For example in echo if you see `s.GET` in your code, start traversing from `GET` method by Command + Click and go deep. 
+    - This can lead to finding good parameters and arguments and configurations while using an API.
 - Other resource is github starred projects by your friends.
 
 Company's projects queue (out of team): 
