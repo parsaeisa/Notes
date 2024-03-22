@@ -50,7 +50,6 @@ Reading the code of a new project is a skill that you should have. --> You shoul
 Company's projects queue (out of team): 
 - Golchin (matching algorithms)
 - OAuth
-- Hulk (using S3)
 - Surge
 - Morpheus
 
