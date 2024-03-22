@@ -14,7 +14,15 @@ DNS or **D**omain **N**ame **S**erver is a map from url that we use (like "googl
 
 source : neetcode.io
 
+## TCP vs UDP in practice
 
+TCP has a concept called "connecion", which you see a lot, for example in gRPC.
+
+But UDP has nothing like connection and it just works with packets. It has to save data just in packets.
+
+## Http generations
+
+**QUIC**: 
 
 # Websocket 
 
