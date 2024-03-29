@@ -86,9 +86,14 @@ Sometimes we don't know whether a policy or action is good or not. Sometimes we 
 Creating a new micro-service
 
 ## Domain 
+
+When you are in a team, you should know that what is your place in the system (the company), what services you affect and what services affect you. If you provide a data, you should know exactly which teams are processing that data. 
+
 Domain managing is one of the challenging part of software managing.
 
-I think it contains the features and domains that each team owns. It can affect the way of developing that domain.
+I think it contains the features and domains that each team owns. It can affect the way of developing that domain. Domain managing is a big concept that I like to call **layer managing**. It's about making layers more seperate, and making their duties more clear. 
+
+Duties of two different layers should not **overlap**.
 
 ## Dismantling 
 
