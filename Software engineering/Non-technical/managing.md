@@ -33,10 +33,11 @@ While picking items for next quarter in the GAP, there are some objectives that 
 - Database optimization
 - Reduce resource consumption
 - Better observability
+- Managing layers (this concept is investigated in domain section in this document)
 
 ### Automation
 
-Automating process can save the team time. It requires a little amount of development cost but it's just one time.
+Automating process can save time. It requires a little amount of development cost but it's just one time.
 
 Tools for automating : 
 * gitlab pipelines
@@ -58,6 +59,8 @@ Hence, it's better to test scenarios in an automated manner as much as possible.
 For example for adding a redis to a project, there should be enough reasons, if redis hashset is usefull in just one handler, it's maintenance and concerns should not be added to the project. 
 
 ## People management
+
+People management requires **soft skill** the most. 
 
 An company's load shouldn't be on **just one person**, because in the case of leaving that one person, responsibilities are not taken by anyone. 
 
