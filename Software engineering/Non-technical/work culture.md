@@ -4,17 +4,6 @@ As a software engineer what should I think about ?
 
 Give comments on product flows, think about them and try to find holes in it and make it better. 
 
-### Where do tasks come from ? 
-
-Based on my knowledge there are two sources of tasks:
-- Business (product): When the business wants to increase the income so it tells product team to design new features.
-- Technical bugs: When there is a logical bug on the production or when the load on a service increases and needs new actions to be scaled.
-
-About the technical source, you should be engaged with a problem from the beginning, try to give ideas on it. Try to suggest tasks to undertake. 
-
-Do not start reading about a task when it is assigned to you. Start sooner.
-
-
 ## Coding
 
 > Trying to write a protocol or a database or another famous tool can be thriving.
@@ -144,6 +133,17 @@ With keeping the tracks of projects, you can easily find **similar problems** wh
 > Always check your email and important group chats.
 
 > Don't do anything in sessions. Just listen. Writing a document for sessions is helpful.
+
+#### Where do tasks come from ? 
+
+Based on my knowledge there are two sources of tasks:
+- Business (product): When the business wants to increase the income so it tells product team to design new features.
+- Technical bugs: When there is a logical bug on the production or when the load on a service increases and needs new actions to be scaled.
+
+About the technical source, you should be engaged with a problem from the beginning, try to give ideas on it. Try to suggest tasks to undertake. 
+
+Do not start reading about a task when it is assigned to you. Start sooner.
+
 
 ### Good communication
 
