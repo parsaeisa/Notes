@@ -5,7 +5,9 @@ Domain is not less important that your technical knowledge. Employees in a tech 
 In my mind, domain is the **design** of the system, but it's not that simple. It has many layers:
 
 - **service to service**: By this title I mean service to service communication. When you are in a team, you should know that what is your place in the system (the company), what services you affect and what services affect you. If you provide a data, you should know exactly which teams are processing that data. 
+    
     not only connections, but their type is important too (http, sdk, consuming, etc.)
+    
     After understanding these, you should be able to know the **technical flow** very well. If you are not, perhaps you did something wrong. After technical flow, you should know the business logic very well too.
 - **in a single service**: You should have this knowledge very accurate **just for** services in your team. This understanging consists of:
     - Project Deign. Including software architecture. Code patterns.
