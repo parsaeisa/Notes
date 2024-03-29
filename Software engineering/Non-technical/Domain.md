@@ -14,8 +14,6 @@ In my mind, domain is the **design** of the system, but it's not that simple. It
     - Stacks and their configurations: e.g. Redis, MaridaDB, Nats, Rabbit, etc.
     - Schema design in databases
 
-One of the most important things in solution design sessions is internal events in the company. For example regulations set by each team. For example the DBA and the Cloud team may have some rules, they are your infrastucture so you should consider their rules.
-
 
 ## Managing level
 
