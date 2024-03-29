@@ -88,12 +88,4 @@ Sometimes we don't know whether a policy or action is good or not. Sometimes we 
 
 ## Domain 
 
-Domain managing is one of the challenging part of software managing.
-
-Concepts introduced in this section are useful in so many levels, from development level to director level:
-
-**Connections**: When you are in a team, you should know that what is your place in the system (the company), what services you affect and what services affect you. If you provide a data, you should know exactly which teams are processing that data. 
-
-**Layer management**: Domain managing is a big concept that I like to call **layer managing**. It's about making layers more **seperate**, and making their duties more **clear**. Duties of two different layers should not **overlap**.
-
-I think it contains the features and domains that each team owns. It can affect the way of developing that domain.
+This section has been moved to [here](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Non-technical/Domain.md).

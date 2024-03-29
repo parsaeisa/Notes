@@ -4,17 +4,6 @@ As a software engineer what should I think about ?
 
 Give comments on product flows, think about them and try to find holes in it and make it better. 
 
-## Domain 
-
-Domain is not less important that your technical knowledge. Domain usually consists of: 
-
-- Your team's projects' connections to world. Their kind (http, sdk, consuming, etc.) and their destination (other services)
-- Project Deign. Including software architecture and schema design.
-- Stacks and their configurations: e.g. Redis, MaridaDB, Nats, Rabbit, etc.
-- Business & technical logic
-
-One of the most important things in solution design sessions is internal events in the company. For example regulations set by each team. For example the DBA and the Cloud team may have some rules, they are your infrastucture so you should consider their rules.
-
 ### Where do tasks come from ? 
 
 Based on my knowledge there are two sources of tasks:
@@ -127,6 +116,8 @@ While **Searching**, when you open a link, read it completely or read it until y
 
 You do not have to always remember the business logic, but you should find it immediately in the code. 
 
+One of the factors of being sharp, is being dominant on domain. Which is discussed [here](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Non-technical/Domain.md).
+
 - Try to give solutions all the time. (the solution can go beyond software engineering and go to other parts 
 like QA, product, analyze, etc.)
     - You can also correct your manager, for example while breaking a task ( tasks' granularity)
@@ -146,7 +137,7 @@ What to follow:
     - incidents
     - features
     - refactorings
-- You should know the rules defined by each team. Teams such as DBA, cloud, the teams that you have dependency on.
+- One of the most important things in solution design sessions is internal events in the company. For example regulations set by each team. For example the DBA and the Cloud team may have some rules, they are your infrastucture so you should consider their rules. DBA, cloud, or any team that you have dependency on. 
 
 With keeping the tracks of projects, you can easily find **similar problems** while working on a solution.
 
