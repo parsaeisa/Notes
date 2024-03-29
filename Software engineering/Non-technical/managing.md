@@ -84,10 +84,6 @@ Sometimes we don't know whether a policy or action is good or not. Sometimes we 
 
 * Sometimes, a project, can be very busy by its heavy features. This can make it hard for that service to be improved So I think the management team (including engineering managers, directors) go to the way of handovering its features to other and even new services. 
 
-## Toolbox
-
-Creating a new micro-service
-
 ## Domain 
 
 Domain managing is one of the challenging part of software managing.
@@ -99,16 +95,3 @@ Concepts introduced in this section are useful in so many levels, from developme
 **Layer management**: Domain managing is a big concept that I like to call **layer managing**. It's about making layers more **seperate**, and making their duties more **clear**. Duties of two different layers should not **overlap**.
 
 I think it contains the features and domains that each team owns. It can affect the way of developing that domain.
-
-## Dismantling 
-
-When you want to dismantle a logic from monolith here are steps : 
-- At first look at the dependencies that the logic has ( consider the monolith as a black-box )
-- Call to the corresponding team and ask them to provide that dependencies
-- Show them to product managers (I think this is in order to not touch the domain )
-- Show them to QA and and developers 
-- start developing the new service
-
-Don't improve the logic while you are dismantling it. 
-
-After that your team owned the logic the start to making it better.

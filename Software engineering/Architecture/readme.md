@@ -43,3 +43,26 @@ I heard two other names, I don't know whether they are programming pardigms or n
 - Dynamic
 
 - Seperating buiness logic from app technical logic
+
+
+## Toolbox
+
+- Creating a new micro-service
+    - This new service can be dismantled from another bigger service. 
+- Removing a micro-service, in order to:
+    - Make servers' duties more clear (layer managing)
+    - Remove system's complexity
+    - Remove a service with no busniess logics on it
+
+### Dismantling 
+
+When you want to dismantle a logic from monolith here are steps : 
+- At first look at the dependencies that the logic has ( consider the monolith as a black-box )
+- Call to the corresponding team and ask them to provide that dependencies
+- Show them to product managers (I think this is in order to not touch the domain )
+- Show them to QA and and developers 
+- start developing the new service
+
+Don't improve the logic while you are dismantling it. 
+
+After that your team owned the logic the start to making it better.
