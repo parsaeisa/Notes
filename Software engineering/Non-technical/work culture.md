@@ -31,6 +31,7 @@ Company's projects queue (out of team):
 - Surge
 - Morpheus
 - Pushman ( as a project working with web-engage)
+- Dehkhoda
 
 > Very obvious but critical point: more than 95 percent of issues come from the code itself. Even the deployments. Before asking Ahmad check the code carefully. 
 
@@ -112,11 +113,11 @@ like QA, product, analyze, etc.)
     - You can also correct your manager, for example while breaking a task ( tasks' granularity)
 
 You must always **consider team trends**. Try to follow, undertand & **remember** projects' **history**. Events like :
-    - starting a project
-    - Leaving a project undone
-    - projects' situations
-    - What is happening in the whole (technical and business logic) ? 
-    - A logic's improvements and problems
+- starting a project
+- Leaving a project undone
+- projects' situations
+- What is happening in the whole (technical and business logic) ? 
+- A logic's improvements and problems
 
 What to follow:
 - People's situation (are they sad or not? are they performing good or not?)
