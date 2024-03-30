@@ -19,6 +19,8 @@ By now, I think that software engineering consists of 3 main topics in computer 
 
 ## System Design 
 
+https://learningdaily.dev/im-new-to-system-design-where-do-i-start-35180232f53
+
 System design is designing set of distributed systems which make up 
 a Backend Software .
 
