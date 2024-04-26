@@ -73,3 +73,32 @@ Then you can send queries using this `tx`.
 
 There are some other methods that I think should always be called when defining a transaction. 
 `tx.Rollback()` and `tx.Commit()` .
+
+
+### My-sql structure
+
+#### Server tier
+Mysql has two tiers: 
+- Server tier
+- Storage engine
+
+The server tier has some components:
+- Connection pool
+- Query cache
+- Parser
+- Optimizer
+- Executor
+- Management utilities
+
+In the process, at first the query goes to query cache to be cheched whether it hits old queries or not, then it goes to parser ( Then parser stores the query in cache), then it goes like this: 
+
+Parser --> Opimizer --> Executor
+
+#### Storage engine
+
+The storage engine is pluggable and here is some options for this plugin: 
+- The memory
+- Inno DB
+- NDB cluster
+
+This tier manages storage and indexes. 
