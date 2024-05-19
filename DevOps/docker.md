@@ -44,6 +44,11 @@ See what port, the container is connected to:
 docker port [container-id]
 ```
 
+See a configuration variable in a container (for example for the memory): 
+```bash
+docker inspect <container id> -f "{{.HostConfig.Memory}}"
+```
+
 ## Flags
 `-d` distpaches and returns the terminal 
 
