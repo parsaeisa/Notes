@@ -14,6 +14,7 @@ Important factors:
 - Peak times
 - Number of requests
 - Number of data records
+- Number of threads in a concurrent program
 - etc ...
 
 Apparently, this estimation doesn't have a defined rule and it is more experimental. 
@@ -24,3 +25,10 @@ Apparently, this estimation doesn't have a defined rule and it is more experimen
 
 ## A mapping betwen RPS and resource
 
+Create this in any company that you are. It differs from a company to another. 
+
+## Throttling
+
+CPU has a sharing system for running distributing its resources for processing different threads. When a process asks for a resource which is beyond its limit, throtling occurs. 
+
+There is a relation between the number of threads and throttling occrurance. If the count of your processes goes up, the throttling change increases.
