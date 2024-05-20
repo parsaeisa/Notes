@@ -24,6 +24,8 @@ To Learn :
 - What is bulk insert 
 - Proxy sql
 - partial index concept
+- Amazon RDS
+- Some other SQL databases: CockroachDB, TiDB, Spanner, and Vitess
 
 ## Database design
 
@@ -131,3 +133,9 @@ Indexes are datastructures that DBMS to find a record in table without scanning 
 Indexing must be the first solution that comes to mind when the DBMS scan all rows in a table. 
 
 There are different types of indexes.
+
+## Replication
+
+Types of replication:
+- Logical
+- Streaming
