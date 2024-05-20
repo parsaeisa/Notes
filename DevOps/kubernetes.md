@@ -7,6 +7,13 @@ In this document I want to talk about what to do exactly with k8s.
 K8s and almost all other container orchestrator use a linux kernel feature called **CFS**. 
 CFS handles resource allocations and enforce limits for runing containers.
 
+###  To learn : 
+* service account : which is a fake account 
+* api server 
+* Headless services
+* Node exporter - which has metricss
+* Kustomization
+
 
 ## Main concepts
 You can see main concepts of k8s in the k8s dashboard : 
@@ -36,13 +43,37 @@ Each of these are k8s clusters. we can get the list of them in cli using :
 get <resource name>s
 ```
 
-###  To learn : 
-* service account : which is a fake account 
-* api server 
-* Headless services
-* Node exporter - which has metricss
-* Kustomization
+### Limits
 
+When a pod is in the `pending`state, the first thing that comes to our mind is that there is no node which has the required RAM of CPU. but, the other probability is that we determined the limits inefficiently. 
+
+Limits say two important things about our workload:
+- The required resources to run ( for the scheduler ), which is `requests`
+- The maximnum resources that it can consume ( for the kubelet), which is `limits`
+
+```
+spec:
+    containers:
+        requests: 
+            cpu: 10m 
+            memory: 50Mi
+        limits:
+            cpu: 100m
+            memory: 100Mi  
+```
+
+For cpu the unit is 'm' and for the memory is 'Mi'. 'Mi' is representation for **Mebibyte** which is closely related to megabyte (2^20).
+
+> If you do not set the requests value, The k8s will default it to the value of your **limits**. 
+
+So, for example if your limit memory is 100Mi and you don't have any request, the k8s considers your request 100Mi. 
+
+Limits are in linux features. In linux when a process gets to its limit, its being considered as a candidate for kernel to free up the memory (as you might know, linux doesn't kill a process immediately and it makes a candidate and elects).
+
+Inspecting cgroups in K8s pods: 
+```bash
+ls -l /sys/fs/cgroup/memory/kubepods/burstable/<pod id >
+```
 ## Manifests
 
 Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
@@ -357,3 +388,7 @@ There are some actions defined on k8s objects. Like reading, editing, etc.
 A user or a pod ( e.g. deamonset pod ) can get some of these accesses.
 
 I think due to deamonset mindset, it needs to modify some pods and need some accesses. 
+
+## Kubelet
+
+Kubelet is a deamon on each node which is responsible for pods health.
