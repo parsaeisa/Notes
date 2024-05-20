@@ -86,6 +86,16 @@ Sometimes we don't know whether a policy or action is good or not. Sometimes we 
 
 * Sometimes, a project, can be very busy by its heavy features. This can make it hard for that service to be improved So I think the management team (including engineering managers, directors) go to the way of handovering its features to other and even new services. 
 
+## Smoothliness
+
+If you want to change something, change it **smoothly**. 
+
+### Partitioning
+
+Partitioning and changing a partition at each time is a useful pattern. If changing the first partition won, go to the next partition. To decide to which partition you should change, you need **measure the impact**. Measuting can be acquired in multiple ways such as monitoring. 
+
+When Figma wanted to scale its databases, it decided to move some of its **tables** to a new instance, so it put some hooks on its Ruby ORMs to collect data of **query patterns** to each table. After this analysis, it chosed right tables to move. 
+
 ## Domain 
 
 This section has been moved to [here](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Non-technical/Domain.md).
