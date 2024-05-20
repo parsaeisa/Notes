@@ -1,6 +1,38 @@
 # Linux
 
 There are different distribution of linux that you should know such as **Fedora** and **Debian**.
+
+## Cgroups
+
+Linux has a mechanism of **dividing the resources** it has between it's **processes**. This feature is being used on many great open source projects such as Kubernetes. Cgroups are being used for this purpose. 
+
+Cgroup is a container for a set of related properties that **control** how the kernel **runs a process**.
+
+It is hierarchical. Each cgroup has a parent and eventually they are ended to **Root cgroup**. 
+
+We can easily inspect cgroups with seing files in `/proc` and `/sys` directory.
+
+```bash
+sudo cat /proc/<pid\>/cgroup
+```
+
+When a host comes under the memory pressure, it **elects** some processes to kill. So, it doesn't kill a process immediately. 
+
+## OOMkiller
+
+By now, I know that there are two oom-killers:
+- Global
+- Cgroup
+
+When a process is out of memory cgroup are being handled by global oom-killer. 
+
+If a process was killed by the cgroup oom-killer, you may see this log: 
+```
+Memory cgroup out of memory: Kill process ...
+```
+
+
+
 # Bash commands 
 
 This is a link which has a good diagrams on most usefull linux command : https://xmind.app/m/WwtB/
