@@ -23,6 +23,7 @@ to runa container from an image :
 ```bash
 docker run <image name>:<image version>
 ```
+In this command, the argument `--memory` sets the memory limit for pod. This argument will set the value for `memory.limit_in_bytes` for cgroups in the pod's kernel. 
 
 to stop a container : 
 ```bash
