@@ -1,4 +1,4 @@
-# Posgtre
+# Posgtres
 
 Postgre sql has a MVCC architecture . 
 
@@ -29,3 +29,22 @@ You can see the full table of conflicts in the [link](https://www.postgresql.org
 
 ### DeadLocks 
 Postge handles deadlocks itself by aborting one of the transactions that has a lock on some resource . 
+
+
+## Downsides
+
+### Index managing
+
+While replicating data, the posgres has a downside on managing indexes. 
+
+When the replication process copies rows in bulk, the DBMS also updates indexes for one row at a time. By it is managable by **removing indexes at destination database** and **rebuilding** them when the copying is complete. 
+
+> When replicating, watch out indexes. They can take too much time. 
+
+### Vacuum issue
+
+Vacuuming is an essential background process in Postgres that reclaims storage occupied by deleted or obsolete rows.
+
+Without regular vacuuming, the database would eventually run out of transaction IDs and grind to a halt. However, vacuuming large tables can be resource-intensive and cause performance issues and downtime.
+
+> DBMS keeps track of all its transactions. 
