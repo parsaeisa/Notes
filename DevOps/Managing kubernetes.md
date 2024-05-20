@@ -13,3 +13,6 @@ There are 4 network problem in K8s:
 - External to service connection
 
 Last two items are covered by **Services**.
+
+https://medium.com/google-cloud/understanding-kubernetes-networking-pods-7117dd28727
+
