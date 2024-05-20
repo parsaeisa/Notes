@@ -54,6 +54,10 @@ I heard two other names, I don't know whether they are programming pardigms or n
     - Remove system's complexity
     - Remove a service with no busniess logics on it
 
+In software engineering, there are short-term solutions and long-term solutions. Some of short-term solutions for scaling datasets: 
+- Scaling database instances Horizontally and vertically
+- Connection pools are useful for limiting the impact of growing number of connections. Connection pools such as **PgBouncer** which figma used.
+
 ### Dismantling 
 
 When you want to dismantle a logic from monolith here are steps : 
