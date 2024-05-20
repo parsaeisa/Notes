@@ -22,10 +22,6 @@ I will fill this section.
 
 I only know that this is a very high level management term.
 
-## Non-financial resources
-
-Developer's time and energy are the most valuable items in a team. So we should save them.
-
 ## Objectives
 
 While picking items for next quarter in the GAP, there are some objectives that can be considered to achieve:
@@ -36,6 +32,10 @@ While picking items for next quarter in the GAP, there are some objectives that 
 - Reduce resource consumption
 - Better observability
 - Managing layers (this concept is investigated in domain section in this document)
+
+## Non-financial resources
+
+Developer's time and energy are the most valuable items in a team. So we should save them.
 
 ### Automation
 
