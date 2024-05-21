@@ -30,6 +30,11 @@ to stop a container :
 docker stop <container id>
 ```
 
+To execute a docker-compose file:
+```bash
+docker-compose -f docker-compose.yml up --build
+```
+
 Get to the shell : 
 ```bash
 docker exec -it [container-id] bash
