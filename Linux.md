@@ -306,6 +306,47 @@ ssh username@remote_server_ip
 tmux attach -t mysession
 ```
 
+## Transferring file 
+
+To transfer a file from your machine to a server You have these tools: 
+- sftp
+- rsync
+- scp
+
+Using sftp was **not succesful**, but scp was ok. I didn't try rsync. 
+
+### scp
+
+Whole command for transfering a file:
+```bash
+scp <source> <dest>
+```
+
+If source or dest is on the server it should have this pattern:
+<id>@<host>:<path in remote system>
+
+For transferring a directory use this:
+```bash
+scp -r <srouce> <dest>
+```
+
+### sftp
+
+`sftp` is used to transfer file from your machine to a server. 
+
+**Before you begin** open a tmux session and do it there. 
+
+initial command:
+```bash
+sftp remote_username@server_ip_or_hostname
+```
+
+Then you must see something like this:
+```bash
+Connected to remote_username@server_ip_or_hostname.
+sftp>
+```
+
 ## flake8
 
 `flake8` is a command-line utility for enforcing style consistency across Python projects.
