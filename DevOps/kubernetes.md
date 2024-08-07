@@ -229,7 +229,7 @@ oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
 
 ## Clusters
 
-Each cluster contains nodes
+Each cluster contains nodes. The **scheduler** assigns pods to the appropriate node in the cluster. 
 
 ## Controllers
 
