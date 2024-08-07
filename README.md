@@ -1,5 +1,14 @@
 # Notes
 
+### Topics:
+* [Software Engineering](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/readme.md)
+* [DevOps](https://github.com/parsaeisa/Notes/blob/main/DevOps/README.md)
+* [SRE](https://github.com/parsaeisa/Notes/blob/main/SRE/readme.md)
+* [Computer Vision](https://github.com/parsaeisa/Notes/blob/main/computer%20vision/readme.MD)
+* [AI]
+* [Languages](https://github.com/parsaeisa/Notes/blob/main/languages/readme.MD)
+* [Papers](https://github.com/parsaeisa/Notes/blob/main/Papers.md)
+
 ### Types of things to learn : 
 
 * Developing 
