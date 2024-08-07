@@ -22,6 +22,8 @@ Patterns are divided to these groups ( which 3 of them are the same as programmi
 * Structural
 * Behavioural
 * Foundational
-* Higher level
+* Configuration
+* Advanced ( Higher level)
 
+You can see some examples in the chart below: 
 <img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/images/some_kuber_patterns.gif">
