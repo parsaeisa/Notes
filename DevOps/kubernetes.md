@@ -1,5 +1,15 @@
 # Kubernetes
 
+Topics:
+* Main concepts
+* Manifests
+* Statefulsets
+* HPA
+* Clusters
+* Networking
+* Volumes
+* [ There are other topics covered by this document. complete the lis]
+
 Kubernetes or k8s is container orchestration tool.
 
 In this document I want to talk about what to do exactly with k8s.
@@ -74,35 +84,9 @@ Inspecting cgroups in K8s pods:
 ```bash
 ls -l /sys/fs/cgroup/memory/kubepods/burstable/<pod id >
 ```
-## Manifests
 
-Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
 
-Files: 
-- clusterrolebinding.yaml
-- configmap.yaml
-- deployment.yaml
-- ingress.yaml
-- networkpolicy.yaml
-- pvc.yaml
-- serviceaccount.yaml
-- service.yaml
-
-You can create most of these files using `helm create` command. 
-
-It has a structure : 
-```
-apiVersion: 
-kind:
-metadata:
-    [e.g. names & labels]
-spec:
-    [other key featues of object]
-```
-
-We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
-
-## Service 
+### Service 
 
 Service is an abstraction layer over pods. You can access pods through their assigned service. 
 
@@ -140,6 +124,45 @@ Other components configures service's behaviour & **connectivity**.
 - ServiceType
 - Service discovery 
 - External access
+
+### Role
+
+There are some actions defined on k8s objects. Like reading, editing, etc.
+
+A user or a pod ( e.g. deamonset pod ) can get some of these accesses.
+
+I think due to deamonset mindset, it needs to modify some pods and need some accesses. 
+
+
+#### Cluster role binding
+
+## Manifests
+
+Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
+
+Files: 
+- clusterrolebinding.yaml
+- configmap.yaml
+- deployment.yaml
+- ingress.yaml
+- networkpolicy.yaml
+- pvc.yaml
+- serviceaccount.yaml
+- service.yaml
+
+You can create most of these files using `helm create` command. 
+
+It has a structure : 
+```
+apiVersion: 
+kind:
+metadata:
+    [e.g. names & labels]
+spec:
+    [other key featues of object]
+```
+
+We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
 
 ## Statefulsets
 
@@ -340,7 +363,6 @@ spec:
 In our configmaps, we may need to store some passwords . e.g. the username and password for connection to a database . 
 These passwords should not be shown in the configmaps . so we store them in secrets to be available merely for administrators.  
 
-## Cluster role binding
 
 ## Service account 
 
@@ -380,14 +402,6 @@ Namespaces can be joined to teams and being removed from it.
 ## Deamonset
 
 Deamonset is used when we want to add a process to every cluster in kubernetes.
-
-## Role
-
-There are some actions defined on k8s objects. Like reading, editing, etc.
-
-A user or a pod ( e.g. deamonset pod ) can get some of these accesses.
-
-I think due to deamonset mindset, it needs to modify some pods and need some accesses. 
 
 ## Kubelet
 
