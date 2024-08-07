@@ -7,3 +7,11 @@ Well, the basic syntax in all languages (such as If, loops, try catch, etc. ) ar
     - In file naming and file structure of their projects.
 - Memory management
 - Best practices
+
+There are some dividings on languages:
+
+Based on their execution:
+- Compiled
+- Interpreted
+
+Programs with compiled languages are often lighter for computers. They run faster and require less memory. 
