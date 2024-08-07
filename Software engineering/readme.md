@@ -1,5 +1,15 @@
 # Software engineering
 
+## Topics
+
+* [Api-paradigm](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Api%20paradigms/readme.md)
+* [Architecture](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Architecture/readme.md)
+* [Brokers](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Brokers/readme.md)
+* [Database](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/Database/readme.md)
+* [Non-technical](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Non-technical)
+* [Observability](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/observability/readme.md)
+* [Trend topics](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/trend%20topics/readme.md)
+
 ## Introduction
 
 The nature of a task (a big task like two factor authentication) defines the nature of a service.
