@@ -77,13 +77,25 @@ Consider there are 5 services that subscribe on a topic in a broker, and all of 
 
 This put a high workload on broker that makes it unreliable. 
 
+### Common system design problems
+
+**Read-heavy** system: Use caching to make systems faster
+
+**Heavy-write** system: A system with heavy traffic of writes. In such problems there are two things that we need:
+- A worker for processing each read request. 
+- A LSM-tree database. 
+
+**Highly avaiable** systems: Using load-balancer
+**High latency**: Use CDN to reduce the latency. 
+**Handling large files**: Block storages and object storages. 
+
 ## Incidents 
 
 What to check when we face an incident ?? 
 * See other services and technologies (like databases and brokers) that your service are connected to. 
 * See logs (in the pods or in Kibana )
 
-  ## 40 Engineering blogs
+## 40 Engineering blogs
 
 Engineering at Meta - https://lnkd.in/e8tiSkEv
 
