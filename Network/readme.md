@@ -69,6 +69,6 @@ There are two versions of SSH, SSH-1 and SSH-2. The SSH-2 has standardized **IET
 It has three steps:
 - Transport layer: Creates a secure connection
 - Authentication layer: Verifies the user
-- Connection layer: 
+- Connection layer: Multiplexes communications into logical channels.
 
-
+<img src="https://github.com/parsaeisa/Notes/blob/main/Network/image/how%20SSH%20works.gif">
