@@ -1,9 +1,12 @@
 # Nginx
 
-nginx has three applications : 
+nginx applications : 
+* high-performance webserver
 * load balancing 
 * caching 
+* SSL termination
 
+## Features
 ### Proxy pass
 proxy_pass directive is used to pass the proxied request . 
 
@@ -37,3 +40,11 @@ completely recieved from server , and it buffers it until the client downloads i
 If buffering is disabled, the response is sent to the client synchronously while 
 it is receiving it from the proxied server. This behavior may be desirable for fast
 interactive clients that need to start receiving the response as soon as possible.
+
+### SSL termination
+
+It can offload the decryption process from backend services. Requests are sending to Nginx in HTTPS and other backend-services can get the rest of requests in HTTP. 
+
+## Architecture
+
+It follows a master-worker process model. The master process is responsible for reading the configuration and managing worker processes. Worker processes handle incoming connections using an event-driven non-blocking I/O model.
