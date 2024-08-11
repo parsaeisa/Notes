@@ -26,6 +26,7 @@ To Learn :
 - partial index concept
 - Amazon RDS
 - Some other SQL databases: CockroachDB, TiDB, Spanner, and Vitess
+- LSM-tree databases
 
 ## Database design
 
