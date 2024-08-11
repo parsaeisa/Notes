@@ -61,3 +61,14 @@ Certificates include these items:
 - The issuer
 
 **Handshake** is the process of exchanging certificates and validating them. 
+
+## SSH
+
+There are two versions of SSH, SSH-1 and SSH-2. The SSH-2 has standardized **IETF**.
+
+It has three steps:
+- Transport layer: Creates a secure connection
+- Authentication layer: Verifies the user
+- Connection layer: 
+
+
