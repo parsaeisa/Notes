@@ -1,5 +1,9 @@
 # Load balancing
 
+In this document we are going to talk about one of the main components of software engineering, load-balancers.
+
+Load-balancers are sometime the main solution for high-availability for finding most suitable node ( e.g. database instance)
+
 ## Switching solution
 
 Consider there is a broker in your microservice. More than one microservice is relying on this broker and one of them has higher priority (in busniess logic) than your services (call this service B). 
