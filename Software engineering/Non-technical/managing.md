@@ -86,6 +86,12 @@ Sometimes we don't know whether a policy or action is good or not. Sometimes we 
 
 * Sometimes, a project, can be very busy by its heavy features. This can make it hard for that service to be improved So I think the management team (including engineering managers, directors) go to the way of handovering its features to other and even new services. 
 
+### Release
+
+We have different kinds of releasing ( a new version of applicaiton ):
+- Rolling updates
+- Canary Deployments
+
 ## Smoothliness
 
 If you want to change something, change it **smoothly**. 

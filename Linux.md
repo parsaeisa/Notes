@@ -2,6 +2,8 @@
 
 There are different distribution of linux that you should know such as **Fedora** and **Debian**.
 
+A list of operating systems: CentOS, CoreOS, Debian, Red hat, Ubuntu, Windows etc
+
 ## Cgroups
 
 Linux has a mechanism of **dividing the resources** it has between it's **processes**. This feature is being used on many great open source projects such as Kubernetes. Cgroups are being used for this purpose. 
@@ -170,6 +172,15 @@ sudo usermod -aG docker [user]
 ```
 
 You can remove the need for sudo.
+
+become root user:
+```bash
+sudo su
+```
+
+## Service
+
+
 
 ## alias
 
