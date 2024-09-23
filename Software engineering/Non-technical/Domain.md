@@ -10,7 +10,7 @@ In my mind, domain is the **design** of the system, but it's not that simple. It
     
     After understanding these, you should be able to know the **technical flow** very well. If you are not, perhaps you did something wrong. After technical flow, you should know the business logic very well too.
 - **in a single service**: You should have this knowledge very accurate **just for** services in your team. This understanging consists of:
-    - Project Deign. Including software architecture. Code patterns.
+    - Project Deign. Including software architecture & Code patterns.
     - Stacks and their configurations: e.g. Redis, MaridaDB, Nats, Rabbit, etc.
     - Schema design in databases
 
