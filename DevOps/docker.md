@@ -199,6 +199,13 @@ You define `ARG`s and then you can use them in label. That's all I know.
 
 ## Docker network 
 
+Creating a network:
+```bash
+docker network create my-bridge-network
+```
+
+We can pass the network to a container while creating it with `--network` flag.
+
 By default, Docker containers run in a separate network namespace, which means that 127.0.0.1 inside the Docker container refers to the container itself, not your host machine.
 
 If we want to send request from container to one of host ports, we have two options: 
@@ -207,6 +214,13 @@ If we want to send request from container to one of host ports, we have two opti
 ```bash
 docker run --network host [OPTIONS] [image name]
 ```
+
+Docker provides different **network drivers**.
+- Bridge
+- Host
+- Overlay
+- Macvlan
+- None
 
 ### Bridge network 
 
