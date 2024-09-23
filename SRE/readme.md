@@ -12,6 +12,9 @@ I think this is about data managing for monitoring.
 
 SRE's are involved with analysis on logs and monitorings. 
 
+Tools:
+- AWX
+
 ## Main duties
 
 - Configure monitorings, tracings and logs
