@@ -221,10 +221,14 @@ There is also an **operator sdk** that helps to create an operators.
 
 ### CRD's
 
-## HPA 
-It stands for Horizontal pod autoscaler . 
+## HPA
+It stands for Horizontal pod autoscaler. K8s handles highly-availability in a great level. For autoscaling we use k8s.
 
-We can create it using the k8s dashboard . 
+Put at least 2 pods for a service to HA that service. But if the requests to our service is going to grow we need to add more pods.
+
+* Before any scaling we need load-testing and fine-tuning to see whether the service works as we expected or not.
+
+We can create it using the k8s dashboard.
 
 HPA has three parameters :
 - min : the minimum count of our pods 
