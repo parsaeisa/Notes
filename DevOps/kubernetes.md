@@ -230,12 +230,12 @@ Put at least 2 pods for a service to HA that service. But if the requests to our
 
 We can create it using the k8s dashboard.
 
-HPA has three parameters :
-- min : the minimum count of our pods 
-- max : the maximum counts 
+HPA has three parameters:
+- min : the minimum count of our pods
+- max : the maximum counts
 - cpu-percent : This is one of the metrics that k8s decides to scale pods with.
 
-Autoscaling using HPA with CLI : 
+Autoscaling using HPA with CLI:
 ```bash
 oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
 ```
