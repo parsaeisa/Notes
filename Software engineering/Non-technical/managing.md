@@ -8,10 +8,14 @@ Resources are:
 - Authorities (e.g. accesses)
 
 A manager's concerns : 
-* Team non-financial resources (technical level, energy & time)
+* Team non-financial resources:
+    * Members progress and development in their career
+    * Energy
+    * Time
 * Technical probelms (the scale is related to the manager's level):
     * Testing services
     * Request loads
+* When to choose which technical problem
 
 A technical managers should know the design in the whole system. After identifying this, they can give ideas for improvements. In this matter, a technical manager should be dominant on software design. So keep mind in [this link](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Architecture).
 
