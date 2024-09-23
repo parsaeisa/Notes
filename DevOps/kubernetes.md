@@ -24,6 +24,15 @@ CFS handles resource allocations and enforce limits for runing containers.
 * Node exporter - which has metricss
 * Kustomization
 
+grpc load balancing : 
+* kube resolver 
+* connection pool
+
+grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
+
+To learn : 
+- CRD
+- What is exactly a cluster ??
 
 ## Main concepts
 You can see main concepts of k8s in the k8s dashboard : 
@@ -369,17 +378,6 @@ These passwords should not be shown in the configmaps . so we store them in secr
 This is an account that is used for pipelines in automations.
 
 It has a level of access that can be for example editor.
-
-grpc load balancing : 
-* kube resolver 
-* connection pool
-
-grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
-
-To learn : 
-- CRD
-- What is exactly a cluster ??
-
 
 ## Job 
 
