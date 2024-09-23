@@ -13,7 +13,7 @@ A manager's concerns :
     * Testing services
     * Request loads
 
-A technical managers should know the design in the whole system. After identifying this, they can give ideas for improvements. In this matter, a technical manager should be dominant on software design. So keep mind in (this link)[https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Architecture].
+A technical managers should know the design in the whole system. After identifying this, they can give ideas for improvements. In this matter, a technical manager should be dominant on software design. So keep mind in [this link](https://github.com/parsaeisa/Notes/tree/main/Software%20engineering/Architecture).
 
 ## Supply-Demand balance
 
