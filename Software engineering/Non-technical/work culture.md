@@ -76,7 +76,7 @@ Required skills:
 - Have good communication With others
 
 ### Be productive
-- Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks to ** **)
+- Prioritize your tasks. don't work on more than one task at a time. (You can lower the time interval of working on different tasks)
 
 #### Doing multiple tasks at the same time
 
