@@ -86,7 +86,7 @@ Consider in k8s you deployed 3 replicas of a database:
 
 These operations are performed differntly in MySQL, PostgreSQL & elasticsearch for example. 
 
-There is no solution for doing this and we cannot automate in kubernetes. 
+There is no solution for doing this and we cannot automate in kubernetes. Read more [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/kubernetes.md#operator). 
 
 ## Sharding
 I think sharding is an operation on Datas . Some criterion is used to partition the data among the different set of slave/master databases . 
