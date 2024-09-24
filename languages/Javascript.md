@@ -67,6 +67,45 @@ This line creates a function called `add` which adds two number.
 `var` is hoisted but `let` is not.
 `var` is global but `let` is block scoped.
 
+## Closure
+
+Closure is a function which is defined in another function and then is returned by that function.
+
+```javascript
+function multiplyBy(multiplier) {
+    return function(number) {
+        return number * multiplier;
+    };
+}
+```
+The inner function is closure and it can **remember** variables which were defined in it's outer function (`multiplier`). It is used like this: 
+
+```javascript
+const multiplyByTwo = multiplyBy(2);
+console.log(multiplyByTwo(5)); // Output: 10
+```
+
+A point of view is that a function can act as a class with one property and that one property can be accessed through the closure. Look at this example:
+```javascript
+function counter() {
+    let count = 0; // Private variable
+
+    return function() {
+        count++;
+        console.log(count);
+    };
+}
+
+const increment = counter();
+increment(); // Output: 1
+increment(); // Output: 2
+
+const anotherCounter = counter();
+anotherCounter(); // Output: 1
+```
+
+
+
 ## To learn:
 
 What are decorators ?
