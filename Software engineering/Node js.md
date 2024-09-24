@@ -27,3 +27,16 @@ Importing a built-in or custom package:
 const fs = require('fs');
 ```
 
+## Components
+
+Here a list of components from top to bottom:
+- Controller: Sits between http requests and Service. 
+- Service: Service has the business logic of the application. 
+- Mapper: Mapper is responsible to map database object to understandable objects for the program. 
+- Prisma: Its the ORM. 
+
+Both mapper and prisma are beneath Service (Prisma is not under mapper). An example of usages:
+```javascript
+const dbUser = { id: 1, first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com' };
+const apiUser = userMapper(dbUser);
+```
