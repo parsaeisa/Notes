@@ -98,6 +98,35 @@ function a(){
 // Other things
 ```
 
+## Callbacks
+Callbacks are functions that are passed to other functions and are the actions that should be performed at end of execution of thread. 
+
+Example:
+```javascript
+function fetchData(callback) {
+    setTimeout(() => {
+        callback(null, "Data fetched");
+    }, 1000);
+}
+
+fetchData((error, result) => {
+    if (error) {
+        console.log("Error occurred");
+    } else {
+        console.log(result);  // "Data fetched"
+    }
+});
+```
+
+They can be passed to a wide variaty of asynchronous operations like File I/O, network I/O, API I/O, etc. Example for event handling:
+```javascript
+document.getElementById("myButton").addEventListener("click", function() {
+    console.log("Button was clicked!");
+});
+```
+
+* Callbacks can be nested and lead to **callback hell** and that's why using promises makes the code more cleaner and managable. 
+
 ## Closure
 
 Closure is a function which is defined in another function and then is returned by that function.
