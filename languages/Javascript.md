@@ -136,3 +136,24 @@ anotherCounter(); // Output: 1
 ```
 
 ## Promises
+
+Promis is an object which it's constructor takes a function as input. 
+
+When calling the created object, we have three methods to handle the possible results of that function execution:
+- `then`
+- `catch`
+- `finally`
+
+```javascript
+let myPromise = new Promise((/* arguments */) => { 
+    // Method behaviour
+});
+
+myPromise
+    .then(
+        // function if the result was ok. 
+    )
+    .catch(
+        // function if the result was an error. 
+    )
+```
