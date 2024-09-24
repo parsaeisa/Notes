@@ -76,6 +76,28 @@ This line creates a function called `add` which adds two number.
 `var` is hoisted but `let` is not.
 `var` is global but `let` is block scoped.
 
+## Decorators
+
+Decorators are a special types of syntax which modifies the behaviour of a method or a class. 
+
+> Decorators are **not** natively supported in JavaScript without a transpiler like Babel or using TypeScript.
+
+Install Babel with:
+```bash
+npm install --save-dev typescript
+```
+It has more steps, search for it later. 
+
+Decorators can be a method:
+```javascript
+function a(){
+    // behaviour
+}
+
+@a
+// Other things
+```
+
 ## Closure
 
 Closure is a function which is defined in another function and then is returned by that function.
@@ -113,8 +135,4 @@ const anotherCounter = counter();
 anotherCounter(); // Output: 1
 ```
 
-
-
-## To learn:
-
-What are decorators ?
+## Promises
