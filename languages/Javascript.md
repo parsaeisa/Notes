@@ -14,6 +14,11 @@ let isEqual = (5 == '5'); // true
 let isStrictEqual = (5 === '5'); // false
 ```
 
+## To learn:
+
+What are decorators ?
+
+
 ## Datatypes
 
 Javascript has **Number** and **BigInt**. So it doesn't have int, int8, float, etc.
