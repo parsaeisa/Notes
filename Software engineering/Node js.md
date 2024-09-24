@@ -40,3 +40,35 @@ Both mapper and prisma are beneath Service (Prisma is not under mapper). An exam
 const dbUser = { id: 1, first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com' };
 const apiUser = userMapper(dbUser);
 ```
+
+## Commands
+
+In this section, useful commands for generating project files are listed. 
+
+### Prisma 
+
+You can create migratoins using:
+```bash
+npx prisma migrate dev --name <migration_name>
+```
+
+ESLint:
+```bash
+npx eslint --init
+```
+
+Jest (testing):
+```bash
+npx jest --init
+```
+
+Prettier:
+```bash
+echo {} > .prettierrc
+```
+Creates a `.prettierrc` file for code formatting configuration.
+
+For creating required files for an express application:
+```bash
+npx express-generator
+```
