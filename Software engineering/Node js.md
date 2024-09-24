@@ -60,22 +60,23 @@ You can create migratoins using:
 npx prisma migrate dev --name <migration_name>
 ```
 
-ESLint:
+### ESLint
 ```bash
 npx eslint --init
 ```
 
-Jest (testing):
+### Jest (testing)
 ```bash
 npx jest --init
 ```
 
-Prettier:
+### Prettier
 ```bash
 echo {} > .prettierrc
 ```
 Creates a `.prettierrc` file for code formatting configuration.
 
+### Express application
 For creating required files for an express application:
 ```bash
 npx express-generator
