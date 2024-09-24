@@ -29,11 +29,19 @@ const fs = require('fs');
 
 ## Components
 
-Here a list of components from top to bottom:
+Here a list of components:
 - Controller: Sits between http requests and Service. 
 - Service: Service has the business logic of the application. 
 - Mapper: Mapper is responsible to map database object to understandable objects for the program. 
 - Prisma: Its the ORM. 
+- Helpers: Like it's name, it is a directory with helper methods, reduces duplicates and improves code organization. 
+
+The order is like this: 
+```bash
+Controllers -> Services --> Mapper
+                        \-> Prisma
+```
+Helper directory is a seperated direcotry. 
 
 Both mapper and prisma are beneath Service (Prisma is not under mapper). An example of usages:
 ```javascript
