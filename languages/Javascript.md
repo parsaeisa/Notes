@@ -1,5 +1,9 @@
 # Javascript
 
+Good documents for Javascriot:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+- https://javascript.info/
+
 The main feature of javascript is it's **event-driven** and **non-blocking I/O model**. 
 Particularly it has:
 - callbacks
