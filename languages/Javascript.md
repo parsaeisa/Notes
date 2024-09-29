@@ -71,6 +71,20 @@ This line creates a function called `add` which adds two number.
 - `array.shift()`: Removes from the beginning.
 - `array.splice(index, count)`: Removes elements at a specific index.
 
+### Inline for loops for arrays
+
+Javascript has a feature which can make for loops into one line:
+```javascript
+return Array.from({length: n}, (_, i) => "This is the element " + i)
+```
+I think the `Array.from` creates an array and gets a function as input to fill each element.  
+
+Another example for creating 2d array:
+```javascript
+return Array.from({length: n}, (_, i) => Array.from({length: m}, (_, j) => i + j))
+```
+
+
 ## Difference between var and let
 
 `var` is hoisted but `let` is not.
@@ -174,20 +188,6 @@ if(typeof a == "string"){
     // operation
 }
 ```
-
-### Inline for loops for arrays
-
-Javascript has a feature which can make for loops into one line:
-```javascript
-return Array.from({length: n}, (_, i) => "This is the element " + i)
-```
-I think the `Array.from` creates an array and gets a function as input to fill each element.  
-
-Another example for creating 2d array:
-```javascript
-return Array.from({length: n}, (_, i) => Array.from({length: m}, (_, j) => i + j))
-```
-
 ## Promises
 
 Promis is an object which it's constructor takes a function as input. 
