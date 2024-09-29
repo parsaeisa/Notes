@@ -164,6 +164,21 @@ const anotherCounter = counter();
 anotherCounter(); // Output: 1
 ```
 
+## Cool syntax
+
+### Inline for loops for arrays
+
+Javascript has a feature which can make for loops into one line:
+```javascript
+return Array.from({length: n}, (_, i) => "This is the element " + i)
+```
+I think the `Array.from` creates an array and gets a function as input to fill each element.  
+
+Another example for creating 2d array:
+```javascript
+return Array.from({length: n}, (_, i) => Array.from({length: m}, (_, j) => i + j))
+```
+
 ## Promises
 
 Promis is an object which it's constructor takes a function as input. 
