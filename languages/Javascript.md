@@ -166,6 +166,15 @@ anotherCounter(); // Output: 1
 
 ## Cool syntax
 
+### typeof
+
+You can get the type of a variable with `typeof` clause:
+```javascript
+if(typeof a == "string"){
+    // operation
+}
+```
+
 ### Inline for loops for arrays
 
 Javascript has a feature which can make for loops into one line:
