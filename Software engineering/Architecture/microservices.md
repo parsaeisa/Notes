@@ -96,6 +96,11 @@ As I recall, **proxy** was a way to hide clients identity from server, the **rev
 
 Here reverse proxy is usefull because client should not know that a specific response was send from which service, So they pass through a load-balancer (nginx).
 
+Steps for request processing in an API-Gateway:
+
+<img src="https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/images/API-Gateway.png">
+
+
 ### Circuit breakers 
 
 ### Command Query Responsibility Segregation
