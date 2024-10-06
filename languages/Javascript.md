@@ -71,6 +71,7 @@ This line creates a function called `add` which adds two number.
 - `array.shift()`: Removes from the beginning.
 - `array.splice(index, count)`: Removes elements at a specific index.
 - `array.filter()`: Filters elements of an array with a condition. 
+- `names.join(', ')`: concatenates all elements of an array with the seperator ', '
 
 ### Inline for loops for arrays
 
