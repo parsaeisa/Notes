@@ -188,6 +188,16 @@ if(typeof a == "string"){
     // operation
 }
 ```
+
+## Spread operator
+
+Spread operator is `...` that you see everywhere. 
+
+For strings, when it comes before the string, it converts the string into an array.
+```javascript
+arr = [...stringVar]
+```
+
 ## Promises
 
 Promis is an object which it's constructor takes a function as input. 
