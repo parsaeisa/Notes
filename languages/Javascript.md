@@ -70,6 +70,7 @@ This line creates a function called `add` which adds two number.
 - `array.pop()`: Removes from the end.
 - `array.shift()`: Removes from the beginning.
 - `array.splice(index, count)`: Removes elements at a specific index.
+- `array.filter()`: Filters elements of an array with a condition. 
 
 ### Inline for loops for arrays
 
@@ -84,6 +85,11 @@ Another example for creating 2d array:
 return Array.from({length: n}, (_, i) => Array.from({length: m}, (_, j) => i + j))
 ```
 
+### An example of filter
+For example this line counts the '1' characters in a binary string. 
+```javascript
+const countOnes = binary => [...binary].filter(bit => bit === '1').length;
+```
 
 ## Difference between var and let
 
