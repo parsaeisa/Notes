@@ -210,3 +210,13 @@ myPromise
         // function if the result was an error. 
     )
 ```
+
+## Where not to use async
+
+A place where I always see that programmers put `async` is requesting to a third party service such as database, broker, external service, etc.
+
+But most of other places I think is wrong to use.
+
+The point is that any `async` needs an `await` and `await` stops the thread of current code block and it is not wanted. 
+
+[ Read the rest from chat gpt ]
