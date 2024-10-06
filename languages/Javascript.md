@@ -63,7 +63,8 @@ This line creates a function called `add` which adds two number.
 - Cannot be used as constructors
 - Don't have access to arguments (what are arguments).
 
-## Array
+## Datastructures
+### Array
 
 - `array.push(element)`: adds to the end.
 - `array.unshift(element)`: adds to the beginning.
@@ -73,7 +74,7 @@ This line creates a function called `add` which adds two number.
 - `array.filter()`: Filters elements of an array with a condition. 
 - `names.join(', ')`: concatenates all elements of an array with the seperator ', '
 
-### Inline for loops for arrays
+#### Inline for loops for arrays
 
 Javascript has a feature which can make for loops into one line:
 ```javascript
@@ -86,10 +87,32 @@ Another example for creating 2d array:
 return Array.from({length: n}, (_, i) => Array.from({length: m}, (_, j) => i + j))
 ```
 
-### An example of filter
+#### An example of filter
 For example this line counts the '1' characters in a binary string. 
 ```javascript
 const countOnes = binary => [...binary].filter(bit => bit === '1').length;
+```
+
+### Object literal
+
+Object literal serves the same purpose as **maps** in golang.
+
+It allow you to store key-value pairs. 
+```javascript
+const kvPair = {
+    0: 'element 0',
+    1: 'element 1',
+    2: 'element 2',
+    3: 'element 3',
+    4: 'element 4',
+}
+
+const person = {
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 30,
+    "job": "Software Engineer"
+};
 ```
 
 ## Difference between var and let
