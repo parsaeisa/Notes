@@ -196,7 +196,7 @@ if(typeof a == "string"){
 }
 ```
 
-## Spread operator
+### Spread operator
 
 Spread operator is `...` that you see everywhere. 
 
