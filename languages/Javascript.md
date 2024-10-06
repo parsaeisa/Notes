@@ -115,6 +115,8 @@ const person = {
 };
 ```
 
+* Object literals can sometimes act as switch-case statements. Where the **case** can come in the place of **keys**.
+
 ## Difference between var and let
 
 `var` is hoisted but `let` is not.
