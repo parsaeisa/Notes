@@ -93,6 +93,17 @@ For example this line counts the '1' characters in a binary string.
 const countOnes = binary => [...binary].filter(bit => bit === '1').length;
 ```
 
+#### Map Reduce
+You know about the map reduce mindset. It can be applied on arrays, threads and in an upper layer on multiple services in an event-driven architecture. 
+
+Here's just a simple example of extracting the sum of squares of elements of an array:
+```javascript
+const numbers = [1, 2, 3, 4]
+const sumOfSquares = numbers.map(num => num * num).reduce((a, b) => a+b, 0)
+```
+
+The statement `.reduce((a, b) => a+b, 0)` is common for summing elements in an array. 
+
 ### Object literal
 
 Object literal serves the same purpose as **maps** in golang.
