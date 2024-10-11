@@ -73,6 +73,8 @@ This line creates a function called `add` which adds two number.
 - `array.splice(index, count)`: Removes elements at a specific index.
 - `array.filter()`: Filters elements of an array with a condition ( decides whether an element remain or not). 
 - `array.map()`: It applies a function to all elements in an array.
+- `array.indexOf()`: It can find the index of an element or even of a substring.
+- `array.lastIndexOf()`: It can find the last occurrance of an element or even of a substring.
 - `names.join(', ')`: concatenates all elements of an array with the seperator ', '
 
 #### Inline for loops for arrays
