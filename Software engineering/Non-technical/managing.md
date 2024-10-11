@@ -65,6 +65,8 @@ Hence, it's better to test scenarios in an automated manner as much as possible.
 
 For example for adding a redis to a project, there should be enough reasons, if redis hashset is usefull in just one handler, it's maintenance and concerns should not be added to the project. 
 
+* When you take a technology in an enterprise app, you should cusotmise that thechnology. It consists so much developing. Like customising the Echo framework in Snapp which you did it.
+
 ## People management
 
 People management requires **soft skill** the most. 
@@ -74,8 +76,6 @@ An company's load shouldn't be on **just one person**, because in the case of le
 Due to this fact, do not assign a service to just one person . Every member in team should contribute on every service that is owned by our team .
 
 ## Scattered points
-
-* When you take a technology in an enterprise app, you should cusotmise that thechnology .
 
 For example wrap echo framework in another framework that behaves like your company wants . 
 
