@@ -1,6 +1,12 @@
 # Work culture 
 
-As a software engineer what should I think about ? 
+As a software engineer what should I think about?
+
+As I thinked with my-self very earlier, All tasks are divided into two group:
+- Creating new features
+- Make old features sustainable
+
+Making features sustainable can even be related to changing company cultures.
 
 Give comments on product flows, think about them and try to find holes in it and make it better. 
 
@@ -50,12 +56,15 @@ These are duties that I see our mid-levels have:
 
 ### Leading level
 
-I think in a leading level, the developer (?!) should checks the services' health **overally**. A leader in the first place should:
-- Monitor services, check their health
-- Think how to plan implementing new features
-- Only think about their improvement
-- And think about the feasibility of those improvements based on the resources
-    * resources are mainly time and team members. These two factors specify the priority
+I think in a leading level, the developer (?!) should checks the services' health **overally**. Think again about the division given in the first of this document. A leader in the first place should:
+- **Creating new features:** Think how to plan implementing new features:
+    - Divide tasks between team members carefully. You should adjust the granularity of tasks.
+    - Each features that needs to be implemented has a priority and a manager should schedule their implementations carefully.
+- **Making old features sustaible**: 
+    - Monitor services, check their health
+    - Think about improvements.
+    - And think about the feasibility of those improvements based on the resources
+        * resources are mainly time and team members. These two factors specify the priority
 
 Then the leader must break the problem to smaller ones (it can be accomplished by a meeting with team members) and dispatch them between team members. He must see:
 - Members unboardings
