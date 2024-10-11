@@ -241,6 +241,13 @@ For strings, when it comes before the string, it converts the string into an arr
 arr = [...stringVar]
 ```
 
+### For loop
+
+For iterating on a string:
+```javascript
+for (let char of str) {}
+```
+
 ## Promises
 
 Promis is an object which it's constructor takes a function as input. 
