@@ -83,6 +83,10 @@ For example wrap echo framework in another framework that behaves like your comp
 
 * Each features that needs to be implemented has a priority and a manager should schedule their implementations carefully.
 
+* Not only there is no trade-off between sustainability and speed, but also they are on the same side. If a software is not being developed with sustainability, adding a new feature and debugging it takes much more time and reduces your speed. 
+
+* **You need to have** technical debts, it's like a loan and it is inevitable. But you must spent some time to pay it back.
+
 Sometimes we don't know whether a policy or action is good or not. Sometimes we can stop thinking & investigating and test it for a while. For example in the case of features, we roll it out in buckets. These two are related.
 
 * Layers in a company are not seperated from each other. Each layer should consider other layers resources (hard & soft resources). You can see an example of cooperating between devlopers & QA layer in the **test automation** section of this document.
