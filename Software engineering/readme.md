@@ -196,3 +196,5 @@ Forethough Engineering - https://lnkd.in/esCKvedJ
 Capital One - https://lnkd.in/ezsKUf_H
 
 Disney Streaming - https://lnkd.in/e4nmMdWd
+
+Open AI - https://openai.com/news/
