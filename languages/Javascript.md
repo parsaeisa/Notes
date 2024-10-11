@@ -71,7 +71,8 @@ This line creates a function called `add` which adds two number.
 - `array.pop()`: Removes from the end.
 - `array.shift()`: Removes from the beginning.
 - `array.splice(index, count)`: Removes elements at a specific index.
-- `array.filter()`: Filters elements of an array with a condition. 
+- `array.filter()`: Filters elements of an array with a condition ( decides whether an element remain or not). 
+- `array.map()`: It applies a function to all elements in an array.
 - `names.join(', ')`: concatenates all elements of an array with the seperator ', '
 
 #### Inline for loops for arrays
@@ -87,10 +88,23 @@ Another example for creating 2d array:
 return Array.from({length: n}, (_, i) => Array.from({length: m}, (_, j) => i + j))
 ```
 
-#### An example of filter
+#### An example of .filter
 For example this line counts the '1' characters in a binary string. 
 ```javascript
 const countOnes = binary => [...binary].filter(bit => bit === '1').length;
+```
+#### An example of .map
+
+Putting ')' for every character which more than one count, and putting '(' for the others.
+
+```javascript
+const encoded = [...word].map(c => {
+    if(charCount[c] > 1){
+      return ')';
+    } else {
+      return '(';
+    }
+  });
 ```
 
 #### Map Reduce
