@@ -34,3 +34,15 @@ This is configurable in many brokers to publish it **exactly one time** or **at 
 > This section's resource is Nats documentation, I don't know whether these patterns exist in other brokers or not. 
 
 The traditional way is the scenario that consumers gets data when they are published and if they were not connected to the broker, they don't get the message.
+
+## Real time processing
+
+There are so much use cases that a large amount of data need to be processed real-time. 
+
+There are some tools and some concepts which are used. 
+
+**OLAP**: OLAP is a concept and an approach to analyzing large amount data sets. This is optimized for query-heavy operations. It is implemented by:
+- Microsoft SQL Server Analysis Services (SSAS)
+- Oracle OLAP
+- SAP BW
+- Apache Pinot ( used by Uber )
