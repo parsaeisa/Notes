@@ -67,6 +67,10 @@ For example for adding a redis to a project, there should be enough reasons, if 
 
 * When you take a technology in an enterprise app, you should cusotmise that thechnology. It consists so much developing. Like customising the Echo framework in Snapp which you did it.
 
+When Uber used Apache Pinot for real-time processing, it:
+- added Full SQL support with Presto to it
+- added the ability to handle upsert queries
+
 ## People management
 
 People management requires **soft skill** the most. 
