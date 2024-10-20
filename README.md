@@ -4,10 +4,11 @@
 * [Software Engineering](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/readme.md)
 * [DevOps](https://github.com/parsaeisa/Notes/blob/main/DevOps/README.md)
 * [SRE](https://github.com/parsaeisa/Notes/blob/main/SRE/readme.md)
-* [Computer Vision](https://github.com/parsaeisa/Notes/blob/main/computer%20vision/readme.MD)
-* [AI]
-* [Languages](https://github.com/parsaeisa/Notes/blob/main/languages/readme.MD)
+* [Computer Vision](https://github.com/parsaeisa/Notes/blob/main/Computer%20vision/readme.MD)
+* [AI](https://github.com/parsaeisa/Notes/tree/main/AI)
+* [Languages](https://github.com/parsaeisa/Notes/blob/main/Languages/readme.MD)
 * [Papers](https://github.com/parsaeisa/Notes/blob/main/Papers.md)
+* [General knowledge](https://github.com/parsaeisa/Notes/tree/main/General%20knowledge)
 
 ### Types of things to learn : 
 
