@@ -27,6 +27,8 @@ Importing a built-in or custom package:
 const fs = require('fs');
 ```
 
+Although javascript has an event loop and is running on one thread, the Node.js has some worker threads which can do something in background but their communication is limited. 
+
 ## Components
 
 Here a list of components:
