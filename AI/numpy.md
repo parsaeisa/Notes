@@ -37,6 +37,17 @@ the b arrays elements are 0 when the index is even and are 1 when the indexes ar
 
 `full` creates an array with same value - parameters : array shape , value . 
 
+Please:
+```python
+# Use this:
+x, y = arr.shape()
+
+# Instead of this:
+x = arr.shape[0]
+y = arr.shape[1]
+```
+For God sake :))
+
 ### Where
 When you use `np.where` for an image, it gives you **two arrays**. The first array is y indexes of elements having that condition and the second one is x indexes of those.
 ```python
