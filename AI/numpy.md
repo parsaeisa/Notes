@@ -26,7 +26,6 @@ The code gives each element in a as an input argument to b , and act it like a m
 
 the b arrays elements are 0 when the index is even and are 1 when the indexes are odd . So it's a function which determines whether a number is even or odd . 
 
-
 * unique
 * cumsum
 * interp
@@ -37,6 +36,12 @@ the b arrays elements are 0 when the index is even and are 1 when the indexes ar
 `unique` extracts unique elements of an array - parameters : array
 
 `full` creates an array with same value - parameters : array shape , value . 
+
+### Where
+When you use `np.where` for an image, it gives you **two arrays**. The first array is y indexes of elements having that condition and the second one is x indexes of those.
+```python
+y_indices, x_indices = np.where(img >= threshhold)
+```
 
 #### stacking two images side by side
 
