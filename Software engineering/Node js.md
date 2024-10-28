@@ -83,3 +83,49 @@ For creating required files for an express application:
 ```bash
 npx express-generator
 ```
+
+## Process
+
+Node.js provides a global object called `process`.
+
+### Some key features
+You can:
+- Access environment variables
+- access command-line arguments passed to the Node.js process via `process.argv`
+- terminate a process using `process.exit(0)`
+- access informations about the current process (informations such as **pid** and **cwd**)
+- check the memory usage of the process using `process.memoryUsage()`
+- do some event handling but search more about it
+
+### Config file
+
+As mentioned before it can access environment variables, so it serves a same purpose as config files.
+
+> Dynamic configuration: This term refers to having multiple configs, for deployment, test, staging, etc.
+
+`process.env` lets you keep sensitive information out of your version control system.
+
+### Common practice
+
+Common practice is to use **dotenv**.
+
+```bash
+npm install dotenv
+```
+
+Create an .env file:
+```bash
+PORT=3000
+DB_URI=mongodb://localhost:27017/mydb
+```
+
+Accessing information:
+```javascript
+require('dotenv').config(); // Load variables from .env file
+
+const port = process.env.PORT || 5000; // Use default port if not set
+const dbUri = process.env.DB_URI;
+
+console.log(`Server running on port: ${port}`);
+console.log(`Database URI: ${dbUri}`);
+```
