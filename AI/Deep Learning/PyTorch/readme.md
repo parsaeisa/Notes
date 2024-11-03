@@ -8,7 +8,7 @@ topics :
 * loss function
 * model
 
-## What da ffuck is this shit methods
+## What da ffuck are these shit methods
 * Detach
 * no_grad
 * ttest_rel
