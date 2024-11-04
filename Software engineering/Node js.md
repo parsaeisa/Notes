@@ -29,6 +29,22 @@ const fs = require('fs');
 
 Although javascript has an event loop and is running on one thread, the Node.js has some worker threads which can do something in background but their communication is limited. 
 
+## Files
+
+#### `package.json`
+
+In this file you can define many things such as:
+- What happen for each command. In the `"scripts"` part:
+```bash
+{
+  "scripts": {
+      "dev": "docker compose ...",
+      "test": "docker compose ...",
+  }
+}
+```
+
+
 ## Components
 
 Here a list of components:
@@ -48,7 +64,53 @@ Helper directory is a seperated direcotry.
 Both mapper and prisma are beneath Service (Prisma is not under mapper). An example of usages:
 ```javascript
 const dbUser = { id: 1, first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com' };
-const apiUser = userMapper(dbUser);
+constapiUser = userMapper(dbUser);
+```
+
+### Process
+
+Node.js provides a global object called `process`.
+
+#### Some key features
+You can:
+- Access environment variables
+- access command-line arguments passed to the Node.js process via `process.argv`
+- terminate a process using `process.exit(0)`
+- access informations about the current process (informations such as **pid** and **cwd**)
+- check the memory usage of the process using `process.memoryUsage()`
+- do some event handling but search more about it
+
+#### Config file
+
+As mentioned before it can access environment variables, so it serves a same purpose as config files.
+
+> Dynamic configuration: This term refers to having multiple configs, for deployment, test, staging, etc.
+
+`process.env` lets you keep sensitive information out of your version control system.
+
+#### Common practice
+
+Common practice is to use **dotenv**.
+
+```bash
+npm install dotenv
+```
+
+Create an .env file:
+```bash
+PORT=3000
+DB_URI=mongodb://localhost:27017/mydb
+```
+
+Accessing information:
+```javascript
+require('dotenv').config(); // Load variables from .env file
+
+const port = process.env.PORT || 5000; // Use default port if not set
+const dbUri = process.env.DB_URI;
+
+console.log(`Server running on port: ${port}`);
+console.log(`Database URI: ${dbUri}`);
 ```
 
 ## Commands
@@ -82,50 +144,4 @@ Creates a `.prettierrc` file for code formatting configuration.
 For creating required files for an express application:
 ```bash
 npx express-generator
-```
-
-## Process
-
-Node.js provides a global object called `process`.
-
-### Some key features
-You can:
-- Access environment variables
-- access command-line arguments passed to the Node.js process via `process.argv`
-- terminate a process using `process.exit(0)`
-- access informations about the current process (informations such as **pid** and **cwd**)
-- check the memory usage of the process using `process.memoryUsage()`
-- do some event handling but search more about it
-
-### Config file
-
-As mentioned before it can access environment variables, so it serves a same purpose as config files.
-
-> Dynamic configuration: This term refers to having multiple configs, for deployment, test, staging, etc.
-
-`process.env` lets you keep sensitive information out of your version control system.
-
-### Common practice
-
-Common practice is to use **dotenv**.
-
-```bash
-npm install dotenv
-```
-
-Create an .env file:
-```bash
-PORT=3000
-DB_URI=mongodb://localhost:27017/mydb
-```
-
-Accessing information:
-```javascript
-require('dotenv').config(); // Load variables from .env file
-
-const port = process.env.PORT || 5000; // Use default port if not set
-const dbUri = process.env.DB_URI;
-
-console.log(`Server running on port: ${port}`);
-console.log(`Database URI: ${dbUri}`);
 ```
