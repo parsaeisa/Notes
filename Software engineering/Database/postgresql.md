@@ -18,6 +18,11 @@ It has some parameters , some notes and is not compatible with all versions of p
 
 It obtains `ACCESS EXCLUSIVE` to force the tables removal . 
 
+### Connecting to an external database
+```bash
+psql -h <host address> -p <port> -U <user name> -d <database name>
+```
+
 ## Locks
 Posgtre has LOCKs in many layers :
 * Table 
