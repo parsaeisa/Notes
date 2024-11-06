@@ -23,6 +23,19 @@ It obtains `ACCESS EXCLUSIVE` to force the tables removal .
 psql -h <host address> -p <port> -U <user name> -d <database name>
 ```
 
+### Getting dump from an external database
+This command creates a dump file from an external database and stores it in the underlying machine. 
+```bash
+pg_dump  -h <host address> -p <port> -U <username> -F c -b -v -f output_file.dump <database name>
+```
+**Parameters:**
+- `-F`: Specifies the format of the output file.
+    - `c`: .dump
+    - `t`: .tar
+- `-b`: Includes large objects in the dump.
+- `-v`: Enables verbose mode to display progress.
+- `-W`: Prompts for the password of the user.
+
 ## Locks
 Posgtre has LOCKs in many layers :
 * Table 
