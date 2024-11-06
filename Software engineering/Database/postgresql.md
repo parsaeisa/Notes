@@ -46,6 +46,15 @@ pg_dump  -h <host address> -p <port> -U <username> -F c -b -v -f output_file.dum
 - `-v`: Enables verbose mode to display progress.
 - `-W`: Prompts for the password of the user.
 
+### Restore a database from a dumpfile
+```bash
+pg_restore -U <username> -d <database name> -v output_file.dump
+```
+### Creating DB
+```bash
+createdb -U <username> <database name>
+```
+
 ## Locks
 Posgtre has LOCKs in many layers :
 * Table 
