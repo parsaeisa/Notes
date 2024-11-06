@@ -13,6 +13,9 @@ SELECT table_name FROM information_schema.tables;
 
 ## Commands 
 
+- `\q`: Exit SQL session
+
+
 `TRUNCATE` Empties one or set of tables .
 
 It acts llike `DELETE` but it has some advantages : 
