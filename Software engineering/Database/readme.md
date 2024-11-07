@@ -140,3 +140,42 @@ There are different types of indexes.
 Types of replication:
 - Logical
 - Streaming
+
+## Data archive
+
+Archived data is generally **not** intended for **everyday** operations. It is typically stored separately and accessed only when needed, such as for:
+- auditing
+- reporting
+- historical analysis
+
+Archived data can sometimes be accessed on demand **if necessary**.
+*
+It helps improve the **performance** and **manageability** of the active database by reducing its size.
+
+#### Trade-off**
+
+The trade-off is that accessing archived data may be slower or require additional steps.
+
+### Methods
+
+#### Data Partitioning and Archiving:
+
+This involves moving data to separate tables, partitions, or even another database or storage system. It keeps archived data accessible if needed.
+
+#### Incremental Backups:
+
+Instead of taking full dumps regularly, you can archive only the **changes** made since the last backup. This method reduces storage requirements and speeds up backup operations.
+
+#### Cold Storage Solutions:
+
+Archived data can be moved to more cost-effective, long-term storage solutions (like Amazon Glacier). This approach is useful for data that needs to be retained for compliance or historical reasons but is rarely accessed.
+
+> What do we mean by the term **cold**?
+
+#### Data Warehousing:
+
+Moving data to a data warehouse for analysis and long-term storage is another archiving method. This allows for optimized querying of historical data while maintaining performance for the main operational database.
+
+#### Log Archiving:
+
+For databases using transaction logs (e.g., **PostgreSQL Write-Ahead** Logging or **MySQL binlogs**), you can archive these logs for point-in-time recovery or auditing purposes.
