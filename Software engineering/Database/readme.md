@@ -179,3 +179,8 @@ Moving data to a data warehouse for analysis and long-term storage is another ar
 #### Log Archiving:
 
 For databases using transaction logs (e.g., **PostgreSQL Write-Ahead** Logging or **MySQL binlogs**), you can archive these logs for point-in-time recovery or auditing purposes.
+
+## Block storage
+
+Divides data into fixed-size blocks and stores them individually.
+It can be used for example on virtual machine file systems.
