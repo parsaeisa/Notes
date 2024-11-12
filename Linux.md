@@ -358,6 +358,18 @@ Connected to remote_username@server_ip_or_hostname.
 sftp>
 ```
 
+## systemlctl
+
+You can see whether a program is running or not:
+```bash
+sudo systemctl status postgresql
+```
+
+Or we can run programgs:
+```bash
+sudo systemctl start postgresql
+```
+
 ## flake8
 
 `flake8` is a command-line utility for enforcing style consistency across Python projects.
