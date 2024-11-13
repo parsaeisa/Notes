@@ -404,6 +404,8 @@ But each start from left to right is:
 - Month (1-12)
 - Day of the week (0-6, where 0 is Sunday)
 
+You can get sure from your timing using this link: https://crontab.guru/
+
 Seeing logs for cronjobs:
 ```bash
 grep CRON /var/log/syslog
