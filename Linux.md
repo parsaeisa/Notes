@@ -388,6 +388,11 @@ flake8 --exclude='__init__.py','venv/' --extend-exclude='*_pb2*.py' --max-line-l
 
 ## Cronjob
 
+For accessing the cron file:
+```bash
+crontab -e
+```
+
 As you know it is like:
 ```bash
 * * * * * /path/to/command
@@ -398,6 +403,13 @@ But each start from left to right is:
 - Day of the month (1-31)
 - Month (1-12)
 - Day of the week (0-6, where 0 is Sunday)
+
+Seeing logs for cronjobs:
+```bash
+grep CRON /var/log/syslog
+```
+
+As you can see they are moved to **syslog**.
 
 ## Versions
 
