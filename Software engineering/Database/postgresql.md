@@ -50,6 +50,8 @@ pg_dump  -h <host address> -p <port> -U <username> -F c -b -v -f output_file.dum
 ```bash
 pg_restore -U <username> -d <database name> -v output_file.dump
 ```
+Same parameters with pg_dump exist here ( except `-F` argument)
+
 ### Creating DB
 ```bash
 createdb -U <username> <database name>
