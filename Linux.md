@@ -370,6 +370,13 @@ Or we can run programgs:
 sudo systemctl start postgresql
 ```
 
+## grep
+
+With `grep` you can find patterns in a file. 
+```bash
+grep -i 'hello world' menu.h
+```
+
 ## flake8
 
 `flake8` is a command-line utility for enforcing style consistency across Python projects.
