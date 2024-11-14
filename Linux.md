@@ -109,9 +109,6 @@ Then run :
 sudo netplan apply
 ```
 
-## System ctl
-
-I don't know what is it, I just used it once to **restart docker**.
 
 ## find
 is a built-in function which finds a file or directory . 
@@ -178,6 +175,10 @@ become root user:
 sudo su
 ```
 
+I think these commands are used to give permissions to executable files. 
+
+The files that are used for installing a tool. 
+
 ## Service
 
 
@@ -204,12 +205,6 @@ apk add curl jq coreutils
 With this command, curl, jg and coreutils is installed to the machine. 
 
 * Sometimes the `make` command (the command that executes commands in a makefile) is not available. In this situation use `apk add make`.
-
-## chmod, usermod
-
-I think these commands are used to give permissions to executable files. 
-
-The files that are used for installing a tool. 
 
 ## awk
 
@@ -369,6 +364,8 @@ Or we can run programgs:
 ```bash
 sudo systemctl start postgresql
 ```
+
+I don't know what is it exactly, once I used it to **restart docker**.
 
 ## grep
 
