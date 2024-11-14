@@ -46,11 +46,18 @@ pg_dump  -h <host address> -p <port> -U <username> -F c -b -v -f output_file.dum
 - `-v`: Enables verbose mode to display progress.
 - `-W`: Prompts for the password of the user.
 
+We can give password to it like this:
+```bash
+PGPASSWORD=$ENV_POSTGRES_PASSWORD pg_dump <arguments>
+```
+
 ### Restore a database from a dumpfile
 ```bash
 pg_restore -U <username> -d <database name> -v output_file.dump
 ```
 Same parameters with pg_dump exist here ( except `-F` argument)
+
+Also we gave password to it like `pg_dump` command.
 
 ### Creating DB
 ```bash
