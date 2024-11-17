@@ -68,6 +68,24 @@ print(Y)
 #  [5 5 5]]
 ```
 
+`diag` does different things for different shape of inputs:
+- For vectors: converts them to diagonal matrices:
+```python
+arr = np.array([1, 2, 3])
+diagonal_matrix = np.diag(arr)
+# Output: array([[1, 0, 0],
+#                [0, 2, 0],
+#                [0, 0, 3]])
+```
+- For matrices: extract the diagonal elements:
+```python
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+diagonal_elements = np.diag(matrix)
+# Output: array([1, 5, 9])
+```
+
 ### Where
 When you use `np.where` for an image, it gives you **two arrays**. The first array is y indexes of elements having that condition and the second one is x indexes of those.
 ```python
