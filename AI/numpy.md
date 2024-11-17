@@ -48,6 +48,26 @@ y = arr.shape[1]
 ```
 For God sake :))
 
+`meshgrid` Creates coordinate matrices from two input vectors. For example:
+```python
+import numpy as np
+
+x = np.array([1, 2, 3])
+y = np.array([4, 5])
+
+X, Y = np.meshgrid(x, y)
+
+print(X)
+# Output:
+# [[1 2 3]
+#  [1 2 3]]
+
+print(Y)
+# Output:
+# [[4 4 4]
+#  [5 5 5]]
+```
+
 ### Where
 When you use `np.where` for an image, it gives you **two arrays**. The first array is y indexes of elements having that condition and the second one is x indexes of those.
 ```python
@@ -69,3 +89,9 @@ plt.imshow(res, cmap='gray')
 * unique
 * cumsum
 * interp
+
+## Submodules
+
+### linalg
+`linalg` is a submodule used for linear algebra. It has some methods:
+- `solve`: For solving equations like Ax=b.
