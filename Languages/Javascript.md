@@ -4,6 +4,8 @@ Good documents for Javascriot:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 - https://javascript.info/
 
+**You can see the document about type script in bottom of this document. **
+
 The main feature of javascript is it's **event-driven** and **non-blocking I/O model**. 
 Particularly it has:
 - callbacks
@@ -301,3 +303,14 @@ But most of other places I think is wrong to use.
 The point is that any `async` needs an `await` and `await` stops the thread of current code block and it is not wanted. 
 
 [ Read the rest from chat gpt ]
+
+# Typescript
+
+I don't know complete differences between javascript and typescript, I just write here things which I'm sure only exist in Typescript.
+
+That's correct! In JavaScript, you can't explicitly define types for variables, which means type safety and type checks are not enforced. This can lead to runtime errors if you use variables in unexpected ways.
+
+We can define types for variables like this:
+```javascript
+const var_name: <vartype> = <value>;
+```
