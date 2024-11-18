@@ -353,7 +353,7 @@ Connected to remote_username@server_ip_or_hostname.
 sftp>
 ```
 
-## systemlctl
+## systemctl
 
 You can see whether a program is running or not:
 ```bash
