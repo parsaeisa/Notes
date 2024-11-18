@@ -6,6 +6,8 @@ and it is so fast because it is implemented with C++ .
 
 * try your best to not use for loop !!
 
+## Techniques
+
 consider a is a numpy array . the below line multiplies 
 each element in a to the number . 
 
@@ -26,12 +28,20 @@ The code gives each element in a as an input argument to b , and act it like a m
 
 the b arrays elements are 0 when the index is even and are 1 when the indexes are odd . So it's a function which determines whether a number is even or odd . 
 
-* unique
-* cumsum
-* interp
-* dstack
+For applying a condition to an array this technique can be used (`d` is a numpy array):
+```python
+# d[condition] gives us [elements having that condition]
+d[d==0]=1e-6
+```
+This code, searches for every elements in `d` which are equal to zero. 
 
 ## Methods 
+
+To learn:
+- unique
+- cumsum
+- interp
+- dstack
 
 `unique` extracts unique elements of an array - parameters : array
 
