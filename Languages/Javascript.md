@@ -304,6 +304,20 @@ The point is that any `async` needs an `await` and `await` stops the thread of c
 
 [ Read the rest from chat gpt ]
 
+## Third party tools
+
+### faker
+This is used for creating fake objects. Creating fake objects is usefull while writing unit and integration tests. 
+```javascript
+import { faker } from "@faker-js/faker";
+
+const user = User.withNamedParameters({
+    email: faker.internet.email(),
+    name: faker.name.firstName(),
+    phoneNumber: faker.phone.number("+49 91 ### ## ##"),
+});
+```
+
 # Typescript
 
 I don't know complete differences between javascript and typescript, I just write here things which I'm sure only exist in Typescript.
