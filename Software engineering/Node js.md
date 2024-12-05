@@ -88,7 +88,23 @@ As mentioned before it can access environment variables, so it serves a same pur
 
 `process.env` lets you keep sensitive information out of your version control system.
 
-#### Common practice
+### Cache
+
+Node.js has a caching feature. You can add it to your project using the code below:
+```javascript
+import NodeCache from "node-cache";
+const seconds = 10;
+
+const cache = new NodeCache({ stdTTL: seconds });
+// There is of course other configurations
+
+cache.flushAll();
+
+export default cache;
+
+```
+
+## Common practice
 
 Common practice is to use **dotenv**.
 
