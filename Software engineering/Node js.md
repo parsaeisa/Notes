@@ -101,8 +101,17 @@ const cache = new NodeCache({ stdTTL: seconds });
 cache.flushAll();
 
 export default cache;
-
 ```
+
+`cache.flushAll()` should be called when you are starting up your application.
+
+You can use it with:
+```javascript
+cache.set(key, value);
+cache.get(key);
+```
+
+It has other features such as `.keys` too. Search if you needed.
 
 ## Common practice
 
