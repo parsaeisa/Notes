@@ -104,6 +104,13 @@ export default cache;
 
 ```
 
+### Container 
+
+Container typically refers to an IoC (Inversion of Control) container provided by a dependency injection (DI) library, such as "InversifyJS", "tsyringe" or others.
+
+It has some methods like resolve, rebind and dispose. Don't forget to search about them.
+
+Classes should have the decorator @Injectable so they can be registered in container. 
 ## Common practice
 
 Common practice is to use **dotenv**.
