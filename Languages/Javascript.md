@@ -335,3 +335,10 @@ We can define types for variables like this:
 ```javascript
 const var_name: <vartype> = <value>;
 ```
+
+## Third party tools
+
+### ts-node
+
+It is a Node.js tool that allows you to directly run TypeScript 
+files without needing to compile them to JavaScript first. It acts as both a runtime and a **REPL (Read-Eval-Print Loop)** for TypeScript.
