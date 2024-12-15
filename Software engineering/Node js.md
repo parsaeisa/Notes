@@ -150,6 +150,16 @@ console.log(`Database URI: ${dbUri}`);
 
 In this section, useful commands for generating project files are listed. 
 
+### npx
+It is a tool that comes with Node.js and allows you to execute binaries (CLI tools) from 
+`node_modules` or directly fetch and run a package without globally installing it
+
+It comes before other node.js related CLIs. 
+
+It:
+- doesn't need globally installing a CLI that you want to use
+- uses the last version of a CLI. 
+
 ### Prisma 
 
 You can create migratoins using:
