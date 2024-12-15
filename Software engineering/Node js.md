@@ -11,12 +11,6 @@ Running a project:
 node <file name>.js
 ```
 
-In `package.json` file we have a `scripts` flag. We can put this `node index.js` in that like this:
-```bash
-"scripts": {
-  "start": "node index.js"
-}
-```
 Then simply run:
 ```bash
 npm start
@@ -33,7 +27,15 @@ Although javascript has an event loop and is running on one thread, the Node.js 
 
 #### `package.json`
 
-In this file you can define many things such as:
+In this file you can define many things like commands that can be executed in the root directory of project.
+
+These commands consist:
+- Running the application
+- Running tests ( unit, integration, single, ...)
+- Code forammting related (Lint, Prettier)
+- Docs ( like swagger )
+- Migrations ( Creating migrations for every new entities )
+
 - What happen for each command. In the `"scripts"` part:
 ```bash
 {
@@ -41,6 +43,12 @@ In this file you can define many things such as:
       "dev": "docker compose ...",
       "test": "docker compose ...",
   }
+}
+```
+  In this section, We can put this `node index.js` in that like this:
+```bash
+"scripts": {
+  "start": "node index.js"
 }
 ```
 
