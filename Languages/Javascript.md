@@ -318,6 +318,13 @@ const user = User.withNamedParameters({
 });
 ```
 
+### SwaggerAutogen
+
+For creating swagger for your project you use `swaggerAutogen` like this:
+```javascript
+const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
+```
+
 # Typescript
 
 I don't know complete differences between javascript and typescript, I just write here things which I'm sure only exist in Typescript.
