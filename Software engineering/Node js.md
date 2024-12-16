@@ -122,6 +122,8 @@ export const AppDataSource = new DataSource({
 
 As you can see configurations for getting connected to database is here. 
 
+**Also**, `typeorm` has some important commands which you can see in the commands section of this document. 
+
 ### Cache
 
 Node.js has a caching feature. You can add it to your project using the code below:
@@ -193,6 +195,13 @@ It comes before other node.js related CLIs.
 It:
 - doesn't need globally installing a CLI that you want to use
 - uses the last version of a CLI. 
+
+### typeorm
+
+It handles database schema changes and is used for managing migrations. By managing I mean:
+- Creating
+- Running
+- Reverting
 
 ### Prisma 
 
