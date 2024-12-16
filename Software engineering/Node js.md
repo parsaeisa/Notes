@@ -96,6 +96,32 @@ As mentioned before it can access environment variables, so it serves a same pur
 
 `process.env` lets you keep sensitive information out of your version control system.
 
+### AppDatasource
+
+AppDatasource is a thing which you use it to get connected to database. It is from **typeorm** library. 
+
+use:
+```javascript
+import { DataSource } from "typeorm";
+
+export const AppDataSource = new DataSource({
+	type: "postgres",
+	host: process.env.HOST,
+	username: process.env.USER,
+	password: process.env.PASSWORD,
+	database: process.env.DB,
+	port: Number(process.env.PORT),
+	ssl: process.env.IS_ON_LOCAL_MACHINE === "true" ? false : { rejectUnauthorized: false },
+	synchronize: false,
+	logging: ["query", "error"], // it can be false
+	entities: [/* Array of entities */],
+	subscribers: [],
+	migrations: ["./migrations/*.ts"],
+});
+```
+
+As you can see configurations for getting connected to database is here. 
+
 ### Cache
 
 Node.js has a caching feature. You can add it to your project using the code below:
@@ -128,6 +154,7 @@ Container typically refers to an IoC (Inversion of Control) container provided b
 It has some methods like resolve, rebind and dispose. Don't forget to search about them.
 
 Classes should have the decorator @Injectable so they can be registered in container. 
+
 ## Common practice
 
 Common practice is to use **dotenv**.
