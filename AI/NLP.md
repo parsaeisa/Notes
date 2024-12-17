@@ -101,3 +101,21 @@ Some of them are based on True/False-Positive/Negative:
 Other ones:
 - Accuracy: Correct predictions / Total number of predictions 
 - ROC-AUC: idk what it is. Is it even a metric ?
+
+Implementation:
+```python
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+def compute_metrics(eval_pred):
+    logits, labels = eval_pred
+    predictions = logits.argmax(axis=-1)  # Get predicted class
+    precision, recall, f1, _ = precision_recall_fscore_support(labels, predictions, average="binary")
+    accuracy = accuracy_score(labels, predictions)
+    return {
+        "accuracy": accuracy,
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
+```
+
+This method, must be passed to a `Trainer` from huggingface library. 
