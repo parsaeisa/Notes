@@ -3,17 +3,39 @@
 New words:
 - Sentence splitting
 
-## Reducing word variaty
+## Project components
 
-### Stemming
+### Collator
 
-### Lemmatization
+collator organizes and batches data together for training or evaluation. It ensures that the input data (e.g., tokenized text) is properly formatted into consistent tensors of the same size, ready for processing by a model.
 
-Linguistically more accurate than Stemming but more expensive. 
+It is needed because tokenized sequences vary in length. Possible actions are:
+- Padding: Adding characters to beginning and end of words
+- Truncation: Removing characters
+
+```python
+from transformers import AutoTokenizer, DataCollatorWithPadding
+
+# Load tokenizer
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+
+# Tokenize sample data
+texts = ["Hello!", "This is an example.", "Tokenization!"]
+tokenized_texts = [tokenizer(text, truncation=True) for text in texts]
+
+# Use a data collator to pad and batch the tokenized data
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+
+batch = data_collator(tokenized_texts)
+
+print(batch)
+```
+
+`DefaultDataCollator`: Assumes inputs are already padded.
 
 ### Tokenization
 
-A tokenizer is a tool or component that splits text into smaller units called tokens. Tokens can be characters, words, subwords, characters, or **even sentences**, depending on the tokenizer's **design and purpose**.
+A tokenizer splits text into smaller units called tokens. Tokens can be characters, words, subwords, characters, or **even sentences**, depending on the tokenizer's **design and purpose**.
 
 It is used in pipelines in three stages:
 - Pre-processing
@@ -36,6 +58,15 @@ print(tokens)
 As you can see it takes a pretrained model as input while initialization.
 
 
+
+## Reducing word variaty
+
+### Stemming
+
+### Lemmatization
+
+Linguistically more accurate than Stemming but more expensive. 
+
 ## Famous things
 
 I think it is essential to know two famous things in these groups:
@@ -46,7 +77,7 @@ I think it is essential to know two famous things in these groups:
 
 - `datasets`
 - `torch`
-- `transformers`
+- `transformers`: Hugging face
 - `typing`
 
 Good modules in `transformers`: `AutoModelForSequenceClassification`, `AutoTokenizer`, `DataCollatorWithPadding`, `EvalPrediction`, `Trainer`, `TrainingArguments`
