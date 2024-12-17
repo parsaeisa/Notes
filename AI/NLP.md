@@ -82,6 +82,10 @@ I think it is essential to know two famous things in these groups:
 
 Good modules in `transformers`: `AutoModelForSequenceClassification`, `AutoTokenizer`, `DataCollatorWithPadding`, `EvalPrediction`, `Trainer`, `TrainingArguments`
 
+### datasets
+
+To learn methods:
+- `map`
 
 ## Metrics
 
