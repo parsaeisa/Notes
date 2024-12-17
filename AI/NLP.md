@@ -79,6 +79,12 @@ I think it is essential to know two famous things in these groups:
 - Powerful pre-trained models. **And** I think we should know famous models for each action. Like tokenizing. 
 - Good datasets
 
+### Famous Models
+
+| Name | Description |
+|------|-------------|
+| "Qwen/Qwen2.5-0.5B-Instruct" | Recent small GPT-like model |
+
 ## Good python libraries
 
 - `datasets`
