@@ -37,6 +37,8 @@ print(batch)
 
 A tokenizer splits text into smaller units called tokens. Tokens can be characters, words, subwords, characters, or **even sentences**, depending on the tokenizer's **design and purpose**.
 
+Each model has it's own tokenizer.
+
 It is used in pipelines in three stages:
 - Pre-processing
 - Encoding
