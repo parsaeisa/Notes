@@ -2,6 +2,12 @@
 
 New words:
 - Sentence splitting
+- Inference:
+- Knowledge graph:
+- Grid search: It's a way for finding the best hyper parameteres.
+
+New methods:
+- `compute_class_weights` from `sickit_learn`
 
 ## Project components
 
@@ -37,8 +43,6 @@ print(batch)
 
 A tokenizer splits text into smaller units called tokens. Tokens can be characters, words, subwords, characters, or **even sentences**, depending on the tokenizer's **design and purpose**.
 
-Each model has it's own tokenizer.
-
 It is used in pipelines in three stages:
 - Pre-processing
 - Encoding
@@ -57,7 +61,7 @@ print(tokens)
 # Output: ['token', '##izers', 'are', 'amazing', '!']
 ```
 
-As you can see it takes a pretrained model as input while initialization.
+Each model has it's own tokenizer and as you can see it takes a pretrained model as input while initialization.
 
 
 
