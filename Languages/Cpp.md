@@ -1,5 +1,7 @@
 # C++
 
+Classes and packages are referred to each other with `::`. Like: `torch::nn::Linear`.
+
 ## Good libraries
 
 - CUDA
