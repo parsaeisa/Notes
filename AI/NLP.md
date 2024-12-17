@@ -11,6 +11,10 @@ New words:
 
 Linguistically more accurate than Stemming but more expensive. 
 
+## Famous pre-trained models
+
+I think it is essential to know powerful famous pre-trained models. **And** I think we should know famous models for each action. Like tokenizing. 
+
 ## Metrics
 
 One good library for metrics is `sklearn.metrics`.
