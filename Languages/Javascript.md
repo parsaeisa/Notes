@@ -325,6 +325,27 @@ For creating swagger for your project you use `swaggerAutogen` like this:
 const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 ```
 
+## Writing tests
+
+### Tricks
+ 
+To see how many times a method was called:
+```javascript
+expect(yourMethodMock.mock.calls.length).toBe(0);
+```
+
+### Mocking
+
+The first thing that comes to mind when mocking a method is the code below:
+```javascript
+const mock = jest.spyOn(<Your class>.prototype as any, "<Your method name>");
+			mock.mockResolvedValueOnce(() => Promise.resolve());
+
+// Here you can put your expectations on mock ( Created top of the code )
+// For example:
+expect(sendEmailMock).toHaveBeenCalled();
+```
+
 # Typescript
 
 I don't know complete differences between javascript and typescript, I just write here things which I'm sure only exist in Typescript.
