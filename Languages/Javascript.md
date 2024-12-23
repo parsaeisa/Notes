@@ -327,14 +327,19 @@ const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 
 ## Writing tests
 
-### Tricks
- 
-To see how many times a method was called:
+### Mocking
+
+I think for putting expectations and mocking a method we can simply use `jest.fn()`. For example:
 ```javascript
-expect(yourMethodMock.mock.calls.length).toBe(0);
+AppDataSource: {
+    getRepository: jest.fn(),
+}
 ```
 
-### Mocking
+We can mock a **whole file** ( or class in a file ) using `jest.mock` with the code below:
+```javascript
+jest.mock('path to file', () => (/* mocked behavour */));
+```
 
 The first thing that comes to mind when mocking a method is the code below:
 ```javascript
@@ -344,6 +349,14 @@ const mock = jest.spyOn(<Your class>.prototype as any, "<Your method name>");
 // Here you can put your expectations on mock ( Created top of the code )
 // For example:
 expect(sendEmailMock).toHaveBeenCalled();
+```
+
+
+### Tricks
+ 
+To see how many times a method was called:
+```javascript
+expect(yourMethodMock.mock.calls.length).toBe(0);
 ```
 
 # Typescript
