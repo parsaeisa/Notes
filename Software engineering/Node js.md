@@ -151,6 +151,14 @@ It has other features such as `.keys` too. Search if you needed.
 
 ### Container 
 
+You may see a class with input arguments defined in it's constructor. But you cannot find that constructor being explicitly
+called anywhere. This is because container manager in Node.js. When you try to inject a class for using it with the code below:
+```javascript
+const emailService = container.resolve(emailService);
+// emailService is the class
+```
+The container manager instantiates or retrieves it and gives it the dependencies it needs.
+
 Container typically refers to an IoC (Inversion of Control) container provided by a dependency injection (DI) library, such as "InversifyJS", "tsyringe" or others.
 
 It has some methods like resolve, rebind and dispose. Don't forget to search about them.
