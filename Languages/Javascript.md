@@ -329,6 +329,10 @@ const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 
 ### Mocking
 
+Methods to learn:
+- `jest.restoreAllMocks()`
+- `jest.clearAllMocks()`
+
 I think for putting expectations and mocking a method we can simply use `jest.fn()`. For example:
 ```javascript
 AppDataSource: {
