@@ -345,6 +345,27 @@ We can mock a **whole file** ( or class in a file ) using `jest.mock` with the c
 jest.mock('path to file', () => (/* mocked behavour */));
 ```
 
+And a complete example of mocking a class:
+```javascript
+class MockEmailVerification {
+	code: string;
+	user: User;
+
+	constructor(user: User) {
+		this.code = "123456";
+		this.user = user;
+	}
+}
+
+// Mock the entire EmailVerification class
+jest.mock("path/to/file", () => {
+	return jest.fn().mockImplementation(/* This should be similar to constructor */(user) => {
+		return new MockEmailVerification(user);
+	});
+});
+```
+After these lines, if you instantiate the `EmailVerificationClass` in normal way (`const email = new EmailVerification()`), You will get the mocked one. 
+
 The first thing that comes to mind when mocking a method is the code below:
 ```javascript
 const mock = jest.spyOn(<Your class>.prototype as any, "<Your method name>");
