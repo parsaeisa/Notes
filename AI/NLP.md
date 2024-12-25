@@ -177,3 +177,16 @@ def compute_metrics(eval_pred):
 ```
 
 This method, must be passed to a `Trainer` from huggingface library. 
+
+## Strategy
+
+You will hear strategies while learning about NLP projects. Strategies are applied when defining `training_args` (`TrainingArguments`). 
+
+And by strategy they mean what to do with data at each step. 
+
+- `eval_strategy`: At which time slot to evaluate. One example is "epoch", which tells to evaluate at end of each epoch. 
+- `warmup_steps`: Warm-up steps for learning rate scheduler.
+- `per_device_train_batch_size` & `per_device_eval_batch_size`: For batch size.
+
+They are sometimes related to logging:
+- `logging_steps=10`: Log every 10 steps
