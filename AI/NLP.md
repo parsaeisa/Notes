@@ -190,3 +190,7 @@ And by strategy they mean what to do with data at each step.
 
 They are sometimes related to logging:
 - `logging_steps=10`: Log every 10 steps
+
+## Transformers
+
+This image shows a good list of features and abilities of transformers:
