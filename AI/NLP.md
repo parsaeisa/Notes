@@ -9,6 +9,18 @@ New words:
 New methods:
 - `compute_class_weights` from `sickit_learn`
 
+## Project steps
+
+These steps are a bit more detailed and that is because they are inspired from an actuall working NLP project. 
+
+- Preprocessing: One thing in this step is somehow like aggregate queries in databases.
+- Tokenizing
+- Splitting train and test dataset
+- Computing class weights (??)
+- Defining model
+- Configuring parameters
+- Train the model
+
 ## Project components
 
 ### Collator
@@ -60,9 +72,18 @@ tokens = tokenizer.tokenize(text)
 print(tokens)
 # Output: ['token', '##izers', 'are', 'amazing', '!']
 ```
-
 Each model has it's own tokenizer and as you can see it takes a pretrained model as input while initialization.
 
+While tokenizing there are some parameters that we should set:
+- Padding
+
+A good practice for tokenizing a dataset ( from dataset package ):
+```python
+def tokenize_function(examples):
+    return tokenizer(examples['Text'], padding="max_length", truncation=True)
+
+tokenized_datasets = hf_dataset.map(tokenize_function, batched=True)
+```
 
 
 ## Reducing word variaty
@@ -81,6 +102,14 @@ I think it is essential to know two famous things in these groups:
 
 ### Famous Models
 
+There are some categories. e.g. for binary classification we have:
+- BERT-Based Models: `bert-base-uncased`, `roberta-base`, `distilbert-base-uncased`
+- Fine-Tuned BERT Variants: `finbert`, `scibert`, `bioBERT`
+- Transformer Architectures for Small Datasets: `albert-base-v2`, `distilroberta-base`
+- Handling Long Texts: `longformer-base-4096`, `bigbird-roberta-base`
+- Models for Imbalanced Data: `xlm-roberta-base`, `deberta-base`
+- Lightweight Models for Faster Training: `tiny-bert`, `distilbert-base-uncased`
+
 | Name | Description |
 |------|-------------|
 | "Qwen/Qwen2.5-0.5B-Instruct" | Recent small GPT-like model |
@@ -96,8 +125,25 @@ Good modules in `transformers`: `AutoModelForSequenceClassification`, `AutoToken
 
 ### datasets
 
+```python
+from datasets import Dataset
+```
+
+Converting a dataframe to a dataset:
+```python
+# It should have two columns, data and label
+hf_dataset = Dataset.from_pandas(df[['Text', 'Binary_Label']])
+```
+
 To learn methods:
-- `map`
+- `map`: Used in tokenizing
+
+### transformers
+Modules:
+- TrainingArguments: It gives hyper parameteres to a model
+- AutoTokenizer
+- AutoModelForSequenceClassification
+- Trainer
 
 ## Metrics
 
