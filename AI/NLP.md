@@ -194,3 +194,5 @@ They are sometimes related to logging:
 ## Transformers
 
 This image shows a good list of features and abilities of transformers:
+
+<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/transformer_features.png" >
