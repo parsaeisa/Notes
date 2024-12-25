@@ -195,4 +195,4 @@ They are sometimes related to logging:
 
 This image shows a good list of features and abilities of transformers:
 
-<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/transformer_features.png" >
+<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/transformer_features.png" width="800" height="600" >
