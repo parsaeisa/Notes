@@ -122,6 +122,8 @@ export const AppDataSource = new DataSource({
 
 As you can see configurations for getting connected to database is here. 
 
+**Also**, `typeorm` has some important commands which you can see in the commands section of this document. 
+
 ### Cache
 
 Node.js has a caching feature. You can add it to your project using the code below:
@@ -148,6 +150,14 @@ cache.get(key);
 It has other features such as `.keys` too. Search if you needed.
 
 ### Container 
+
+You may see a class with input arguments defined in it's constructor. But you cannot find that constructor being explicitly
+called anywhere. This is because container manager in Node.js. When you try to inject a class for using it with the code below:
+```javascript
+const emailService = container.resolve(emailService);
+// emailService is the class
+```
+The container manager instantiates or retrieves it and gives it the dependencies it needs.
 
 Container typically refers to an IoC (Inversion of Control) container provided by a dependency injection (DI) library, such as "InversifyJS", "tsyringe" or others.
 
@@ -193,6 +203,13 @@ It comes before other node.js related CLIs.
 It:
 - doesn't need globally installing a CLI that you want to use
 - uses the last version of a CLI. 
+
+### typeorm
+
+It handles database schema changes and is used for managing migrations. By managing I mean:
+- Creating
+- Running
+- Reverting
 
 ### Prisma 
 

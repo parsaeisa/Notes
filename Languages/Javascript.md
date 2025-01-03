@@ -327,6 +327,65 @@ For creating swagger for your project you use `swaggerAutogen` like this:
 const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 ```
 
+## Writing tests
+
+### Mocking
+
+Methods to learn:
+- `jest.restoreAllMocks()`
+- `jest.clearAllMocks()`
+
+I think for putting expectations and mocking a method we can simply use `jest.fn()`. For example:
+```javascript
+AppDataSource: {
+    getRepository: jest.fn(),
+}
+```
+
+We can mock a **whole file** ( or class in a file ) using `jest.mock` with the code below:
+```javascript
+jest.mock('path to file', () => (/* mocked behavour */));
+```
+
+And a complete example of mocking a class:
+```javascript
+class MockEmailVerification {
+	code: string;
+	user: User;
+
+	constructor(user: User) {
+		this.code = "123456";
+		this.user = user;
+	}
+}
+
+// Mock the entire EmailVerification class
+jest.mock("path/to/file", () => {
+	return jest.fn().mockImplementation(/* This should be similar to constructor */(user) => {
+		return new MockEmailVerification(user);
+	});
+});
+```
+After these lines, if you instantiate the `EmailVerificationClass` in normal way (`const email = new EmailVerification()`), You will get the mocked one. 
+
+The first thing that comes to mind when mocking a method is the code below:
+```javascript
+const mock = jest.spyOn(<Your class>.prototype as any, "<Your method name>");
+			mock.mockResolvedValueOnce(() => Promise.resolve());
+
+// Here you can put your expectations on mock ( Created top of the code )
+// For example:
+expect(sendEmailMock).toHaveBeenCalled();
+```
+
+
+### Tricks
+ 
+To see how many times a method was called:
+```javascript
+expect(yourMethodMock.mock.calls.length).toBe(0);
+```
+
 # Typescript
 
 I don't know complete differences between javascript and typescript, I just write here things which I'm sure only exist in Typescript.

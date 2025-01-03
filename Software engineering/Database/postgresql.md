@@ -13,7 +13,16 @@ SELECT table_name FROM information_schema.tables;
 
 ## Commands 
 
+For connecting to psql you should first run:
+```bash
+psql -U postgres
+```
+
+I guess postgres is the default username. 
+
 - `\q`: Exit SQL session
+- `\l`: List databases
+- `\c database_name`: Like `use database_name` in mysql.
 
 
 `TRUNCATE` Empties one or set of tables .
