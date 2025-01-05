@@ -62,6 +62,51 @@ Now, where we configure to execute some commands on **multiple** machines? We do
 ```
 the term databases appears on hosts in playbook.
 
+## How to use? 
+
+```bash
+pip install ansible
+```
+
+Checking whether ansible is installed:
+
+```bash
+ansible --version
+```
+
+Create a file called inventory.ini:
+
+```bash
+[webservers]
+192.168.1.100
+192.168.1.101
+
+[dbservers]
+192.168.1.200
+```
+
+Create an ansible configuration file:
+
+```bash
+[defaults]
+inventory = ./inventory.ini
+remote_user = your_ssh_user
+```
+
+Ping all hosts:
+
+```bash
+ansible all -m ping
+```
+
+Run a command:
+```bash
+ansible all -m shell -a "uptime"
+```
+
+Then start to run playbooks.
+
+
 ## Some modules
 Here you see a list of all modules you see or a link to them: 
 
