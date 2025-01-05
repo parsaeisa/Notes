@@ -83,3 +83,19 @@ Then, for defining a command, you use the code below :
 def commands_method(arg1: str):
     pass
 ```
+
+## pip 
+
+When you see pip is not found on terminal use this instead of pip:
+```bash
+python -m pip [arguments]
+```
+
+Seeing the list of installed packages:
+```bash
+pip list
+```
+
+To see information of a package such as where a specific python package is installed:
+```bash
+pip show < package name >
