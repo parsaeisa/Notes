@@ -99,3 +99,27 @@ pip list
 To see information of a package such as where a specific python package is installed:
 ```bash
 pip show < package name >
+```
+
+### venv
+
+Sometimes you don't have full access to all beneath layers and you cannot install whatever you want on machine. Here you use virtual environments. 
+
+Normally venv is installed alongside with Python.
+
+To create a new einvironment:
+```python
+python -m venv myenv
+```
+
+myenv is you new environment. ( we have python -m pip and we have also pip, so maybe you can easy run venv without any prefixes)
+
+After creating a database a new directory is created with the name of your environment and you should activate it. To activate it:
+```python
+source myenv/bin/activate
+```
+
+After you are done, you can simply close the session using:
+```python
+deactivate
+```
