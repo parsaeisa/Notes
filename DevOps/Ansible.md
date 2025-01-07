@@ -172,3 +172,11 @@ state: latest
 ```
 
 - `service`: Starts a new service. like running nginx.
+
+Installing git:
+```bash
+- name: Install Git
+      apt:
+        name: git
+        state: present
+```
