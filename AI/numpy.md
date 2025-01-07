@@ -96,6 +96,35 @@ diagonal_elements = np.diag(matrix)
 # Output: array([1, 5, 9])
 ```
 
+`cumsum`: At first I wondered about it's difference with `np.sum`. This is the difference:
+```python
+arr = np.array([1, 2, 3, 4])
+np.sum(arr) # Output: 10
+np.cumsum(arr)  # Output: [1, 3, 6, 10]
+
+# And in two dimension arrays:
+matrix = np.array([[1, 2], [3, 4]])
+np.sum(matrix, axis=0)  # Output: [4, 6] (sum along rows)
+np.cumsum(matrix, axis=0)  # Output: [[1, 2], [4, 6]]
+```
+
+The output of `cumsum` is a array but the output of `sum` is a number for each array.
+
+`np.searchsorted`: It is used to find the indices where elements should be inserted into a sorted array to maintain the array's order.
+
+```python
+arr = np.array([1, 3, 5, 7])
+values = [4, 6]
+
+# Find indices to insert
+indices = np.searchsorted(arr, values)
+print(indices)  # Output: [2, 3]
+
+# Explanation:
+# 4 should be inserted before 5 (index 2).
+# 6 should be inserted before 7 (index 3).
+```
+
 ### Where
 When you use `np.where` for an image, it gives you **two arrays**. The first array is y indexes of elements having that condition and the second one is x indexes of those.
 ```python
