@@ -124,6 +124,16 @@ There is a parameter called `state`. If it's value is `present`, it just makes s
 
 One other possible value for this parameter is `latest` which checks the version every time and installs it's last version.
 
+### Installing docker
+
+While installing docker using ansible, no error is shown but when you try `docker --version` it says command not found.
+
+Docker and docker-compose should be installed from a repository which must be stabled.
+
+So one of the possible reason for happening this issue is that connection wasn't established to the repositry, ansible couldn't find anything and then it thought there was no problem. 
+
+So think about reconfiguring the repository.
+
 ## Some modules
 Here you see a list of all modules you see or a link to them: 
 
