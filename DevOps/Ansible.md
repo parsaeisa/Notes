@@ -105,7 +105,34 @@ ansible all -m shell -a "uptime"
 ```
 
 Then start to run playbooks.
+```bash
+ansible-playbook "path/to/yaml-file"
+```
 
+## Scenarios
+
+Consider an ansible task wants to install a tool. What happens if that tool is already installed? For instance take this task overhere:
+```
+- name: Install Docker (if not already installed)
+    apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+```
+
+There is a parameter called `state`. If it's value is `present`, it just makes sure whether docker is installed and if it was, it acts idempotent and doesn't do anything.
+
+One other possible value for this parameter is `latest` which checks the version every time and installs it's last version.
+
+### Installing docker
+
+While installing docker using ansible, no error is shown but when you try `docker --version` it says command not found.
+
+Docker and docker-compose should be installed from a repository which must be stabled.
+
+So one of the possible reason for happening this issue is that connection wasn't established to the repositry, ansible couldn't find anything and then it thought there was no problem. 
+
+So think about reconfiguring the repository.
 
 ## Some modules
 Here you see a list of all modules you see or a link to them: 
@@ -145,3 +172,11 @@ state: latest
 ```
 
 - `service`: Starts a new service. like running nginx.
+
+Installing git:
+```bash
+- name: Install Git
+      apt:
+        name: git
+        state: present
+```
