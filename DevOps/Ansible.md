@@ -105,7 +105,24 @@ ansible all -m shell -a "uptime"
 ```
 
 Then start to run playbooks.
+```bash
+ansible-playbook "path/to/yaml-file"
+```
 
+## Scenarios
+
+Consider an ansible task wants to install a tool. What happens if that tool is already installed? For instance take this task overhere:
+```
+- name: Install Docker (if not already installed)
+    apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+```
+
+There is a parameter called `state`. If it's value is `present`, it just makes sure whether docker is installed and if it was, it acts idempotent and doesn't do anything.
+
+One other possible value for this parameter is `latest` which checks the version every time and installs it's last version.
 
 ## Some modules
 Here you see a list of all modules you see or a link to them: 
