@@ -446,3 +446,41 @@ You can see an example here:
 ```bash
 flake8 --exclude='__init__.py','venv/' --extend-exclude='*_pb2*.py' --max-line-length=121  ./..
 ```
+
+## dpkg
+
+dpkg is a low-level package manager on Debians. It manages .deb packages. It works with local .deb files.
+
+On the other hand, apt is a high-level package manager which manages dependencies and repositories.
+
+I used it one time and that was because apt wasn't showing me anything helpful.
+
+Installing:
+```bash
+sudo dpkg -i package_name.deb
+```
+
+Removing:
+```bash
+sudo dpkg -r package_name
+```
+s
+Listing installed packages:
+```bash
+dpkg -l
+```
+
+Checking if a package is installed or not:
+```bash
+dpkg -l | grep package_name
+```
+
+Extracting package contents:
+```bash
+dpkg -x package_name.deb /path/to/destination
+```
+
+Reconfiguring:
+```bash
+sudo dpkg-reconfigure package_name
+```
