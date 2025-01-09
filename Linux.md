@@ -33,6 +33,13 @@ If a process was killed by the cgroup oom-killer, you may see this log:
 Memory cgroup out of memory: Kill process ...
 ```
 
+## Directory structure
+
+`usr`:
+
+- `/usr/bin`: Binaries installed by Package-manager and OS-provider. For example `docker` is in this directory after installation.
+- `/usr/local/bin`: Binaries installed manually by user or custom binaries. For example `docker-compose` is in this directory.
+
 ## Cronjob
 
 For accessing the cron file:
