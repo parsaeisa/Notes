@@ -124,6 +124,8 @@ There is a parameter called `state`. If it's value is `present`, it just makes s
 
 One other possible value for this parameter is `latest` which checks the version every time and installs it's last version.
 
+How does ansible finds out about a tool's state ( To check it is installed or not )? It asks the package manager used by os. it can be apt, yum or anything else.
+
 ### Installing docker
 
 While installing docker using ansible, no error is shown but when you try `docker --version` it says command not found.
