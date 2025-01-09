@@ -51,8 +51,13 @@ In the case that they are needed search for them , just know that they exist .
 
 With using this character, the output of previous command is the input of currnet command.  
 
-```
+```bash
 command 1 | command 2 | command 3
+```
+
+For checking where a software is installed:
+```bash
+which docker
 ```
 
 Here the output of command 1 goes to command 2 and the output of command 2 goes to command 3. 
