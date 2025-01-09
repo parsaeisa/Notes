@@ -33,6 +33,51 @@ If a process was killed by the cgroup oom-killer, you may see this log:
 Memory cgroup out of memory: Kill process ...
 ```
 
+## Cronjob
+
+For accessing the cron file:
+```bash
+crontab -e
+```
+
+As you know it is like:
+```bash
+* * * * * /path/to/command
+```
+But each start from left to right is:
+- Minute (0-59)
+- Hour (0-23)
+- Day of the month (1-31)
+- Month (1-12)
+- Day of the week (0-6, where 0 is Sunday)
+
+You can get sure from your timing using this link: https://crontab.guru/
+
+Seeing logs for cronjobs:
+```bash
+grep CRON /var/log/syslog
+```
+
+As you can see they are moved to **syslog**.
+
+## Versions
+
+### Ubuntu and Debian
+
+Ubuntu is based on Debian.
+
+Debian focuses on **stability** which means:
+- It is good for servers 
+- It has a long unpredictable release cycle.
+- It uses older and well-tested tools.
+
+but Ubuntu focuses on **ease of use** and has more features which makes it suitable for desktop. 
+- It has a default desktop environment (GNOME)
+- It has a better community
+
+In so many thing Ubunto is the opposite of Debian:
+- It has a regular release cycle
+- It uses newer tools
 
 
 # Bash commands 
@@ -394,49 +439,3 @@ You can see an example here:
 ```bash
 flake8 --exclude='__init__.py','venv/' --extend-exclude='*_pb2*.py' --max-line-length=121  ./..
 ```
-
-## Cronjob
-
-For accessing the cron file:
-```bash
-crontab -e
-```
-
-As you know it is like:
-```bash
-* * * * * /path/to/command
-```
-But each start from left to right is:
-- Minute (0-59)
-- Hour (0-23)
-- Day of the month (1-31)
-- Month (1-12)
-- Day of the week (0-6, where 0 is Sunday)
-
-You can get sure from your timing using this link: https://crontab.guru/
-
-Seeing logs for cronjobs:
-```bash
-grep CRON /var/log/syslog
-```
-
-As you can see they are moved to **syslog**.
-
-## Versions
-
-### Ubuntu and Debian
-
-Ubuntu is based on Debian.
-
-Debian focuses on **stability** which means:
-- It is good for servers 
-- It has a long unpredictable release cycle.
-- It uses older and well-tested tools.
-
-but Ubuntu focuses on **ease of use** and has more features which makes it suitable for desktop. 
-- It has a default desktop environment (GNOME)
-- It has a better community
-
-In so many thing Ubunto is the opposite of Debian:
-- It has a regular release cycle
-- It uses newer tools
