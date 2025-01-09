@@ -3,7 +3,7 @@
 New words:
 - Sentence splitting
 - Inference:
-- Knowledge graph:
+- Knowledge graph: It is a graph which shows the relation between different objects. This is both human-readable and machine-processable.
 - Grid search: It's a way for finding the best hyper parameteres.
 
 New methods:
@@ -14,12 +14,24 @@ New methods:
 These steps are a bit more detailed and that is because they are inspired from an actuall working NLP project. 
 
 - Preprocessing: One thing in this step is somehow like aggregate queries in databases.
-- Tokenizing
-- Splitting train and test dataset
-- Computing class weights (??)
+- [ pre-training steps described below ]
 - Defining model
 - Configuring parameters
 - Train the model
+
+### Steps before training model
+
+There some steps which can be taken and can be not taken:
+- Text Cleaning: Remove unnecessary characters, punctuation, or HTML tags from the text.
+- Tokenization: Split text into tokens suitable for input to pre-trained models.
+- Padding/Truncation: Adjust sequences to a fixed length by padding or truncating, considering model-specifictoken limits.
+- Label Encoding: Convert sub-narratives into multi-hot encoded vectors or numerical representations.
+- Handling Imbalanced Data: Compute class weights to address label imbalance during training.
+- Train-Validation Split: Split the dataset while ensuring label distribution consistency across subsets.
+- Text Augmentation: Introduce variations in text (e.g., synonym replacement) to increase dataset diversity.
+- Embedding Preparation (if needed): Generate embeddings using pre-trained models for classical ML methods.
+- Normalization: Normalize token embeddings if required by the model or framework.
+- Exploratory Data Analysis (EDA): Analyze label co-occurrence, frequency, and input text length distributions.
 
 ## Project components
 
