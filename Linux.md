@@ -86,6 +86,34 @@ In so many thing Ubunto is the opposite of Debian:
 - It has a regular release cycle
 - It uses newer tools
 
+## User access
+
+Sometimes, you may see a command which cannot find a file which it needs. That's maybe due to command is executed by a user and files have been created by other user. 
+
+For checking which user created a certain file use:
+```bash
+sudo ls -l path/to/file
+```
+
+### File permission representation
+
+Apparently we have 3 permission sets:
+- owner
+- group 
+- others
+
+File permission representation is normally a 4 digit number:
+- If the first one is zero, it means all digits are octall ( search about it later )
+
+Other 3 digits from left to right, show the permission level of owner, group, others.
+
+About numbers themselves, We have three kind of permissions: 
+- Read: 4
+- Write: 2
+- Execute: 1
+
+Each digit can be a sum of a subset of these 3. For example 5 is 4+1 which means permission to read and execute (rx) and 7 (Full access) is 4+2+1 which is the permission for reading, writing and exectuing.
+
 
 # Bash commands 
 
