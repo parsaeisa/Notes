@@ -141,14 +141,39 @@ So think about reconfiguring the repository.
 ## Some modules
 Here you see a list of all modules you see or a link to them: 
 
-- `file`: Creates a directory.
+- `file`: Creates files and directories.
 
 Creating:
-```bash
-path: path/to/new/dir
-state: directory
+```yml
+file:
+    path: path/to/new/dir
+    state: directory
+    mode: '0775'
 ```
 
+I don't know whether that `mode: '0775'` is necessary or not.
+
+It can create multiple layered directories. I mean in `dir1/dir2/dir3` it creates all three directories.
+
+For creating empty files:
+```yml
+- name: Create empty files
+  file:
+    path: path/to/file
+    state: touch
+```
+
+- copy: Creating files on external server
+
+```yml
+- name: Add config files for google play
+    copy:
+      dest: /path/to/file
+      content: |
+        LINE 1
+        LINE 2
+        LINE 3
+```
 - `postgres_table`: related to postgres tables.
 
 Renaming a table:
