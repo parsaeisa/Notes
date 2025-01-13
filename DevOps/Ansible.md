@@ -13,7 +13,7 @@ Ansible is somehow a superset of docker. Docker creates the required environment
 Most of the times we need sequences of different commands such as installing and configurings.
 
 **tasks**: It has a sequence of modules ( with order ). It has group of tasks like this:
-```bash
+```yml
 tasks:
     - name: task1
       module_name:
@@ -29,7 +29,7 @@ tasks:
 We get connected to the database with parameters `hosts` and `remote_user`.
 
 You can define variables too. like this:
-```bash
+```yml
 vars:
     tablename: "foo"
 
@@ -41,7 +41,7 @@ tasks:
 ```
 
 All these together is called a **play** which is like this:
-```bash
+```yml
 - hosts: 
   remote_user:
   var:
@@ -66,19 +66,19 @@ the term databases appears on hosts in playbook.
 
 ## How to use? 
 
-```bash
+```yml
 pip install ansible
 ```
 
 Checking whether ansible is installed:
 
-```bash
+```yml
 ansible --version
 ```
 
 Create a file called inventory.ini:
 
-```bash
+```yml
 [webservers]
 192.168.1.100
 192.168.1.101
@@ -89,7 +89,7 @@ Create a file called inventory.ini:
 
 Create an ansible configuration file:
 
-```bash
+```yml
 [defaults]
 inventory = ./inventory.ini
 remote_user = your_ssh_user
@@ -97,17 +97,17 @@ remote_user = your_ssh_user
 
 Ping all hosts:
 
-```bash
+```yml
 ansible all -m ping
 ```
 
 Run a command:
-```bash
+```yml
 ansible all -m shell -a "uptime"
 ```
 
 Then start to run playbooks.
-```bash
+```yml
 ansible-playbook "path/to/yaml-file"
 ```
 
@@ -177,17 +177,17 @@ For creating empty files:
 - `postgres_table`: related to postgres tables.
 
 Renaming a table:
-```bash
+```yml
 table: foo
 rename: bar
 ```
 Giving ownership to a user:
-```bash
+```yml
 name: foo
 owner: someuser
 ```
 Truncating a table:
-```bash
+```yml
 name: foo
 truncate: bar
 ``` 
@@ -195,7 +195,7 @@ truncate: bar
 - `yum`: Installs differnt things.
 
 Installing nginx:
-```bash
+```yml
 name: nginx
 state: latest
 ```
@@ -203,7 +203,7 @@ state: latest
 - `service`: Starts a new service. like running nginx.
 
 Installing git:
-```bash
+```yml
 - name: Install Git
       apt:
         name: git
