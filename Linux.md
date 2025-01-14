@@ -114,6 +114,10 @@ About numbers themselves, We have three kind of permissions:
 
 Each digit can be a sum of a subset of these 3. For example 5 is 4+1 which means permission to read and execute (rx) and 7 (Full access) is 4+2+1 which is the permission for reading, writing and exectuing.
 
+Changing the ownership of a directory:
+```bash
+sudo chown -R $USER:$USER /path/to/cloned/directory
+```
 
 # Bash commands 
 
