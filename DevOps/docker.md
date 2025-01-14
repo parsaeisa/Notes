@@ -45,6 +45,8 @@ Get a container's information :
 docker logs [container-id]
 ```
 
+For seeing logs, only **first two characters** of container_id is also enough.
+
 See what port, the container is connected to: 
 ```bash
 docker port [container-id]
@@ -53,6 +55,23 @@ docker port [container-id]
 See a configuration variable in a container (for example for the memory): 
 ```bash
 docker inspect <container id> -f "{{.HostConfig.Memory}}"
+```
+
+Seeing docker images ids:
+```bash
+docker images -a -q
+```
+
+Deleting images:
+```bash
+docker rmi <image id>
+```
+
+## Docker compose
+
+For deleting containers created by a docker compose:
+```bash
+docker compose down
 ```
 
 ## Flags
@@ -103,9 +122,7 @@ sudo docker exec -it <container id> bash
 ```
 
 * You can get container Id from docker ps command .
-* Sometimes /bin/sh works instead of bash . 
-
-
+* Sometimes /bin/sh works instead of bash .
 
 ### Volume 
 
@@ -114,6 +131,21 @@ You can mount a directory or file from the host machine into the container.
 Command : 
 ```bash
 docker run -v <host_path>:<container_path> ...
+```
+
+Listing all volumes:
+```bash
+docker volumes ls
+```
+
+And for seeing volume IDs:
+```bash
+docker volumes ls -q
+```
+
+Deleting a volume:
+```bash
+docker volumes rm <volume id>
 ```
 
 ## Useful commands
