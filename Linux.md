@@ -382,7 +382,22 @@ The command below checks that a port is available or not.
 telnet [address] [port number]
 ```
 
+## ssh
 
+For establishing a ssh connection to an external server the first obvious command is:
+```bash
+ssh <username>@<ip address>
+```
+
+For establishing this connection, the external server must have your public key.
+Your keys ( both public and private) exist in `.ssh` directory. 
+
+If you want to use a new one we can create one by `ssh-keygen` command.
+
+But everytime (per each restart) we need pass our **private key** with ssh-add:
+```bash
+ssh /path/to/private key
+```
 
 ## tmux
 
