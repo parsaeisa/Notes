@@ -45,6 +45,11 @@ Get a container's information :
 docker logs [container-id]
 ```
 
+And for seeing all logs real-time (not dispatched):
+```bash
+docker logs [container-id] --follow
+```
+
 For seeing logs, only **first two characters** of container_id is also enough.
 
 See what port, the container is connected to: 
