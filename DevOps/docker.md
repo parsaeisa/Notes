@@ -147,10 +147,16 @@ And for seeing volume IDs:
 ```bash
 docker volumes ls -q
 ```
+> You can see just ids with `-q` flag.
 
 Deleting a volume:
 ```bash
 docker volumes rm <volume id>
+```
+
+Deleting all volumes:
+```bash
+docker volume rm $(docker volume ls -q)
 ```
 
 ## Useful commands
