@@ -214,3 +214,36 @@ Installing git:
 
 https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html
 
+## Ansible vault
+
+The first time I surveyed ansible vault was for transfering a private file to the external ubuntu instance. I think it encrypts files and we can put the encryption of files on version control with whole trust.
+
+For using it:
+```bash
+ansible-vault create <file_name>
+```
+
+```bash
+ansible-vault encrypt <file_name>
+```
+
+```bash
+ansible-vault decrypt <file_name>
+```
+
+And for editing the file:
+```bash
+ansible-vault edit <file_name>
+```
+
+Using them in playbooks:
+```bash
+ansible-playbook <playbook.yml> --ask-vault-pass
+```
+```bash
+ansible-playbook <playbook.yml> --vault-password-file <password_file>
+```
+And for changing the password:
+```bash
+ansible-vault rekey <file_name>
+```
