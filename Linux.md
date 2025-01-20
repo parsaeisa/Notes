@@ -531,3 +531,14 @@ Reconfiguring:
 ```bash
 sudo dpkg-reconfigure package_name
 ```
+
+## Combined commands
+
+There are some commands which are a combination of other simple commands. 
+
+Count of files in a directory:
+```bash
+find /path/to/directory -type f | wc -l
+```
+- `-type f`: Filters directories to only count files.
+- `wc -l`: Counts the number of files in output.
