@@ -29,6 +29,12 @@ Based on the roadmap.sh website these are first factors that matter:
 - Performance
 - Scalability
 
+## Scalability
+A system isn't scalable when It has just one component, in any stage, which does everything. 
+
+A System is scalable when there are multiple little components and workloads are dispatched between them.
+
+
 ## Software architecture scattered problems 
 
 * seperating business logics from technical logics 
