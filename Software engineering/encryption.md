@@ -25,6 +25,8 @@ a=b
 
 We can check this equality without sending a and b value over the internet. This checking insures **integrity**.
 
+I think revealing a value from it's hash is impossible.
+
 ### Hash functions
 
 A good hash function must have these properties:
