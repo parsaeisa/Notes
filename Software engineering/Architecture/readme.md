@@ -1,5 +1,7 @@
 # Architecture
 
+Architecture design depict subsystem **responsibilities**.
+
 Architecture is a concept that exists in different layers. 
 * In the code itself.
 * In a project's packages.
