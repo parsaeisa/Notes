@@ -25,14 +25,7 @@ a=b
 
 We can check this equality without sending a and b value over the internet. This checking insures **integrity**.
 
-### Signature
-
-Sender: Hashes the message and encrypts that hash in **asymmetric** way, then appends this encrypted hash to the end of the message before sending.
-
-Receiver: Decrypts the signature with public key, then hashes the message. If these two hashes were equal, integrity is proved.
-
-
-## Hash functions
+### Hash functions
 
 A good hash function must have these properties:
 - Collision free
@@ -43,6 +36,14 @@ A good hash function must have these properties:
 
 NIST lists seven approved hash algorithms: SHA-1, SHA-224, SHA-256, SHA-384 SHA
 512, SHA-512/224 and SHA-512/256
+
+I've heard MD5, MD4 and MDA5 too.
+
+### Signature
+
+Sender: Hashes the message and encrypts that hash in **asymmetric** way, then appends this encrypted hash to the end of the message before sending.
+
+Receiver: Decrypts the signature with public key, then hashes the message. If these two hashes were equal, integrity is proved.
 
 ## Mod (%)
 
