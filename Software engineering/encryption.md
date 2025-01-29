@@ -32,10 +32,17 @@ Sender: Hashes the message and encrypts that hash in **asymmetric** way, then ap
 Receiver: Decrypts the signature with public key, then hashes the message. If these two hashes were equal, integrity is proved.
 
 
-## Different encrypting algorithms
+## Hash functions
 
-- SHA
-- MD5
+A good hash function must have these properties:
+- Collision free
+- Preimage resistance
+- Second preimage resistance
+
+* Collision is when two values have same hashes.
+
+NIST lists seven approved hash algorithms: SHA-1, SHA-224, SHA-256, SHA-384 SHA
+512, SHA-512/224 and SHA-512/256
 
 ## Mod (%)
 
