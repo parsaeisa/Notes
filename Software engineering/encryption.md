@@ -7,6 +7,19 @@ Encryption is a useful concept that applies in many software applications such a
 - Key-value store
 - Authorization & Authentication
 
+One classification of encryptions are:
+- Symmetric (only one key is used for encrypting and decrypting)
+- Asymmetric (Pulic and private key)
+
+## Symmetric
+
+Examples: AES
+
+When AES encrypts a data it gives:
+- **DEK:** It stands for "Data encryption key".
+- **IV:** It stands for Initial value. 
+
+
 ## Different encrypting algorithms
 
 - SHA
