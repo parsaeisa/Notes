@@ -8,6 +8,9 @@ Resources are:
 - Authorities (e.g. accesses)
 
 A manager's concerns : 
+Engineering is not just about technology. It's about **people and processes**.
+
+Here's a more practical lsit of manager's concerns:
 * Team non-financial resources:
     * Members progress and development in their career
     * Energy

@@ -210,6 +210,38 @@ It handles database schema changes and is used for managing migrations. By manag
 - Creating
 - Running
 - Reverting
+Put these lines in your package.json (in "scripts" tag):
+```
+"migration:generate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate -d ./src/datasource.ts ./migrations/$npm_config_name",
+"migration:run": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run -d ./src/datasource.ts",
+"migration:revert": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:revert -d ./src/datasource.ts",
+```
+
+For creating migrations, Run this command:
+```
+npm run migration:generate --name=myMigration
+```
+
+Then a new file is created. It has two methods, up and down. For adding a new query, you should add it in up method and add it's reverse query ( A query which deletes everything that is created or vice-versa ) in down method.
+```javascript
+public async up /*...*/ {
+	await queryRunner.query(
+            `your query`
+        );
+}
+
+public async down /*...*/ {
+	await queryRunner.query(
+            `Your reverse query`
+        );
+}
+```
+
+Then apply this migration to your database using this:
+```
+npm run migration:run
+```
+
 
 ### Prisma 
 
