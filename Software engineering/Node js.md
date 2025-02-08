@@ -242,6 +242,25 @@ Then apply this migration to your database using this:
 npm run migration:run
 ```
 
+#### For starting a transaction
+
+```javascript
+const queryRunner = AppDataSource.createQueryRunner();
+await queryRunner.connect();
+await queryRunner.startTransaction();
+try {
+	// Queries using queryRunner.manager
+
+	await queryRunner.commitTransaction();
+	return true;
+} catch (failure) {
+	await queryRunner.rollbackTransaction();
+	if (failure instanceof Failure) return failure;
+} finally {
+	await queryRunner.release();
+}
+```
+
 
 ### Prisma 
 
