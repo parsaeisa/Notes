@@ -386,6 +386,19 @@ To see how many times a method was called:
 expect(yourMethodMock.mock.calls.length).toBe(0);
 ```
 
+## Built-in methods
+
+### Interval
+
+Intervals are functions that are executed periodically. They start with `setInterval(()=>{})` and they are deleted by `clearInterval`.
+```javascript
+const intervalId = setInterval(() => {
+    console.log("This runs every 5 seconds");
+}, 5000);
+
+clearInterval(intervalId);
+```
+
 # Typescript
 
 I don't know complete differences between javascript and typescript, I just write here things which I'm sure only exist in Typescript.
