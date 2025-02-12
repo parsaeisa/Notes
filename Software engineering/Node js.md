@@ -176,6 +176,8 @@ Put these lines in your package.json (in "scripts" tag):
 "migration:revert": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:revert -d ./src/datasource.ts",
 ```
 
+That `datasource.ts` is discussed further in this document.
+
 For creating migrations, Run this command:
 ```
 npm run migration:generate --name=myMigration
