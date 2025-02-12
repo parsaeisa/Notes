@@ -96,34 +96,6 @@ As mentioned before it can access environment variables, so it serves a same pur
 
 `process.env` lets you keep sensitive information out of your version control system.
 
-### AppDatasource
-
-AppDatasource is a thing which you use it to get connected to database. It is from **typeorm** library. 
-
-use:
-```javascript
-import { DataSource } from "typeorm";
-
-export const AppDataSource = new DataSource({
-	type: "postgres",
-	host: process.env.HOST,
-	username: process.env.USER,
-	password: process.env.PASSWORD,
-	database: process.env.DB,
-	port: Number(process.env.PORT),
-	ssl: process.env.IS_ON_LOCAL_MACHINE === "true" ? false : { rejectUnauthorized: false },
-	synchronize: false,
-	logging: ["query", "error"], // it can be false
-	entities: [/* Array of entities */],
-	subscribers: [],
-	migrations: ["./migrations/*.ts"],
-});
-```
-
-As you can see configurations for getting connected to database is here. 
-
-**Also**, `typeorm` has some important commands which you can see in the commands section of this document. 
-
 ### Cache
 
 Node.js has a caching feature. You can add it to your project using the code below:
@@ -190,26 +162,13 @@ console.log(`Server running on port: ${port}`);
 console.log(`Database URI: ${dbUri}`);
 ```
 
-## Commands
+## Interacting with database
 
-In this section, useful commands for generating project files are listed. 
-
-### npx
-It is a tool that comes with Node.js and allows you to execute binaries (CLI tools) from 
-`node_modules` or directly fetch and run a package without globally installing it
-
-It comes before other node.js related CLIs. 
-
-It:
-- doesn't need globally installing a CLI that you want to use
-- uses the last version of a CLI. 
-
-### typeorm
-
-It handles database schema changes and is used for managing migrations. By managing I mean:
+For Interacting with database in Node.js, typeorm is used. It handles database schema changes and is used for managing migrations. By managing I mean:
 - Creating
 - Running
 - Reverting
+
 Put these lines in your package.json (in "scripts" tag):
 ```
 "migration:generate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate -d ./src/datasource.ts ./migrations/$npm_config_name",
@@ -242,6 +201,32 @@ Then apply this migration to your database using this:
 npm run migration:run
 ```
 
+### AppDatasource
+
+AppDatasource is a thing which you use it to get connected to database. It is from **typeorm** library. 
+
+use:
+```javascript
+import { DataSource } from "typeorm";
+
+export const AppDataSource = new DataSource({
+	type: "postgres",
+	host: process.env.HOST,
+	username: process.env.USER,
+	password: process.env.PASSWORD,
+	database: process.env.DB,
+	port: Number(process.env.PORT),
+	ssl: process.env.IS_ON_LOCAL_MACHINE === "true" ? false : { rejectUnauthorized: false },
+	synchronize: false,
+	logging: ["query", "error"], // it can be false
+	entities: [/* Array of entities */],
+	subscribers: [],
+	migrations: ["./migrations/*.ts"],
+});
+```
+
+As you can see configurations for getting connected to database is here. 
+
 #### For starting a transaction
 
 ```javascript
@@ -260,6 +245,21 @@ try {
 	await queryRunner.release();
 }
 ```
+
+
+## Commands
+
+In this section, useful commands for generating project files are listed. 
+
+### npx
+It is a tool that comes with Node.js and allows you to execute binaries (CLI tools) from 
+`node_modules` or directly fetch and run a package without globally installing it
+
+It comes before other node.js related CLIs. 
+
+It:
+- doesn't need globally installing a CLI that you want to use
+- uses the last version of a CLI. 
 
 
 ### Prisma 
