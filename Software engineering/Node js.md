@@ -248,6 +248,57 @@ try {
 }
 ```
 
+## Validation
+
+This section is concerned with validation incoming requests from user. 
+
+There is a general form of validation which is preventing injections. Injections such as SQL, Command and XSS.
+For preventing injection this code is used:
+```javascript
+const { body, param, validationResult } = require('express-validator');
+
+app.post('/user', [
+  body('email').isEmail(),
+  body('password').isLength({ min: 8 })
+], (req, res) => {
+	// You can move these lines to a middleware. 
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  res.send('User created');
+});
+```
+
+But a specific kind of validation is related to app's business logic. One thing in this kind of validation is checking schemas. This is an schema object definition in Node.js which can be added to a checking middleware in Node.js:
+```javascript
+const firstValidation: Schema = {
+	email: {
+		notEmpty: {
+			errorMessage: requiredField,
+		},
+		trim: true,
+		isEmail: true,
+		escape: true,
+	},
+	passwordConfirmation: {
+		notEmpty: { errorMessage: requiredField },
+		trim: true,
+		isLength: { options: { min: 10 }, errorMessage: "This field must contain at least 10 characters" },
+		escape: true,
+		custom: {
+			options: (password, { req }) => password === req.body.password,
+			errorMessage: "Password confirmation must be equal to password",
+		},
+	},
+	dateOfBirth: {
+		notEmpty: {
+			errorMessage: requiredField,
+		},
+		isDate: true,
+	},
+}
+```
 
 ## Commands
 
