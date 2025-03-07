@@ -66,6 +66,7 @@ The order is like this:
 ```bash
 Controllers -> Services --> Mapper
                         \-> Prisma
+						 \-> Repositories
 ```
 Helper directory is a seperated direcotry. 
 
