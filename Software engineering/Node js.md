@@ -300,6 +300,21 @@ const firstValidation: Schema = {
 }
 ```
 
+In the controller, You may read the request directly with `req.body`. But it's not safe. For making it safe, In one of our middlewares, after defining validation schemas, We can use:
+
+```javascript
+res.locals.validated = matchedData(req);
+```
+
+And it's better to wrap it in a error checking if clause:
+```javascript
+const errors = validationResult(req);
+if (errors.isEmpty()) {
+	res.locals.validated = matchedData(req);
+	return next();
+}
+```
+
 ## Commands
 
 In this section, useful commands for generating project files are listed. 
