@@ -31,6 +31,10 @@ Javascript has **Number** and **BigInt**. So it doesn't have int, int8, float, e
 
 **Undefined** is a variable which has been initiated but doesn't have a value. So it is not equal to **Null**.
 
+### Enum
+
+We have `const enum`s. Which can't be set a the type of a database entity column. 
+
 ## Functions
 
 In the case of functions we have two things:
