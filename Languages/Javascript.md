@@ -300,6 +300,13 @@ myPromise
 
 Whenever the return type of a method is `Promise< any type(s)>`, I think the method should have `async` at first of it when you want to get those types (in `Promise`) you should probably forgot to put `await` at the beginning of calling this method.
 
+## Promise.resolve
+
+Apparently `Promise.resolve(value)` it has 3 applications:
+- When value is a promise
+- When value is not a promise, 
+- When is an object with a `.then` function.
+
 ## Where not to use async
 
 A place where I always see that programmers put `async` is requesting to a third party service such as database, broker, external service, etc.
