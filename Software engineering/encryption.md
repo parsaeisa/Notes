@@ -66,6 +66,17 @@ When AES encrypts a data it gives:
 - **DEK:** It stands for "Data encryption key".
 - **IV:** It stands for Initial value. 
 
+## Paseto
+
+Paseto is designed to address the shortcomings of JWT tokens. It can create either a symmetric or asymmetric token.
+
+Each token is consisted of four parts:
+- Version
+- Purpose
+- Payload
+- Footer
+
+
 ## Mod (%)
 
 The mod operator is a usefull operator. This operator is being used on bucketing. 
