@@ -54,7 +54,7 @@ Sender: Hashes the message and encrypts that hash in **asymmetric** way, then ap
 
 Receiver: Decrypts the signature with public key, then hashes the message. If these two hashes were equal, integrity is proved.
 
-###  Certificate
+### Certificate
 
 Certifiacte is a signature to a public key. I think it is used in TLS.
 
