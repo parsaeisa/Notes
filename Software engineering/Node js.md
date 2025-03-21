@@ -138,32 +138,7 @@ It has some methods like resolve, rebind and dispose. Don't forget to search abo
 
 Classes should have the decorator @Injectable so they can be registered in container. 
 
-## Common practice
-
-Common practice is to use **dotenv**.
-
-```bash
-npm install dotenv
-```
-
-Create an .env file:
-```bash
-PORT=3000
-DB_URI=mongodb://localhost:27017/mydb
-```
-
-Accessing information:
-```javascript
-require('dotenv').config(); // Load variables from .env file
-
-const port = process.env.PORT || 5000; // Use default port if not set
-const dbUri = process.env.DB_URI;
-
-console.log(`Server running on port: ${port}`);
-console.log(`Database URI: ${dbUri}`);
-```
-
-## Interacting with database
+### AppDatasource ( Interacting with database )
 
 For Interacting with database in Node.js, typeorm is used. It handles database schema changes and is used for managing migrations. By managing I mean:
 - Creating
@@ -203,8 +178,6 @@ Then apply this migration to your database using this:
 ```
 npm run migration:run
 ```
-
-### AppDatasource
 
 AppDatasource is a thing which you use it to get connected to database. It is from **typeorm** library. 
 
@@ -248,6 +221,37 @@ try {
 	await queryRunner.release();
 }
 ```
+
+### Logging
+
+A package which I saw is being used is **"winston"**.
+
+## Common practice
+
+Common practice is to use **dotenv**.
+
+```bash
+npm install dotenv
+```
+
+Create an .env file:
+```bash
+PORT=3000
+DB_URI=mongodb://localhost:27017/mydb
+```
+
+Accessing information:
+```javascript
+require('dotenv').config(); // Load variables from .env file
+
+const port = process.env.PORT || 5000; // Use default port if not set
+const dbUri = process.env.DB_URI;
+
+console.log(`Server running on port: ${port}`);
+console.log(`Database URI: ${dbUri}`);
+```
+
+
 
 ## Validation
 
