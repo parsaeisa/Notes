@@ -226,6 +226,19 @@ try {
 
 A package which I saw is being used is **"winston"**.
 
+### Other files
+
+There are some other files which of course have some usages:
+- jest.config.js
+- jest.setup.js
+
+Once, in the jest.setup.js file I added this:
+```javascript
+process.env.PGHOST = '127.0.0.1';  // PostgreSQL
+```
+
+And it solved a problem where postgres was looking for IPv6 addresses.
+
 ## Common practice
 
 Common practice is to use **dotenv**.
