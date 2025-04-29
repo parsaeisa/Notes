@@ -72,3 +72,9 @@ It has three steps:
 - Connection layer: Multiplexes communications into logical channels.
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/Network/image/how%20SSH%20works.gif">
+
+## IPv4 vs IPv6
+
+Two different generations of protocols.
+- IPv4: 32-bit address. 4 numbers seperated by dots. Exhausted due to internet growth.
+- IPv6: 128-bit address (8 groups of hex digits separated by colons). Practically unlimited.
