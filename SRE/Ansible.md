@@ -128,6 +128,8 @@ One other possible value for this parameter is `latest` which checks the version
 
 How does ansible finds out about a tool's state ( To check it is installed or not )? It asks the package manager used by os. it can be apt, yum or anything else.
 
+One type of scenarios which worth to watch out is idempotency. Consider a docker container is already running. What should happen if you run playbook one more time? Should it replace the new container with the old one? Or it should be idempotent and do nothing? 
+
 ### Installing docker
 
 While installing docker using ansible, no error is shown but when you try `docker --version` it says command not found.
@@ -214,3 +216,46 @@ Installing git:
 
 https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html
 
+There is a good ansible playbook in this link:
+https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_v2_module.html
+
+
+## Ansible vault
+
+The first time I surveyed ansible vault was for transfering a private file to the external ubuntu instance. I think it encrypts files and we can put the encryption of files on version control with whole trust.
+
+For using it:
+```bash
+ansible-vault create <file_name>
+```
+It redirects you to an editor which you can put the content of the file you want to be encrypted.
+
+For enctypting an exisiting file:
+```bash
+ansible-vault encrypt <file_name>
+```
+
+```bash
+ansible-vault decrypt <file_name>
+```
+
+And for editing the file:
+```bash
+ansible-vault edit <file_name>
+```
+
+Using them in playbooks:
+```bash
+ansible-playbook <playbook.yml> --ask-vault-pass
+```
+```bash
+ansible-playbook <playbook.yml> --vault-password-file <password_file>
+```
+And for changing the password:
+```bash
+ansible-vault rekey <file_name>
+```
+
+### Installation
+
+It's not directly installed by for example `pip install ansible-vault`. It is a part of ansible itself so if ansible is installed it should be installed too.

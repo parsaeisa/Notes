@@ -72,6 +72,18 @@ Deleting images:
 docker rmi <image id>
 ```
 
+## De-allocate
+
+Sometimes you want to remove a volume but you see an error which says "this volume is being used." and you see no running container after `docker ps`. Here these volumes are being used by **stopped containers**. You can see them using:
+```bash
+docker ps -a
+```
+
+Then you can use this command to delete all stopped containers:
+```bash
+docker prune
+```
+
 ## Docker compose
 
 For deleting containers created by a docker compose:

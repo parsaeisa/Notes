@@ -66,6 +66,7 @@ The order is like this:
 ```bash
 Controllers -> Services --> Mapper
                         \-> Prisma
+						 \-> Repositories
 ```
 Helper directory is a seperated direcotry. 
 
@@ -95,34 +96,6 @@ As mentioned before it can access environment variables, so it serves a same pur
 > Dynamic configuration: This term refers to having multiple configs, for deployment, test, staging, etc.
 
 `process.env` lets you keep sensitive information out of your version control system.
-
-### AppDatasource
-
-AppDatasource is a thing which you use it to get connected to database. It is from **typeorm** library. 
-
-use:
-```javascript
-import { DataSource } from "typeorm";
-
-export const AppDataSource = new DataSource({
-	type: "postgres",
-	host: process.env.HOST,
-	username: process.env.USER,
-	password: process.env.PASSWORD,
-	database: process.env.DB,
-	port: Number(process.env.PORT),
-	ssl: process.env.IS_ON_LOCAL_MACHINE === "true" ? false : { rejectUnauthorized: false },
-	synchronize: false,
-	logging: ["query", "error"], // it can be false
-	entities: [/* Array of entities */],
-	subscribers: [],
-	migrations: ["./migrations/*.ts"],
-});
-```
-
-As you can see configurations for getting connected to database is here. 
-
-**Also**, `typeorm` has some important commands which you can see in the commands section of this document. 
 
 ### Cache
 
@@ -165,6 +138,107 @@ It has some methods like resolve, rebind and dispose. Don't forget to search abo
 
 Classes should have the decorator @Injectable so they can be registered in container. 
 
+### AppDatasource ( Interacting with database )
+
+For Interacting with database in Node.js, typeorm is used. It handles database schema changes and is used for managing migrations. By managing I mean:
+- Creating
+- Running
+- Reverting
+
+Put these lines in your package.json (in "scripts" tag):
+```
+"migration:generate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate -d ./src/datasource.ts ./migrations/$npm_config_name",
+"migration:run": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run -d ./src/datasource.ts",
+"migration:revert": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:revert -d ./src/datasource.ts",
+```
+
+That `datasource.ts` is discussed further in this document.
+
+For creating migrations, Run this command:
+```
+npm run migration:generate --name=myMigration
+```
+
+Then a new file is created. It has two methods, up and down. For adding a new query, you should add it in up method and add it's reverse query ( A query which deletes everything that is created or vice-versa ) in down method.
+```javascript
+public async up /*...*/ {
+	await queryRunner.query(
+            `your query`
+        );
+}
+
+public async down /*...*/ {
+	await queryRunner.query(
+            `Your reverse query`
+        );
+}
+```
+
+Then apply this migration to your database using this:
+```
+npm run migration:run
+```
+
+AppDatasource is a thing which you use it to get connected to database. It is from **typeorm** library. 
+
+use:
+```javascript
+import { DataSource } from "typeorm";
+
+export const AppDataSource = new DataSource({
+	type: "postgres",
+	host: process.env.HOST,
+	username: process.env.USER,
+	password: process.env.PASSWORD,
+	database: process.env.DB,
+	port: Number(process.env.PORT),
+	ssl: process.env.IS_ON_LOCAL_MACHINE === "true" ? false : { rejectUnauthorized: false },
+	synchronize: false,
+	logging: ["query", "error"], // it can be false
+	entities: [/* Array of entities */],
+	subscribers: [],
+	migrations: ["./migrations/*.ts"],
+});
+```
+
+As you can see configurations for getting connected to database is here. 
+
+#### For starting a transaction
+
+```javascript
+const queryRunner = AppDataSource.createQueryRunner();
+await queryRunner.connect();
+await queryRunner.startTransaction();
+try {
+	// Queries using queryRunner.manager
+
+	await queryRunner.commitTransaction();
+	return true;
+} catch (failure) {
+	await queryRunner.rollbackTransaction();
+	if (failure instanceof Failure) return failure;
+} finally {
+	await queryRunner.release();
+}
+```
+
+### Logging
+
+A package which I saw is being used is **"winston"**.
+
+### Other files
+
+There are some other files which of course have some usages:
+- jest.config.js
+- jest.setup.js
+
+Once, in the jest.setup.js file I added this:
+```javascript
+process.env.PGHOST = '127.0.0.1';  // PostgreSQL
+```
+
+And it solved a problem where postgres was looking for IPv6 addresses.
+
 ## Common practice
 
 Common practice is to use **dotenv**.
@@ -190,6 +264,75 @@ console.log(`Server running on port: ${port}`);
 console.log(`Database URI: ${dbUri}`);
 ```
 
+
+
+## Validation
+
+This section is concerned with validation incoming requests from user. 
+
+There is a general form of validation which is preventing injections. Injections such as SQL, Command and XSS.
+For preventing injection this code is used:
+```javascript
+const { body, param, validationResult } = require('express-validator');
+
+app.post('/user', [
+  body('email').isEmail(),
+  body('password').isLength({ min: 8 })
+], (req, res) => {
+	// You can move these lines to a middleware. 
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  res.send('User created');
+});
+```
+
+But a specific kind of validation is related to app's business logic. One thing in this kind of validation is checking schemas. This is an schema object definition in Node.js which can be added to a checking middleware in Node.js:
+```javascript
+const firstValidation: Schema = {
+	email: {
+		notEmpty: {
+			errorMessage: requiredField,
+		},
+		trim: true,
+		isEmail: true,
+		escape: true,
+	},
+	passwordConfirmation: {
+		notEmpty: { errorMessage: requiredField },
+		trim: true,
+		isLength: { options: { min: 10 }, errorMessage: "This field must contain at least 10 characters" },
+		escape: true,
+		custom: {
+			options: (password, { req }) => password === req.body.password,
+			errorMessage: "Password confirmation must be equal to password",
+		},
+	},
+	dateOfBirth: {
+		notEmpty: {
+			errorMessage: requiredField,
+		},
+		isDate: true,
+	},
+}
+```
+
+In the controller, You may read the request directly with `req.body`. But it's not safe. For making it safe, In one of our middlewares, after defining validation schemas, We can use:
+
+```javascript
+res.locals.validated = matchedData(req);
+```
+
+And it's better to wrap it in a error checking if clause:
+```javascript
+const errors = validationResult(req);
+if (errors.isEmpty()) {
+	res.locals.validated = matchedData(req);
+	return next();
+}
+```
+
 ## Commands
 
 In this section, useful commands for generating project files are listed. 
@@ -204,12 +347,6 @@ It:
 - doesn't need globally installing a CLI that you want to use
 - uses the last version of a CLI. 
 
-### typeorm
-
-It handles database schema changes and is used for managing migrations. By managing I mean:
-- Creating
-- Running
-- Reverting
 
 ### Prisma 
 

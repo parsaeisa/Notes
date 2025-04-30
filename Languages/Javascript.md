@@ -31,6 +31,10 @@ Javascript has **Number** and **BigInt**. So it doesn't have int, int8, float, e
 
 **Undefined** is a variable which has been initiated but doesn't have a value. So it is not equal to **Null**.
 
+### Enum
+
+We have `const enum`s. Which can't be set a the type of a database entity column. 
+
 ## Functions
 
 In the case of functions we have two things:
@@ -296,6 +300,13 @@ myPromise
 
 Whenever the return type of a method is `Promise< any type(s)>`, I think the method should have `async` at first of it when you want to get those types (in `Promise`) you should probably forgot to put `await` at the beginning of calling this method.
 
+## Promise.resolve
+
+Apparently `Promise.resolve(value)` it has 3 applications:
+- When value is a promise
+- When value is not a promise, 
+- When is an object with a `.then` function.
+
 ## Where not to use async
 
 A place where I always see that programmers put `async` is requesting to a third party service such as database, broker, external service, etc.
@@ -384,6 +395,19 @@ expect(sendEmailMock).toHaveBeenCalled();
 To see how many times a method was called:
 ```javascript
 expect(yourMethodMock.mock.calls.length).toBe(0);
+```
+
+## Built-in methods
+
+### Interval
+
+Intervals are functions that are executed periodically. They start with `setInterval(()=>{})` and they are deleted by `clearInterval`.
+```javascript
+const intervalId = setInterval(() => {
+    console.log("This runs every 5 seconds");
+}, 5000);
+
+clearInterval(intervalId);
 ```
 
 # Typescript

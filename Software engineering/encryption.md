@@ -1,10 +1,17 @@
 # Encryption
 
+Everywhere you hear about security the main topic is **encryption**.
+
 Encryption is a useful concept that applies in many software applications such as:
 - URL shortener
 - Key-value store
 - Authorization & Authentication
 
+One classification of encryptions are:
+- Symmetric (only one key is used for encrypting and decrypting)
+- Asymmetric (Pulic and private key)
+
+## Different encrypting algorithms
 ## Applied cryptography
 - Encryption
 - Hashing
@@ -47,9 +54,28 @@ Sender: Hashes the message and encrypts that hash in **asymmetric** way, then ap
 
 Receiver: Decrypts the signature with public key, then hashes the message. If these two hashes were equal, integrity is proved.
 
-###  Certificate
+### Certificate
 
 Certifiacte is a signature to a public key. I think it is used in TLS.
+
+## Symmetric
+
+Examples: AES
+
+When AES encrypts a data it gives:
+- **DEK:** It stands for "Data encryption key".
+- **IV:** It stands for Initial value. 
+
+## Paseto
+
+Paseto is designed to address the shortcomings of JWT tokens. It can create either a symmetric or asymmetric token.
+
+Each token is consisted of four parts:
+- Version
+- Purpose
+- Payload
+- Footer
+
 
 ## Mod (%)
 
