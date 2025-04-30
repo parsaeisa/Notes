@@ -1,7 +1,7 @@
 # Robotics
 
 Topics:
-- [RL](https://github.com/parsaeisa/Notes/blob/main/AI/RL.md)
+- [Reinforcement Learning](https://github.com/parsaeisa/Notes/blob/main/AI/RL.md)
 - 3D understanding
 
 ## 3D understanding
