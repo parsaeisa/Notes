@@ -2,6 +2,10 @@
 
 `WebSocket` and `Http` are based on HTTP
 
+Mobile Ad Hoc Networks ( MANETs ): Decentralized and self-configuring ( Dynamic topology ) wireless networks where nodes communicate without relying on a fixed infrastructure.
+
+Each node can be a router or end device.
+
 ## Making a VPN
 
 - Buy a server from Racknerd website.
