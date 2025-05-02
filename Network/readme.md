@@ -20,6 +20,11 @@ TCP has a concept called "connecion", which you see a lot, for example in gRPC.
 
 But UDP has nothing like connection and it just works with packets. It has to save data just in packets.
 
+TCP has a 3-way handshake using a flag called **SYN**. The deal is like this:
+- Client to server: SYN
+- Server to client: SYN ack
+- Client ot server: ack
+
 ## Http generations
 
 **QUIC**: 
