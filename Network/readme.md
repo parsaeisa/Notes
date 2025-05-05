@@ -2,6 +2,10 @@
 
 `WebSocket` and `Http` are based on HTTP
 
+Mobile Ad Hoc Networks ( MANETs ): Decentralized and self-configuring ( Dynamic topology ) wireless networks where nodes communicate without relying on a fixed infrastructure.
+
+Each node can be a router or end device.
+
 ## Making a VPN
 
 - Buy a server from Racknerd website.
@@ -19,6 +23,11 @@ source : neetcode.io
 TCP has a concept called "connecion", which you see a lot, for example in gRPC.
 
 But UDP has nothing like connection and it just works with packets. It has to save data just in packets.
+
+TCP has a 3-way handshake using a flag called **SYN**. The deal is like this:
+- Client to server: SYN
+- Server to client: SYN ack
+- Client ot server: ack
 
 ## Http generations
 

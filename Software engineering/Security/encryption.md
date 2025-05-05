@@ -77,6 +77,10 @@ Each token is consisted of four parts:
 - Footer
 
 
+## Mathematics operations
+
+Some mathematical operations play a key role in encryption.
+
 ## Mod (%)
 
 The mod operator is a usefull operator. This operator is being used on bucketing. 
@@ -88,6 +92,13 @@ Consider a key-value store. You want to map key's (strings) to the underlying ar
 You do some encodings on the key and calculate their sum, then using the sum mod on the array's capacity, you can map them to your array. 
 
 See this link: https://github.com/parsaeisa/key_value_store
+
+## XOR
+
+XOR is used a lot in encryption because of the three features which it has:
+* It cause bit fusions which makes a pattern harder to detect.
+* It is reversible, if `A xor B = C`, then we have: `C xor B = A`.
+* It is a single CPU operation which makes it fase and a good choice for lightweight encryption.
 
 ## Authorization / Authentication
 
