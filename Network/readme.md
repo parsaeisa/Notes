@@ -84,17 +84,7 @@ It has three steps:
 
 A ssh server must be running in an instance so it can accept ssh connections.
 
-### Commands
-
-Connecting to an instance:
-```bash
-ssh <username>@<ip address>
-```
-
-Adding key to an instance:
-```bash
-ssh -i <address to the corresponding private key to the added public key to the server> <username>@<ip address>
-```
+You can see it commands [here](https://github.com/parsaeisa/Notes/blob/main/Linux.md#ssh).
 
 #### Running an ssh server
 It can be done with `systemctl` or `systemsetup`.
