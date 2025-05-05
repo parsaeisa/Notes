@@ -87,6 +87,12 @@ Create a file called inventory.ini:
 192.168.1.200
 ```
 
+If for a certain server you need username, add it using this:
+```yml
+[all]
+<ip address> ansible_user=your_username  # ← Add here
+```
+
 Create an ansible configuration file:
 
 ```yml
