@@ -73,6 +73,23 @@ It has three steps:
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/Network/image/how%20SSH%20works.gif">
 
+A ssh server must be running in an instance so it can accept ssh connections.
+
+### Commands
+
+Connecting to an instance:
+```bash
+ssh <username>@<ip address>
+```
+
+Adding key to an instance:
+```bash
+ssh -i <address to the corresponding private key to the added public key to the server> <username>@<ip address>
+```
+
+#### Running an ssh server
+It can be done with `systemctl` or `systemsetup`.
+
 ## IPv4 vs IPv6
 
 Two different generations of protocols.
