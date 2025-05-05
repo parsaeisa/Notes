@@ -97,8 +97,13 @@ remote_user = your_ssh_user
 
 Ping all hosts:
 
-```yml
+```bash
 ansible all -m ping
+```
+
+For trying with username:
+```bash
+ansible all -m ping -u <username>
 ```
 
 Run a command:
