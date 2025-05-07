@@ -396,7 +396,12 @@ If you want to use a new one we can create one by `ssh-keygen` command.
 
 But everytime (per each restart) we need pass our **private key** with ssh-add:
 ```bash
-ssh /path/to/private key
+ssh-add /path/to/private key
+```
+
+Or:
+```bash
+ssh -i <address to the corresponding private key to the added public key to the server> <username>@<ip address>
 ```
 
 ## tmux
