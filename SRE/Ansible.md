@@ -230,6 +230,33 @@ https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html
 There is a good ansible playbook in this link:
 https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_v2_module.html
 
+### Duplicated tasks
+
+For putting duplicated tasks in a single place, put your tasks in a single file, like this in a new file:
+```yml
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: Update apt and install docker-ce
+  apt:
+    name: docker-ce
+    state: latest
+    update_cache: true
+```
+
+Put this file in a directory called "roles" ( I think it's the convention ) then import it to your playbook with these:
+```yml
+- include_tasks: roles/install-docker.yml
+```
+
+In the same level with your tasks
 
 ## Ansible vault
 
