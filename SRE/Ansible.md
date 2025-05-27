@@ -66,14 +66,30 @@ the term databases appears on hosts in playbook.
 
 ## How to use? 
 
-```yml
-pip install ansible
-```
-
 Checking whether ansible is installed:
 
 ```yml
 ansible --version
+```
+
+```yml
+pip install ansible
+```
+
+** Don't bother yourself installing ansible. Use a python virtual environment**:
+```bash
+# Creating
+python3 -m venv your_env_name # It creates directory with you environments name
+
+# Activating
+source your_env_name/bin/activate
+```
+
+Then you are redirected to a virtual environemnt, install ansible there.
+
+For coming out:
+```bash
+deactivate
 ```
 
 Create a file called inventory.ini:
