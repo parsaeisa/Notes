@@ -169,6 +169,12 @@ One of those commands are:
 ```bash
 htpasswd -bnBC 10 "" "your_password" | tr -d ':\n'
 ```
+
+The other one is hashing wiht Argon algorithm ( used for passwords in directus databsae ):
+
+```bash
+echo -n 'yourpassword' | argon2 your_salt -id -t 3 -m 16 -p 4
+```
 ## netplan 
 
 I used it for setting new DNS servers. 
