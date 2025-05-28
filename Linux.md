@@ -160,6 +160,15 @@ parameters :
 parameters : 
 * complete it ...
 
+## Hashing
+
+Sometimes you need to hash some string to create mock data when you are testing a feature in a database. There are different hashing algorithms and find the command compatible to that algorithm. 
+
+One of those commands are:
+
+```bash
+htpasswd -bnBC 10 "" "your_password" | tr -d ':\n'
+```
 ## netplan 
 
 I used it for setting new DNS servers. 
