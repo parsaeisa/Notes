@@ -331,6 +331,8 @@ const user = User.withNamedParameters({
 });
 ```
 
+
+
 ### SwaggerAutogen
 
 For creating swagger for your project you use `swaggerAutogen` like this:
@@ -408,6 +410,22 @@ const intervalId = setInterval(() => {
 }, 5000);
 
 clearInterval(intervalId);
+```
+
+### test
+
+In js, Regex objects have a method called ".test()". This method gets an string as input and checks whether the string fits in that string or not.
+```javascript
+const sqlPattern = /some_regex_pattern/;  
+const isMalicious = sqlPattern.test(userInput); // Returns true/false
+
+sqlPattern.test("DROP TABLE users"); // Returns true (malicious)
+sqlPattern.test("Hello world");     // Returns false (safe)
+
+// For seeing the type:
+if (sqlPattern instanceof RegExp) {
+  sqlPattern.test(input);
+}
 ```
 
 # Typescript
