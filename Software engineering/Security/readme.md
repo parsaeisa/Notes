@@ -4,6 +4,12 @@ There is two stages while security scannings :
 * SAST : Statict application security testing , which is just applied on base codes .  
 * DAST : Dynamic application security testing which is applied on application after deployments . It needs a new server to deploy our application on . 
 
+## Some Terms
+
+**IPSec**: A set of encryption rules for ip packets. Two of it's most important components:
+- Authorization Header
+- Encapsulating security payload
+
 ## Some tools
 
 `kics` finds security vulnerabilities, compliance issues, and infrastructure misconfigurations .
