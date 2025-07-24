@@ -11,6 +11,7 @@ git clone https://github.com/wazuh/wazuh-docker.git -b v4.12.0
 cd wazuh-docker/single-node/
 # Creating certificates using a worker pod
 docker-compose -f generate-indexer-certs.yml run --rm generator
+# Running servers ( Wazuh manager, indexer and dashboard )
 docker-compose up -d
 ```
 
