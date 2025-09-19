@@ -14,6 +14,8 @@ You can add recrods with it manually or you can enable it's **API access** to au
 
 For API access, it has a document which lists all methods and their manual: https://www.namecheap.com/support/api/intro/
 
+It has methods for checking available domains, getting domain lists, Setting new hosts, etc.
+
 For adding a TXT record:
 
 ```bash
