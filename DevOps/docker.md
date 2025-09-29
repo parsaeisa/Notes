@@ -284,3 +284,10 @@ What is brige network at all ?
 ## Label
 
 I think docker assigns labels to it's running container. I don't know anything more. 
+
+## Containers life cycle
+
+There parameters can be added to any container in a docker compose file:
+
+- `stop_signal`: It tells Docker which signal to send first when stopping that container. By default it’s SIGTERM. Some processes (like Nginx, PostgreSQL, or your own app) may need a different one (e.g. SIGQUIT, SIGINT) to shut down gracefully.
+- `stop_grace_period`: It controls how long Docker waits after sending the stop signal before force-killing the container with SIGKILL.
