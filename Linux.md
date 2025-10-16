@@ -562,3 +562,23 @@ find /path/to/directory -type f | wc -l
 ```
 - `-type f`: Filters directories to only count files.
 - `wc -l`: Counts the number of files in output.
+
+## OpenSSL
+
+OpenSSL is a tool and library for creating and managing **cryptographic keys**, **certificates**, and **secure connections** (like HTTPS).
+
+Example — start a simple HTTPS server using OpenSSL:
+
+```bash
+# 1. Generate private key and certificate
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
+
+# 2. Start HTTPS server on port 4433
+openssl s_server -key key.pem -cert cert.pem -port 4433
+```
+
+Then you can connect securely using:
+
+```bash
+openssl s_client -connect localhost:4433
+```
