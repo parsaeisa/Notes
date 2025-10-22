@@ -239,6 +239,13 @@ Installing git:
         state: present
 ```
 
+### Installing collections
+
+e.g For installing `community.docker`:
+```yml
+ansible-galaxy collection install community.docker
+```
+
 ## Best pracitces
 
 https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html
