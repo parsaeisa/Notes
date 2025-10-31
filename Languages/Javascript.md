@@ -259,6 +259,16 @@ if(typeof a == "string"){
 }
 ```
 
+Possible values for it:
+- `string`    
+- `number`    
+- `boolean`   
+- `bigint`    
+- `symbol`    
+- `undefined` 
+- `object`    
+- `function`  
+
 ### Spread operator
 
 Spread operator is `...` that you see everywhere. 
