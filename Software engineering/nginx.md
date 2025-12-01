@@ -57,5 +57,14 @@ Reloading:
 sudo nginx -s reload
 ```
 
-If you see `include /etc/nginx/modules-enabled/*.conf;` at the beginning of `nginx.conf` file, after each reloading, Nginx automatically loads every `.conf` file which are inside `/etc/nginx/conf.d`.
+If you see `include /etc/nginx/conf.d/*.conf;` at the beginning of `nginx.conf` file, after each reloading, Nginx automatically loads every `.conf` file which are inside `/etc/nginx/conf.d`.
 
+Checking the syntax of configuration files:
+```bash
+nginx -t
+```
+
+The whole structure of Nginx (and what it's doing):
+```bash
+nginx -T
+```
