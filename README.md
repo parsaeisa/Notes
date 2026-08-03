@@ -2,8 +2,7 @@
 
 ### Topics:
 * [Software Engineering](https://github.com/parsaeisa/Notes/blob/main/Software%20engineering/readme.md)
-* [DevOps](https://github.com/parsaeisa/Notes/blob/main/DevOps/README.md)
-* [SRE](https://github.com/parsaeisa/Notes/blob/main/SRE/readme.md)
+* [Infrastructure](https://github.com/parsaeisa/Notes/tree/main/Infrastructure)
 * [Computer Vision](https://github.com/parsaeisa/Notes/blob/main/Computer%20vision/readme.MD)
 * [AI](https://github.com/parsaeisa/Notes/tree/main/AI)
 * [Languages](https://github.com/parsaeisa/Notes/blob/main/Languages/readme.MD)
