@@ -259,6 +259,16 @@ if(typeof a == "string"){
 }
 ```
 
+Possible values for it:
+- `string`    
+- `number`    
+- `boolean`   
+- `bigint`    
+- `symbol`    
+- `undefined` 
+- `object`    
+- `function`  
+
 ### Spread operator
 
 Spread operator is `...` that you see everywhere. 
@@ -300,7 +310,7 @@ myPromise
 
 Whenever the return type of a method is `Promise< any type(s)>`, I think the method should have `async` at first of it when you want to get those types (in `Promise`) you should probably forgot to put `await` at the beginning of calling this method.
 
-## Promise.resolve
+### Promise.resolve
 
 Apparently `Promise.resolve(value)` it has 3 applications:
 - When value is a promise
@@ -330,6 +340,8 @@ const user = User.withNamedParameters({
     phoneNumber: faker.phone.number("+49 91 ### ## ##"),
 });
 ```
+
+
 
 ### SwaggerAutogen
 
@@ -397,6 +409,40 @@ To see how many times a method was called:
 expect(yourMethodMock.mock.calls.length).toBe(0);
 ```
 
+## Profiling
+
+There are couple of ways to profile a test which is taking a long time. One of those is ways is installing 
+
+```bash
+npm install --save-dev jest-slow-test-reporter
+```
+
+Then add this to `jest.config.js` file :
+```javascript
+reporters: [
+        'default',
+        ['jest-slow-test-reporter', { "numTests": 10, "warnOnExceeded": true }]
+    ]
+```
+
+The result should look like this:
+```javascript
+/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+module.exports = {
+	preset: "ts-jest",
+	testEnvironment: "node",
+	modulePathIgnorePatterns: ["dist"],
+	coverageProvider: "v8",
+	testTimeout: 15000,
+	reporters: [
+        'default',
+        ['jest-slow-test-reporter', { "numTests": 10, "warnOnExceeded": true }]
+    ]
+};
+```
+
+Then just run tests and you see 10 tests which go the longest time. 
+
 ## Built-in methods
 
 ### Interval
@@ -408,6 +454,22 @@ const intervalId = setInterval(() => {
 }, 5000);
 
 clearInterval(intervalId);
+```
+
+### test
+
+In js, Regex objects have a method called ".test()". This method gets an string as input and checks whether the string fits in that string or not.
+```javascript
+const sqlPattern = /some_regex_pattern/;  
+const isMalicious = sqlPattern.test(userInput); // Returns true/false
+
+sqlPattern.test("DROP TABLE users"); // Returns true (malicious)
+sqlPattern.test("Hello world");     // Returns false (safe)
+
+// For seeing the type:
+if (sqlPattern instanceof RegExp) {
+  sqlPattern.test(input);
+}
 ```
 
 # Typescript
@@ -427,3 +489,7 @@ const var_name: <vartype> = <value>;
 
 It is a Node.js tool that allows you to directly run TypeScript 
 files without needing to compile them to JavaScript first. It acts as both a runtime and a **REPL (Read-Eval-Print Loop)** for TypeScript.
+
+## Security
+
+### Sgining and verifying

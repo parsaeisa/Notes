@@ -23,6 +23,11 @@ const fs = require('fs');
 
 Although javascript has an event loop and is running on one thread, the Node.js has some worker threads which can do something in background but their communication is limited. 
 
+**global and globalThis**: 
+In Node.js, global is the object that holds globals (like setTimeout, Buffer, etc.). In browsers, it’s window.
+
+To unify this, JavaScript introduced globalThis → a standard way to reference the global object across environments. Use globalThis instead of global. It’s more portable and standard.
+
 ## Files
 
 #### `package.json`

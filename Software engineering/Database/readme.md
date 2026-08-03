@@ -43,8 +43,11 @@ But sometimes we need these actions in our query. So there must be a way to simu
 
 We use **Bulk** term when we want to insert or read high count of records to or from a database.
 
-#### Chunkenized
+#### Pagination
+
 I think this is using `limit` and `offset` in query.
+
+And I've heard one other thing called **cursor based**. Which I don't know what it is.
 
 #### Select for update
 

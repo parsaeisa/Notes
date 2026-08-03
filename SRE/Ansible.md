@@ -66,14 +66,30 @@ the term databases appears on hosts in playbook.
 
 ## How to use? 
 
-```yml
-pip install ansible
-```
-
 Checking whether ansible is installed:
 
 ```yml
 ansible --version
+```
+
+```yml
+pip install ansible
+```
+
+** Don't bother yourself installing ansible. Use a python virtual environment**:
+```bash
+# Creating
+python3 -m venv your_env_name # It creates directory with you environments name
+
+# Activating
+source your_env_name/bin/activate
+```
+
+Then you are redirected to a virtual environemnt, install ansible there.
+
+For coming out:
+```bash
+deactivate
 ```
 
 Create a file called inventory.ini:
@@ -87,6 +103,12 @@ Create a file called inventory.ini:
 192.168.1.200
 ```
 
+If for a certain server you need username, add it using this:
+```yml
+[all]
+<ip address> ansible_user=your_username  # ← Add here
+```
+
 Create an ansible configuration file:
 
 ```yml
@@ -97,8 +119,13 @@ remote_user = your_ssh_user
 
 Ping all hosts:
 
-```yml
+```bash
 ansible all -m ping
+```
+
+For trying with username:
+```bash
+ansible all -m ping -u <username>
 ```
 
 Run a command:
@@ -212,6 +239,13 @@ Installing git:
         state: present
 ```
 
+### Installing collections
+
+e.g For installing `community.docker`:
+```yml
+ansible-galaxy collection install community.docker
+```
+
 ## Best pracitces
 
 https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html
@@ -219,6 +253,33 @@ https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html
 There is a good ansible playbook in this link:
 https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_v2_module.html
 
+### Duplicated tasks
+
+For putting duplicated tasks in a single place, put your tasks in a single file, like this in a new file:
+```yml
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: Update apt and install docker-ce
+  apt:
+    name: docker-ce
+    state: latest
+    update_cache: true
+```
+
+Put this file in a directory called "roles" ( I think it's the convention ) then import it to your playbook with these:
+```yml
+- include_tasks: roles/install-docker.yml
+```
+
+In the same level with your tasks
 
 ## Ansible vault
 

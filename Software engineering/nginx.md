@@ -1,4 +1,4 @@
-# Nginx
+# NGINX
 
 nginx applications : 
 * high-performance webserver
@@ -48,3 +48,23 @@ It can offload the decryption process from backend services. Requests are sendin
 ## Architecture
 
 It follows a master-worker process model. The master process is responsible for reading the configuration and managing worker processes. Worker processes handle incoming connections using an event-driven non-blocking I/O model.
+
+
+## Working with it
+
+Reloading:
+```bash
+sudo nginx -s reload
+```
+
+If you see `include /etc/nginx/conf.d/*.conf;` at the beginning of `nginx.conf` file, after each reloading, Nginx automatically loads every `.conf` file which are inside `/etc/nginx/conf.d`.
+
+Checking the syntax of configuration files:
+```bash
+nginx -t
+```
+
+The whole structure of Nginx (and what it's doing):
+```bash
+nginx -T
+```
