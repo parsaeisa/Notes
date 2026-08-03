@@ -42,8 +42,8 @@ By Gemini. I think very **RAW**.
 ## Some tools
 
 Platform Engineering Strategy & Architecture:
-> A Platform Engineer's core responsibility is to consolidate the entire ecosystem of Cloud and DevOps tools under one roof, building an automated, self-service abstraction layer over them.
-> Therefore, a Platform Engineer must master and integrate tools across three key domains:
-> 1. **Infrastructure & Cloud Ecosystem (Cloud/IaC):** AWS, Azure, Terraform, Pulumi, Crossplane.
-> 2. **Deployment & Containerization Ecosystem (DevOps/GitOps):** Kubernetes, Docker, Helm, ArgoCD, FluxCD.
-> 3. **Developer Experience & Portal Ecosystem (Platform/DevEx):** Backstage, Port, Cortex, HashiCorp Vault.
+A Platform Engineer's core responsibility is to consolidate the entire ecosystem of Cloud and DevOps tools under one roof, building an automated, self-service abstraction layer over them.
+Therefore, a Platform Engineer must master and integrate tools across three key domains:
+1. **Infrastructure & Cloud Ecosystem (Cloud/IaC):** AWS, Azure, Terraform, Pulumi, Crossplane.
+2. **Deployment & Containerization Ecosystem (DevOps/GitOps):** Kubernetes, Docker, Helm, ArgoCD, FluxCD.
+3. **Developer Experience & Portal Ecosystem (Platform/DevEx):** Backstage, Port, Cortex, HashiCorp Vault.
