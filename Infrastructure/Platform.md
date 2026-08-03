@@ -26,3 +26,15 @@ By Gemini. I think very **RAW**.
 **Step 4: Infrastructure Provisioning & Cloud Extension Layer (2 Weeks)**
 * **Goal:** Provision cloud infrastructure programmatically and manage cloud resources natively inside Kubernetes.
 * **Key Focus:** Learn **Terraform** (Infrastructure as Code) and **Crossplane** (Kubernetes Control Plane extension) via **KodeKloud** or dedicated online labs.
+
+## Some key Platform Engineering Considerations
+
+**Security & Secrets Management (Least Privilege):** Enforce strict IAM roles so the control plane (e.g., Crossplane) has minimal cloud permissions. Ensure generated credentials and connection secrets are automatically injected into secure vaults (e.g., HashiCorp Vault or Kubernetes Secrets), never exposed in Git or plain text.
+
+**Network Isolation & Safeguards:** Automate VPC/subnet placement and security group rules so resources (e.g., databases) are strictly private without public IP exposure.
+
+**Governance & Cost Control (FinOps):** Set guardrails and resource quotas (e.g., maximum instance sizes or storage limits) to prevent over-spending. Implement automatic cleanup/TTL policies for non-production environments.
+
+**Reliability & Environment Drift:** Enforce multi-AZ deployment and automated backups for Production by default, while spinning up cost-effective, single-instance resources for Dev/Test environments.
+
+**Automated Day-2 Operations (Observability):** Ensure every auto-provisioned resource automatically connects to central monitoring tools (e.g., Prometheus/Grafana) for metrics and logging without manual setup.
