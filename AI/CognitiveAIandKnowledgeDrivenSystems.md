@@ -20,6 +20,7 @@ flowchart TB
 - Inference & Reasoning: Rule engines embedded in Triple Stores (e.g., GraphDB, Apache Jena) that automatically deduce implicit facts from explicit data and ontological rules.
 
 ### RDF Triples vs. Semantic Data Models (Ontologies)
+When automotive or engineering companies refer to **Semantic Data Models**, they don't just mean storing raw RDF triples in a database. They mean having a **rigorous, rule-based ontology** that models domain logic and dependencies, allowing both automated reasoning engines and LLMs/VLMs to interpret technical engineering systems deterministically without ambiguity.
 
 > **Analogy:** **RDF Triples** are the *building blocks (bricks)*, while **Ontologies / Semantic Data Models** are the *architectural blueprint and structural rules*.
 
@@ -36,11 +37,3 @@ flowchart TB
 * **Controlled Vocabularies & Taxonomies:** Standardized entity names and class hierarchies (e.g., `BrakeSensor` is a subclass of `SafetyComponent`).
 * **Relationship Definitions:** Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
 * **Logical Axioms & Reasoning:** Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
-
-
-
----
-
-### 💡 Summary for Industrial Context (e.g., BMW / Bosch)
-
-When automotive or engineering companies refer to **Semantic Data Models**, they don't just mean storing raw RDF triples in a database. They mean having a **rigorous, rule-based ontology** that models domain logic and dependencies, allowing both automated reasoning engines and LLMs/VLMs to interpret technical engineering systems deterministically without ambiguity.
