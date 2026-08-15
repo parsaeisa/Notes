@@ -34,6 +34,6 @@ When automotive or engineering companies refer to **Semantic Data Models**, they
 
 * **What they are:** Formal specifications (defined using **RDFS** or **OWL**) that define the classes, properties, hierarchy, and logical constraints governing the triples.
 * **Core Components:**
-* **Controlled Vocabularies & Taxonomies:** Standardized entity names and class hierarchies (e.g., `BrakeSensor` is a subclass of `SafetyComponent`).
-* **Relationship Definitions:** Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
-* **Logical Axioms & Reasoning:** Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
+    * Controlled Vocabularies & Taxonomies: Standardized entity names and class hierarchies (e.g., `BrakeSensor` is a subclass of `SafetyComponent`).
+    * Relationship Definitions: Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
+    * Logical Axioms & Reasoning: Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
