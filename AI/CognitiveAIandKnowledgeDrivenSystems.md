@@ -2,17 +2,17 @@
 
 ## Semantic Web Stack
 
-+-------------------------------------------------------------+
-|               Reasoning & Logic (Inference)                 |
-+-------------------------------------------------------------+
-|             Ontologies (OWL - Web Ontology Language)        |
-+-------------------------------------------------------------+
-|         Query Language (SPARQL) & Schemas (RDFS)            |
-+-------------------------------------------------------------+
-|        Data Representation (RDF - Triples: S-P-O)           |
-+-------------------------------------------------------------+
-|      Identifiers & Standards (URIs / IRIs, XML, JSON-LD)    |
-+-------------------------------------------------------------+
++-------------------------------------------------------+
+|            Reasoning & Logic (Inference)              |
++-------------------------------------------------------+
+|          Ontologies (OWL - Web Ontology Language)     |
++-------------------------------------------------------+
+|      Query Language (SPARQL) & Schemas (RDFS)         |
++-------------------------------------------------------+
+|     Data Representation (RDF - Triples: S-P-O)        |
++-------------------------------------------------------+
+|   Identifiers & Standards (URIs / IRIs, XML, JSON-LD) |
++-------------------------------------------------------+
 
 - Unique Identifiers (URIs / IRIs): Provide unambiguous, global identifiers for entities, concepts, and relationships
 - Resource Description Framework (RDF): The standard graph data model that represents facts as structured triples: $\text{(Subject} \rightarrow \text{Predicate} \rightarrow \text{Object)}$.
