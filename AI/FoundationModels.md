@@ -49,3 +49,8 @@ Understanding standard tasks is essential for the evaluation and implementation 
 * **Visual Grounding / Object Detection:** Detecting entities and outputting coordinates (Bounding Boxes) in text format.
 * **Document AI & OCR:** Extracting text, tables, and diagrams from documents, invoices, and PDF files (DocVQA).
 * **Multimodal RAG:** Retrieving and processing textual and visual documents concurrently.
+
+## Finetuning
+
+It is a **counterpart** to GraphRAGs.
+PEFT - LORA - QLoRA
