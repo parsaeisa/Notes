@@ -6,6 +6,10 @@ Rather than training neural networks from scratch, modern industrial AI Engineer
 
 An AI Engineer doesn't train a model from scratch.
 
+## Orchestration Tools
+
+LangChain, LlamaIndex
+
 ## ByteByteGo
 
 ### Top 12 Agent Skills You Should Know
