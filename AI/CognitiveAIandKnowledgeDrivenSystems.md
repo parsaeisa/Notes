@@ -37,3 +37,18 @@ When automotive or engineering companies refer to **Semantic Data Models**, they
     * Controlled Vocabularies & Taxonomies: Standardized entity names and class hierarchies (e.g., `BrakeSensor` is a subclass of `SafetyComponent`).
     * Relationship Definitions: Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
     * Logical Axioms & Reasoning: Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
+
+## Different Graph DBs
+Graph databases are broadly divided into dozens of implementations across two primary architectural paradigms:
+
+* **Labeled Property Graphs (LPG):** **Neo4j** is the most prominent engine in this category, utilizing the **Cypher** query language rather than the RDF standard. Other notable LPG engines include **Amazon Neptune**, **Memgraph**, and **TigerGraph**.
+* **Semantic Web Graph Stores (RDF Triplestores):** These natively adhere to the **W3C RDF** standard and utilize **SPARQL** for querying, which matches the requirements of your project. Key implementations include:
+* **Ontotext GraphDB** (the specific enterprise product bearing this name)
+* **Apache Jena (TDB / Fuseki)**
+* **OpenLink Virtuoso**
+* **Blazegraph**
+* **Stardog**
+
+
+
+In summary, while Neo4j is indeed a graph database, it belongs to the LPG category and does not natively run SPARQL. For a Knowledge-Grounded Multimodal RAG pipeline built on RDF specifications, **Ontotext GraphDB** or **Apache Jena** is the standard choice.
