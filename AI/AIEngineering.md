@@ -6,6 +6,12 @@ Rather than training neural networks from scratch, modern industrial AI Engineer
 
 An AI Engineer doesn't train a model from scratch.
 
+New terms:
+- Prompt Engineering
+- Context Engineering: I think it has Tool calling, MCP and RAG around the prompt engineering
+    - Context window
+- Agent Harness
+
 ## Orchestration Tools
 
 LangChain, LlamaIndex
