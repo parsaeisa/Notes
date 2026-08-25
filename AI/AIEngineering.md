@@ -12,9 +12,10 @@ New terms:
     - Context window
 - Agent Harness
 
-## Orchestration Tools
+## Tools
 
-LangChain, LlamaIndex
+LangChain, LlamaIndex: Orchestration Tools
+Ollama: Deploying tools
 
 ## ByteByteGo
 
