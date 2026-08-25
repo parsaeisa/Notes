@@ -15,6 +15,7 @@ New terms:
 ## Tools
 
 LangChain, LlamaIndex: Orchestration Tools
+
 Ollama: Deploying tools
 
 ## ByteByteGo
