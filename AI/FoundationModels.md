@@ -32,33 +32,33 @@ The most well-known and widely used open-source / open-weight Large Language Mod
 Leading Open-Source Vision-Language Models (VLMs)
 
 * Qwen-VL Family (Alibaba):
-* Models: Qwen2-VL, Qwen2.5-VL (2B, 7B, 72B)
-* Significance: Industry benchmark for image understanding, long video processing, native dynamic resolution, and DocVQA.
+    * Models: Qwen2-VL, Qwen2.5-VL (2B, 7B, 72B)
+    * Significance: Industry benchmark for image understanding, long video processing, native dynamic resolution, and DocVQA.
 
 
 * LLaVA Family (Community / Open-Source):
-* Models: LLaVA-1.5, LLaVA-NeXT (LLaMA/Mistral/Qwen backbones)
-* Significance: Standard reference architecture for linear MLP projection and academic baselines.
+    * Models: LLaVA-1.5, LLaVA-NeXT (LLaMA/Mistral/Qwen backbones)
+    * Significance: Standard reference architecture for linear MLP projection and academic baselines.
 
 
 * Pixtral Family (Mistral AI):
-* Models: Pixtral 12B, Pixtral Large
-* Significance: High inference speed, native variable aspect ratios, and efficient multimodal tokenization.
+    * Models: Pixtral 12B, Pixtral Large
+    * Significance: High inference speed, native variable aspect ratios, and efficient multimodal tokenization.
 
 
 * InternVL Family (OpenGVLab):
-* Models: InternVL 2.0 / 2.5 (1B to 78B)
-* Significance: Top-tier multimodal reasoning and heavy visual task performance across benchmarks.
+    * Models: InternVL 2.0 / 2.5 (1B to 78B)
+    * Significance: Top-tier multimodal reasoning and heavy visual task performance across benchmarks.
 
 
 * PaliGemma Family (Google):
-* Models: PaliGemma 1 / 2 (3B, 10B, 28B; SigLIP + Gemma)
-* Significance: Optimized for foundational tasks including captioning, object detection, and visual question answering.
+    * Models: PaliGemma 1 / 2 (3B, 10B, 28B; SigLIP + Gemma)
+    * Significance: Optimized for foundational tasks including captioning, object detection, and visual question answering.
 
 
 * SmolVLM / Idefics (Hugging Face):
-* Models: SmolVLM (<3B), Idefics 3
-* Significance: Ultra-lightweight and efficient for local hardware and on-device deployment.
+    * Models: SmolVLM (<3B), Idefics 3
+    * Significance: Ultra-lightweight and efficient for local hardware and on-device deployment.
 
 VLM Implementation Complexity for Student & Research Projects:
 
