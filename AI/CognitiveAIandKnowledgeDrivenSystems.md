@@ -52,3 +52,24 @@ Graph databases are broadly divided into dozens of implementations across two pr
 
 
 In summary, while Neo4j is indeed a graph database, it belongs to the LPG category and does not natively run SPARQL. For a Knowledge-Grounded Multimodal RAG pipeline built on RDF specifications, **Ontotext GraphDB** or **Apache Jena** is the standard choice.
+
+## Open source vehicle related ontologies and knowledge bases
+
+Several standardized and open-source ontologies and knowledge bases are widely utilized in academic research and graduate theses within the automotive domain:
+### 1. Open and Standard Automotive Ontologies
+
+* **VSSo (Vehicle Signal Specification Ontology):** A standard ontology developed by the W3C and COVESA to model vehicle signals, sensor data, and internal vehicle telemetry in OWL/RDF format.
+* **Auto (Automotive Ontology):** An ontology developed on top of schema.org for the structured representation of technical specifications, mechanical components, powertrain variants, automotive models, and vehicle body classifications.
+* **Car Ontology (W3C / GoodRelations):** A formal vocabulary designed to model detailed technical specifications, commercial configurations, and physical attributes of automobiles.
+
+### 2. General Public Knowledge Bases
+
+* **Automotive Subgraphs in DBpedia and Wikidata:** Triples connected to the `dbo:Automobile` class hierarchy, including component classifications, standardized failure modes, and brand-specific technical specifications, retrievable via public SPARQL endpoints.
+
+### Exemplary Academic Project Scenario
+
+A representative methodology for academic and research evaluation involves the following pipeline:
+
+* **Domain Definition:** Automotive fault diagnostics or technical specification recommendation systems.
+* **Knowledge Graph Architecture:** Modeling and storing explicit relationships between observed failure symptoms, Diagnostic Trouble Codes (DTC / OBD-II), and mechanical/electrical components as RDF triples in GraphDB.
+* **Role of the MCP Server:** Upon receiving a natural language diagnostic query, the Model Context Protocol (MCP) server formulates and executes the corresponding SPARQL query against the triplestore, retrieving deterministic semantic relations to ground the reasoning of the Large Language Model (LLM) within rigorous engineering specifications.
