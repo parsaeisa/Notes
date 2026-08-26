@@ -1,6 +1,9 @@
 # Automated Driving
 
 The whole system architecture:
+<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/autonomous-driving-architecture.png">
+
+With more detail:
 ```mermaid
 flowchart TD
     %% Subgraphs / Layers
@@ -58,8 +61,6 @@ flowchart TD
     class S1,S2,S3,S4,S5,HDMap,DeadReck,Det,Track,Pred,RoutePlan,BehavPlan,MotionPlan,Controllers,Actuators defaultNode;
     class L1,L2,L2_Loc,L2_Dyn,L3,L4 layerBox;
 ```
-
-<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/autonomous-driving-architecture.png">
 
 1. **Sensing Layer:** Raw data acquisition from physical sensors (LiDAR, Cameras, Radar, IMU, GNSS).
 2. **Perception & State Estimation Layer:**
