@@ -60,21 +60,37 @@ flowchart TD
 ```
 
 +-------------------------------------------------------------------------------+
+
 |                       Autonomous Driving Software Stack                       |
+
 |                                                                               |
+
 |  +--------------------+   +-----------------------+   +--------------------+  |
+
 |  | 1. SENSING         |   | 2. PERCEPTION & STATE |   | 3. PLANNING        |  |
+
 |  | - Raw LiDAR        |   | - Localization & MAP  |   | - Behavior Planner |  |
+
 |  | - Cameras / Radar  |   |   * SLAM (Simult. ...) |   | - Motion / Traject.|  |
+
 |  | - IMU / Wheel Odom |   |   * HD-Map Matching   |   +--------------------+  |
+
 |  | - GNSS / RTK       |   | - Object Detection    |             |             |
+
 |  +--------------------+   | - Tracking & Predict. |             v             |
+
 |             |             +-----------------------+   +--------------------+  |
+
 |             +------------------->   |                 | 4. CONTROL / ACT.  |  |
+
 |                                     v                 | - MPC / PID        |  |
+
 |                         (Ego-Vehicle Pose + World)    | - Throttle/Steer   |  |
+
 |                                                       +--------------------+  |
+
 +-------------------------------------------------------------------------------+
+
 
 1. **Sensing Layer:** Raw data acquisition from physical sensors (LiDAR, Cameras, Radar, IMU, GNSS).
 2. **Perception & State Estimation Layer:**
