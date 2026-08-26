@@ -59,3 +59,26 @@ flowchart TD
     class L1,L2,L2_Loc,L2_Dyn,L3,L4 layerBox;
 ```
 
++-------------------------------------------------------------------------------+
+|                       Autonomous Driving Software Stack                       |
+|                                                                               |
+|  +--------------------+   +-----------------------+   +--------------------+  |
+|  | 1. SENSING         |   | 2. PERCEPTION & STATE |   | 3. PLANNING        |  |
+|  | - Raw LiDAR        |   | - Localization & MAP  |   | - Behavior Planner |  |
+|  | - Cameras / Radar  |   |   * SLAM (Simult. ...) |   | - Motion / Traject.|  |
+|  | - IMU / Wheel Odom |   |   * HD-Map Matching   |   +--------------------+  |
+|  | - GNSS / RTK       |   | - Object Detection    |             |             |
+|  +--------------------+   | - Tracking & Predict. |             v             |
+|             |             +-----------------------+   +--------------------+  |
+|             +------------------->   |                 | 4. CONTROL / ACT.  |  |
+|                                     v                 | - MPC / PID        |  |
+|                         (Ego-Vehicle Pose + World)    | - Throttle/Steer   |  |
+|                                                       +--------------------+  |
++-------------------------------------------------------------------------------+
+
+1. **Sensing Layer:** Raw data acquisition from physical sensors (LiDAR, Cameras, Radar, IMU, GNSS).
+2. **Perception & State Estimation Layer:**
+   * **Localization & Mapping:** Determining exact vehicle pose via **SLAM** or **HD-Map Matching**.
+   * **Dynamic Perception:** 3D object detection, multi-object tracking, and trajectory prediction.
+3. **Planning Layer:** Behavioral decision-making and optimal collision-free path/trajectory generation.
+4. **Control & Actuation Layer:** Executing steering, throttle, and brake commands (e.g., via MPC/PID controllers) to track planned trajectories.
