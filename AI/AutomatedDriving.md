@@ -59,38 +59,7 @@ flowchart TD
     class L1,L2,L2_Loc,L2_Dyn,L3,L4 layerBox;
 ```
 
-+-------------------------------------------------------------------------------+
-
-|                       Autonomous Driving Software Stack                       |
-
-|                                                                               |
-
-|  +--------------------+   +-----------------------+   +--------------------+  |
-
-|  | 1. SENSING         |   | 2. PERCEPTION & STATE |   | 3. PLANNING        |  |
-
-|  | - Raw LiDAR        |   | - Localization & MAP  |   | - Behavior Planner |  |
-
-|  | - Cameras / Radar  |   |   * SLAM (Simult. ...) |   | - Motion / Traject.|  |
-
-|  | - IMU / Wheel Odom |   |   * HD-Map Matching   |   +--------------------+  |
-
-|  | - GNSS / RTK       |   | - Object Detection    |             |             |
-
-|  +--------------------+   | - Tracking & Predict. |             v             |
-
-|             |             +-----------------------+   +--------------------+  |
-
-|             +------------------->   |                 | 4. CONTROL / ACT.  |  |
-
-|                                     v                 | - MPC / PID        |  |
-
-|                         (Ego-Vehicle Pose + World)    | - Throttle/Steer   |  |
-
-|                                                       +--------------------+  |
-
-+-------------------------------------------------------------------------------+
-
+<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/autonomous-driving-architecture.png">
 
 1. **Sensing Layer:** Raw data acquisition from physical sensors (LiDAR, Cameras, Radar, IMU, GNSS).
 2. **Perception & State Estimation Layer:**
