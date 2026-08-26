@@ -73,3 +73,21 @@ A representative methodology for academic and research evaluation involves the f
 * **Domain Definition:** Automotive fault diagnostics or technical specification recommendation systems.
 * **Knowledge Graph Architecture:** Modeling and storing explicit relationships between observed failure symptoms, Diagnostic Trouble Codes (DTC / OBD-II), and mechanical/electrical components as RDF triples in GraphDB.
 * **Role of the MCP Server:** Upon receiving a natural language diagnostic query, the Model Context Protocol (MCP) server formulates and executes the corresponding SPARQL query against the triplestore, retrieving deterministic semantic relations to ground the reasoning of the Large Language Model (LLM) within rigorous engineering specifications.
+
+## Advanced RAG \ Naive RAG
+* **Naive RAG (Traditional / Baseline Retrieval):** A straightforward linear pipeline that embeds the user query, performs vector similarity search against a Vector DB, and passes the top-$K$ chunks directly to the LLM. While simple to implement, it often introduces high noise, struggles with multi-hop reasoning, and overlooks structured entity relationships.
+
+* **Advanced RAG (Modular & Grounded Orchestration):** An enhanced paradigm that transforms the linear retrieval process into an intelligent, structured, and multi-stage workflow. It integrates semantic knowledge structures, agentic decision-making, and pre/post-retrieval optimizations to guarantee deterministic, hallucination-free generation.
+
+### Four Core Architectural Archetypes of Advanced RAG
+* **1. GraphRAG (Knowledge-Grounded Retrieval):**
+Combines vector search with structured Knowledge Graphs (RDF/SPARQL or property graphs like Neo4j). It enables multi-hop reasoning across complex entity hierarchies and grounds generation in domain ontologies to eliminate factual hallucinations.
+
+* **2. Agentic RAG (Dynamic & Multi-Step Orchestration):**
+Employs the LLM as an autonomous agent to evaluate query intent dynamically. It autonomously decomposes complex questions into sub-tasks, performs iterative searches, and calls external tools/databases via protocols like MCP.
+
+* **3. Modular RAG (Pre-Retrieval & Post-Retrieval Pipeline):**
+Refines the end-to-end retrieval stages independently. It applies **Pre-retrieval** transformations (such as Query Expansion, HyDE, or Sub-query decomposition) and **Post-retrieval** refinements (such as neural Rerankers and context summarization) to maximize information density before reaching the generator.
+
+* **4. Self-Reflective / Corrective RAG (CRAG & Self-RAG):**
+Embeds automated evaluation loops into the retrieval cycle. An evaluator model evaluates whether the retrieved passages are relevant and factual; if retrieval quality falls below a threshold, the system triggers corrective query reformulations or falls back to supplementary web search.
