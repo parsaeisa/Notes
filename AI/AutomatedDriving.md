@@ -1,6 +1,7 @@
 # Automated Driving
 
 The whole system architecture:
+
 <img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/autonomous-driving-architecture.png">
 
 With more detail:
