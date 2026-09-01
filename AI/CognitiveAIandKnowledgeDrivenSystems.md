@@ -65,6 +65,8 @@ Decoupling of the Offline Phase (Knowledge Base Preparation) and the Online Phas
     * Step 4 (Graph Retrieval): The generated query is executed against GraphDB to retrieve relevant relational triples linked to the visual input in real time.
     * Step 5 (Grounded Response Generation): Conditioning on the augmented prompt (comprising the input image, user question, and retrieved triples), the model generates the grounded, verified final response within the same inference phase.
 
+**Prompt engineering** is designing prompts when we are talking to LLM/VLM model. This happens **2 times** in the pipeline. First is when we are getting SPARQL queries to send them to GraphDB and the second is when we got the answer from GraphDB and we want to tell LLM/VLM instructions on how to work with this answer.
+
 ### Different Graph DBs
 Graph databases are broadly divided into dozens of implementations across two primary architectural paradigms:
 
