@@ -2,6 +2,7 @@
 
 ## Semantic Web Stack
 
+Inside the GraphDB engine:
 ```mermaid
 flowchart TB
     A["Reasoning & Logic (Inference)"]
@@ -38,7 +39,32 @@ When automotive or engineering companies refer to **Semantic Data Models**, they
     * Relationship Definitions: Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
     * Logical Axioms & Reasoning: Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
 
-## Different Graph DBs
+## Implementation
+
+The RAG application pipeline:
+```mermaid
+flowchart TB
+    A["User: With image & question"]
+    B["VLM: Sees image and creates a SPARQL query"]
+    C["Python script sends this query to GraphDB"]
+    D["GraphDB sends the answer of the query"]
+    A --> B --> C --> D --> B
+```
+
+The whole pipeline:
+Decoupling of the Offline Phase (Knowledge Base Preparation) and the Online Phase (Inference)
+
+* Offline Phase / Knowledge Base Preparation:
+    * Step 1 (Knowledge Graph Construction): This phase consists purely of constructing, structuring, and ingesting RDF knowledge triples into GraphDB (without updating model weights). This process is executed once offline to establish the non-parametric memory of the architecture.
+
+
+* Online Phase / Real-Time Inference Pipeline:
+    * Step 2 (Entity Extraction): Upon receiving a new image and query, the pre-trained Vision-Language Model (e.g., Qwen2-VL) extracts visual concepts and grounded entities during the forward inference pass.
+    * Step 3 (SPARQL Query Generation): The model or pipeline dynamically constructs the corresponding SPARQL query via in-context prompting strategies (such as Few-Shot In-Context Learning).
+    * Step 4 (Graph Retrieval): The generated query is executed against GraphDB to retrieve relevant relational triples linked to the visual input in real time.
+    * Step 5 (Grounded Response Generation): Conditioning on the augmented prompt (comprising the input image, user question, and retrieved triples), the model generates the grounded, verified final response within the same inference phase.
+
+### Different Graph DBs
 Graph databases are broadly divided into dozens of implementations across two primary architectural paradigms:
 
 * **Labeled Property Graphs (LPG):** **Neo4j** is the most prominent engine in this category, utilizing the **Cypher** query language rather than the RDF standard. Other notable LPG engines include **Amazon Neptune**, **Memgraph**, and **TigerGraph**.
