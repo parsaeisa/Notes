@@ -49,6 +49,7 @@ flowchart TB
     C["Python script sends this query to GraphDB"]
     D["GraphDB sends the answer of the query"]
     A --> B --> C --> D --> B
+    B --> A
 ```
 
 The whole pipeline:
