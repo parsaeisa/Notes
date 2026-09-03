@@ -22,6 +22,9 @@ New terms:
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/5%20AI%20terms%20you%20should%20know.png">
 
+### MCP vs RAG vs AI Agent
+<img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/MCP%20vs%20RAG%20vs%20AI%20Agent.png">
+
 ## Tools
 
 LangChain, LlamaIndex: Orchestration Tools
