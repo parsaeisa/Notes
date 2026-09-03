@@ -27,6 +27,9 @@ New terms:
 LangChain, LlamaIndex: Orchestration Tools
 - LlamaIndex: A Data and AI orchestration tool which loads documents (PDFs, Databases), turns them into vectors, indexes them and connects them to LLMs/VLMs.
 
+Evaluation Tools: TruLens & Ragas
+Document processing & Conversion: Docling, Marker
+
 Ollama: Deploying tools
 
 ## 🤖 Top 5 Industrial AI Agent Archetypes Built by AI Engineers
