@@ -25,6 +25,17 @@ New terms:
 ### MCP vs RAG vs AI Agent
 <img src="https://github.com/parsaeisa/Notes/blob/main/AI/Image/MCP%20vs%20RAG%20vs%20AI%20Agent.png">
 
+| Dimension | AI Agent | Model Context Protocol (MCP) |
+| :--- | :--- | :--- |
+| **Core Nature** | Autonomous decision-maker & reasoning entity (LLM-driven brain)[cite: 1, 2]. | Open, standardized communication protocol & interface layer (middleware)[cite: 1, 2]. |
+| **Primary Role** | Multi-step planning, state management, reflection, and dynamic goal execution[cite: 1, 2]. | Exposing structured tools, resources, and contexts across systems via a universal schema[cite: 1, 2]. |
+| **Focus** | **"What"** action to take next based on logic and context[cite: 2]. | **"How"** tools and host applications connect without custom glue code[cite: 1, 2]. |
+
+#### The Driving Analogy
+
+* **The AI Agent is the Driver:** It observes the road, evaluates conditions, plans routes, decides when to accelerate or brake, and navigates obstacles dynamically.
+* **MCP is the Cockpit Interface (Steering Wheel, Pedals & Gearbox):** Standardized, uniform mechanical interfaces that connect the driver's intent to the car’s underlying hardware. Regardless of whether the car runs on petrol or electricity, the pedals and steering wheel operate identically, preventing the driver from needing to rewire the engine just to steer.
+
 ## Tools
 
 LangChain, LlamaIndex: Orchestration Tools
