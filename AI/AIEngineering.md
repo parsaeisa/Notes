@@ -82,6 +82,79 @@ Document processing & Conversion: Docling, Marker
 
 Ollama: Deploying tools
 
+## Prompt-Engineering Example
+
+In production automotive systems such as Mercedes-Benz MBUX, prompt engineering grounds free-form speech into structured, safety-constrained API calls for vehicle electronic control units (ECUs).
+
+**Raw Driver Input:**
+
+> "It's freezing in here! Also, find a gas station along the route that has premium fuel."
+
+Sending this input without conditioning produces conversational text unsuitable for real-time vehicular control. A system prompt establishes strict functional constraints:
+
+Engineered System Prompt:
+```text
+[SYSTEM]
+You are the MBUX in-cabin orchestrator for a Mercedes-Benz vehicle.
+Your goal is to parse natural-language driver intents into discrete, validated vehicle control API calls.
+
+CRITICAL CONSTRAINTS:
+1. Output ONLY a valid JSON object matching the defined schema. No conversational filler, no markdown wrapping outside the JSON.
+2. Safety Priority: Never adjust parameters beyond physical safety thresholds (HVAC bounds: 16.0°C to 28.0°C).
+3. Ambiguity Handling: If the target temperature is unspecified, increment/decrement by 2.0°C from CURRENT_STATE.
+
+[VEHICLE_TELEMETRY]
+- current_cabin_temp: 19.5 C
+- current_fuel_level: 18 %
+- current_gps: "48.7758, 9.1829" (Stuttgart, Germany)
+
+[AVAILABLE_APIS]
+- HVAC_SetTemperature(zone: string, target_celsius: float)
+- NAV_SearchAlongRoute(category: string, filter_tag: string)
+
+[FEW-SHOT EXAMPLES]
+User: "A bit chilly in here."
+Output:
+{
+  "actions": [
+    {"api": "HVAC_SetTemperature", "params": {"zone": "all", "target_celsius": 21.5}}
+  ],
+  "driver_feedback_tts": "Increasing cabin temperature to 21.5 degrees."
+}
+
+[INPUT]
+User: "هوا خیلی سرده، یخ زدم! راستی یه پمپ‌بنزین هم تو مسیر پیدا کن که بنزین سوپر داشته باشه."
+```
+
+Deterministic Model Output:
+```json
+{
+  "actions": [
+    {
+      "api": "HVAC_SetTemperature",
+      "params": {
+        "zone": "all",
+        "target_celsius": 21.5
+      }
+    },
+    {
+      "api": "NAV_SearchAlongRoute",
+      "params": {
+        "category": "fuel_station",
+        "filter_tag": "super_plus"
+      }
+    }
+  ],
+  "driver_feedback_tts": "در حال افزایش دما به ۲۱.۵ درجه و جست‌وجوی پمپ‌بنزین مناسب در مسیر."
+}
+
+```
+
+Engineering Impact:
+* **Schema Enforcement:** Converts conversational utterances into executable CAN Bus function calls.
+* **Safety Boundaries:** Prevents invalid inputs by injecting vehicle telemetry and parameter bounds directly into the context.
+* **Minimal Latency:** Restricts feedback text to concise statements, minimizing driver distraction.
+
 ## 🤖 Top 5 Industrial AI Agent Archetypes Built by AI Engineers
 
 In enterprise production environments, modern **AI Engineers** focus on architecting agents equipped with multi-step reasoning, tool execution, deterministic constraints, and self-correcting feedback loops.
