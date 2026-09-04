@@ -40,7 +40,7 @@ New terms:
 
 It is a protocol which connects our Agent to different tools and platforms. 
 
-On one side we can have different LLMs such as Claude, Gemini, Chat GPT and on the other side we have different tools such as Github, PostgreSQL, Slack, etc.
+On one side we can have different LLMs such as Claude, Gemini, Chat GPT and on the other side we have different tools such as Github, PostgreSQL, Slack, etc. You can **swap AI models** much faster with it.
 
 You may say why they are not using HTTP to connect to other tools, the answer is HTTP request has so many **irrelevant** parameters but MCP keeps the answer it gets from other places clean and relevant. It gives the LLM all it needs. MCP returns simplified LLM-friendly response:
 ```
@@ -53,6 +53,24 @@ You may say why they are not using HTTP to connect to other tools, the answer is
   ]
 }
 ```
+So it's **not** more powerful than API, just more concrete.
+
+One other difference between MCP and API is that the MCP has a memory, so it is **stateful**, unlike APIs which are stateless. MCP keeps a context. 
+
+With APIs you need to manage API keys for each API which you call, but MCP keeps all the API keys of all APIs and handles them for the LLM. the AI Agent doesn't see any API keys or secrets. The MCP adds authentication headers. Actually the term **Context** in MCP stands for keeping the context(state) of the conversation.
+
+### Architecture
+- MCP server: The translator
+- MCP client: sits **next to AI Agent** on the **host**. MCP client is the one who talks to MCP server, the AI Agent just makes it human friendly (in both recieveing from user and responding to user). MCP client sends a tools\call request to the MCP server.
+- AI Agent: It just state the intent. 
+- Host: The host executes different functions. 
+
+### MCP servers
+
+3 Types of MCP servers:
+- Community driven or Open-source: Good for starting
+- Enterprise MCP serves: A gold standards because they are built by the tool companies themeselves.
+- Community servers
 
 ## Tools
 
