@@ -36,6 +36,24 @@ New terms:
 * **The AI Agent is the Driver:** It observes the road, evaluates conditions, plans routes, decides when to accelerate or brake, and navigates obstacles dynamically.
 * **MCP is the Cockpit Interface (Steering Wheel, Pedals & Gearbox):** Standardized, uniform mechanical interfaces that connect the driver's intent to the car’s underlying hardware. Regardless of whether the car runs on petrol or electricity, the pedals and steering wheel operate identically, preventing the driver from needing to rewire the engine just to steer.
 
+## MCP
+
+It is a protocol which connects our Agent to different tools and platforms. 
+
+On one side we can have different LLMs such as Claude, Gemini, Chat GPT and on the other side we have different tools such as Github, PostgreSQL, Slack, etc.
+
+You may say why they are not using HTTP to connect to other tools, the answer is HTTP request has so many **irrelevant** parameters but MCP keeps the answer it gets from other places clean and relevant. It gives the LLM all it needs. MCP returns simplified LLM-friendly response:
+```
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Pod my-app is Running (3/3 containers ready). Node: worker-node-1. Uptime: 2 hours. No restarts."
+    }
+  ]
+}
+```
+
 ## Tools
 
 LangChain, LlamaIndex: Orchestration Tools
