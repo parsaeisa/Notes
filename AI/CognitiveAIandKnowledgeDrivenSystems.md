@@ -39,9 +39,12 @@ When automotive or engineering companies refer to **Semantic Data Models**, they
     * Relationship Definitions: Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
     * Logical Axioms & Reasoning: Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
 
-## Implementation
+## Vanilla RAG
+There is no graph between documents, the system works just based on the similarity between data. 
 
-The RAG application pipeline:
+## GraphRAG
+
+The GraphRAG application pipeline:
 ```mermaid
 flowchart TB
     A["User: With image & question"]
