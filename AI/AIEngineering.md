@@ -152,6 +152,7 @@ Deterministic Model Output:
 
 ## LlamaIndex
 
+It gets raw input documents into ready data for GraphDBs.
 
 Engineering Impact:
 * **Schema Enforcement:** Converts conversational utterances into executable CAN Bus function calls.
