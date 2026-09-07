@@ -53,3 +53,21 @@
 
 * PatchCore: A state-of-the-art visual anomaly detection method that constructs a memory bank of locally aggregated patch features from defect-free training images, identifying defects via nearest-neighbor distance without requiring defective samples during training.
 * Anomalib: An open-source deep learning framework designed by Intel specifically for industrial defect detection, providing modular implementations of reference unsupervised anomaly detection algorithms (including PatchCore and Padim) alongside deployment-ready export tools.
+
+## Multi-label Classification
+
+It can be used in Auto-driving. When it wants to understand what is happening. Each data, each frame, can have multiple labels, such as "A kid passed by the street" or "A car turned left". 
+
+### Core Frameworks & Tooling:
+
+* Core Deep Learning Frameworks:
+    * **PyTorch (`torch.nn`):** The primary industry and research standard; specifically uses `torch.nn.BCEWithLogitsLoss` (which combines a sigmoid layer with binary cross-entropy per class output) to handle non-mutually exclusive target predictions.
+    * **PyTorch Lightning:** Used to build structured, scalable training loops, organize multi-label validation steps, and log per-epoch metrics cleanly.
+
+
+* Evaluation & Metric Libraries:
+    * **TorchMetrics:** Ideal for direct GPU-accelerated multi-label metric computation during training and validation loops.
+    * **Scikit-learn (`sklearn.metrics`):** Standard tool for post-training evaluation, computing metrics such as Mean Average Precision (**mAP**), Macro/Micro **F1-Score**, Precision-Recall curves, and **Hamming Loss**.
+
+* Vision Backbones & Sequence Tooling:
+    * **Hugging Face Transformers / Timm (`pytorch-image-models`):** Used to load pre-trained vision/multimodal backbones (e.g., CLIP, ViT) and adapt their classification heads for multi-label output dimensions.
