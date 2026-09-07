@@ -150,6 +150,9 @@ Deterministic Model Output:
 
 ```
 
+## LlamaIndex
+
+
 Engineering Impact:
 * **Schema Enforcement:** Converts conversational utterances into executable CAN Bus function calls.
 * **Safety Boundaries:** Prevents invalid inputs by injecting vehicle telemetry and parameter bounds directly into the context.
