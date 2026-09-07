@@ -11,6 +11,7 @@
 
 - Markov random field
 - Max-flow/Min-cut algorithm
+- Onboard (Edge Model Compression & Distillation)
 
 ## Usages
 
