@@ -11,7 +11,10 @@
 
 - Markov random field
 - Max-flow/Min-cut algorithm
-- Onboard (Edge Model Compression & Distillation)
+- Onboard (Edge Model Compression & Distillation): INT8 Quantization
+- Sequence Classification: CLIP, GRU, VideoCLIP, ViT(Vision Transformer)
+- Multi-label classification
+- ONNX Runtime, TensorRT: For deploying models on a GPU or CPU.
 
 ## Usages
 
