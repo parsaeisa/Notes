@@ -23,7 +23,6 @@
 - Energy minimization
 
 ## Tools
-توضیحات کوتاه، فنی و استاندارد به انگلیسی برای هر یک از ابزارها و مفاهیم مشخص‌شده در تصویر:
 
 **Inference & Optimization**
 
@@ -57,6 +56,32 @@
 * PatchCore: A state-of-the-art visual anomaly detection method that constructs a memory bank of locally aggregated patch features from defect-free training images, identifying defects via nearest-neighbor distance without requiring defective samples during training.
 * Anomalib: An open-source deep learning framework designed by Intel specifically for industrial defect detection, providing modular implementations of reference unsupervised anomaly detection algorithms (including PatchCore and Padim) alongside deployment-ready export tools.
 
+**Controllable Image Generation & Generative Vision**
+
+Tools designed for precise structural, text-guided, and geometric conditioning of diffusion and generative models:
+
+* Hugging Face `diffusers`: The standard modular library for building, training, and running diffusion architectures (e.g., Stable Diffusion, SDXL, Flux) with custom pipelines and schedulers.
+* ControlNet / T2I-Adapter: Conditioning frameworks that inject explicit spatial controls (e.g., depth maps, edge boundaries, keypoints, segmentation masks) into frozen text-to-image backbones.
+* LoRA / PEFT (Parameter-Efficient Fine-Tuning): Lightweight fine-tuning methods allowing quick adaptation of cross-attention and projection layers to isolate specific styles or attributes without training the entire model.
+* OpenCLIP / CLIP (ViT): Vision-Language foundational models used to evaluate text-image alignment and extract shared-latent space representations.
+
+**Novel View Synthesis & Domain Adaptation (Fisheye / Multi-View)**
+
+Frameworks for 3D scene reconstruction, novel viewpoint rendering, and handling distorted or unconventional camera optics:
+
+* 3D Gaussian Splatting (3DGS) / `gsplat`: Modern representations providing real-time, differentiable rendering of scenes via explicit 3D Gaussians from multi-view captures.
+* Nerfstudio / PyTorch3D: Integrated research toolchains for developing Neural Radiance Fields (NeRFs), managing camera projection rays, and manipulating 3D geometry.
+* OpenCV (`cv2.fisheye` module): Core geometric tools for camera calibration, intrinsic/extrinsic parameter extraction, and distortion/undistortion algorithms (e.g., Kannala-Brandt models) bridging perspective and wide-angle domains.
+* COLMAP: The reference Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline used to extract precise camera poses and sparse 3D geometry from multi-view image datasets.
+
+**Imaging Factor Disentanglement**
+Techniques and toolsets for independently isolating, training, and verifying latent factors (e.g., sensor type, lens characteristics, lighting, domain):
+
+* PyTorch: The primary deep learning framework for designing customized factor-specific loss functions, gradient reversal layers, and learnable embedding spaces.
+* Torchvision: Augmentation toolkits used to engineer factor-specific perturbations and data transforms that break cross-factor correlation leakage during evaluation and training.
+* Hugging Face `transformers` (Pretrained VLMs): Vision-language backbones (e.g., Qwen-VL, LLaVA) employed as zero-shot evaluators or supervisory discriminators to guide factor alignment across unseen combinations.
+* Scikit-learn: General scientific computing utilities used to analyze latent spaces, compute correlation matrices, and benchmark disentanglement metrics (e.g., mutual information, clustering).
+
 ## Multi-label Classification
 
 It can be used in Auto-driving. When it wants to understand what is happening. Each data, each frame, can have multiple labels, such as "A kid passed by the street" or "A car turned left". 
@@ -74,3 +99,5 @@ It can be used in Auto-driving. When it wants to understand what is happening. E
 
 * Vision Backbones & Sequence Tooling:
     * **Hugging Face Transformers / Timm (`pytorch-image-models`):** Used to load pre-trained vision/multimodal backbones (e.g., CLIP, ViT) and adapt their classification heads for multi-label output dimensions.
+
+##
