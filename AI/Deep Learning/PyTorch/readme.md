@@ -1,6 +1,8 @@
 # PyTorch
 
-PyTorch is an extension of NumPy which can interact with GPU . 
+PyTorch is an extension of NumPy which can interacts with GPU . 
+
+The strongest counter part is **Tensorflow** library. Pytorch is better for Academic projects and in the production PyTorch has superiority. 
 
 topics : 
 * tensor
@@ -25,6 +27,45 @@ topics :
 * contiguous
 * graph
 * BatchNorm1d
+
+## Finding videos of PyTorch working with GPUs
+
+### About GPU deployment on Docker and Docker-compose
+
+How to deploy containers with access to Graphic Cards. 
+* `nvidia container toolkit docker tutorial`
+* `docker compose nvidia gpu setup`
+* `deploy pytorch model docker gpu`
+* `fastapi pytorch docker nvidia gpu`
+
+### Resolving Out of Memory (OOM) error and Managing GPU RAM
+
+برای یادگیری نحوه تخصیص بهینه VRAM، پاک‌سازی کش و دیباگ مصرف گرافیک:
+
+* `pytorch cuda out of memory fix`
+* `pytorch gpu memory management`
+* `pytorch cuda amp mixed precision tutorial`
+* `profile pytorch gpu memory usage`
+
+---
+
+### ۳. بهینه‌سازی سرعت و پرفورمنس پردازش روی CUDA
+
+برای دیدن ترفندهای مهندسی در افزایش سرعت پردازش روی کارت‌های انویدیا:
+
+* `pytorch profiler tutorial`
+* `pytorch multi gpu distributed data parallel (DDP) tutorial`
+* `pytorch compile benchmark tutorial`
+
+---
+
+### ۴. کانال‌های یوتیوب معتبر و پیشنهادی
+
+این کانال‌ها به‌طور متمرکز آموزش‌های صنعتی و عمیق در زمینه مهندسی MLOps و سخت‌افزار ارائه می‌دهند:
+
+* **Aladdin Persson:** یکی از بهترین منابع برای پیاده‌سازی‌های سطح پایین پایتورچ، DDP و مدیریت دقیق CUDA.
+* **Weights & Biases:** ویدیوهای بسیار کاربردی پیرامون دیباگ حافظه GPU و مانیتورینگ بلادرنگ مصرف کارت‌ها.
+* **Prompt Engineering / Patrick Loeber:** آموزش‌های سرراست و پروژه-محور برای ترکیب PyTorch با Docker و FastAPI.
 
 ## Tensor
 we can make torch tensors from :
