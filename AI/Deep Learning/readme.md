@@ -59,10 +59,10 @@ The outputs go beyond simple accuracy scores and fall into three distinct tiers:
 
 #### C. System & Operational Metrics (Production Feasibility)
 
-* **Inference Latency:**The wall-clock duration required to process a single sample or batch (measured in milliseconds).
+* **Inference Latency:** The wall-clock duration required to process a single sample or batch (measured in milliseconds).
 
-* **Throughput:**Volume of data processed per unit of time (e.g., Frames per Second [FPS] or Tokens per Second).
+* **Throughput:** Volume of data processed per unit of time (e.g., Frames per Second [FPS] or Tokens per Second).
 
-* **Memory Footprint:**VRAM utilization during execution and disk size of the serialized model weights.
+* **Memory Footprint:** VRAM utilization during execution and disk size of the serialized model weights.
 
-* **Out-of-Distribution (OOD) Robustness:**Output stability and resilience against adversarial perturbations, sensor noise, or distribution shifts.
+* **Out-of-Distribution (OOD) Robustness:** Output stability and resilience against adversarial perturbations, sensor noise, or distribution shifts.
