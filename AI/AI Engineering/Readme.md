@@ -12,6 +12,9 @@ New terms:
     - Context window
 - Agent Harness
 
+Topics:
+- Ollama
+
 ## Teminology
 
 - Agent.md
