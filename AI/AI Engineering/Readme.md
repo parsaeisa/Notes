@@ -2,21 +2,36 @@
 
 The discipline of transforming **existing foundation models** (LLMs/VLMs) into robust, deterministic, secure, and production-ready software systems **connected to** enterprise data and tools.
 
-Rather than training neural networks from scratch, modern industrial AI Engineering focuses on building the software, context, and orchestration layers around foundation models. It bridges the gap between probabilistic AI behavior and enterprise requirements by leveraging semantic grounding (Knowledge Graphs and ontologies), standardized integration protocols (such as MCP), and cyclic agentic workflows (LangGraph/LlamaIndex) to ensure that AI-driven applications operate reliably and deterministically at scale.
+An AI Engineer **doesn't** train a model from scratch.
 
-An AI Engineer doesn't train a model from scratch.
+Topics:
+- Ollama
+
+ترجمه انگلیسی موارد تصویر به همراه نکات مکمل و یکپارچه‌سازی‌شده از متن:
+
+## Core Scope of Modern AI Engineering
+
+* **Data Engineering & Ingestion Pipelines:** Preparing high-quality datasets, preventing data leakage, and implementing robust document chunking and indexing strategies.
+
+* **Semantic Grounding & Knowledge Integration:** Integrating Knowledge Graphs and ontologies (e.g., RDF, GraphRAG) to bridge the gap between probabilistic model outputs and deterministic domain requirements, ensuring factual accuracy.
+
+* **Orchestration & Agentic Architectures:** Designing cyclic agentic workflows and tool-calling state machines using frameworks such as LangGraph, LlamaIndex, and LangChain.
+
+* **Standardized System Interoperability:** Implementing standardized communication protocols (such as Model Context Protocol - MCP) to expose enterprise context, tools, and execution environments to foundation models.
+
+* **AI Operations (MLOps) & Evaluation:** Tracking experiments and parameters (W&B / MLflow), performing model quantization/compression, profiling GPU memory, and running rigorous evaluation suites (e.g., Ragas, eval-driven development).
+
+* **Serving, Optimization & Deployment:** Packaging models and pipelines in Docker containers, optimizing runtime throughput with TensorRT / ONNX, and exposing production-ready APIs via FastAPI or Triton Inference Server.
+
+* **Context & Software Layer Abstraction:** Building resilient software wrappers and orchestration layers around pretrained foundation models, delivering scalable, deterministic enterprise systems rather than training models from scratch.
+
+## Teminology
 
 New terms:
 - Prompt Engineering
 - Context Engineering: I think it has Tool calling, MCP and RAG around the prompt engineering
     - Context window
 - Agent Harness
-
-Topics:
-- Ollama
-
-## Teminology
-
 - Agent.md
 - Skill.md
 - MCP: AI agent connecting to data on another server
