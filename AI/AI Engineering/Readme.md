@@ -98,6 +98,17 @@ LangChain, LlamaIndex: Orchestration Tools
 - Ollama: Deploying tools
 - n8n
 
+### Evaluation Tools
+
+Evaluation frameworks such as Ragas and TruLens can be used **just after integrating GraphDB**, rather than during the baseline phase. These frameworks evaluate the **alignment between** an injected retrieval context and the generated answer.
+
+* **Applicability Stage:** Deploy Ragas or TruLens only in the KG-augmented pipeline to assess retrieval quality and grounding.
+* **Faithfulness Assessment:** Quantifies whether the VLM output is strictly grounded in the SPARQL-retrieved triples rather than driven by parametric hallucinations.
+* **Context Relevance:** Evaluates the semantic utility of the retrieved knowledge graph facts relative to the image and query.
+* **Benchmark Accuracy Metric:** These frameworks evaluate RAG triaging dynamics, not direct dataset correctness; computing official task performance against human annotations still requires the standard OK-VQA consensus metric.
+
+The above metrics are undefined without graph-retrieved triples in the prompt.
+
 ## Prompt-Engineering Example
 
 In production automotive systems such as Mercedes-Benz MBUX, prompt engineering grounds free-form speech into structured, safety-constrained API calls for vehicle electronic control units (ECUs).
