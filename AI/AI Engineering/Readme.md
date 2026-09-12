@@ -7,8 +7,6 @@ An AI Engineer **doesn't** train a model from scratch.
 Topics:
 - Ollama
 
-ترجمه انگلیسی موارد تصویر به همراه نکات مکمل و یکپارچه‌سازی‌شده از متن:
-
 ## Core Scope of Modern AI Engineering
 
 * **Data Engineering & Ingestion Pipelines:** Preparing high-quality datasets, preventing data leakage, and implementing robust document chunking and indexing strategies.
