@@ -5,7 +5,7 @@ The discipline of transforming **existing foundation models** (LLMs/VLMs) into r
 An AI Engineer **doesn't** train a model from scratch.
 
 Topics:
-- Ollama
+- [Ollama](https://github.com/parsaeisa/Notes/blob/main/AI/AI%20Engineering/Ollama.md)
 
 ## Core Scope of Modern AI Engineering
 
@@ -93,10 +93,10 @@ With APIs you need to manage API keys for each API which you call, but MCP keeps
 LangChain, LlamaIndex: Orchestration Tools
 - LlamaIndex: A Data and AI orchestration tool which loads documents (PDFs, Databases), turns them into vectors, indexes them and connects them to LLMs/VLMs.
 
-Evaluation Tools: TruLens & Ragas
-Document processing & Conversion: Docling, Marker
-
-Ollama: Deploying tools
+- Evaluation Tools: TruLens & Ragas
+- Document processing & Conversion: Docling, Marker
+- Ollama: Deploying tools
+- n8n
 
 ## Prompt-Engineering Example
 
