@@ -10,6 +10,44 @@ It's a python open source library which sits between our files (data) and a foun
 * **Storage:** Persists discrete relational triplets in memory or dedicated graph databases (e.g., Neo4j, Nebulagraph).
 * **Retrieval:** Extracts entities/keywords from user queries, maps them to corresponding nodes, and traverses connected subgraphs ($k$-hop paths) to synthesize grounded context.
 
+It's like a database:
+```python
+# Initialize empty PropertyGraphIndex with specified LLM and embedding configurations
+index = PropertyGraphIndex.from_documents(
+    documents=[doc],
+    llm=llm,
+    embed_model=embed_model,
+)
+
+# Insert nodes and relations directly into the underlying PropertyGraphStore
+index.property_graph_store.upsert_nodes(entities)
+index.property_graph_store.upsert_relations(relations)
+
+# ----------------------------------------------------------------------
+# 4. Multi-hop Scene Graph Query Execution
+# ----------------------------------------------------------------------
+# Instantiate a query engine configured to search both vector similarity and graph topology
+query_engine = index.as_query_engine(
+    sub_retrievers=[
+        VectorContextRetriever(
+            graph_store=index.property_graph_store,
+            vector_store=index.vector_store,
+            embed_model=embed_model,
+            similarity_top_k=3,
+        ),
+        LLMSynonymRetriever(
+            graph_store=index.property_graph_store,
+            llm=llm,
+            max_keywords=5,
+        ),
+    ],
+    include_text=True,
+)
+
+query = "Which instruments or components are mounted on or adjacent to the affected truss, and what action is required?"
+response = query_engine.query(query)
+```
+
 ### Core Index Peers in the LlamaIndex Hierarchy
 
 Other counterparts to `KnowledgeGraphIndex`.
