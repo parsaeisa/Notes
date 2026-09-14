@@ -10,6 +10,12 @@ It's a python open source library which sits between our files (data) and a foun
 * **Storage:** Persists discrete relational triplets in memory or dedicated graph databases (e.g., Neo4j, Nebulagraph).
 * **Retrieval:** Extracts entities/keywords from user queries, maps them to corresponding nodes, and traverses connected subgraphs ($k$-hop paths) to synthesize grounded context.
 
+### Core Index Peers in the LlamaIndex Hierarchy
+
+Other counterparts to `KnowledgeGraphIndex`.
+
+* **`PropertyGraphIndex` (Modern Graph Peer):**
+The successor to `KnowledgeGraphIndex`. Implements a Labeled Property Graph (LPG) model that supports rich node/edge metadata alongside native hybrid search (graph traversal + vector embeddings + text search). It's like a database:
 It's like a database:
 ```python
 # Initialize empty PropertyGraphIndex with specified LLM and embedding configurations
@@ -48,12 +54,6 @@ query = "Which instruments or components are mounted on or adjacent to the affec
 response = query_engine.query(query)
 ```
 
-### Core Index Peers in the LlamaIndex Hierarchy
-
-Other counterparts to `KnowledgeGraphIndex`.
-
-* **`PropertyGraphIndex` (Modern Graph Peer):**
-The successor to `KnowledgeGraphIndex`. Implements a Labeled Property Graph (LPG) model that supports rich node/edge metadata alongside native hybrid search (graph traversal + vector embeddings + text search).
 * **`VectorStoreIndex` (Dense Semantic Peer):**
 Maps document chunks into high-dimensional vector spaces for semantic similarity matching (e.g., cosine similarity). Lacks explicit relational reasoning.
 * **`TreeIndex` & `SummaryIndex` (Hierarchical/Sequential Peers):**
