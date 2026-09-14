@@ -18,6 +18,12 @@ Other counterparts to `KnowledgeGraphIndex`.
 The successor to `KnowledgeGraphIndex`. Implements a Labeled Property Graph (LPG) model that supports rich node/edge metadata alongside native hybrid search (graph traversal + vector embeddings + text search). It's like a database:
 It's like a database:
 ```python
+# some other modules imported from LlamaIndex
+from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
+
+llm = OpenAI(model="gpt-4o", temperature=0.0)
+embed_model = OpenAIEmbedding(model_name="text-embedding-3-small")
 # Initialize empty PropertyGraphIndex with specified LLM and embedding configurations
 index = PropertyGraphIndex.from_documents(
     documents=[doc],
