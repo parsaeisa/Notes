@@ -81,7 +81,14 @@ Graph databases are broadly divided into dozens of implementations across two pr
 * **Blazegraph**
 * **Stardog**
 
-
+#### ArangoDB
+ArangoDB is a native multi-model NoSQL database that implements a **Labeled Property Graph (LPG)** model, rather than an RDF triple store.
+* **Data Model:** It unifies three core storage paradigms—Document (JSON-like VelocyPack documents), Key-Value, and Graph—under a single database engine.
+* **Graph Structure (LPG):**
+    * **Vertices (Nodes):** Stored as discrete JSON documents within standard document collections.
+    * **Edges (Relations):** Stored in specialized *Edge Collections*. Each edge is a complete JSON document containing mandatory `_from` and `_to` pointer attributes referencing vertex IDs, and it can store arbitrary metadata properties (e.g., weights, timestamps, relation types).
+* **Query Language:** It uses **AQL (ArangoDB Query Language)**, a declarative language that allows developers to run document filters, aggregations, full-text searches, and complex graph traversals ($k$-hop depth/breadth exploration) within a single unified query.
+* **RDF vs. LPG Distinction:** It does not use W3C Semantic Web standards (no SPARQL, no native RDF triplet structures) and does not have a built-in OWL/RDFS formal logic reasoning engine. Instead, it relies on flexible graph traversal and document indexing.
 
 In summary, while Neo4j is indeed a graph database, it belongs to the LPG category and does not natively run SPARQL. For a Knowledge-Grounded Multimodal RAG pipeline built on RDF specifications, **Ontotext GraphDB** or **Apache Jena** is the standard choice.
 
