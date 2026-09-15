@@ -24,6 +24,55 @@
 
 ## Tools
 
+The big toolbox tree:
+```
+Computer Vision Architectures
+│
+├── 1. Backbone Architectures (Feature Extractors)
+│   ├── CNN-based (Local features, inductive bias)
+│   │   ├── ResNet (Residual connections / skip connections)
+│   │   ├── ConvNeXt (Modernized CNN with ViT design choices)
+│   │   └── EfficientNet / MobileNet (Lightweight, edge computing)
+│   └── Vision Transformers (Global attention, scalable)
+│       ├── ViT (Patch embeddings + pure self-attention)
+│       └── Swin Transformer (Shifted windows, hierarchical / multi-scale)
+│
+├── 2. Object Detection & Localization
+│   ├── Two-Stage (High precision, slower)
+│   │   └── Faster R-CNN (RPN + RoI Align)
+│   ├── One-Stage (Real-time, single forward pass)
+│   │   ├── YOLO Series (v8, v9, v10 / anchor-free, real-time)
+│   │   └── RetinaNet (Focal Loss for class imbalance)
+│   └── Transformer-based (End-to-end set prediction)
+│       └── DETR / Deformable DETR (Bipartite matching, cross-attention)
+│
+├── 3. Image Segmentation
+│   ├── Semantic Segmentation (Pixel-level class labels)
+│   │   ├── U-Net (Encoder-decoder + skip connections; biomedical)
+│   │   └── DeepLabV3+ (Atrous/dilated convolutions, ASPP)
+│   ├── Instance Segmentation (Separating distinct objects)
+│   │   └── Mask R-CNN (RoI Align + parallel mask branch)
+│   └── Panoptic & Promptable Segmentation
+│       ├── Mask2Former (Unified architecture for semantic/instance/panoptic)
+│       └── SAM / SAM 2 (Segment Anything; prompt-driven zero-shot segmentation)
+│
+├── 4. Multimodal & Vision-Language (VLM)
+│   ├── Contrastive Alignment (Joint embedding space)
+│   │   ├── CLIP (InfoNCE loss, text-image zero-shot classification)
+│   │   └── SigLIP (Sigmoid loss, better batch efficiency)
+│   └── Generative / Reasoning VLMs (Vision encoder + LLM backbone)
+│       ├── LLaVA (Linear/MLP projection between ViT and LLM)
+│       └── Qwen2.5-VL / InternVL (Dynamic resolution, visual agents)
+│
+└── 5. 3D Vision, Reconstruction & Generation
+    ├── Classical / Implicit Neural Representations
+    │   ├── NeRF (Neural Radiance Fields, coordinate-based rendering)
+    │   └── 3D Gaussian Splatting (3DGS; real-time differentiable rasterization)
+    └── Generative Vision
+        ├── Diffusion Models (Stable Diffusion, Flux; denoising process)
+        └── Flow Matching (Faster sampling, optimal transport trajectories)
+```
+
 **Inference & Optimization**
 
 * TensorRT: An NVIDIA software development kit designed to optimize deep learning inference on GPUs via layer fusion, quantization (FP16/INT8), and kernel tuning to achieve maximum throughput and minimal latency.
