@@ -52,6 +52,13 @@ New terms:
 * **The AI Agent is the Driver:** It observes the road, evaluates conditions, plans routes, decides when to accelerate or brake, and navigates obstacles dynamically.
 * **MCP is the Cockpit Interface (Steering Wheel, Pedals & Gearbox):** Standardized, uniform mechanical interfaces that connect the driver's intent to the car’s underlying hardware. Regardless of whether the car runs on petrol or electricity, the pedals and steering wheel operate identically, preventing the driver from needing to rewire the engine just to steer.
 
+## The structure of an AI Agent
+
+In standard system architecture, an AI Agent comprises three core components:
+* **Reasoning Core:** A foundation model (LLM / VLM) responsible for intent parsing, multi-step planning, and decision-making.
+* **Memory & Knowledge Store:** A structured knowledge layer (e.g., Graph Database / Knowledge Graph) that supplies relational context, grounded facts, and long-term state.
+* **Tools & Actuators:** Standardized interfaces and protocol endpoints (e.g., ERI, REST APIs, or execution runtimes) allowing the agent to perform actions and query distributed servers.
+
 ## MCP
 
 It is a protocol which connects our Agent to different tools and platforms. 
