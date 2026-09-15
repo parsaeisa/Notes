@@ -105,3 +105,7 @@ The outputs go beyond simple accuracy scores and fall into three distinct tiers:
 * **Memory Footprint:** VRAM utilization during execution and disk size of the serialized model weights.
 
 * **Out-of-Distribution (OOD) Robustness:** Output stability and resilience against adversarial perturbations, sensor noise, or distribution shifts.
+
+## Transformers self-attention
+
+Unlike CNNs, which have a limited receptive field, or RNNs, which struggle with vanishing gradients over long sequences, transformer self-attention enables parallel matrix operations and captures long-range dependencies without signal degradation.
