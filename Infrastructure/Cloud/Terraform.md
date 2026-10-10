@@ -93,5 +93,3 @@ output "bucket_arn" {
 2. `terraform plan`: Generates an execution plan by comparing the local `.tf` code against the live cloud infrastructure. Displays exact delta changes (create, update in-place, destroy).
 3. `terraform apply`: Executes the planned changes against the cloud provider's API to provision the actual resources.
 4. **`terraform.tfstate` (State File)**: A managed JSON file recording the exact real-world resource mapping. It tracks provisioned IDs and prevents configuration drift across future runs.
-
-```
