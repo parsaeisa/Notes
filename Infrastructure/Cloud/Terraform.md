@@ -8,8 +8,6 @@ Unlike CI/CD pipelines (e.g., `.gitlab-ci.yml`), Terraform does **not** rely on 
 * When running commands like `terraform plan` or `terraform apply`, Terraform automatically scans and merges **all `.tf` files** inside the current working directory.
 * While all configurations can technically be written in one file, the industry standard separates responsibilities into modular files for maintainability and clarity.
 
----
-
 ## 2. Standard Terraform Module Layout
 A clean, production-grade module typically consists of four core files:
 
@@ -17,8 +15,6 @@ A clean, production-grade module typically consists of four core files:
 2. **`variables.tf`**: Input variable declarations, data types, and default values.
 3. **`outputs.tf`**: Return values exposed after provisioning (e.g., database endpoints, public IPs, bucket ARNs).
 4. **`terraform.tfvars`**: Concrete values assigned to input variables (often environment-specific: staging, prod).
-
----
 
 ## 3. Practical Code Example: AWS S3 Bucket Provisioning
 
@@ -90,8 +86,6 @@ output "bucket_arn" {
 }
 
 ```
-
----
 
 ## 4. Execution Lifecycle & CLI Workflow
 
