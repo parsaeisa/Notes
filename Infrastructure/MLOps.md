@@ -71,6 +71,7 @@ While **DevOps** governs the traditional software development lifecycle, **MLOps
 
 ## Tooling Ecosystem
 
+```
 ├── 1. Data Management & Versioning
 │   ├── Data Versioning: DVC, LakeFS, Pachyderm
 │   ├── Feature Stores: Feast, Hopsworks, Tecton
@@ -101,3 +102,4 @@ While **DevOps** governs the traditional software development lifecycle, **MLOps
     ├── AWS: Amazon SageMaker
     ├── GCP: Google Cloud Vertex AI
     └── Azure: Azure Machine Learning (Azure ML)
+```
