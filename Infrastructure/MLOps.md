@@ -2,7 +2,38 @@
 
 Well, I know DevOps, so my learning path for MLOps goes through DevOps in the beginning. 
 
-## Similarities with DevOps
+## Similarities with DevOps: Shared Foundations
+
+While MLOps extends traditional practices to accommodate data and probabilistic models, both disciplines rely on the same core engineering principles, architectural patterns, and underlying infrastructure.
+
+
+| Aspect | Shared Foundation | Shared Implementation |
+| :--- | :--- | :--- |
+| **Infrastructure Layer** | Cloud Native & Containerized | Kubernetes, Docker, AWS/GCP/Azure |
+| **Operational Goal** | Reliability & Automation | High availability, low latency, zero-downtime releases |
+| **Workflow Management** | Automation Pipelines | Declarative CI/CD/CT pipelines via code |
+| **Observability** | Telemetry & Incident Response | Metrics collection, structured logging, alert routing |
+| **Culture & Practices** | Collaborative & Iterative | Infrastructure as Code (IaC), GitOps, Agile loops |
+
+### 1. Underlying Infrastructure & Orchestration
+* **Cloud-Native Foundations:** Both paradigms depend on cloud resources (AWS, GCP, Azure) to provide elastic compute, storage, and networking.
+* **Kubernetes (K8s) & Containerization:** Both package services into Docker containers and leverage Kubernetes for container orchestration, auto-scaling, service discovery, and resource management (CPU/RAM for microservices, GPU/TPU for ML workloads).
+
+### 2. Infrastructure as Code (IaC) & Configuration Management
+* **Declarative Environments:** Both mandate that environments are provisioned declaratively using tools like Terraform, Pulumi, or Ansible.
+* **Environment Parity:** Both enforce consistency across Development, Staging, and Production environments to prevent configuration drift and execution errors.
+
+### 3. Pipeline-Driven Automation
+* **Automated Lifecycles:** Both replace manual human intervention with automated execution triggers (e.g., GitHub Actions, GitLab CI, Argo Workflows).
+* **Automated Quality Gates:** Both enforce automated testing before pushing artifacts to production—DevOps validates unit and integration passes; MLOps validates schema compatibility and model performance thresholds.
+
+### 4. Enterprise Observability & System Monitoring
+* **Core Metrics Tracking:** Both require real-time monitoring of operational health metrics, including request latency, error rates (HTTP 5xx), system throughput, and resource utilization (CPU, memory, disk I/O).
+* **Logging & Tracing:** Both rely on centralized logging frameworks (e.g., ELK/EFK stack) and distributed tracing (e.g., OpenTelemetry) to diagnose production bottlenecks and failures.
+
+### 5. Deployment Strategies & Zero-Downtime Releases
+* **Progressive Delivery:** Both utilize blue-green deployments, canary releases, and shadow deployments to roll out updates safely without interrupting active user traffic.
+* **Automated Rollbacks:** Both require automated fallback mechanisms to revert to a previous stable state if production health checks or performance metrics drop below predefined SLAs.
 
 ## Differences with DevOps
 
