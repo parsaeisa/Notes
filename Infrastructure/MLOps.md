@@ -69,4 +69,35 @@ While **DevOps** governs the traditional software development lifecycle, **MLOps
 * **DevOps:** Relies on Unit, Integration, Regression, and End-to-End (E2E) functional tests.
 * **MLOps:** Extends testing to include **Data Validation** (checking schema, null values, feature distributions) and **Model Validation** (evaluating accuracy, precision/recall, fairness/bias, and execution latencies before rollout).
 
-## Tools
+## Tooling Ecosystem
+
+├── 1. Data Management & Versioning
+│   ├── Data Versioning: DVC, LakeFS, Pachyderm
+│   ├── Feature Stores: Feast, Hopsworks, Tecton
+│   └── Data Quality & Validation: Great Expectations, Deepchecks, Soda
+│
+├── 2. Experiment Tracking & Model Registry
+│   ├── Experiment Tracking: MLflow, Weights & Biases (W&B), Comet, Neptune
+│   └── Model Registry: MLflow Model Registry, Weights & Biases, Comet
+│
+├── 3. Pipeline Orchestration (Workflow)
+│   ├── Kubernetes-Native: Kubeflow Pipelines, Argo Workflows
+│   └── General / Data Orchestration: Apache Airflow, Prefect, Dagster
+│
+├── 4. Model Training & Compute Management
+│   ├── Distributed Training: Ray Train, DeepSpeed, Horovod
+│   └── Compute Abstraction: Anyscale, Modal, Run:ai
+│
+├── 5. Model Serving & Deployment
+│   ├── High-Performance Inference: Triton Inference Server, vLLM, TGI (Text Generation Inference)
+│   ├── Microservice / API Serving: BentoML, Ray Serve, FastAPI, TorchServe, TF Serving
+│   └── Kubernetes Serving: KServe (formerly KFServing), Seldon Core
+│
+├── 6. Monitoring & Observability
+│   ├── Model Performance & Drift: Evidently AI, Arize AI, Fiddler, Whylogs
+│   └── Infrastructure Telemetry: Prometheus + Grafana, Datadog
+│
+└── 7. All-in-One Cloud Managed Platforms
+    ├── AWS: Amazon SageMaker
+    ├── GCP: Google Cloud Vertex AI
+    └── Azure: Azure Machine Learning (Azure ML)
