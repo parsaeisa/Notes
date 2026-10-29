@@ -4,6 +4,8 @@ The discipline of transforming **existing foundation models** (LLMs/VLMs) into r
 
 An AI Engineer **doesn't** train a model from scratch.
 
+Apparently LangGraph plays a key-role in this field, specially in multi-agent architectures. 
+
 Topics:
 - [Ollama](https://github.com/parsaeisa/Notes/blob/main/AI/AI%20Engineering/Ollama.md)
 
