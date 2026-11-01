@@ -1,5 +1,12 @@
 # LlamaIndex
 
+It gets raw input documents into ready data for GraphDBs.
+
+Engineering Impact:
+* **Schema Enforcement:** Converts conversational utterances into executable CAN Bus function calls.
+* **Safety Boundaries:** Prevents invalid inputs by injecting vehicle telemetry and parameter bounds directly into the context.
+* **Minimal Latency:** Restricts feedback text to concise statements, minimizing driver distraction.
+
 It's a python open source library which sits between our files (data) and a foundation model (such as VLM/LLM).
 
 ### `KnowledgeGraphIndex` in LlamaIndex

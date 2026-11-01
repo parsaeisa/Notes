@@ -186,15 +186,6 @@ Deterministic Model Output:
 
 ```
 
-## LlamaIndex
-
-It gets raw input documents into ready data for GraphDBs.
-
-Engineering Impact:
-* **Schema Enforcement:** Converts conversational utterances into executable CAN Bus function calls.
-* **Safety Boundaries:** Prevents invalid inputs by injecting vehicle telemetry and parameter bounds directly into the context.
-* **Minimal Latency:** Restricts feedback text to concise statements, minimizing driver distraction.
-
 ## 🤖 Top 5 Industrial AI Agent Archetypes Built by AI Engineers
 
 In enterprise production environments, modern **AI Engineers** focus on architecting agents equipped with multi-step reasoning, tool execution, deterministic constraints, and self-correcting feedback loops.
