@@ -10,7 +10,9 @@ Topics:
 - [Ollama](https://github.com/parsaeisa/Notes/blob/main/AI/AI%20Engineering/Ollama.md)
 - [LlamaIndex](https://github.com/parsaeisa/Notes/blob/main/AI/AI%20Engineering/LlamaIndex.md)
 
+## Personal Notes
 
+You've always asked AI in their online platform, person-in-person, that is old now. I know, it was for just 2 years ago, but, it's old! You should always think about how automate different operations using Agents. Let AI do your job! Even if you get fired, you have something to show to the next Company about your AI engineering skills. 
 
 ## Core Scope of Modern AI Engineering
 
