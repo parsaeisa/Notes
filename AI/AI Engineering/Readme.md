@@ -14,6 +14,49 @@ Topics:
 
 You've always asked AI in their online platform, person-in-person, that is old now. I know, it was for just 2 years ago, but, it's old! You should always think about how automate different operations using Agents. Let AI do your job! Even if you get fired, you have something to show to the next Company about your AI engineering skills. 
 
+## Problems that can be solved only with Agentic Workflows
+
+An **Agentic Workflow** is essential when a task involves **non-linear planning, dynamic tool integration, multi-step execution loops, and automated self-correction**. Without an agentic architecture, these tasks become exceptionally **slow, error-prone, and heavily** reliant on manual human intervention.
+
+| # | Use Case Category | Primary Failure Mode Without Agents | Core Agentic Capability |
+| :--- | :--- | :--- | :--- |
+| **1** | Automated Code Debugging & Refactoring | Human copy-pastes stack traces repeatedly | Autonomous test-driven execution loops |
+| **2** | Deep Multi-Source Research & Synthesis | Generates shallow, unverified text summaries | Parallel task decomposition & critic loops |
+| **3** | End-to-End Operational Customer Support | Bot is limited to static FAQs; requires human transfer | Multi-API execution (CRM, Refund, Inventory) |
+| **4** | Automated API Migration & Refactoring | Manual cross-file refactoring and build debugging | Dependency mapping & incremental compilation loops |
+| **5** | Heterogeneous Document Reconciliation | High OCR/parsing errors require manual review | Rule-based validation & dynamic tool switching |
+| **6** | Incident Triage & Infrastructure Remediation | Slow manual log investigation during outages | Automated context gathering & guarded remediation |
+
+### 1. Automated Code Debugging & Refactoring
+* **The Non-Agentic Bottleneck:** Standard LLMs generate code in a single turn. When dealing with complex runtime errors or failing test suites across a large codebase, a human must manually copy the code into an IDE, run tests, copy back the new error logs, and prompt the LLM again—creating an exhausting, high-latency manual loop.
+* **The Agentic Solution:** An agent uses code execution sandboxes (e.g., E2B, Docker) and terminal tools to autonomously analyze stack traces, edit codebase files, execute test suites (`pytest`, `npm test`), inspect output logs, and iteratively refactor until all tests pass.
+
+### 2. Deep Multi-Source Research & Synthesis
+* **The Non-Agentic Bottleneck:** Single-prompt LLMs provide high-level, generic summaries. Deep research requires dozens of manual search queries, cross-checking conflicting financial/academic data, extracting tables, and filtering out hallucinations.
+* **The Agentic Solution:** Utilizes a **Multi-Agent Orchestration Pattern** (Supervisor/Sub-agents):
+  * **Planner Agent:** Decomposes the research topic into specialized sub-queries.
+  * **Search/Scraper Agents:** Concurrently retrieve data from live web search APIs (e.g., Tavily, Exa) and filter noise.
+  * **Critic Agent:** Audits facts, detects logical contradictions, and requests targeted re-searches before a Writer Agent compiles the final report.
+
+### 3. End-to-End Operational Customer Support
+* **The Non-Agentic Bottleneck:** Standard chatbots answer informational FAQs but cannot execute state-changing actions. Complex tickets (e.g., duplicate charges needing cancellation and refund) get transferred to human support queues, leading to resolution delays of hours or days.
+* **The Agentic Solution:** Agents leverage **Function Calling & API Tools** to query internal databases (CRM), verify transaction history, execute payment gateway refunds via API, update inventory systems, and notify the user with a tracking ID—resolving complex issues autonomously in seconds.
+
+### 4. Automated API Migration & Refactoring
+* **The Non-Agentic Bottleneck:** Upgrading a major SDK or breaking-change API across a enterprise codebase with dozens of dependent files requires manual identification, editing, and compilation testing file by file.
+* **The Agentic Solution:** The agent reads breaking-change documentation, scans the entire codebase for deprecated signatures, applies edits across dependent files, runs build scripts, isolates syntax/link errors, and iteratively fixes the code until the build compiles successfully.
+
+### 5. Heterogeneous Document Extraction & Reconciliation
+* **The Non-Agentic Bottleneck:** Extracting financial or operational data from unpredictable formats (scanned PDFs, invoice images, raw emails, spreadsheets) often yields parsing/OCR errors that pollute downstream databases if not manually audited by humans line by line.
+* **The Agentic Solution:** Incorporates **Deterministic Validation & Tool Switching**:
+  1. Parses documents using OCR/Vision tools.
+  2. Runs programmatic math reconciliation (e.g., checking if line items equal the invoice total) and schema validation (e.g., Pydantic).
+  3. Dynamically switches to a higher-precision vision model if validation fails, or routes low-confidence fields to a Human-in-the-Loop (HITL) queue.
+
+### 6. Automated Incident Triage & Infrastructure Remediation
+* **The Non-Agentic Bottleneck:** During production outages or security alerts, DevOps engineers spend critical time manually pulling logs, checking metrics, formulating hypotheses, and executing CLI commands to diagnose root causes—costing extended downtime.
+* **The Agentic Solution:** Upon receiving a monitoring Webhook (e.g., Prometheus, Datadog), the agent autonomously queries log aggregators, identifies root causes, selects scoped infrastructure tools (e.g., Kubernetes API, Cloud CLI), executes guarded remediation actions (e.g., restarting crashed pods, blocking malicious IPs), and verifies service health post-fix.
+
 ## Core Scope of Modern AI Engineering
 
 * **Data Engineering & Ingestion Pipelines:** Preparing high-quality datasets, preventing data leakage, and implementing robust document chunking and indexing strategies.
