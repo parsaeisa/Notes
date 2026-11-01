@@ -1,4 +1,4 @@
-# Cognitive AI and Knowledge Driven systems
+# RAG
 
 ## Semantic Web Stack
 
