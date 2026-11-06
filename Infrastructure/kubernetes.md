@@ -10,7 +10,9 @@ Topics:
 * Volumes
 * [ There are other topics covered by this document. complete the lis]
 
-Kubernetes or k8s is container orchestration tool.
+Kubernetes or k8s is container orchestration tool. The operating system of Clouds!
+
+It is "Declarative" because It is always running a **Control loop**. 
 
 In this document I want to talk about what to do exactly with k8s.
 
@@ -28,11 +30,43 @@ grpc load balancing :
 * kube resolver 
 * connection pool
 
-grpc just sends a single TCP connection and handles every thing in it . like redis pipe . 
+grpc just sends a single TCP connection and handles every thing in it . like redis pipe. 
 
 To learn : 
 - CRD
-- What is exactly a cluster ??
+
+## Architecture
+
+The architecture is pretty simple (from 10000 feet overview): **Couple of Master nodes, A lot more of Worker nodes**.
+
+You send instructions to Control plane. The control plane **schedules** the workload. Control plane is on master nodes. 
+
+### Network
+
+K8s does NOT implement the Network. 
+
+
+## K8s administration
+
+You can run k8s anywhere. It's so much flexible. On-premise, Cloud, Hybrid cloud, etc. Using it on cloud platforms with sth called I think "Managed Kubernetes", it's easier. 
+
+Kubernetes Services:
+- GKE (For GCP)
+- EKS (Amazon)
+- AKS (For Azure)
+- Openshift
+
+In a managed kubernetes, even the k8s admins **don't** have access to control plane, but they have Full cluster-level administrative access through different APIs and configurations to change them.
+
+
+
+| Feature / Access Type | Self-Hosted Kubernetes (On-Prem / Bare Metal) | Managed Kubernetes (GKE / EKS / AKS) |
+| --- | --- | --- |
+| **SSH access to Master Nodes** | Allowed | **Not Allowed** |
+| **Direct etcd database manipulation** | Allowed | **Not Allowed** (Managed by Cloud Provider) |
+| **Full `kubectl` cluster-admin access** | Allowed | Allowed |
+| **User access control & RBAC management** | Allowed | Allowed |
+| **Direct modification of `/etc/kubernetes` files** | Allowed | **Not Allowed** (Configured via Cloud Console/API) |
 
 ## Main concepts
 You can see main concepts of k8s in the k8s dashboard : 
