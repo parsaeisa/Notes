@@ -48,7 +48,9 @@ K8s does NOT implement the Network.
 
 ## K8s administration
 
-You can run k8s anywhere. It's so much flexible. On-premise, Cloud, Hybrid cloud, etc. Using it on cloud platforms with sth called I think "Managed Kubernetes", it's easier. 
+You can run k8s anywhere. It's so much flexible. We can run it self-managed (On-premise), or in Cloud, Hybrid cloud, etc. Using it on cloud platforms with sth called I think "Managed Kubernetes", it's easier. 
+
+In self-managed k8s you have to manage k8s setup and configuration, upgrades, observability and ... which have a lot of overhead. 
 
 Kubernetes Services:
 - GKE (For GCP)
@@ -67,6 +69,8 @@ In a managed kubernetes, even the k8s admins **don't** have access to control pl
 | **Full `kubectl` cluster-admin access** | Allowed | Allowed |
 | **User access control & RBAC management** | Allowed | Allowed |
 | **Direct modification of `/etc/kubernetes` files** | Allowed | **Not Allowed** (Configured via Cloud Console/API) |
+
+
 
 ## Main concepts
 You can see main concepts of k8s in the k8s dashboard : 
