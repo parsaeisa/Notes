@@ -14,7 +14,7 @@ path = os.path.join(dirname , 'path/to/file/img1.png' )
 ## Common errors 
 > too many values to unpack (expected 2)
 
-it happens when you have something like this : 
+it happens when you have something like this: 
 ```python
 a, b = ['apple', 'banana', 'kiwi']
 ```
