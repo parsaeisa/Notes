@@ -1,5 +1,9 @@
 # GCP
 
+To learn:
+- Different processer series (C4, C4A, N4, C3, C3D, T2A, T2D, ...)
+- A software engineer should always **have sense** about sizes & capacities.
+
 ## Regional vs Zonal
 
 In regional architecture, resources are automatically distributed and **replicated** across **multiple Availability Zones** (typically 3) within a single region (e.g., `us-central1`).
