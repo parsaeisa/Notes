@@ -45,7 +45,7 @@ The first 3 items are always handled by GCP. The GKE has two modes:
 
 The key cost factor: In standard, you pay for the whole node, but in autopilot, you pay just for CPU/memory requests. 
 
-### Why standard?
+#### Why standard?
 
 Having full-access is usefull for some bunch of scenarios:
 - Installing custom agents on nodes. Where SSH access to nodes is needed.
@@ -53,3 +53,7 @@ Having full-access is usefull for some bunch of scenarios:
 - Running Hybrid clusters 
 
 Idk what are the things mentiond above, read them later.
+
+### Cloud shell
+
+For interacting with clusters, we get the credentials for the cluster from `gcloud` command, then inside that cluster we run for example `kubectl expose ...`.
