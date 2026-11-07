@@ -1,5 +1,29 @@
 # GCP
 
+## Regional vs Zonal
+
+In regional architecture, resources are automatically distributed and **replicated** across **multiple Availability Zones** (typically 3) within a single region (e.g., `us-central1`).
+
+We know basics like how are availability and cost in both of these architectures.
+
+| Criterion | Zonal Architecture | Regional Architecture |
+| :--- | :--- | :--- |
+| **Network Latency** | **Lower.** Data traffic stays strictly within the same physical data center, minimizing inter-service latency. | **Slightly Higher.** Synchronous data replication and inter-pod traffic across zones introduce slight network latency. |
+| **Use Cases** | Development/Testing environments, non-critical workloads, batch processing, latency-sensitive single-node apps. | Production environments, mission-critical applications, enterprise databases requiring high uptime SLAs. |
+
+Well, the Regional mode obviously seems a better option, when we have **sensitive data** or a **payment service** or when **downtime is very bad for us**. But in what cases we use Zonal mode? Some of them are listed here:
+* **Ephemeral Staging & Dev Environments:**
+  * **Scenario:** A feature branch environment spun up by a CI/CD pipeline for PR testing.
+  * **Why Zonal:** If zone `us-central1-a` experiences an outage, developers can re-deploy to another zone or wait out the downtime. High availability is unnecessary, and running multi-zone nodes for short-lived testing wastes budget.
+
+* **Batch Processing & Data Crunching (Stateless / Re-runnable):**
+  * **Scenario:** Overnight video transcoding jobs, machine learning model training (e.g., PyTorch on GPUs), or daily financial report generation.
+  * **Why Zonal:** The workloads can be restarted from checkpoints if a zone fails. Placing GPU/TPU worker nodes in a single zone avoids cross-zone latency and avoids high data-transfer egress costs during massive network reads.
+
+* **Low-Latency In-Memory Caching (Single-Node Redis / Memcached):**
+  * **Scenario:** A transient session-store or L1 cache where microsecond response times are critical and data loss is tolerable because it can be rebuilt from the primary DB.
+  * **Why Zonal:** Eliminates the ~1–2ms network latency added by cross-zone synchronous replication.
+
 ## Google Kubenetes Engine (GKE)
 
 Seems like managing kubernetes has 5 items:
