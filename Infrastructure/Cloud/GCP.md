@@ -30,6 +30,8 @@ Well, the Regional mode obviously seems a better option, when we have **sensitiv
 
 ## Google Kubenetes Engine (GKE)
 
+- What is release channel?
+
 Seems like managing kubernetes has 5 items:
 - Setting up infra, servers, etc. 
 - Installung k8s
@@ -40,6 +42,8 @@ Seems like managing kubernetes has 5 items:
 The first 3 items are always handled by GCP. The GKE has two modes:
 * Standard mode: Customer can manage only the last **two items**
 * Autopilot mode: Customr can manage only the last **item**
+
+In Workload tab you see all Kubernetes resources which run pods.
 
 ### Differences between Autopilot and Standard mode
 
@@ -57,3 +61,5 @@ Idk what are the things mentiond above, read them later.
 ### Cloud shell
 
 For interacting with clusters, we get the credentials for the cluster from `gcloud` command, then inside that cluster we run for example `kubectl expose ...`.
+
+We can **simply copy** the "get credential" command from the clusters pannel in GKE.
