@@ -72,7 +72,8 @@ In a managed kubernetes, even the k8s admins **don't** have access to control pl
 
 
 
-## Main concepts
+## Main resources
+
 You can see main concepts of k8s in the k8s dashboard : 
 
 <img src="https://github.com/parsaeisa/Notes/blob/main/DevOps/okd-dashboard.png" width="200" height="650" >
@@ -87,10 +88,33 @@ For example:
 oc describe project automation-test
 ```
 
+### Kubernetes resources which run pods
+
+#### 1. Native Workload Controllers
+* **Deployments:** Stateless workloads (e.g., Web APIs, Microservices).
+* **StatefulSets:** Stateful workloads requiring persistent identity/storage (e.g., PostgreSQL, MongoDB, Redis clusters).
+* **DaemonSets:** Pods running on every node (or selected nodes) across the cluster (e.g., Fluentd log collectors, Datadog agents).
+* **ReplicaSets:** Underpinning controllers managed automatically by Deployments.
+
+#### 2. Batch & Job Controllers
+* **Jobs:** Workloads meant to execute once to completion (e.g., DB migrations, data processing scripts).
+* **CronJobs:** Scheduled recurring jobs (e.g., nightly backups, periodic cleanup scripts).
+
+#### 3. Individual Unmanaged Pods
+* **Standalone Pods:** Naked pods created directly without a parent controller (not recommended for production, but monitored here).
+
+#### 4. Custom Resource Definitions (CRDs)
+* **Operator-managed Workloads:** Custom resources defined by Kubernetes Operators (e.g., Argo Workflows, Prometheus Operator instances) that manage pod lifecycles.
+
 ### Level of abstraction 
 Pod is the atomicity of kubernetes . 
 
 Pod → Deployments → namespace → TEAM
+
+Autoscaling deployments:
+```bash
+kubectl autoscale deployment hello-world-rest-api --max=4 --cpu=70%
+```
 
 * in openshift instead of **namespace** we have **project**.
 
@@ -99,6 +123,7 @@ Each of these are k8s clusters. we can get the list of them in cli using :
 ```bash
 get <resource name>s
 ```
+For almost all of these resources the `oc` (or `kubectl`) has `get` and `delete` commands.
 
 ### Limits
 
@@ -135,17 +160,22 @@ ls -l /sys/fs/cgroup/memory/kubepods/burstable/<pod id >
 
 ### Service 
 
+If you want expose a pod to the outside world, you have to put it behind a service. It's dangerous to put the pod out on it's own.
+
 Service is an abstraction layer over pods. You can access pods through their assigned service. 
 
-I has some key points :
+It has some key points :
 
 - Stable ip address : Pods' ip addresses change contantly, but a service's ip address & DNS name is constat all the time and other connections can be made to it. 
-
 - Load balancing
-
 - Headless services: K8s supports headless services which returns the IP address of a pod, then then other services can **directly** interact with that pod. 
 
 - Service Types: 
+
+```
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+```
+In OKD we use `oc` instead of `kubectl`.
 
 - Service discovery
 
