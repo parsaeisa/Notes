@@ -1,43 +1,6 @@
 # RAG
 
-## Semantic Web Stack
-
-Inside the GraphDB engine:
-```mermaid
-flowchart TB
-    A["Reasoning & Logic (Inference)"]
-    B["Ontologies (OWL)"]
-    C["Query Language (SPARQL) & Schemas (RDFS)"]
-    D["Data Representation (RDF · Triples: S-P-O)"]
-    E["Identifiers & Standards (URIs / IRIs · XML · JSON-LD)"]
-    A --> B --> C --> D --> E
-```
-
-
-- Unique Identifiers (URIs / IRIs): Provide unambiguous, global identifiers for entities, concepts, and relationships
-- Resource Description Framework (RDF): The standard graph data model that represents facts as structured triples: $\text{(Subject} \rightarrow \text{Predicate} \rightarrow \text{Object)}$.
-- Ontologies & Logic (RDFS & OWL): Express domain schemas, class hierarchies, and logical rules/axioms (e.g., inverse relations, transitivity) to formalize domain knowledge.
-- Query Language (SPARQL): The standard declarative query language designed to extract and manipulate data stored in RDF graphs (analogous to SQL for relational databases).
-- Inference & Reasoning: Rule engines embedded in Triple Stores (e.g., GraphDB, Apache Jena) that automatically deduce implicit facts from explicit data and ontological rules.
-
-### RDF Triples vs. Semantic Data Models (Ontologies)
-When automotive or engineering companies refer to **Semantic Data Models**, they don't just mean storing raw RDF triples in a database. They mean having a **rigorous, rule-based ontology** that models domain logic and dependencies, allowing both automated reasoning engines and LLMs/VLMs to interpret technical engineering systems deterministically without ambiguity.
-
-> **Analogy:** **RDF Triples** are the *building blocks (bricks)*, while **Ontologies / Semantic Data Models** are the *architectural blueprint and structural rules*.
-
-#### 1. RDF Triples: The Data Units (The "Bricks")
-
-* **What they are:** The atomic data format used to state simple, explicit facts.
-* **Structure:** Formatted as $\text{(Subject} \rightarrow \text{Predicate} \rightarrow \text{Object)}$ (e.g., `Engine` $\rightarrow$ `isPartOf` $\rightarrow$ `Vehicle`).
-* **Role:** They store the raw factual data in a graph format, similar to how individual rows store data in a relational database table.
-
-#### 2. Ontologies & Semantic Data Models: The Schema & Logic (The "Blueprint")
-
-* **What they are:** Formal specifications (defined using **RDFS** or **OWL**) that define the classes, properties, hierarchy, and logical constraints governing the triples.
-* **Core Components:**
-    * Controlled Vocabularies & Taxonomies: Standardized entity names and class hierarchies (e.g., `BrakeSensor` is a subclass of `SafetyComponent`).
-    * Relationship Definitions: Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
-    * Logical Axioms & Reasoning: Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
+I think you use RAG, when you want bring company's data into the game. For example through company's documents.
 
 ## Vanilla RAG
 There is no graph between documents, the system works just based on the similarity between data. 
@@ -92,6 +55,64 @@ ArangoDB is a native multi-model NoSQL database that implements a **Labeled Prop
 
 In summary, while Neo4j is indeed a graph database, it belongs to the LPG category and does not natively run SPARQL. For a Knowledge-Grounded Multimodal RAG pipeline built on RDF specifications, **Ontotext GraphDB** or **Apache Jena** is the standard choice.
 
+## Advanced RAG \ Naive RAG
+* **Naive RAG (Traditional / Baseline Retrieval):** A straightforward linear pipeline that embeds the user query, performs vector similarity search against a Vector DB, and passes the top-$K$ chunks directly to the LLM. While simple to implement, it often introduces high noise, struggles with multi-hop reasoning, and overlooks structured entity relationships.
+
+* **Advanced RAG (Modular & Grounded Orchestration):** An enhanced paradigm that transforms the linear retrieval process into an intelligent, structured, and multi-stage workflow. It integrates semantic knowledge structures, agentic decision-making, and pre/post-retrieval optimizations to guarantee deterministic, hallucination-free generation.
+
+### Four Core Architectural Archetypes of Advanced RAG
+* **1. GraphRAG (Knowledge-Grounded Retrieval):**
+Combines vector search with structured Knowledge Graphs (RDF/SPARQL or property graphs like Neo4j). It enables multi-hop reasoning across complex entity hierarchies and grounds generation in domain ontologies to eliminate factual hallucinations.
+
+* **2. Agentic RAG (Dynamic & Multi-Step Orchestration):**
+Employs the LLM as an autonomous agent to evaluate query intent dynamically. It autonomously decomposes complex questions into sub-tasks, performs iterative searches, and calls external tools/databases via protocols like MCP.
+
+* **3. Modular RAG (Pre-Retrieval & Post-Retrieval Pipeline):**
+Refines the end-to-end retrieval stages independently. It applies **Pre-retrieval** transformations (such as Query Expansion, HyDE, or Sub-query decomposition) and **Post-retrieval** refinements (such as neural Rerankers and context summarization) to maximize information density before reaching the generator.
+
+* **4. Self-Reflective / Corrective RAG (CRAG & Self-RAG):**
+Embeds automated evaluation loops into the retrieval cycle. An evaluator model evaluates whether the retrieved passages are relevant and factual; if retrieval quality falls below a threshold, the system triggers corrective query reformulations or falls back to supplementary web search.
+
+## Semantic Web Stack
+
+Inside the GraphDB engine:
+```mermaid
+flowchart TB
+    A["Reasoning & Logic (Inference)"]
+    B["Ontologies (OWL)"]
+    C["Query Language (SPARQL) & Schemas (RDFS)"]
+    D["Data Representation (RDF · Triples: S-P-O)"]
+    E["Identifiers & Standards (URIs / IRIs · XML · JSON-LD)"]
+    A --> B --> C --> D --> E
+```
+
+
+- Unique Identifiers (URIs / IRIs): Provide unambiguous, global identifiers for entities, concepts, and relationships
+- Resource Description Framework (RDF): The standard graph data model that represents facts as structured triples: $\text{(Subject} \rightarrow \text{Predicate} \rightarrow \text{Object)}$.
+- Ontologies & Logic (RDFS & OWL): Express domain schemas, class hierarchies, and logical rules/axioms (e.g., inverse relations, transitivity) to formalize domain knowledge.
+- Query Language (SPARQL): The standard declarative query language designed to extract and manipulate data stored in RDF graphs (analogous to SQL for relational databases).
+- Inference & Reasoning: Rule engines embedded in Triple Stores (e.g., GraphDB, Apache Jena) that automatically deduce implicit facts from explicit data and ontological rules.
+
+### RDF Triples vs. Semantic Data Models (Ontologies)
+When automotive or engineering companies refer to **Semantic Data Models**, they don't just mean storing raw RDF triples in a database. They mean having a **rigorous, rule-based ontology** that models domain logic and dependencies, allowing both automated reasoning engines and LLMs/VLMs to interpret technical engineering systems deterministically without ambiguity.
+
+> **Analogy:** **RDF Triples** are the *building blocks (bricks)*, while **Ontologies / Semantic Data Models** are the *architectural blueprint and structural rules*.
+
+#### 1. RDF Triples: The Data Units (The "Bricks")
+
+* **What they are:** The atomic data format used to state simple, explicit facts.
+* **Structure:** Formatted as $\text{(Subject} \rightarrow \text{Predicate} \rightarrow \text{Object)}$ (e.g., `Engine` $\rightarrow$ `isPartOf` $\rightarrow$ `Vehicle`).
+* **Role:** They store the raw factual data in a graph format, similar to how individual rows store data in a relational database table.
+
+#### 2. Ontologies & Semantic Data Models: The Schema & Logic (The "Blueprint")
+
+* **What they are:** Formal specifications (defined using **RDFS** or **OWL**) that define the classes, properties, hierarchy, and logical constraints governing the triples.
+* **Core Components:**
+    * Controlled Vocabularies & Taxonomies: Standardized entity names and class hierarchies (e.g., `BrakeSensor` is a subclass of `SafetyComponent`).
+    * Relationship Definitions: Specifying domain, range, and semantics of predicates (e.g., establishing that `isPartOf` is a **transitive** relation, or that `sendsDataTo` is the **inverse** of `receivesDataFrom`).
+    * Logical Axioms & Reasoning: Enabling inference engines to automatically deduce implicit knowledge from explicit triples.
+
+
 ## Open source vehicle related ontologies and knowledge bases
 
 Several standardized and open-source ontologies and knowledge bases are widely utilized in academic research and graduate theses within the automotive domain:
@@ -113,23 +134,7 @@ A representative methodology for academic and research evaluation involves the f
 * **Knowledge Graph Architecture:** Modeling and storing explicit relationships between observed failure symptoms, Diagnostic Trouble Codes (DTC / OBD-II), and mechanical/electrical components as RDF triples in GraphDB.
 * **Role of the MCP Server:** Upon receiving a natural language diagnostic query, the Model Context Protocol (MCP) server formulates and executes the corresponding SPARQL query against the triplestore, retrieving deterministic semantic relations to ground the reasoning of the Large Language Model (LLM) within rigorous engineering specifications.
 
-## Advanced RAG \ Naive RAG
-* **Naive RAG (Traditional / Baseline Retrieval):** A straightforward linear pipeline that embeds the user query, performs vector similarity search against a Vector DB, and passes the top-$K$ chunks directly to the LLM. While simple to implement, it often introduces high noise, struggles with multi-hop reasoning, and overlooks structured entity relationships.
 
-* **Advanced RAG (Modular & Grounded Orchestration):** An enhanced paradigm that transforms the linear retrieval process into an intelligent, structured, and multi-stage workflow. It integrates semantic knowledge structures, agentic decision-making, and pre/post-retrieval optimizations to guarantee deterministic, hallucination-free generation.
-
-### Four Core Architectural Archetypes of Advanced RAG
-* **1. GraphRAG (Knowledge-Grounded Retrieval):**
-Combines vector search with structured Knowledge Graphs (RDF/SPARQL or property graphs like Neo4j). It enables multi-hop reasoning across complex entity hierarchies and grounds generation in domain ontologies to eliminate factual hallucinations.
-
-* **2. Agentic RAG (Dynamic & Multi-Step Orchestration):**
-Employs the LLM as an autonomous agent to evaluate query intent dynamically. It autonomously decomposes complex questions into sub-tasks, performs iterative searches, and calls external tools/databases via protocols like MCP.
-
-* **3. Modular RAG (Pre-Retrieval & Post-Retrieval Pipeline):**
-Refines the end-to-end retrieval stages independently. It applies **Pre-retrieval** transformations (such as Query Expansion, HyDE, or Sub-query decomposition) and **Post-retrieval** refinements (such as neural Rerankers and context summarization) to maximize information density before reaching the generator.
-
-* **4. Self-Reflective / Corrective RAG (CRAG & Self-RAG):**
-Embeds automated evaluation loops into the retrieval cycle. An evaluator model evaluates whether the retrieved passages are relevant and factual; if retrieval quality falls below a threshold, the system triggers corrective query reformulations or falls back to supplementary web search.
 
 ## 🔬 Core Research Frontiers in RAG & Foundation Model Optimization
 
