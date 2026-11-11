@@ -222,6 +222,13 @@ Autoscaling using HPA with CLI:
 oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
 ```
 
+## ReplicaSet
+
+Ensures the right number of pods are always running. 
+
+Each version of a deployment is a ReplicaSet? And when we update a deployment we are creating a new ReplicaSet?
+
+The role of deployments is to manage the Replicasets. 
 
 ### Selector 
 
