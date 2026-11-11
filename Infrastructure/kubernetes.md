@@ -41,6 +41,22 @@ The architecture is pretty simple (from 10000 feet overview): **Couple of Master
 
 You send instructions to Control plane. The control plane **schedules** the workload. Control plane is on master nodes. 
 
+### Worker nodes
+
+Worker nodes are divided into **node pools**. The nodes in a single node pool are all the same. 
+
+Node pools can have different configurations:
+- Hardware Specs:
+    - 5 general-purpose nodes for web apps (e.g., 4 vCPU, 16 GB RAM)
+    - 10 memory-optimized nodes for databases/Redis
+    - 3 GPU-enabled nodes for AI/ML workloads.
+- CPU Architecture: Mixture of x86 (Intel/AMD) and ARM-based instances (e.g., GCP Tau ARM, AWS Graviton) to optimize costs.
+- Pricing Models: Stable On-Demand instances for core services alongside discounted Spot VMs for fault-tolerant batch processing.
+
+Scheduling Mechanisms
+- **nodeSelector** & **nodeAffinity**: Directs pods to specific nodes based on key-value labels (e.g., gpu=true).
+- **Taints** & **Tolerations**: Prevents unauthorized pods from scheduling on restricted nodes unless explicit tolerations exist.
+
 ### Kubelet
 
 Kubelet is a deamon on each node which is responsible for pods health.
@@ -74,7 +90,7 @@ In a managed kubernetes, even the k8s admins **don't** have access to control pl
 | **User access control & RBAC management** | Allowed | Allowed |
 | **Direct modification of `/etc/kubernetes` files** | Allowed | **Not Allowed** (Configured via Cloud Console/API) |
 
-
+Worker nodes can be autoscaled. Read about it in GCP document. 
 
 ## Main resources
 
