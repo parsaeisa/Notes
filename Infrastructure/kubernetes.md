@@ -111,11 +111,6 @@ Pod is the atomicity of kubernetes .
 
 Pod → Deployments → namespace → TEAM
 
-Autoscaling deployments:
-```bash
-kubectl autoscale deployment hello-world-rest-api --max=4 --cpu=70%
-```
-
 * in openshift instead of **namespace** we have **project**.
 
 Each of these are k8s clusters. we can get the list of them in cli using : 
@@ -178,6 +173,32 @@ kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
 In OKD we use `oc` instead of `kubectl`.
 
 - Service discovery
+
+## HPA
+It stands for Horizontal pod autoscaler. K8s handles highly-availability in a great level. For autoscaling we use k8s.
+
+Without it, we set the number of instances manually in the deployment file or in our commmands. But the number of required instances may change and not be a constant value. In these cases, we use **Autoscaling**. 
+
+Autoscaling deployments:
+```bash
+kubectl autoscale deployment hello-world-rest-api --max=4 --cpu=70%
+```
+
+Put at least 2 pods for a service to HA that service. But if the requests to our service is going to grow we need to add more pods.
+
+* Before any scaling we need load-testing and fine-tuning to see whether the service works as we expected or not.
+
+We can create it using the k8s dashboard.
+
+HPA has three parameters:
+- min : the minimum count of our pods
+- max : the maximum counts
+- cpu-percent : This is one of the metrics that k8s decides to scale pods with.
+
+Autoscaling using HPA with CLI:
+```bash
+oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
+```
 
 
 ### Selector 
@@ -288,25 +309,6 @@ Resources are what I called objects in previous. We have resources such as confi
 There is also an **operator sdk** that helps to create an operators.
 
 ### CRD's
-
-## HPA
-It stands for Horizontal pod autoscaler. K8s handles highly-availability in a great level. For autoscaling we use k8s.
-
-Put at least 2 pods for a service to HA that service. But if the requests to our service is going to grow we need to add more pods.
-
-* Before any scaling we need load-testing and fine-tuning to see whether the service works as we expected or not.
-
-We can create it using the k8s dashboard.
-
-HPA has three parameters:
-- min : the minimum count of our pods
-- max : the maximum counts
-- cpu-percent : This is one of the metrics that k8s decides to scale pods with.
-
-Autoscaling using HPA with CLI:
-```bash
-oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
-```
 
 ## Clusters
 
