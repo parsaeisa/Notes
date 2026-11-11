@@ -41,6 +41,10 @@ The architecture is pretty simple (from 10000 feet overview): **Couple of Master
 
 You send instructions to Control plane. The control plane **schedules** the workload. Control plane is on master nodes. 
 
+### Kubelet
+
+Kubelet is a deamon on each node which is responsible for pods health.
+
 ### Network
 
 K8s does NOT implement the Network. 
@@ -174,7 +178,7 @@ In OKD we use `oc` instead of `kubectl`.
 
 - Service discovery
 
-## HPA
+### HPA
 It stands for Horizontal pod autoscaler. K8s handles highly-availability in a great level. For autoscaling we use k8s.
 
 Without it, we set the number of instances manually in the deployment file or in our commmands. But the number of required instances may change and not be a constant value. In these cases, we use **Autoscaling**. 
@@ -234,35 +238,10 @@ I think due to deamonset mindset, it needs to modify some pods and need some acc
 
 #### Cluster role binding
 
-## Manifests
+### CRD's
 
-Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
 
-Files: 
-- clusterrolebinding.yaml
-- configmap.yaml
-- deployment.yaml
-- ingress.yaml
-- networkpolicy.yaml
-- pvc.yaml
-- serviceaccount.yaml
-- service.yaml
-
-You can create most of these files using `helm create` command. 
-
-It has a structure : 
-```
-apiVersion: 
-kind:
-metadata:
-    [e.g. names & labels]
-spec:
-    [other key featues of object]
-```
-
-We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
-
-## Statefulsets
+### Statefulsets
 
 Stateful sets are used for stateful components of our system . 
 
@@ -308,24 +287,10 @@ Resources are what I called objects in previous. We have resources such as confi
 
 There is also an **operator sdk** that helps to create an operators.
 
-### CRD's
-
-## Clusters
-
-Each cluster contains nodes. The **scheduler** assigns pods to the appropriate node in the cluster. 
-
-## Controllers
-
-## Networking 
-
-Networking is one of the sections in okd dashboard ( administrator mode ) . 
-
-{image}
-
 ### Routes
 We can define routes for connecting to a deployment . We can define only for ourselves and for debugging purposes.
 
-## Volumes
+### Volumes
 
 A volume can be created within a project and can be used by pods within that project. Volumes **cannot be shared between projects**, and if a project is deleted, the pods and the volumes within that project will be deleted.
 
@@ -453,15 +418,45 @@ This is an account that is used for pipelines in automations.
 
 It has a level of access that can be for example editor.
 
-## Job 
+### Job 
 
 You can define a job for k8s that is executed in a cron job timing . 
 
-### Using k8s job in a project
+#### Using k8s job in a project
 
 You can put an endpoint in your project that has a handler. In this handler you do things that you want to be done on in a scheduled way on a regular basis.
 
 Then in that cronjob, you can make a request to that endpoint ( in bash, curl ) in time regulations that you want.
+
+
+
+## Manifests
+
+Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
+
+Files: 
+- clusterrolebinding.yaml
+- configmap.yaml
+- deployment.yaml
+- ingress.yaml
+- networkpolicy.yaml
+- pvc.yaml
+- serviceaccount.yaml
+- service.yaml
+
+You can create most of these files using `helm create` command. 
+
+It has a structure : 
+```
+apiVersion: 
+kind:
+metadata:
+    [e.g. names & labels]
+spec:
+    [other key featues of object]
+```
+
+We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
 
 ## Team
 
@@ -475,6 +470,14 @@ Namespaces can be joined to teams and being removed from it.
 
 Deamonset is used when we want to add a process to every cluster in kubernetes.
 
-## Kubelet
+## Clusters
 
-Kubelet is a deamon on each node which is responsible for pods health.
+Each cluster contains nodes. The **scheduler** assigns pods to the appropriate node in the cluster. 
+
+## Controllers
+
+## Networking 
+
+Networking is one of the sections in okd dashboard ( administrator mode ) . 
+
+{image}
