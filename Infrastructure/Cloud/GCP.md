@@ -63,3 +63,16 @@ Idk what are the things mentiond above, read them later.
 For interacting with clusters, we get the credentials for the cluster from `gcloud` command, then inside that cluster we run for example `kubectl expose ...`.
 
 We can **simply copy** the "get credential" command from the clusters pannel in GKE.
+
+### Autoscaling worker nodes
+
+There is a `gcloud` command for it. The command may change later, but the idea will sure stay. The commands are `gcloud resize` and `gcloud update ... --enable-autoscaling ...`.
+
+The command does some configuration for the **node-pool**. 
+
+## Scenarios and Solutions
+
+### Keeping you costs low
+Use Autopilot. 
+If you are using Standard, use SpotVMs and **Comitted use discounts**. Choose right machine type. 
+
