@@ -39,6 +39,8 @@ To learn :
 
 The architecture is pretty simple (from 10000 feet overview): **Couple of Master nodes, A lot more of Worker nodes**.
 
+Those master nodes are called "Control Plane", the **brain** of the k8s.
+
 You send instructions to Control plane. The control plane **schedules** the workload. Control plane is on master nodes. 
 
 ### Worker nodes
