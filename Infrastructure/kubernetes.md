@@ -224,11 +224,15 @@ oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
 
 ## ReplicaSet
 
-Ensures the right number of pods are always running. It sits **between pod and deployment**. 
+It sits **between pod and deployment**. 
 
-When we update a deployment we are creating a new ReplicaSet?
+It ensures the right number of pods are always running. If you delete a pod, the ReplicaSet would create it back again.
+
+How is it related to deployment?
 
 The role of deployments is to manage the Replicasets. Deployments have versioning, they can be rolled back. Also it has rolling update feature which is out of the scope of a ReplicaSet.
+
+When we update a deployment we are creating a new ReplicaSet. 
 
 Engineers normally don't write yaml files for ReplicaSets.
 
