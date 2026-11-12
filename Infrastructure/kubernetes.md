@@ -228,7 +228,9 @@ Ensures the right number of pods are always running. It sits **between pod and d
 
 When we update a deployment we are creating a new ReplicaSet?
 
-The role of deployments is to manage the Replicasets. Hence, the engineers normally don't write yaml files for ReplicaSets.
+The role of deployments is to manage the Replicasets. Deployments have versioning, they can be rolled back. Also it has rolling update feature which is out of the scope of a ReplicaSet.
+
+Engineers normally don't write yaml files for ReplicaSets.
 
 ### Selector 
 
