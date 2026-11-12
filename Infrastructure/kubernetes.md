@@ -43,7 +43,19 @@ Those master nodes are called "Control Plane", the **brain** of the k8s.
 
 You send instructions to Control plane. The control plane **schedules** the workload. Control plane is on master nodes. 
 
+## Control plane (Master Nodes)
+
+Components:
+- API server: The reciever of `kubectl` commands.
+- Scheduler: Assigns pods to the appropriate node in the cluster. 
+- Controller Manager
+- etcd
+
 ### Worker nodes
+
+Components:
+- kubelet: Talking to master node
+- Container engine
 
 Worker nodes are divided into **node pools**. The nodes in a single node pool are all the same. 
 
@@ -501,9 +513,6 @@ Namespaces can be joined to teams and being removed from it.
 
 Deamonset is used when we want to add a process to every cluster in kubernetes.
 
-## Clusters
-
-Each cluster contains nodes. The **scheduler** assigns pods to the appropriate node in the cluster. 
 
 ## Controllers
 
