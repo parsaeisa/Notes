@@ -71,6 +71,14 @@ Scheduling Mechanisms
 - **nodeSelector** & **nodeAffinity**: Directs pods to specific nodes based on key-value labels (e.g., gpu=true).
 - **Taints** & **Tolerations**: Prevents unauthorized pods from scheduling on restricted nodes unless explicit tolerations exist.
 
+### Controllers 
+
+Example controllers:
+- Node controller: Monitors health of nodes
+- Replication controller
+- Deployment controller
+- Cloud controller manager
+
 ### Kubelet
 
 Kubelet is a deamon on each node which is responsible for pods health.
