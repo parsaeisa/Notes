@@ -57,7 +57,7 @@ Components:
 - kubelet: Talking to master node
 - Container engine
 
-Worker nodes are divided into **node pools**. The nodes in a single node pool are all the same. 
+Worker nodes are divided into **node pools**. All the nodes in a single node pool have a same configuration. 
 
 Node pools can have different configurations:
 - Hardware Specs:
