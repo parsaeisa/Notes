@@ -46,11 +46,12 @@ You send instructions to Control plane. The control plane **schedules** the work
 ## Control plane (Master Nodes)
 
 Components:
-- API server: The reciever of `kubectl` commands.
+- API server: The reciever of `kubectl` commands. 
 - Scheduler: Assigns pods to the appropriate node in the cluster. 
 - Controller Manager
 - etcd
 
+An example of the harmony: The command of creating a deployment sends a request to the API server. The **API server** authenticates the request and performs it. It creates a deployment object in **etcd** and triggers the deployment controller. **Deployment controller** creates a ReplicaSet. Then, the **ReplicaSet** requests a new pod creation. The **scheduler** decides which worker node, deploy the new pod to. After this, the **kubelet on the selected node** pulls the image and start the container. After deploying, the **Controllers** watch the pods and make sure they are healthy. When a node failes, the pods are moved to another node!!
 ### Worker nodes
 
 Components:
