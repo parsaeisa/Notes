@@ -75,6 +75,8 @@ An **Agentic Workflow** is essential when a task involves **non-linear planning,
 
 * **Context & Software Layer Abstraction:** Building resilient software wrappers and orchestration layers around pretrained foundation models, delivering scalable, deterministic enterprise systems rather than training models from scratch.
 
+* **Version Management**
+
 ## Teminology
 
 New terms:
@@ -110,6 +112,70 @@ In standard system architecture, an AI Agent comprises three core components:
 * **Reasoning Core:** A foundation model (LLM / VLM) responsible for intent parsing, multi-step planning, and decision-making.
 * **Memory & Knowledge Store:** A structured knowledge layer (e.g., Graph Database / Knowledge Graph) that supplies relational context, grounded facts, and long-term state.
 * **Tools & Actuators:** Standardized interfaces and protocol endpoints (e.g., ERI, REST APIs, or execution runtimes) allowing the agent to perform actions and query distributed servers.
+
+## Tools
+
+LangChain, LlamaIndex: Orchestration Tools
+- LlamaIndex: A Data and AI orchestration tool which loads documents (PDFs, Databases), turns them into vectors, indexes them and connects them to LLMs/VLMs.
+
+- Evaluation Tools: TruLens & Ragas
+- Document processing & Conversion: Docling, Marker
+- Ollama: Deploying tools
+- n8n
+
+### Evaluation Tools
+
+Evaluation frameworks such as Ragas and TruLens can be used **just after integrating GraphDB**, rather than during the baseline phase. These frameworks evaluate the **alignment between** an injected retrieval context and the generated answer.
+
+* **Applicability Stage:** Deploy Ragas or TruLens only in the KG-augmented pipeline to assess retrieval quality and grounding.
+* **Faithfulness Assessment:** Quantifies whether the VLM output is strictly grounded in the SPARQL-retrieved triples rather than driven by parametric hallucinations.
+* **Context Relevance:** Evaluates the semantic utility of the retrieved knowledge graph facts relative to the image and query.
+* **Benchmark Accuracy Metric:** These frameworks evaluate RAG triaging dynamics, not direct dataset correctness; computing official task performance against human annotations still requires the standard OK-VQA consensus metric.
+
+The above metrics are undefined without graph-retrieved triples in the prompt.
+
+## Data Layer
+
+A lot of security challenges and errors are not addressed in the system level, but they are addressed in the data layer. 
+
+**Scenario Analysis**:
+If an intern queries confidential executive compensation and the system retrieves that document, the system has suffered a security breach—even if the generated answer is accurate. Relying on a system prompt to restrict access fails because security must be enforced deterministically at the data layer, not probabilistically at the model layer. Unauthorized data must never enter the LLM's context window.
+
+**Solution**: Pre-Retrieval Document-Level Access Control (ACL)
+To enforce document-level permissions during retrieval, we implement Pre-Retrieval Metadata Filtering:
+
+- Ingestion Time: When indexing document chunks into the vector database (e.g., Qdrant, Pinecone, Milvus), attach access control lists (ACLs) as metadata (e.g., allowed_roles: ["HR_Admin", "Executive"] or specific user_ids).
+
+- Query Time: Authenticate the user via enterprise SSO/IAM (e.g., Okta, Active Directory) to extract their role and permissions before searching. Pass these attributes as a mandatory metadata filter into the vector search query.
+
+- Result: The vector database physically filters out unauthorized chunks before similarity scoring occurs. To the LLM, restricted documents do not exist, completely neutralizing prompt injection attempts aimed at extracting unauthorized data.
+
+- Permission Syncing: Maintain a synchronization pipeline (via webhooks or scheduled jobs) to update vector metadata immediately whenever employee roles or document permissions change.
+
+## Vector Databases
+
+Before data is stored in a vector database, it is passed through a pre-trained deep learning model—known as an embedding model—**strictly for inference**. During this forward pass, the model does not train or update its weights; instead, it extracts the semantic meaning of the raw input and encodes it into a dense numerical vector representation ready for indexing.
+
+Vector databases do not contain deep neural networks; embedding models are separate components that generate the numerical vectors before storage. 
+
+###  Different Models
+Different vector databases (such as **Pinecone, Qdrant, Milvus, and Chroma**) are primarily distinguished by their **data engineering architecture and retrieval mechanisms**:
+
+- **Indexing Algorithms**: The mathematical structures used to organize vectors for fast Approximate Nearest Neighbor (ANN) search (e.g., HNSW, IVF).
+- **Storage and Scalability**: How data is stored (in-memory vs. disk-based), distributed across nodes, and deployed (fully managed cloud vs. open-source self-hosted).
+- **Filtering and Hybrid Search**: Efficiency in applying metadata filters during retrieval and combining semantic search with traditional keyword search.
+- **Memory Optimization**: Compression techniques (such as quantization) used to reduce RAM consumption while preserving search accuracy.
+
+#### Different Deep Learning models
+
+Here are the most widely used, industry-standard embedding models for generating vectors prior to storage in a vector database:
+
+* **OpenAI (`text-embedding-3-large` / `text-embedding-3-small`):** The industry standard for commercial APIs, offering high semantic accuracy and flexible dimensionality (Matryoshka Representation Learning).
+* **Cohere (`embed-v3`):** Widely adopted in enterprise RAG systems, particularly strong in multilingual retrieval and native compression support.
+* **BAAI / BGE (`bge-m3` / `bge-large-en-v1.5`):** Leading open-source embedding models heavily used in self-hosted production pipelines for dense, sparse, and multi-vector retrieval.
+* **NVIDIA (`NV-Embed-v2`):** A top-performing open-weight model based on Mistral, frequently deployed in high-accuracy enterprise search architectures.
+* **Sentence-Transformers (`E5-mistral-7b-instruct` / `all-MiniLM-L6-v2`):** Standard open-source models for self-hosted environments—`E5` for high-precision retrieval and `MiniLM` for ultra-low-latency CPU inference.
+* **Voyage AI (`voyage-3` / `voyage-code-3`):** Specialized commercial models favored in technical and code-retrieval production pipelines.
 
 ## MCP
 
@@ -147,26 +213,6 @@ With APIs you need to manage API keys for each API which you call, but MCP keeps
 - Enterprise MCP serves: A gold standards because they are built by the tool companies themeselves.
 - Community servers
 
-## Tools
-
-LangChain, LlamaIndex: Orchestration Tools
-- LlamaIndex: A Data and AI orchestration tool which loads documents (PDFs, Databases), turns them into vectors, indexes them and connects them to LLMs/VLMs.
-
-- Evaluation Tools: TruLens & Ragas
-- Document processing & Conversion: Docling, Marker
-- Ollama: Deploying tools
-- n8n
-
-### Evaluation Tools
-
-Evaluation frameworks such as Ragas and TruLens can be used **just after integrating GraphDB**, rather than during the baseline phase. These frameworks evaluate the **alignment between** an injected retrieval context and the generated answer.
-
-* **Applicability Stage:** Deploy Ragas or TruLens only in the KG-augmented pipeline to assess retrieval quality and grounding.
-* **Faithfulness Assessment:** Quantifies whether the VLM output is strictly grounded in the SPARQL-retrieved triples rather than driven by parametric hallucinations.
-* **Context Relevance:** Evaluates the semantic utility of the retrieved knowledge graph facts relative to the image and query.
-* **Benchmark Accuracy Metric:** These frameworks evaluate RAG triaging dynamics, not direct dataset correctness; computing official task performance against human annotations still requires the standard OK-VQA consensus metric.
-
-The above metrics are undefined without graph-retrieved triples in the prompt.
 
 ## Prompt-Engineering Example
 
