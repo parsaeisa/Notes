@@ -70,6 +70,14 @@ There is a `gcloud` command for it. The command may change later, but the idea w
 
 The command does some configuration for the **node-pool**. 
 
+### Cluster types
+
+- Zonal cluster: Only the conrol plane is in one region. But worker nodes can be spreaded in multiple regions. 
+- Regional Cluster: Both worker and master nodes are spreaded across multipl regions. **In GKE autopilot clusters are always regional**. 
+- Private Cluster: All the communication between clusters happen in a private network.
+- Confidential GKE node pool
+- Alpha Cluster: NOT for production. 
+
 ## Scenarios and Solutions
 
 ### Keeping you costs low
