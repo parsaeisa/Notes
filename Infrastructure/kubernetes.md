@@ -539,3 +539,16 @@ If there is a problem with any k8s recouse, use `describe` command. Example:
 ```bash
 kubectl describe pod <name of the pod>
 ```
+
+## Declarative k8s
+
+### Labels
+
+Labels are key-value pairs attached with k8s resources. We can assign multiple labels to one resource. 
+
+Labels are used to group and organize resources. They are used to route traffic. Services use **label selectors**. Also, Prometheus can use these labels to visualize different resources and add metric to them. 
+
+Deleting resources based on label.
+```bash
+kubectl delete pod -l environment=staging
+```
