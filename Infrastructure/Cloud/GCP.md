@@ -49,6 +49,8 @@ In Workload tab you see all Kubernetes resources which run pods.
 
 The key cost factor: In standard, you pay for the whole node, but in autopilot, you pay just for CPU/memory requests. 
 
+In Autopilot, Scaling up takes a lot of time. 
+
 #### Why standard?
 
 Having full-access is usefull for some bunch of scenarios:
@@ -84,3 +86,9 @@ The command does some configuration for the **node-pool**.
 Use Autopilot. 
 If you are using Standard, use SpotVMs and **Comitted use discounts**. Choose right machine type. 
 
+### Best practices
+
+- Shielded GKE
+- K8s releases and cluster upgrades: It is a managed upgrade experience with multiple channels (rapid, regular, stable). With it we can make sure that k8s is up to dated with it's latest version. 
+- Confidential GKE Nodes
+- GKE sandbox: For undtrusted workloads.
