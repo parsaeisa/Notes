@@ -1,5 +1,21 @@
 # Cloud
 
+## Architectural Layer Comparison: GCP vs. Private Cloud
+
+| Architectural Layer | Google Cloud Platform (GCP) | Private Cloud (e.g., Internal Cloud) | Core Responsibility |
+| --- | --- | --- | --- |
+| **4. Container Orchestration** | **GKE** (Google Kubernetes Engine) | **Kubernetes** (via Kubespray, Rancher, or Cluster API) | Schedules, scales, and manages containerized applications. |
+| **3. Compute & Networking (IaaS)** | **Compute Engine (VMs)** & **VPC** | **OpenStack** (Nova, Neutron, Octavia) | Provisions virtual machines, virtual networks, and load balancers. |
+| **2. Distributed Storage** | **Cloud Storage** & **Persistent Disk** | **Ceph** (RBD, RGW, CephFS) | Aggregates raw disks into block, object, and file storage pools. |
+| **1. Physical Infrastructure** | Google Data Centers & Proprietary Hardware | **Bare Metal Servers** (On-Premises Data Centers) | Provides raw compute, memory, storage drives, and physical switches. |
+
+---
+
+### Core Infrastructure Components Explained
+
+* **OpenStack:** An open-source cloud operating system that pools compute, storage, and networking resources across a data center. It abstracts physical hardware into on-demand **Virtual Machines (Nova)**, software-defined **Networks (Neutron)**, and **Load Balancers (Octavia)** managed via APIs, replicating the core IaaS capabilities of AWS EC2 or GCP Compute Engine.
+* **Ceph:** A fault-tolerant, distributed storage platform designed to scale horizontally on commodity hardware without a single point of failure. It unifies local disks across multiple servers into a single storage cluster, simultaneously exposing **Block Storage** (for Kubernetes Persistent Volumes), **Object Storage** (S3-compatible APIs), and **File Systems**.
+
 ## Main duties of a Cloud Engineer
 
 ### 1. Infrastructure Architecture & Automation
