@@ -43,6 +43,8 @@ Those master nodes are called "Control Plane", the **brain** of the k8s.
 
 You send instructions to Control plane. The control plane **schedules** the workload. Control plane is on master nodes. 
 
+Where is the Regsitry?
+
 ## Control plane (Master Nodes)
 
 Components:
@@ -243,7 +245,7 @@ Autoscaling using HPA with CLI:
 oc autoscale deployment/helloworld --min=2 --max=10 --cpu-percent=240
 ```
 
-## ReplicaSet
+### ReplicaSet
 
 It sits **between pod and deployment**. 
 
@@ -530,3 +532,10 @@ Deamonset is used when we want to add a process to every cluster in kubernetes.
 Networking is one of the sections in okd dashboard ( administrator mode ) . 
 
 {image}
+
+## Troubleshooting
+
+If there is a problem with any k8s recouse, use `describe` command. Example:
+```bash
+kubectl describe pod <name of the pod>
+```
