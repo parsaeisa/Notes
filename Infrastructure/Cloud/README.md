@@ -4,10 +4,10 @@
 
 | Architectural Layer | Google Cloud Platform (GCP) | Private Cloud (e.g., Internal Cloud) | Core Responsibility |
 | --- | --- | --- | --- |
-| **4. Container Orchestration** | **GKE** (Google Kubernetes Engine) | **Kubernetes** (via Kubespray, Rancher, or Cluster API) | Schedules, scales, and manages containerized applications. |
-| **3. Compute & Networking (IaaS)** | **Compute Engine (VMs)** & **VPC** | **OpenStack** (Nova, Neutron, Octavia) | Provisions virtual machines, virtual networks, and load balancers. |
-| **2. Distributed Storage** | **Cloud Storage** & **Persistent Disk** | **Ceph** (RBD, RGW, CephFS) | Aggregates raw disks into block, object, and file storage pools. |
-| **1. Physical Infrastructure** | Google Data Centers & Proprietary Hardware | **Bare Metal Servers** (On-Premises Data Centers) | Provides raw compute, memory, storage drives, and physical switches. |
+| **Container Orchestration** | **GKE** (Google Kubernetes Engine) | **Kubernetes** (via Kubespray, Rancher, or Cluster API) | Schedules, scales, and manages containerized applications. |
+| **Compute & Networking (IaaS)** | **Compute Engine (VMs)** & **VPC** | **OpenStack** (Nova, Neutron, Octavia) | Provisions virtual machines, virtual networks, and load balancers. |
+| **Distributed Storage** | **Cloud Storage** & **Persistent Disk** | **Ceph** (RBD, RGW, CephFS) | Aggregates raw disks into block, object, and file storage pools. |
+| **Physical Infrastructure** | Google Data Centers & Proprietary Hardware | **Bare Metal Servers** (On-Premises Data Centers) | Provides raw compute, memory, storage drives, and physical switches. |
 
 ---
 
