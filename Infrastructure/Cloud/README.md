@@ -1,5 +1,7 @@
 # Cloud
 
+Cloud is an abstraction layer over compute resources that allows them to be provisioned on demand via a simple API call.
+
 ## Architectural Layer Comparison: GCP vs. Private Cloud
 
 | Architectural Layer | Google Cloud Platform (GCP) | Private Cloud (e.g., Internal Cloud) | Core Responsibility |
@@ -11,7 +13,7 @@
 
 ---
 
-### Core Infrastructure Components Explained
+### Core Infrastructure Components Explained    
 
 * **OpenStack:** An open-source cloud operating system that pools compute, storage, and networking resources across a data center. It abstracts physical hardware into on-demand **Virtual Machines (Nova)**, software-defined **Networks (Neutron)**, and **Load Balancers (Octavia)** managed via APIs, replicating the core IaaS capabilities of AWS EC2 or GCP Compute Engine.
 * **Ceph:** A fault-tolerant, distributed storage platform designed to scale horizontally on commodity hardware without a single point of failure. It unifies local disks across multiple servers into a single storage cluster, simultaneously exposing **Block Storage** (for Kubernetes Persistent Volumes), **Object Storage** (S3-compatible APIs), and **File Systems**.
