@@ -117,6 +117,10 @@ In a managed kubernetes, even the k8s admins **don't** have access to control pl
 
 Worker nodes can be autoscaled. Read about it in GCP document. 
 
+## Self-healing
+
+- LivenessProbe
+
 ## Main resources
 
 You can see main concepts of k8s in the k8s dashboard : 
