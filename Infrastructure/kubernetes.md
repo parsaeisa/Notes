@@ -45,7 +45,7 @@ You send instructions to Control plane. The control plane **schedules** the work
 
 Where is the Regsitry?
 
-## Control plane (Master Nodes)
+### Control plane (Master Nodes)
 
 Components:
 - API server: The reciever of `kubectl` commands. 
@@ -483,35 +483,6 @@ You can put an endpoint in your project that has a handler. In this handler you 
 Then in that cronjob, you can make a request to that endpoint ( in bash, curl ) in time regulations that you want.
 
 
-
-## Manifests
-
-Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
-
-Files: 
-- clusterrolebinding.yaml
-- configmap.yaml
-- deployment.yaml
-- ingress.yaml
-- networkpolicy.yaml
-- pvc.yaml
-- serviceaccount.yaml
-- service.yaml
-
-You can create most of these files using `helm create` command. 
-
-It has a structure : 
-```
-apiVersion: 
-kind:
-metadata:
-    [e.g. names & labels]
-spec:
-    [other key featues of object]
-```
-
-We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
-
 ## Team
 
 Each team consists multiple namespaces. 
@@ -552,3 +523,45 @@ Deleting resources based on label.
 ```bash
 kubectl delete pod -l environment=staging
 ```
+
+### Deployment Strategy
+
+We set it in Deployment yaml file. 
+
+RollingUpdate: This feature updates the pods gradually. It deletes the old pods only when new pods are `Ready`. Parameters:
+- `maxSurge`: The ratio of maximum number of temporal pods (Which can be created concurrently) to all of pods. (25%: maximum 1 pod can be added, when there is already 4 pods). Of course, increasing `maxSurge` increases the cost.
+- `maxUnavailable`: The ration of pods which can be down while releasing the new version. When 100%, it is simply `Recreate`. Increasing it, somehow, increases the cost, because your server is not up anymore to give service.
+
+Both parameters above can be set with percentage(`%`) or normal number (`1`,`2`,`3`, ...) which is the number of pods. Also, both of them can't be zero (because in that case no pod is updated!).
+
+They are moving in the trade-off of ... [Complete it]
+
+If we want all pods to be created again, we could use `Recreate` strategy. But it's not recommended. 
+
+### Manifests
+
+Each object is defined for k8s in a yml file that I like to call manifest. Manifests are descriptive files.
+
+Files: 
+- clusterrolebinding.yaml
+- configmap.yaml
+- deployment.yaml
+- ingress.yaml
+- networkpolicy.yaml
+- pvc.yaml
+- serviceaccount.yaml
+- service.yaml
+
+You can create most of these files using `helm create` command. 
+
+It has a structure : 
+```
+apiVersion: 
+kind:
+metadata:
+    [e.g. names & labels]
+spec:
+    [other key featues of object]
+```
+
+We talk to k8s within manifests. I use **helm** for deploying applications. You can read about helm [here](https://github.com/parsaeisa/Notes/blob/main/DevOps/Helm.md)
