@@ -2,6 +2,12 @@
 
 I think you use RAG, when you want bring company's data into the game. For example through company's documents.
 
+## Strategy
+
+In production RAG engineering, At first, teams establish **a foundational data pipeline** during the ingestion phase by implementing **Hybrid Search** (dense and sparse vectors) alongside an **appropriate chunking strategy**. 
+
+Subsequently, based on **evaluation metrics and user feedback**, engineers iteratively introduce and tune query-time components—such as Cross-Encoder Rerankers and Query Transformation—directly within the retrieval pipeline to maximize precision without re-indexing the vector database.
+
 ## Vector Databases
 
 Before data is stored in a vector database, it is passed through a pre-trained deep learning model—known as an embedding model—**strictly for inference**. During this forward pass, the model does not train or update its weights; instead, it extracts the semantic meaning of the raw input and encodes it into a dense numerical vector representation ready for indexing.
