@@ -152,31 +152,6 @@ To enforce document-level permissions during retrieval, we implement Pre-Retriev
 
 - Permission Syncing: Maintain a synchronization pipeline (via webhooks or scheduled jobs) to update vector metadata immediately whenever employee roles or document permissions change.
 
-## Vector Databases
-
-Before data is stored in a vector database, it is passed through a pre-trained deep learning model—known as an embedding model—**strictly for inference**. During this forward pass, the model does not train or update its weights; instead, it extracts the semantic meaning of the raw input and encodes it into a dense numerical vector representation ready for indexing.
-
-Vector databases do not contain deep neural networks; embedding models are separate components that generate the numerical vectors before storage. 
-
-###  Different Models
-Different vector databases (such as **Pinecone, Qdrant, Milvus, and Chroma**) are primarily distinguished by their **data engineering architecture and retrieval mechanisms**:
-
-- **Indexing Algorithms**: The mathematical structures used to organize vectors for fast Approximate Nearest Neighbor (ANN) search (e.g., HNSW, IVF).
-- **Storage and Scalability**: How data is stored (in-memory vs. disk-based), distributed across nodes, and deployed (fully managed cloud vs. open-source self-hosted).
-- **Filtering and Hybrid Search**: Efficiency in applying metadata filters during retrieval and combining semantic search with traditional keyword search.
-- **Memory Optimization**: Compression techniques (such as quantization) used to reduce RAM consumption while preserving search accuracy.
-
-#### Different Deep Learning models
-
-Here are the most widely used, industry-standard embedding models for generating vectors prior to storage in a vector database:
-
-* **OpenAI (`text-embedding-3-large` / `text-embedding-3-small`):** The industry standard for commercial APIs, offering high semantic accuracy and flexible dimensionality (Matryoshka Representation Learning).
-* **Cohere (`embed-v3`):** Widely adopted in enterprise RAG systems, particularly strong in multilingual retrieval and native compression support.
-* **BAAI / BGE (`bge-m3` / `bge-large-en-v1.5`):** Leading open-source embedding models heavily used in self-hosted production pipelines for dense, sparse, and multi-vector retrieval.
-* **NVIDIA (`NV-Embed-v2`):** A top-performing open-weight model based on Mistral, frequently deployed in high-accuracy enterprise search architectures.
-* **Sentence-Transformers (`E5-mistral-7b-instruct` / `all-MiniLM-L6-v2`):** Standard open-source models for self-hosted environments—`E5` for high-precision retrieval and `MiniLM` for ultra-low-latency CPU inference.
-* **Voyage AI (`voyage-3` / `voyage-code-3`):** Specialized commercial models favored in technical and code-retrieval production pipelines.
-
 ## MCP
 
 It is a protocol which connects our Agent to different tools and platforms. 
