@@ -24,6 +24,15 @@ let isStrictEqual = (5 === '5'); // false
 
 What are decorators ?
 
+## Starting a project
+
+You shouldn't just install the packages. You also have to document them somewhere. Like `requirements.txt` in python projects. That place is `package.json` file (it's not just for Node.js, it's for all javascript/typescript project). When starting a new project, write it in the terminal:
+```bash
+npm init -y
+```
+
+Then it creates a `package.json` files and the package which you install, gets written in this file.
+
 
 ## Datatypes
 
